@@ -4,6 +4,12 @@
 	(generator_version "10.0")
 	(uuid "42309c5d-9d7a-429d-b353-e8927a604374")
 	(paper "B")
+	(title_block
+		(title "Phyduino Pico 2")
+		(date "2026-05-04")
+		(rev "A")
+		(company "University of Toronto, Dept. of Physics")
+	)
 	(lib_symbols
 		(symbol "Connector - Generic Mounting Pin [KL]:Conn_01x22_MountingPin"
 			(pin_names

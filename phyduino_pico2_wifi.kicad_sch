@@ -4,6 +4,12 @@
 	(generator_version "10.0")
 	(uuid "1e6e5fb3-cc97-428d-a40c-6d96e4b90ef5")
 	(paper "B")
+	(title_block
+		(title "Phyduino Pico 2")
+		(date "2026-05-04")
+		(rev "A")
+		(company "University of Toronto, Dept. of Physics")
+	)
 	(lib_symbols
 		(symbol "Analog - Switches - Analog Devices [KL]:TS3A24159DRC"
 			(exclude_from_sim no)
