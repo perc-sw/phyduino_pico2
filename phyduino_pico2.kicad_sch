@@ -2113,7 +2113,7 @@
 		)
 		(uuid "0046ac38-f3bf-4537-92ee-4d8cbf0be1af")
 	)
-	(text "D19/SCL"
+	(text "D15/SCL"
 		(exclude_from_sim no)
 		(at 240.03 101.6 0)
 		(effects
@@ -2124,7 +2124,7 @@
 		)
 		(uuid "03970bf9-d361-4d9d-9c1a-70b22ffacf7d")
 	)
-	(text "D18/SDA"
+	(text "D14/SDA"
 		(exclude_from_sim no)
 		(at 240.03 99.06 0)
 		(effects
@@ -2148,7 +2148,7 @@
 	)
 	(text "D12/MISO"
 		(exclude_from_sim no)
-		(at 239.522 88.392 0)
+		(at 240.03 88.392 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2313,7 +2313,7 @@
 	)
 	(text "~D11/MOSI"
 		(exclude_from_sim no)
-		(at 239.268 86.106 0)
+		(at 240.284 86.106 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2682,16 +2682,6 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 186.69) (xy 107.95 186.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "30e9aa33-f18d-4376-a8b8-5f288eda907d")
-	)
-	(wire
-		(pts
 			(xy 231.14 165.1) (xy 232.41 165.1)
 		)
 		(stroke
@@ -2922,6 +2912,16 @@
 	)
 	(wire
 		(pts
+			(xy 71.12 165.1) (xy 88.9 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73776ff7-7088-4450-ba75-9b5f2131d230")
+	)
+	(wire
+		(pts
 			(xy 232.41 57.15) (xy 143.51 57.15)
 		)
 		(stroke
@@ -2962,7 +2962,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 137.16) (xy 107.95 137.16)
+			(xy 71.12 144.78) (xy 107.95 144.78)
 		)
 		(stroke
 			(width 0)
@@ -2999,6 +2999,26 @@
 			(type default)
 		)
 		(uuid "8ae5b490-02a0-448c-b48a-3834c2462327")
+	)
+	(wire
+		(pts
+			(xy 71.12 167.64) (xy 88.9 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c7f1e1b-3098-45d2-bcfd-a7df2e6f846f")
+	)
+	(wire
+		(pts
+			(xy 91.44 165.1) (xy 107.95 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e2c9e8f-fe8c-42b9-acb1-b6ab433dc9e9")
 	)
 	(wire
 		(pts
@@ -3062,6 +3082,16 @@
 	)
 	(wire
 		(pts
+			(xy 88.9 167.64) (xy 91.44 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94266a62-f72f-4fce-b1c7-00174ab15a6d")
+	)
+	(wire
+		(pts
 			(xy 71.12 124.46) (xy 107.95 124.46)
 		)
 		(stroke
@@ -3089,6 +3119,16 @@
 			(type default)
 		)
 		(uuid "a0763ff3-e8cb-4f3e-9720-af9ffefbab74")
+	)
+	(wire
+		(pts
+			(xy 71.12 147.32) (xy 107.95 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2f88659-e688-40e2-84d8-5e894354e794")
 	)
 	(wire
 		(pts
@@ -3169,6 +3209,16 @@
 			(type default)
 		)
 		(uuid "bf265992-dd08-4271-8d57-e73c48ec08c4")
+	)
+	(wire
+		(pts
+			(xy 91.44 167.64) (xy 107.95 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4512f3d-5b7f-4466-bdb9-d3c50c14d7f0")
 	)
 	(wire
 		(pts
@@ -3312,16 +3362,6 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 139.7) (xy 107.95 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eb8a4f46-309c-46d6-bd62-c6e7d1b3f258")
-	)
-	(wire
-		(pts
 			(xy 143.51 114.3) (xy 232.41 114.3)
 		)
 		(stroke
@@ -3349,6 +3389,16 @@
 			(type default)
 		)
 		(uuid "f25eb74e-c7f2-4d9d-a0bd-30103500de3c")
+	)
+	(wire
+		(pts
+			(xy 88.9 165.1) (xy 91.44 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f54a8d06-6bfc-413f-aa00-83d1cef127b5")
 	)
 	(wire
 		(pts
@@ -5218,7 +5268,7 @@
 				(justify right)
 			)
 		)
-		(pin "D18" bidirectional
+		(pin "D14" bidirectional
 			(at 143.51 97.79 0)
 			(uuid "579d87d4-f0d0-40ac-bb09-862c99cbc0c8")
 			(effects
@@ -5228,7 +5278,7 @@
 				(justify right)
 			)
 		)
-		(pin "D19" bidirectional
+		(pin "D15" bidirectional
 			(at 143.51 100.33 0)
 			(uuid "dc2b7a96-add8-4a5c-b257-b75ef69aa512")
 			(effects
@@ -5529,7 +5579,7 @@
 			)
 		)
 		(pin "USB_D_N" bidirectional
-			(at 107.95 139.7 180)
+			(at 107.95 147.32 180)
 			(uuid "01c4ed7d-1097-43dd-96cb-c720b8c84e2b")
 			(effects
 				(font
@@ -5539,7 +5589,7 @@
 			)
 		)
 		(pin "USB_D_P" bidirectional
-			(at 107.95 137.16 180)
+			(at 107.95 144.78 180)
 			(uuid "a17eed48-d536-42b9-9f87-37618d484c03")
 			(effects
 				(font
@@ -5558,9 +5608,19 @@
 				(justify left)
 			)
 		)
-		(pin "WIFI_UART_SEL" output
-			(at 107.95 186.69 180)
-			(uuid "b3130c7c-8fbc-4f59-b272-0cb62aacea11")
+		(pin "WIFI_DL_UART_RX" input
+			(at 107.95 167.64 180)
+			(uuid "71c6f540-d856-4d02-acc8-33d7f553561a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "WIFI_DL_UART_TX" output
+			(at 107.95 165.1 180)
+			(uuid "9b907495-f4ac-4aea-a4e5-c859f685d47a")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5578,134 +5638,7 @@
 	)
 	(sheet
 		(at 39.37 111.76)
-		(size 31.75 30.48)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 255 255 194 1)
-		)
-		(uuid "991805c7-2bd3-48b9-a38c-b72d3ef8139f")
-		(property "Sheetname" "USB Power Delivery"
-			(at 39.37 111.0484 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "phyduino_pico2_usbpd.kicad_sch"
-			(at 39.37 142.8246 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "I2C1_SCL" input
-			(at 71.12 116.84 0)
-			(uuid "3f189e4d-dd96-4929-b1b6-367ba44b2a30")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "I2C1_SDA" bidirectional
-			(at 71.12 114.3 0)
-			(uuid "cf2cb279-3fe0-4d4c-96d5-f92aa7813a29")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "USBPD_FLIP" output
-			(at 71.12 124.46 0)
-			(uuid "adb2777b-9f61-4c2f-bbc7-9e7b62909fc8")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "USBPD_GPIO" output
-			(at 71.12 127 0)
-			(uuid "d0f85dee-e1c0-4975-aa66-531633bfdb5a")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "USBPD_INT" output
-			(at 71.12 121.92 0)
-			(uuid "0e818239-be07-45cd-8fa8-4c0ddbe9eacc")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "PSW_STATUS" output
-			(at 71.12 130.81 0)
-			(uuid "78a16b01-7e82-49e0-ade6-1f717983fd2d")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "USB_D_N" bidirectional
-			(at 71.12 139.7 0)
-			(uuid "29bc8954-0245-4607-935a-0a1c05ad4b84")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "USB_D_P" bidirectional
-			(at 71.12 137.16 0)
-			(uuid "4d4acbe7-1896-4841-bd56-9cd80648bf6b")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(instances
-			(project "phyduino_pico2"
-				(path "/42309c5d-9d7a-429d-b353-e8927a604374"
-					(page "4")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 39.37 171.45)
-		(size 31.75 20.32)
+		(size 31.75 80.01)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -5719,8 +5652,8 @@
 			(color 255 255 194 1)
 		)
 		(uuid "caa003fc-dd7d-454a-95fd-499db9ef27e8")
-		(property "Sheetname" "Wifi Interface"
-			(at 39.37 170.7384 0)
+		(property "Sheetname" "Communication & Power Delivery"
+			(at 39.37 111.0484 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5752,9 +5685,9 @@
 				(justify right)
 			)
 		)
-		(pin "WIFI_UART_CTS" output
+		(pin "WIFI_AT_UART_CTS" output
 			(at 71.12 179.07 0)
-			(uuid "2daabcf2-208a-4a70-a517-9d57362fc41c")
+			(uuid "ee6ee458-cc82-48be-9375-6ee165703308")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5762,9 +5695,9 @@
 				(justify right)
 			)
 		)
-		(pin "WIFI_UART_RTS" input
+		(pin "WIFI_AT_UART_RTS" input
 			(at 71.12 181.61 0)
-			(uuid "5b2bd613-03c9-4bc7-85e7-a75a88f2cf4b")
+			(uuid "7f02bd8d-0cc7-4748-8f66-947bc2b3474f")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5772,9 +5705,9 @@
 				(justify right)
 			)
 		)
-		(pin "WIFI_UART_RX" input
+		(pin "WIFI_AT_UART_RX" input
 			(at 71.12 176.53 0)
-			(uuid "0433f00c-05c0-4589-a28d-4efed6a0ebc9")
+			(uuid "bfca2a3a-adde-4f6e-945c-34ae2cbc09d5")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5782,9 +5715,9 @@
 				(justify right)
 			)
 		)
-		(pin "WIFI_UART_TX" output
+		(pin "WIFI_AT_UART_TX" output
 			(at 71.12 173.99 0)
-			(uuid "3438a243-a801-41f1-bcaf-22dd7c68e31d")
+			(uuid "b988ff35-c359-4d43-91a7-146618df7afc")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5792,9 +5725,99 @@
 				(justify right)
 			)
 		)
-		(pin "WIFI_UART_SEL" input
-			(at 71.12 186.69 0)
-			(uuid "9bff960c-1c00-43fc-bf01-9ba4f65cafd3")
+		(pin "WIFI_DL_UART_RX" input
+			(at 71.12 167.64 0)
+			(uuid "1d9ec86f-5b45-4f26-b497-6bb499872cf1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "WIFI_DL_UART_TX" output
+			(at 71.12 165.1 0)
+			(uuid "165a28b6-72d8-4f9b-a337-5931443773c8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "I2C1_SCL" input
+			(at 71.12 116.84 0)
+			(uuid "4e621ca1-fd00-48df-a986-c8234b531856")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "I2C1_SDA" bidirectional
+			(at 71.12 114.3 0)
+			(uuid "4180f8c2-fcd6-467d-91c7-53f856564233")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "PSW_STATUS" output
+			(at 71.12 130.81 0)
+			(uuid "b48348da-a1cd-4121-bbc6-4fec0e8c1e74")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "USBPD_FLIP" output
+			(at 71.12 124.46 0)
+			(uuid "39388494-3740-416c-a500-a26cc0a078db")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "USBPD_GPIO" output
+			(at 71.12 127 0)
+			(uuid "0656fb73-b12b-4689-a93d-7362f074ed1d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "USBPD_INT" output
+			(at 71.12 121.92 0)
+			(uuid "a29b639f-b3d9-41e0-bd33-5cb119281e54")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "USB_D_N" bidirectional
+			(at 71.12 147.32 0)
+			(uuid "69b05da2-b0bc-44b1-867b-390883a034ac")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "USB_D_P" bidirectional
+			(at 71.12 144.78 0)
+			(uuid "fdf69a19-3057-441c-95c4-135e6abd0e18")
 			(effects
 				(font
 					(size 1.27 1.27)

@@ -50,7 +50,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.25
+          "min_clearance": 0.15
         }
       },
       "diff_pair_dimensions": [
@@ -846,7 +846,7 @@
         "uuid": "42309c5d-9d7a-429d-b353-e8927a604374"
       }
     ],
-    "used_designators": "",
+    "used_designators": "R58-59,C7,U10",
     "variants": [
       {
         "name": "Digikey"
@@ -864,11 +864,7 @@
     ],
     [
       "caa003fc-dd7d-454a-95fd-499db9ef27e8",
-      "Wifi Interface"
-    ],
-    [
-      "991805c7-2bd3-48b9-a38c-b72d3ef8139f",
-      "USB Power Delivery"
+      "Communication & Power Delivery"
     ]
   ],
   "text_variables": {},
