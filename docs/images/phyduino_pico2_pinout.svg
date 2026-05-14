@@ -23,15 +23,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.0084307"
-     inkscape:cx="644.07003"
-     inkscape:cy="608.371"
+     inkscape:zoom="2.6893196"
+     inkscape:cx="660.20417"
+     inkscape:cy="638.26554"
      inkscape:window-width="1920"
      inkscape:window-height="961"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g637"
+     inkscape:current-layer="g33"
      showgrid="false"
      showguides="false">
     <inkscape:grid
@@ -422,6 +422,74 @@
        d="m 152.15622,159.589 v 36.81298"
        id="path615-7"
        inkscape:label="SEPERATOR" />
+    <g
+       id="g633"
+       inkscape:label="PWM CAPABILE">
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:2.82223px;font-family:'Tekton Pro';-inkscape-font-specification:'Tekton Pro Bold';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.499999;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+         x="117.96122"
+         y="181.0739"
+         id="text629"><tspan
+           sodipodi:role="line"
+           id="tspan629"
+           style="stroke-width:0.5"
+           x="117.96122"
+           y="181.0739">PWM CAPABLE PIN</tspan></text>
+      <g
+         id="g614-17"
+         inkscape:label="PWM Path"
+         transform="matrix(1.4400326,0,0,1.4400326,-73.412691,-48.355184)"
+         style="stroke-width:0.694429">
+        <path
+           style="fill:none;fill-opacity:1;stroke:#999999;stroke-width:0.138886;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+           d="m 129.80922,158.72496 c 0.0302,-0.95718 0.97308,-1.16038 0.97877,0.002"
+           id="path7-06"
+           sodipodi:nodetypes="cc" />
+        <path
+           style="fill:none;fill-opacity:1;stroke:#999999;stroke-width:0.138886;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+           d="m 130.78588,158.74055 c 0,1.1205 0.98439,1.2212 0.99037,7e-4"
+           id="path7-4-0"
+           sodipodi:nodetypes="cc" />
+        <path
+           style="fill:none;fill-opacity:1;stroke:#999999;stroke-width:0.138886;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+           d="m 129.80003,158.72647 -0.60753,0.008"
+           id="path8-85" />
+        <path
+           style="fill:none;fill-opacity:1;stroke:#999999;stroke-width:0.138887;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+           d="m 131.76845,158.72786 h 0.0478 0.45447"
+           id="path614-39"
+           sodipodi:nodetypes="ccc" />
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:1.95984px;font-family:'Tekton Pro';-inkscape-font-specification:'Tekton Pro Bold';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.347214;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       x="139.12791"
+       y="181.00235"
+       id="text621"
+       transform="matrix(1.4400326,0,0,1.4400326,-44.401343,-97.064372)"
+       inkscape:label="NOTE"><tspan
+         sodipodi:role="line"
+         id="tspan621"
+         style="stroke-width:0.347214"
+         x="139.12791"
+         y="181.00235">The follwing peripherals, UART1 and </tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.347214"
+         x="139.12791"
+         y="183.45215"
+         id="tspan622">I2C1 are used by internal components</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.347214"
+         x="139.12791"
+         y="185.90195"
+         id="tspan624">refer to user manual for details on</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.347214"
+         x="139.12791"
+         y="188.35175"
+         id="tspan627">for wiring and programming.</tspan></text>
   </g>
   <text
      xml:space="preserve"
@@ -20717,32 +20785,6 @@
            style="stroke-width:0.347214;fill:#000000;fill-opacity:1;stroke:none"
            x="140.4258"
            y="180.54938" /></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:bold;font-size:1.95984px;font-family:'Tekton Pro';-inkscape-font-specification:'Tekton Pro Bold';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.347214;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-         x="139.12791"
-         y="181.00235"
-         id="text621"><tspan
-           sodipodi:role="line"
-           id="tspan621"
-           style="stroke-width:0.347214"
-           x="139.12791"
-           y="181.00235">The follwing peripherals, UART  1 and </tspan><tspan
-           sodipodi:role="line"
-           style="stroke-width:0.347214"
-           x="139.12791"
-           y="183.45215"
-           id="tspan622">I2C1 are used by internal components</tspan><tspan
-           sodipodi:role="line"
-           style="stroke-width:0.347214"
-           x="139.12791"
-           y="185.90195"
-           id="tspan624">refer to user manual for details on</tspan><tspan
-           sodipodi:role="line"
-           style="stroke-width:0.347214"
-           x="139.12791"
-           y="188.35175"
-           id="tspan627">for wiring and programming.</tspan></text>
     </g>
     <g
        id="g630"
