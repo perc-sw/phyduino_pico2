@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="18"
+   height="18"
+   viewBox="0 0 24 24"
+   fill="none"
+   stroke="currentColor"
+   stroke-width="2"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="icon-pcb-layers.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     showguides="true"
+     inkscape:zoom="41.833333"
+     inkscape:cx="8.9880479"
+     inkscape:cy="8.9760957"
+     inkscape:window-width="1033"
+     inkscape:window-height="961"
+     inkscape:window-x="50"
+     inkscape:window-y="32"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3" />
+  <path
+     d="M 5.5693505,10.087498 2.8494572,11.804359 12.098477,17.1027 21.347496,11.804359 18.369662,10.125026"
+     id="path1"
+     sodipodi:nodetypes="ccccc"
+     style="stroke-width:2;stroke:#885010;stroke-opacity:1" />
+  <path
+     d="m 5.5923809,13.689308 -2.7198933,1.71686 9.2490194,5.29834 9.249019,-5.29834 -2.977834,-1.679333"
+     id="path1-6"
+     sodipodi:nodetypes="ccccc"
+     style="stroke-width:2;stroke:#885010;stroke-opacity:1" />
+  <path
+     d="M 11.974112,2.9362631 21.223131,8.234604 11.974112,13.532945 2.7250929,8.234604 Z"
+     id="path3"
+     style="stroke-width:2;stroke:#885010;stroke-opacity:1" />
+</svg>

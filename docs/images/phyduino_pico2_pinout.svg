@@ -23,15 +23,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="2.6893196"
-     inkscape:cx="660.20417"
-     inkscape:cy="638.26554"
+     inkscape:zoom="6.1039955"
+     inkscape:cx="629.17806"
+     inkscape:cy="282.19221"
      inkscape:window-width="1920"
      inkscape:window-height="961"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g33"
+     inkscape:current-layer="g32"
      showgrid="false"
      showguides="false">
     <inkscape:grid
@@ -22812,48 +22812,49 @@
          xml:space="preserve"
          style="font-weight:bold;font-size:2.82222px;font-family:'Tekton Pro';-inkscape-font-specification:'Tekton Pro Bold';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
          x="177.01367"
-         y="66.424774"
+         y="65.991623"
          id="text1-6"><tspan
            sodipodi:role="line"
            id="tspan1-6"
            style="font-size:2.82222px;fill:#000000;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
            x="177.01367"
-           y="66.424774">SPI</tspan></text>
+           y="65.991623">SPI</tspan></text>
       <text
          xml:space="preserve"
-         style="font-weight:bold;font-size:2.82222px;font-family:'Tekton Pro';-inkscape-font-specification:'Tekton Pro Bold';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
-         x="189.12251"
-         y="66.486778"
-         id="text1-6-6"><tspan
+         style="font-weight:bold;font-size:2.82227px;font-family:'Tekton Pro';-inkscape-font-specification:'Tekton Pro Bold';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
+         x="189.11899"
+         y="66.012604"
+         id="text1-6-6"
+         transform="scale(1.0000186,0.9999814)"><tspan
            sodipodi:role="line"
            id="tspan1-6-1"
-           style="font-size:2.82222px;fill:#000000;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
-           x="189.12251"
-           y="66.486778">I<tspan
+           style="font-size:2.82227px;fill:#000000;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
+           x="189.11899"
+           y="66.012604">I<tspan
    style="font-size:65%;baseline-shift:super"
-   id="tspan2">2</tspan>C</tspan></text>
+   id="tspan633">2</tspan>C</tspan></text>
       <text
          xml:space="preserve"
          style="font-weight:bold;font-size:2.82222px;font-family:'Tekton Pro';-inkscape-font-specification:'Tekton Pro Bold';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
          x="156.12463"
-         y="66.203644"
+         y="66.036781"
          id="text1-6-4"><tspan
            sodipodi:role="line"
            id="tspan1-6-8"
            style="font-size:2.82222px;fill:#000000;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
            x="156.12463"
-           y="66.203644">UART</tspan></text>
+           y="66.036781">UART</tspan></text>
       <text
          xml:space="preserve"
          style="font-weight:bold;font-size:2.82222px;font-family:'Tekton Pro';-inkscape-font-specification:'Tekton Pro Bold';writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-dasharray:none"
          x="165.89279"
-         y="66.249435"
+         y="66.017021"
          id="text1-6-4-7"><tspan
            sodipodi:role="line"
            id="tspan1-6-8-2"
            style="font-size:2.82222px;fill:#000000;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
            x="165.89279"
-           y="66.249435">PWM</tspan></text>
+           y="66.017021">PWM</tspan></text>
     </g>
   </g>
 </svg>

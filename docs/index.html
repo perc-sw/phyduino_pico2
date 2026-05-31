@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="https://www.physics.utoronto.ca/static/utphy_themes/favicon/favicon.ico">
+<title>Phyduino Pico2 · U of T Physics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style/uoft_physics_perc_sw.css">
+</head>
+<body>
+
+<!-- ── U of T Physics site header ── -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="header-logo" href="https://www.physics.utoronto.ca/">
+      <img class="header-logo-img" src="https://www.physics.utoronto.ca/static/utphy_themes/images/Physics-Logo-White.png" alt="University of Toronto Department of Physics">
+    </a>
+    <span class="header-board-title">Phyduino Pico2</span>
+  </div>
+</header>
+
+<!-- breadcrumb -->
+<div class="breadcrumb-bar" aria-label="Breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="https://www.physics.utoronto.ca/">Physics</a>
+    <span class="sep" aria-hidden="true">›</span>
+    <a href="https://www.physics.utoronto.ca/physics-at-uoft/services/plrs/electronic-support-services/">Electronic Support Services</a>
+    <span class="sep" aria-hidden="true">›</span>
+    <a href="https://plrs.physics.utoronto.ca/course-listing/">Introduction to Electronics</a>
+    <!-- <span class="sep" aria-hidden="true">›</span> -->
+    <!-- <span class="current">Phyduino Pico</span> -->
+  </div>
+</div>
+
+<!-- ── Page content ── -->
+<div class="page-wrap">
+
+  <div class="board-hero">
+    <div class="board-hero-text">
+      <span class="board-tag">Introduction to Electronics - Phyduino Pico2</span>
+      <div class="board-img-panel">
+      <img src="./images/phyduino_pico2.png" alt="Phyduino Pico2 board, top view" onerror="this.style.display='none'">
+    </div>
+      <p class="board-desc">
+        An Arduino Uno-style development board built around the Raspberry Pi RP2350 microcontroller,
+        and designed for the Introduction to Electronics course. Students learn surface-mount
+        soldering techniques, microcontroller programming, analog-to-digital conversion and digital
+        communication.
+      </p>
+      <div class="spec-row">
+        <span class="spec-pill">RP2350</span>
+        <span class="spec-pill">4-layer PCB</span>
+        <span class="spec-pill">USB-C PD</span>
+        <span class="spec-pill">Data Acquisition</span>
+        <span class="spec-pill">Wireless Communication</span>
+        <span class="spec-pill">Rev-A</span>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Assembly resources -->
+  <div class="section-head"><h2>Assembly resources</h2></div>
+  <div class="resource-grid">
+    <a class="res-card" href="./bom/ibom.html">
+      <div class="res-icon blue" aria-hidden="true">
+        <img class="res-icon.img" src="images/icon-bom.svg">
+      </div>
+      <span class="res-label">Interactive BoM</span>
+      <span class="res-desc">
+        Interactive Bill of materials for easy assembly of the PCB. Click any component on the PCB layout to highlight its 
+        part number/value of the component in the chart and vice versa. 
+      </span>
+      <span class="res-ext">HTML</span>
+    </a>
+    <a class="res-card" href="./pdf/board/phyduino_pico2-schematic.pdf">
+      <div class="res-icon green" aria-hidden="true">
+        <img class="res-icon.img" src="images/icon-schematic.svg">
+      </div>
+      <span class="res-label">Schematic</span>
+      <span class="res-desc">Full circuit schematic pdf</span>
+      <span class="res-ext">PDF</span>
+    </a>
+    <div class="res-card">
+      <div class="res-icon amber" aria-hidden="true">
+        <img class="res-icon.img" src="images/icon-pcb-layers.svg">
+      </div>
+      <span class="res-label">PCB Drawings</span>
+      <span class="res-desc">Copper layer drawings and fabrication package for ordering boards.</span>
+      <div class="res-file-list">
+        <a class="res-file-row" href="./pdf/board/phyduino_pico2_pcb-top.pdf">Top layer Cu<span class="res-file-tag">PDF</span></a>
+        <a class="res-file-row" href="./pdf/board/phyduino_pico_pcb_inner1.pdf">Inner layer 1 Cu<span class="res-file-tag">PDF</span></a>
+        <a class="res-file-row" href="./pdf/board/phyduino_pico_pcb_inner2.pdf">Inner layer 2 Cu<span class="res-file-tag">PDF</span></a>
+        <a class="res-file-row" href="./pdf/board/phyduino_pico2_pcb-bottom.pdf">Bottom layer Cu<span class="res-file-tag">PDF</span></a>
+        <a class="res-file-row" href="">Fabrication files <span class="res-file-tag">ZIP</span></a>
+      </div>
+    </div>
+    <a class="res-card" href="./models/phyduino_pico2.step">
+      <div class="res-icon red" aria-hidden="true">
+        <img class="res-icon.img" src="images/icon-3d-model.svg">
+      </div>
+      <span class="res-label">3D model</span>
+      <span class="res-desc">STEP file for mechanical clearance and enclosure design.</span>
+      <span class="res-ext">.step</span>
+    </a>
+  </div>
+
+  <!-- Datasheets -->
+  <div class="section-head"><h2>Key component datasheets</h2></div>
+  <div class="ds-table-wrap">
+    <table class="ds-table">
+      <tbody>
+        <tr>
+          <td>RP2350</td>
+          <td>Raspberry Pi dual-core Cortex-M33/Hazard 3 microcontroller</td>
+          <td><a class="ds-link" href="./pdf/datasheets/MCU - RP2350.pdf">PDF</a></td>
+        </tr>
+        <tr>
+          <td>ESP32-C61-MINI-1</td>
+          <td>Wireless module 2.4 GHz Wi-Fi 6 (802.11ax), Bluetooth® 5 (LE)</td>
+          <td><a class="ds-link" href="./pdf/datasheets/WiFi - ESP32-C61-MINI-1.pdf">PDF</a></td>
+        </tr>
+        <tr>
+          <td>AT25QF128A</td>
+          <td>128-Mbit Serial NOR Flash Memory</td>
+          <td><a class="ds-link" href="./pdf/datasheets/QSPI Flash - AT25SF128A.pdf">PDF</a></td>
+        </tr>
+        <tr>
+          <td>24AA64F</td>
+          <td>64Kbit I2C Serial EEPROM</td>
+          <td><a class="ds-link" href="./pdf/datasheets/EEPROM - 24AA64F.pdf">PDF</a></td>
+        </tr>
+        <tr>
+          <td>AP337725A</td>
+          <td>USB Power Delivery 3.1 EPR sink controller</td>
+          <td><a class="ds-link" href="./pdf/datasheets/USBPD - AP33772S.pdf">PDF</a></td>
+        </tr>
+        <tr>
+          <td>AP63200</td>
+          <td>3.8V TO 32V Input, 2A Low IQ Synchronous Buck Regulator</td>
+          <td><a class="ds-link" href="./pdf/datasheets/DCDC - AP63200.pdf">PDF</a></td>
+        </tr>
+        <tr>
+          <td>TPS2121</td>
+          <td> 2.8-V to 22-V Priority Power MUX</td>
+          <td><a class="ds-link" href="./pdf/datasheets/PMUX - TPS2121.pdf">PDF</a></td>
+        </tr>
+        <tr>
+          <td>ADS7038</td>
+          <td>8-Channel, 12-Bit ADC with SPI Interface, GPIOs</td>
+          <td><a class="ds-link" href="./pdf/datasheets/ADC- ADS7038.pdf">PDF</a></td>
+        </tr>
+        <tr>
+          <td>PCA9570</td>
+          <td>4-bit general purpose outputs for 1 MHz I2C-bus</td>
+          <td><a class="ds-link" href="./pdf/datasheets/IO-Expander - PCA9570.pdf">PDF</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+  <!-- Repo links -->
+  <div class="section-head"><h2>Course Repositories</h2></div>
+  <div class="repo-links">
+    <a class="repo-row" href="https://github.com/perc-sw/phyduino_pico2">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      <span>
+        <span class="repo-row-label">GitHub · </span>
+        <span class="repo-row-name">Phyduino Pico2</span>
+      </span>
+      <svg class="repo-row-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+    </a>
+    <a class="repo-row" href="https://github.com/perc-sw/analog_shield2">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      <span>
+        <span class="repo-row-label">GitHub · </span>
+        <span class="repo-row-name">Analog Shield2</span>
+      </span>
+      <svg class="repo-row-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+    </a>
+    <a class="repo-row" href="https://github.com/perc-sw/phyduino_pico">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      <span>
+        <span class="repo-row-label">GitHub · </span>
+        <span class="repo-row-name">Phyduino Pico</span>
+      </span>
+      <svg class="repo-row-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+    </a>
+    <a class="repo-row" href="https://github.com/perc-sw/analog_shield">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      <span>
+        <span class="repo-row-label">GitHub · </span>
+        <span class="repo-row-name">Analog Shield</span>
+      </span>
+      <svg class="repo-row-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+    </a>
+  </div>
+
+</div><!-- end page-wrap -->
+
+<!-- ── Footer ── -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a href="https://www.physics.utoronto.ca">
+    <img class="footer-logo" src="https://www.physics.utoronto.ca/static/utphy_themes/images/Physics-Logo-White.png">
+    </a>
+    <div class="social-media">
+      
+      <ul class="footer-social-media-list">
+        
+        <li title="send email">
+          <a href="mailto:physics.perc@utoronto.ca" aria-label="send email" class="dark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mail">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
+              <path d="M3 7l9 6l9 -6"></path>
+            </svg>
+          </a>
+        </li>
+    
+        <li title="facebook">
+          <a href="https://www.facebook.com/PhysicsUofT/" aria-label="visit facebook page" class="dark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+            </svg>
+          </a>
+        </li>
+    
+        <li title="X, formerly known as twitter">
+          <a href="https://twitter.com/uoftphysics" aria-label="visit x formerly known as twitter" class="dark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+              <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+            </svg>
+          </a>
+        </li>
+    
+        <li title="instagram">
+          <a href="https://www.instagram.com/uoftphysics" aria-label="visit instagram" class="dark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path><path d="M16.5 7.5v.01"></path></svg>
+          </a>
+        </li>
+    
+        <li title="youtube">
+          <a href="https://www.youtube.com//channel/UCH2J2YJx3nfN1KygnB1ub4w" aria-label="visit youtube" class="dark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z"></path><path d="M10 9l5 3l-5 3z"></path></svg>
+          </a>
+        </li>
+      
+      </ul>
+
+    </div>
+    
+  </div>
+</footer>
+
+</body>
+</html>
