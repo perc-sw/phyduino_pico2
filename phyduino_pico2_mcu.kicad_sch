@@ -10765,7 +10765,7 @@
 	)
 	(hierarchical_label "USBPD_INT"
 		(shape input)
-		(at 187.96 198.12 0)
+		(at 187.96 203.2 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11162,7 +11162,7 @@
 	)
 	(hierarchical_label "USBPD_FLIP"
 		(shape input)
-		(at 187.96 203.2 0)
+		(at 187.96 198.12 0)
 		(effects
 			(font
 				(size 1.27 1.27)

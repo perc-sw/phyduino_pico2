@@ -2602,13 +2602,13 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 72.39) (xy 45.72 72.39)
+			(xy 45.72 72.39) (xy 67.31 72.39)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1a34ce98-979b-40ee-a8dd-3fe88d28eaa8")
+		(uuid "1c533905-9189-4cce-9336-96f1ffeafc55")
 	)
 	(wire
 		(pts
@@ -3102,16 +3102,6 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 58.42) (xy 67.31 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9eee9b44-2218-4164-99e9-f376b0148045")
-	)
-	(wire
-		(pts
 			(xy 143.51 162.56) (xy 232.41 162.56)
 		)
 		(stroke
@@ -3389,6 +3379,16 @@
 			(type default)
 		)
 		(uuid "f25eb74e-c7f2-4d9d-a0bd-30103500de3c")
+	)
+	(wire
+		(pts
+			(xy 67.31 58.42) (xy 67.31 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4ba171e-a6c1-4d73-bd1c-7ecaac73243b")
 	)
 	(wire
 		(pts
@@ -4550,7 +4550,7 @@
 				)
 			)
 		)
-		(property "Value" "+VUSB"
+		(property "Value" "+VIN"
 			(at 67.31 54.61 0)
 			(show_name no)
 			(do_not_autoplace no)
