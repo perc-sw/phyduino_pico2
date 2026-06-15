@@ -660,7 +660,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "svg/",
+      "plot": "fabrication/",
       "specctra_dsn": "",
       "vrml": ""
     },
@@ -862,7 +862,7 @@
         "uuid": "42309c5d-9d7a-429d-b353-e8927a604374"
       }
     ],
-    "used_designators": "#PWR20",
+    "used_designators": "#PWR103,#PWR105",
     "variants": [
       {
         "name": "Digikey"
