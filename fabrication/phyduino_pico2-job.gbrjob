@@ -3,15 +3,15 @@
     "GenerationSoftware": {
       "Vendor": "KiCad",
       "Application": "Pcbnew",
-      "Version": "10.0.1-10.0.1~ubuntu24.04.1"
+      "Version": "10.0.3-10.0.3~ubuntu24.04.1"
     },
-    "CreationDate": "2026-05-04T15:37:17-04:00"
+    "CreationDate": "2026-06-14T19:04:54-04:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "phyduino_pico2",
       "GUID": "70687964-7569-46e6-9f5f-7069636f322e",
-      "Revision": "rev?"
+      "Revision": "A"
     },
     "Size": {
       "X": 68.68,
@@ -101,6 +101,7 @@
     {
       "Type": "Legend",
       "Color": "White",
+      "Material": "Liquid Photo",
       "Name": "Top Silk Screen"
     },
     {
@@ -109,8 +110,9 @@
     },
     {
       "Type": "SolderMask",
-      "Color": "Red",
+      "Color": "Blue",
       "Thickness": 0.01,
+      "Material": "Liquid Ink",
       "Name": "Top Solder Mask"
     },
     {
@@ -159,8 +161,9 @@
     },
     {
       "Type": "SolderMask",
-      "Color": "Red",
+      "Color": "Blue",
       "Thickness": 0.01,
+      "Material": "Liquid Ink",
       "Name": "Bottom Solder Mask"
     },
     {
@@ -170,6 +173,7 @@
     {
       "Type": "Legend",
       "Color": "White",
+      "Material": "Liquid Photo",
       "Name": "Bottom Silk Screen"
     }
   ]
