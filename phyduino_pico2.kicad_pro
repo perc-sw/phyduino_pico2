@@ -60,9 +60,9 @@
           "hatch_smoothing_level": 0,
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
-          "min_clearance": 0.25,
+          "min_clearance": 0.12,
           "min_island_area": 10.0,
-          "min_thickness": 0.25,
+          "min_thickness": 0.1,
           "pad_connection": 2,
           "remove_islands": 0,
           "thermal_relief_gap": 0.5,
@@ -271,7 +271,29 @@
     },
     "layer_pairs": [],
     "layer_presets": [],
-    "viewports": []
+    "viewports": [
+      {
+        "h": 16485182.120051093,
+        "name": "ADC/GPIO",
+        "w": 22554000.510855705,
+        "x": 73461774.71263687,
+        "y": 65874909.32314227
+      },
+      {
+        "h": 24727773.18007666,
+        "name": "DCDCs",
+        "w": 33831000.76628356,
+        "x": 27568688.122585513,
+        "y": 55451918.77396032
+      },
+      {
+        "h": 24727773.18007666,
+        "name": "MCU",
+        "w": 33831000.76628357,
+        "x": 48756485.82374823,
+        "y": 35576775.478953846
+      }
+    ]
   },
   "boards": [],
   "component_class_settings": {
@@ -812,6 +834,18 @@
           "label": "#",
           "name": "${ITEM_NUMBER}",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "FLASH_SIZE",
+          "name": "FLASH_SIZE",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "RAM_SIZE",
+          "name": "RAM_SIZE",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -862,7 +896,7 @@
         "uuid": "42309c5d-9d7a-429d-b353-e8927a604374"
       }
     ],
-    "used_designators": "#PWR103,#PWR105",
+    "used_designators": "D2-5,#PWR8,#PWR20,#PWR34-35,#PWR49-52,#PWR86,#PWR101,#PWR103,#PWR105,R53-54,R60-63,R141-142,R144,TP11,TP27,U2-3,C6",
     "variants": [
       {
         "name": "Digikey"

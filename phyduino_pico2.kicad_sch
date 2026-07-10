@@ -3668,6 +3668,17 @@
 				)
 			)
 		)
+		(property "Tolerance" ""
+			(at 300.99 256.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(instances
 			(project "phyduino_pico2"
 				(path "/42309c5d-9d7a-429d-b353-e8927a604374"
@@ -3758,6 +3769,17 @@
 			)
 		)
 		(property "KiLib_Generator" "mounting_hardware/mounting_hole"
+			(at 295.91 256.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" ""
 			(at 295.91 256.54 0)
 			(hide yes)
 			(show_name no)
@@ -3911,6 +3933,17 @@
 			)
 		)
 		(property "KiLib_Generator" "connector/pin_header_socket"
+			(at 237.49 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" ""
 			(at 237.49 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -4081,6 +4114,17 @@
 			)
 		)
 		(property "KiLib_Generator" "connector/Amphenol"
+			(at 237.49 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" ""
 			(at 237.49 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -4318,6 +4362,17 @@
 				)
 			)
 		)
+		(property "Tolerance" ""
+			(at 237.49 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "bff13611-2463-47ff-82a9-f8d728def6b9")
 		)
@@ -4484,6 +4539,17 @@
 			)
 		)
 		(property "KiLib_Generator" "connector/pin_header_socket"
+			(at 40.64 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" ""
 			(at 40.64 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -5062,6 +5128,17 @@
 				)
 			)
 		)
+		(property "Tolerance" ""
+			(at 237.49 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a68488e0-79c5-4def-b6c1-3c2432112672")
 		)
@@ -5378,7 +5455,7 @@
 				(justify right)
 			)
 		)
-		(pin "HS_I2C0_SCL" bidirectional
+		(pin "HS_I2C1_SCL" bidirectional
 			(at 143.51 116.84 0)
 			(uuid "be440122-b1e6-4c8f-843f-38b5a8e6b5d9")
 			(effects
@@ -5388,7 +5465,7 @@
 				(justify right)
 			)
 		)
-		(pin "HS_I2C0_SDA" bidirectional
+		(pin "HS_I2C1_SDA" bidirectional
 			(at 143.51 114.3 0)
 			(uuid "5ac18320-040f-403b-ab23-c22a247da8a3")
 			(effects
@@ -5458,7 +5535,7 @@
 				(justify left)
 			)
 		)
-		(pin "WIFI_UART_CTS" output
+		(pin "WIFI_UART_CTS" input
 			(at 107.95 179.07 180)
 			(uuid "36ff418d-9daf-4c90-a473-fd4705092d97")
 			(effects
@@ -5468,7 +5545,7 @@
 				(justify left)
 			)
 		)
-		(pin "WIFI_UART_RTS" input
+		(pin "WIFI_UART_RTS" output
 			(at 107.95 181.61 180)
 			(uuid "f87dbe90-6606-4e43-8cd9-5473c53af3fe")
 			(effects
