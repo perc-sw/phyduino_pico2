@@ -287,6 +287,13 @@
         "y": 55451918.77396032
       },
       {
+        "h": 24873861.39261746,
+        "name": "External Memory",
+        "w": 42197207.27100657,
+        "x": 27121396.36456673,
+        "y": 31896456.742620606
+      },
+      {
         "h": 24727773.18007666,
         "name": "MCU",
         "w": 33831000.76628357,
@@ -694,7 +701,7 @@
       "method": 0,
       "sort_order": 0
     },
-    "bom_export_filename": "docs/phyduino_pico_2.csv",
+    "bom_export_filename": "docs\\bom\\Power Dist.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -728,22 +735,22 @@
           "show": true
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "DNP",
           "name": "${DNP}",
-          "show": true
+          "show": false
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Exclude from BOM",
           "name": "${EXCLUDE_FROM_BOM}",
           "show": true
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Exclude from Board",
           "name": "${EXCLUDE_FROM_BOARD}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
@@ -755,7 +762,7 @@
           "group_by": false,
           "label": "Datasheet",
           "name": "Datasheet",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
@@ -797,7 +804,7 @@
           "group_by": false,
           "label": "PN",
           "name": "PN",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -815,7 +822,7 @@
           "group_by": false,
           "label": "Variant",
           "name": "Variant",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -846,6 +853,18 @@
           "label": "RAM_SIZE",
           "name": "RAM_SIZE",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "VOLTAGE",
+          "name": "VOLTAGE",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MFR",
+          "name": "MFR",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -853,7 +872,7 @@
       "include_excluded_from_bom": true,
       "name": "",
       "sort_asc": true,
-      "sort_field": "Reference"
+      "sort_field": "Variant"
     },
     "bus_aliases": {},
     "connection_grid_size": 50.0,
@@ -884,7 +903,7 @@
     "meta": {
       "version": 1
     },
-    "page_layout_descr_file": "",
+    "page_layout_descr_file": "kicad-embed://ISO_B_PLRS.kicad_wks",
     "plot_directory": "",
     "reuse_designators": true,
     "subpart_first_id": 65,
@@ -896,7 +915,7 @@
         "uuid": "42309c5d-9d7a-429d-b353-e8927a604374"
       }
     ],
-    "used_designators": "D2-5,#PWR8,#PWR20,#PWR34-35,#PWR49-52,#PWR86,#PWR101,#PWR103,#PWR105,R53-54,R60-63,R141-142,R144,TP11,TP27,U2-3,C6",
+    "used_designators": "L1-2,D2-5,#PWR7-8,#PWR20,#PWR25,#PWR27-28,#PWR34-35,#PWR37-40,#PWR44,#PWR49-54,#PWR58-61,#PWR64-66,#PWR76-89,#PWR92-96,#PWR101,#PWR103,#PWR105,J6,J8,R6,R47-48,R51-54,R56-64,R134-139,R141-144,R146-151,R153-164,TP11,TP22,TP27,U2-3,U6,U8-10,U12-14,U108,C5-9,C16-19,C22-25,C27-29,C36,C131-132,C136-140",
     "variants": [
       {
         "name": "Digikey"
@@ -914,7 +933,11 @@
     ],
     [
       "caa003fc-dd7d-454a-95fd-499db9ef27e8",
-      "Communication & Power Delivery"
+      "Wireless Communication"
+    ],
+    [
+      "62a72eab-32a2-4607-a7e9-a45f8428aec8",
+      "Power"
     ]
   ],
   "text_variables": {},
