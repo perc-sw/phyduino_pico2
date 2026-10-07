@@ -5474,7 +5474,7 @@
 				)
 			)
 		)
-		(property "Description" "5.1kΩ 62.5mW 50V Thick Film Resistor ±1% 0402 Chip Resistor - Surface Mount RoHS"
+		(property "Description" ""
 			(at 74.93 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -5485,7 +5485,7 @@
 				)
 			)
 		)
-		(property "PN" "CHANGLONG"
+		(property "PN" ""
 			(at 74.93 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -5507,7 +5507,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "CHANGLONG"
+		(property "LCSC PN" ""
 			(at 74.93 102.87 90)
 			(hide yes)
 			(show_name no)
@@ -5518,7 +5518,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CHANGLONG"
+		(property "LCSC MANUFACTURER" ""
 			(at 74.93 102.87 90)
 			(hide yes)
 			(show_name no)
@@ -5529,7 +5529,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "13-RC0402FR-7W5K1LCT-ND"
+		(property "DIGIKEY PN" ""
 			(at 74.93 102.87 90)
 			(hide yes)
 			(show_name no)
@@ -5540,7 +5540,7 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
+		(property "DIGKEY MANUFACTURER" ""
 			(at 74.93 102.87 90)
 			(hide yes)
 			(show_name no)
@@ -5551,7 +5551,7 @@
 				)
 			)
 		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+		(property "KiLib_Generator" ""
 			(at 74.93 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -5778,7 +5778,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "0.033µF"
+		(property "Value" "0.1µF"
 			(at 81.4959 65.9693 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7300,7 +7300,7 @@
 				)
 			)
 		)
-		(property "Description" "5.1kΩ 62.5mW 50V Thick Film Resistor ±1% 0402 Chip Resistor - Surface Mount RoHS"
+		(property "Description" ""
 			(at 66.04 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -7311,7 +7311,7 @@
 				)
 			)
 		)
-		(property "PN" "CHANGLONG"
+		(property "PN" ""
 			(at 66.04 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -7333,7 +7333,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "CHANGLONG"
+		(property "LCSC PN" ""
 			(at 66.04 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -7344,7 +7344,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CHANGLONG"
+		(property "LCSC MANUFACTURER" ""
 			(at 66.04 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -7355,7 +7355,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "13-RC0402FR-7W5K1LCT-ND"
+		(property "DIGIKEY PN" ""
 			(at 66.04 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -7366,7 +7366,7 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
+		(property "DIGKEY MANUFACTURER" ""
 			(at 66.04 83.82 90)
 			(hide yes)
 			(show_name no)
@@ -7862,7 +7862,7 @@
 				)
 			)
 		)
-		(property "Description" "5.1kΩ 62.5mW 50V Thick Film Resistor ±1% 0402 Chip Resistor - Surface Mount RoHS"
+		(property "Description" ""
 			(at 66.04 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -7873,7 +7873,7 @@
 				)
 			)
 		)
-		(property "PN" "CHANGLONG"
+		(property "PN" ""
 			(at 66.04 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -7895,7 +7895,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "CHANGLONG"
+		(property "LCSC PN" ""
 			(at 66.04 99.06 90)
 			(hide yes)
 			(show_name no)
@@ -7906,7 +7906,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CHANGLONG"
+		(property "LCSC MANUFACTURER" ""
 			(at 66.04 99.06 90)
 			(hide yes)
 			(show_name no)
@@ -7917,7 +7917,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "13-RC0402FR-7W5K1LCT-ND"
+		(property "DIGIKEY PN" ""
 			(at 66.04 99.06 90)
 			(hide yes)
 			(show_name no)
@@ -7928,7 +7928,7 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
+		(property "DIGKEY MANUFACTURER" ""
 			(at 66.04 99.06 90)
 			(hide yes)
 			(show_name no)
@@ -9156,7 +9156,7 @@
 				)
 			)
 		)
-		(property "Value" "21kΩ"
+		(property "Value" "42.2kΩ"
 			(at 316.23 81.28 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9188,7 +9188,7 @@
 				)
 			)
 		)
-		(property "Description" "21kΩ ±1% 62.5mW 0402 Thick Film Resistor"
+		(property "Description" ""
 			(at 316.23 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -9199,7 +9199,7 @@
 				)
 			)
 		)
-		(property "PN" "FRC0402F2102TS"
+		(property "PN" ""
 			(at 316.23 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -9221,7 +9221,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C2998083"
+		(property "LCSC PN" ""
 			(at 316.23 81.28 90)
 			(hide yes)
 			(show_name no)
@@ -9232,7 +9232,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "FOJAN"
+		(property "LCSC MANUFACTURER" ""
 			(at 316.23 81.28 90)
 			(hide yes)
 			(show_name no)
@@ -9243,7 +9243,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "311-21.0KLRCT-ND"
+		(property "DIGIKEY PN" ""
 			(at 316.23 81.28 90)
 			(hide yes)
 			(show_name no)
@@ -9254,7 +9254,7 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
+		(property "DIGKEY MANUFACTURER" ""
 			(at 316.23 81.28 90)
 			(hide yes)
 			(show_name no)
@@ -9438,7 +9438,7 @@
 				)
 			)
 		)
-		(property "Description" "100nF ±20% 50V Ceramic Capacitor X7R 0402"
+		(property "Description" ""
 			(at 96.52 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -9449,7 +9449,7 @@
 				)
 			)
 		)
-		(property "PN" "TCC0402X7R104M500AT"
+		(property "PN" ""
 			(at 96.52 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -9471,7 +9471,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C5142567"
+		(property "LCSC PN" ""
 			(at 96.52 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -9482,7 +9482,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CCTC"
+		(property "LCSC MANUFACTURER" ""
 			(at 96.52 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -9493,7 +9493,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "490-14514-1-ND"
+		(property "DIGIKEY PN" ""
 			(at 96.52 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -9504,7 +9504,7 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" "Murata Electronics"
+		(property "DIGKEY MANUFACTURER" ""
 			(at 96.52 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -9574,7 +9574,7 @@
 				)
 			)
 		)
-		(property "Value" "5.1kΩ"
+		(property "Value" "10kΩ"
 			(at 316.23 115.57 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9606,7 +9606,7 @@
 				)
 			)
 		)
-		(property "Description" "5.1kΩ 62.5mW 50V Thick Film Resistor ±1% 0402 Chip Resistor - Surface Mount RoHS"
+		(property "Description" ""
 			(at 316.23 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -9617,7 +9617,7 @@
 				)
 			)
 		)
-		(property "PN" "CHANGLONG"
+		(property "PN" ""
 			(at 316.23 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -9639,7 +9639,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "CHANGLONG"
+		(property "LCSC PN" ""
 			(at 316.23 115.57 90)
 			(hide yes)
 			(show_name no)
@@ -9650,7 +9650,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CHANGLONG"
+		(property "LCSC MANUFACTURER" ""
 			(at 316.23 115.57 90)
 			(hide yes)
 			(show_name no)
@@ -9661,7 +9661,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "13-RC0402FR-7W5K1LCT-ND"
+		(property "DIGIKEY PN" ""
 			(at 316.23 115.57 90)
 			(hide yes)
 			(show_name no)
@@ -9672,7 +9672,7 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
+		(property "DIGKEY MANUFACTURER" ""
 			(at 316.23 115.57 90)
 			(hide yes)
 			(show_name no)
@@ -10320,7 +10320,7 @@
 				)
 			)
 		)
-		(property "Description" "5.1kΩ 62.5mW 50V Thick Film Resistor ±1% 0402 Chip Resistor - Surface Mount RoHS"
+		(property "Description" ""
 			(at 74.93 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -10331,7 +10331,7 @@
 				)
 			)
 		)
-		(property "PN" "CHANGLONG"
+		(property "PN" ""
 			(at 74.93 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -10353,7 +10353,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "CHANGLONG"
+		(property "LCSC PN" ""
 			(at 74.93 53.34 90)
 			(hide yes)
 			(show_name no)
@@ -10364,7 +10364,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CHANGLONG"
+		(property "LCSC MANUFACTURER" ""
 			(at 74.93 53.34 90)
 			(hide yes)
 			(show_name no)
@@ -10375,7 +10375,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "13-RC0402FR-7W5K1LCT-ND"
+		(property "DIGIKEY PN" ""
 			(at 74.93 53.34 90)
 			(hide yes)
 			(show_name no)
@@ -10386,7 +10386,7 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
+		(property "DIGKEY MANUFACTURER" ""
 			(at 74.93 53.34 90)
 			(hide yes)
 			(show_name no)
@@ -10397,7 +10397,7 @@
 				)
 			)
 		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+		(property "KiLib_Generator" ""
 			(at 74.93 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -10569,7 +10569,7 @@
 				)
 			)
 		)
-		(property "Description" "5.1kΩ 62.5mW 50V Thick Film Resistor ±1% 0402 Chip Resistor - Surface Mount RoHS"
+		(property "Description" ""
 			(at 66.04 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -10580,7 +10580,7 @@
 				)
 			)
 		)
-		(property "PN" "CHANGLONG"
+		(property "PN" ""
 			(at 66.04 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -10602,7 +10602,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "CHANGLONG"
+		(property "LCSC PN" ""
 			(at 66.04 132.08 90)
 			(hide yes)
 			(show_name no)
@@ -10613,7 +10613,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CHANGLONG"
+		(property "LCSC MANUFACTURER" ""
 			(at 66.04 132.08 90)
 			(hide yes)
 			(show_name no)
@@ -10624,7 +10624,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "13-RC0402FR-7W5K1LCT-ND"
+		(property "DIGIKEY PN" ""
 			(at 66.04 132.08 90)
 			(hide yes)
 			(show_name no)
@@ -10635,7 +10635,7 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
+		(property "DIGKEY MANUFACTURER" ""
 			(at 66.04 132.08 90)
 			(hide yes)
 			(show_name no)
@@ -10894,7 +10894,7 @@
 				)
 			)
 		)
-		(property "Description" "5.1kΩ 62.5mW 50V Thick Film Resistor ±1% 0402 Chip Resistor - Surface Mount RoHS"
+		(property "Description" ""
 			(at 66.04 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -10905,7 +10905,7 @@
 				)
 			)
 		)
-		(property "PN" "CHANGLONG"
+		(property "PN" ""
 			(at 66.04 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -10927,7 +10927,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "CHANGLONG"
+		(property "LCSC PN" ""
 			(at 66.04 34.29 90)
 			(hide yes)
 			(show_name no)
@@ -10938,7 +10938,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CHANGLONG"
+		(property "LCSC MANUFACTURER" ""
 			(at 66.04 34.29 90)
 			(hide yes)
 			(show_name no)
@@ -10949,7 +10949,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "13-RC0402FR-7W5K1LCT-ND"
+		(property "DIGIKEY PN" ""
 			(at 66.04 34.29 90)
 			(hide yes)
 			(show_name no)
@@ -10960,7 +10960,7 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
+		(property "DIGKEY MANUFACTURER" ""
 			(at 66.04 34.29 90)
 			(hide yes)
 			(show_name no)
@@ -11728,7 +11728,7 @@
 				)
 			)
 		)
-		(property "Description" "5.1kΩ 62.5mW 50V Thick Film Resistor ±1% 0402 Chip Resistor - Surface Mount RoHS"
+		(property "Description" ""
 			(at 66.04 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -11739,7 +11739,7 @@
 				)
 			)
 		)
-		(property "PN" "CHANGLONG"
+		(property "PN" ""
 			(at 66.04 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -11761,7 +11761,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "CHANGLONG"
+		(property "LCSC PN" ""
 			(at 66.04 49.53 90)
 			(hide yes)
 			(show_name no)
@@ -11772,7 +11772,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CHANGLONG"
+		(property "LCSC MANUFACTURER" ""
 			(at 66.04 49.53 90)
 			(hide yes)
 			(show_name no)
@@ -11783,7 +11783,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "13-RC0402FR-7W5K1LCT-ND"
+		(property "DIGIKEY PN" ""
 			(at 66.04 49.53 90)
 			(hide yes)
 			(show_name no)
@@ -11794,7 +11794,7 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
+		(property "DIGKEY MANUFACTURER" ""
 			(at 66.04 49.53 90)
 			(hide yes)
 			(show_name no)
@@ -11805,7 +11805,7 @@
 				)
 			)
 		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+		(property "KiLib_Generator" ""
 			(at 66.04 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -12134,7 +12134,7 @@
 				)
 			)
 		)
-		(property "Description" "100nF ±20% 50V Ceramic Capacitor X7R 0402"
+		(property "Description" ""
 			(at 83.82 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -12145,7 +12145,7 @@
 				)
 			)
 		)
-		(property "PN" "TCC0402X7R104M500AT"
+		(property "PN" ""
 			(at 83.82 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -12167,7 +12167,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C5142567"
+		(property "LCSC PN" ""
 			(at 83.82 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -12178,7 +12178,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CCTC"
+		(property "LCSC MANUFACTURER" ""
 			(at 83.82 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -12189,7 +12189,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "490-14514-1-ND"
+		(property "DIGIKEY PN" ""
 			(at 83.82 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -12200,7 +12200,7 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" "Murata Electronics"
+		(property "DIGKEY MANUFACTURER" ""
 			(at 83.82 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -12270,7 +12270,7 @@
 				)
 			)
 		)
-		(property "Value" "21kΩ"
+		(property "Value" "42.2kΩ"
 			(at 316.23 107.95 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12302,7 +12302,7 @@
 				)
 			)
 		)
-		(property "Description" "21kΩ ±1% 62.5mW 0402 Thick Film Resistor"
+		(property "Description" ""
 			(at 316.23 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -12313,7 +12313,7 @@
 				)
 			)
 		)
-		(property "PN" "FRC0402F2102TS"
+		(property "PN" ""
 			(at 316.23 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -12335,7 +12335,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C2998083"
+		(property "LCSC PN" ""
 			(at 316.23 107.95 90)
 			(hide yes)
 			(show_name no)
@@ -12346,7 +12346,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "FOJAN"
+		(property "LCSC MANUFACTURER" ""
 			(at 316.23 107.95 90)
 			(hide yes)
 			(show_name no)
@@ -12357,7 +12357,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "311-21.0KLRCT-ND"
+		(property "DIGIKEY PN" ""
 			(at 316.23 107.95 90)
 			(hide yes)
 			(show_name no)
@@ -12368,7 +12368,7 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
+		(property "DIGKEY MANUFACTURER" ""
 			(at 316.23 107.95 90)
 			(hide yes)
 			(show_name no)
@@ -12552,7 +12552,7 @@
 				)
 			)
 		)
-		(property "Description" "100nF ±20% 50V Ceramic Capacitor X7R 0402"
+		(property "Description" ""
 			(at 96.52 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -12563,7 +12563,7 @@
 				)
 			)
 		)
-		(property "PN" "TCC0402X7R104M500AT"
+		(property "PN" ""
 			(at 96.52 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -12574,7 +12574,7 @@
 				)
 			)
 		)
-		(property "Variant" "ADV_SMT"
+		(property "Variant" ""
 			(at 96.52 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -12585,7 +12585,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C5142567"
+		(property "LCSC PN" ""
 			(at 96.52 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -12596,7 +12596,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CCTC"
+		(property "LCSC MANUFACTURER" ""
 			(at 96.52 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -12607,7 +12607,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "490-14514-1-ND"
+		(property "DIGIKEY PN" ""
 			(at 96.52 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -12618,7 +12618,7 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" "Murata Electronics"
+		(property "DIGKEY MANUFACTURER" ""
 			(at 96.52 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -13020,7 +13020,7 @@
 				)
 			)
 		)
-		(property "Description" "47kΩ ±1% 125mW 0805 Thick Film Resistor"
+		(property "Description" ""
 			(at 280.67 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -13031,7 +13031,7 @@
 				)
 			)
 		)
-		(property "Variant" "STUDENT"
+		(property "Variant" "ADV_SMT"
 			(at 280.67 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -13042,7 +13042,7 @@
 				)
 			)
 		)
-		(property "PN" "0805W8F4702T5E"
+		(property "PN" ""
 			(at 280.67 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -13053,7 +13053,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C17713"
+		(property "LCSC PN" ""
 			(at 280.67 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -13064,7 +13064,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "UNI-ROYAL"
+		(property "LCSC MANUFACTURER" ""
 			(at 280.67 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -13075,7 +13075,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "311-47.0KCRCT-ND"
+		(property "DIGIKEY PN" ""
 			(at 280.67 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -13086,7 +13086,7 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
+		(property "DIGKEY MANUFACTURER" ""
 			(at 280.67 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -13189,7 +13189,7 @@
 				)
 			)
 		)
-		(property "Description" "5.1kΩ 62.5mW 50V Thick Film Resistor ±1% 0402 Chip Resistor - Surface Mount RoHS"
+		(property "Description" ""
 			(at 66.04 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -13200,7 +13200,7 @@
 				)
 			)
 		)
-		(property "PN" "CHANGLONG"
+		(property "PN" ""
 			(at 66.04 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -13222,7 +13222,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "CHANGLONG"
+		(property "LCSC PN" ""
 			(at 66.04 147.32 90)
 			(hide yes)
 			(show_name no)
@@ -13233,7 +13233,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CHANGLONG"
+		(property "LCSC MANUFACTURER" ""
 			(at 66.04 147.32 90)
 			(hide yes)
 			(show_name no)
@@ -13244,7 +13244,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "13-RC0402FR-7W5K1LCT-ND"
+		(property "DIGIKEY PN" ""
 			(at 66.04 147.32 90)
 			(hide yes)
 			(show_name no)
@@ -13255,7 +13255,7 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
+		(property "DIGKEY MANUFACTURER" ""
 			(at 66.04 147.32 90)
 			(hide yes)
 			(show_name no)
@@ -13614,7 +13614,7 @@
 				)
 			)
 		)
-		(property "Description" "47kΩ ±1% 125mW 0805 Thick Film Resistor"
+		(property "Description" ""
 			(at 280.67 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -13625,7 +13625,7 @@
 				)
 			)
 		)
-		(property "Variant" "STUDENT"
+		(property "Variant" "ADV_SMT"
 			(at 280.67 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -13636,7 +13636,7 @@
 				)
 			)
 		)
-		(property "PN" "0805W8F4702T5E"
+		(property "PN" ""
 			(at 280.67 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -13647,7 +13647,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C17713"
+		(property "LCSC PN" ""
 			(at 280.67 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -13658,7 +13658,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "UNI-ROYAL"
+		(property "LCSC MANUFACTURER" ""
 			(at 280.67 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -13669,7 +13669,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "311-47.0KCRCT-ND"
+		(property "DIGIKEY PN" ""
 			(at 280.67 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -13680,7 +13680,7 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
+		(property "DIGKEY MANUFACTURER" ""
 			(at 280.67 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -13943,7 +13943,7 @@
 				)
 			)
 		)
-		(property "Description" "5.1kΩ 62.5mW 50V Thick Film Resistor ±1% 0402 Chip Resistor - Surface Mount RoHS"
+		(property "Description" ""
 			(at 66.04 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -13954,7 +13954,7 @@
 				)
 			)
 		)
-		(property "PN" "CHANGLONG"
+		(property "PN" ""
 			(at 66.04 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -13976,7 +13976,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "CHANGLONG"
+		(property "LCSC PN" ""
 			(at 66.04 139.7 90)
 			(hide yes)
 			(show_name no)
@@ -13987,7 +13987,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CHANGLONG"
+		(property "LCSC MANUFACTURER" ""
 			(at 66.04 139.7 90)
 			(hide yes)
 			(show_name no)
@@ -13998,7 +13998,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "13-RC0402FR-7W5K1LCT-ND"
+		(property "DIGIKEY PN" ""
 			(at 66.04 139.7 90)
 			(hide yes)
 			(show_name no)
@@ -14009,7 +14009,7 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
+		(property "DIGKEY MANUFACTURER" ""
 			(at 66.04 139.7 90)
 			(hide yes)
 			(show_name no)
@@ -14079,7 +14079,7 @@
 				)
 			)
 		)
-		(property "Value" "5.1kΩ"
+		(property "Value" "10kΩ"
 			(at 316.23 88.9 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14111,7 +14111,7 @@
 				)
 			)
 		)
-		(property "Description" "5.1kΩ 62.5mW 50V Thick Film Resistor ±1% 0402 Chip Resistor - Surface Mount RoHS"
+		(property "Description" ""
 			(at 316.23 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -14122,7 +14122,7 @@
 				)
 			)
 		)
-		(property "PN" "CHANGLONG"
+		(property "PN" ""
 			(at 316.23 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -14144,7 +14144,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "CHANGLONG"
+		(property "LCSC PN" ""
 			(at 316.23 88.9 90)
 			(hide yes)
 			(show_name no)
@@ -14155,7 +14155,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CHANGLONG"
+		(property "LCSC MANUFACTURER" ""
 			(at 316.23 88.9 90)
 			(hide yes)
 			(show_name no)
@@ -14166,7 +14166,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "13-RC0402FR-7W5K1LCT-ND"
+		(property "DIGIKEY PN" ""
 			(at 316.23 88.9 90)
 			(hide yes)
 			(show_name no)
@@ -14177,7 +14177,7 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
+		(property "DIGKEY MANUFACTURER" ""
 			(at 316.23 88.9 90)
 			(hide yes)
 			(show_name no)
@@ -14449,7 +14449,7 @@
 				)
 			)
 		)
-		(property "Description" "100nF ±20% 50V Ceramic Capacitor X7R 0402"
+		(property "Description" ""
 			(at 96.52 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -14460,7 +14460,7 @@
 				)
 			)
 		)
-		(property "PN" "TCC0402X7R104M500AT"
+		(property "PN" ""
 			(at 96.52 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -14471,7 +14471,7 @@
 				)
 			)
 		)
-		(property "Variant" "ADV_SMT"
+		(property "Variant" ""
 			(at 96.52 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -14482,7 +14482,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C5142567"
+		(property "LCSC PN" ""
 			(at 96.52 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -14493,7 +14493,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CCTC"
+		(property "LCSC MANUFACTURER" ""
 			(at 96.52 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -14504,7 +14504,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "490-14514-1-ND"
+		(property "DIGIKEY PN" ""
 			(at 96.52 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -14515,7 +14515,7 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" "Murata Electronics"
+		(property "DIGKEY MANUFACTURER" ""
 			(at 96.52 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -14923,7 +14923,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "0.033µF"
+		(property "Value" "0.1µF"
 			(at 81.4959 115.4993 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15114,7 +15114,7 @@
 				)
 			)
 		)
-		(property "Description" "47kΩ ±1% 125mW 0805 Thick Film Resistor"
+		(property "Description" ""
 			(at 280.67 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -15125,7 +15125,7 @@
 				)
 			)
 		)
-		(property "Variant" "STUDENT"
+		(property "Variant" "ADV_SMT"
 			(at 280.67 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -15136,7 +15136,7 @@
 				)
 			)
 		)
-		(property "PN" "0805W8F4702T5E"
+		(property "PN" ""
 			(at 280.67 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -15147,7 +15147,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C17713"
+		(property "LCSC PN" ""
 			(at 280.67 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -15158,7 +15158,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "UNI-ROYAL"
+		(property "LCSC MANUFACTURER" ""
 			(at 280.67 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -15169,7 +15169,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "311-47.0KCRCT-ND"
+		(property "DIGIKEY PN" ""
 			(at 280.67 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -15180,7 +15180,7 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
+		(property "DIGKEY MANUFACTURER" ""
 			(at 280.67 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -15362,7 +15362,7 @@
 				)
 			)
 		)
-		(property "Description" "47kΩ ±1% 125mW 0805 Thick Film Resistor"
+		(property "Description" ""
 			(at 280.67 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -15373,7 +15373,7 @@
 				)
 			)
 		)
-		(property "Variant" "STUDENT"
+		(property "Variant" "ADV_SMT"
 			(at 280.67 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -15384,7 +15384,7 @@
 				)
 			)
 		)
-		(property "PN" "0805W8F4702T5E"
+		(property "PN" ""
 			(at 280.67 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -15395,7 +15395,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C17713"
+		(property "LCSC PN" ""
 			(at 280.67 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -15406,7 +15406,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "UNI-ROYAL"
+		(property "LCSC MANUFACTURER" ""
 			(at 280.67 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -15417,7 +15417,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "311-47.0KCRCT-ND"
+		(property "DIGIKEY PN" ""
 			(at 280.67 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -15428,7 +15428,7 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
+		(property "DIGKEY MANUFACTURER" ""
 			(at 280.67 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -15531,7 +15531,7 @@
 				)
 			)
 		)
-		(property "Description" "5.1kΩ 62.5mW 50V Thick Film Resistor ±1% 0402 Chip Resistor - Surface Mount RoHS"
+		(property "Description" ""
 			(at 66.04 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -15542,7 +15542,7 @@
 				)
 			)
 		)
-		(property "PN" "CHANGLONG"
+		(property "PN" ""
 			(at 66.04 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -15564,7 +15564,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "CHANGLONG"
+		(property "LCSC PN" ""
 			(at 66.04 91.44 90)
 			(hide yes)
 			(show_name no)
@@ -15575,7 +15575,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CHANGLONG"
+		(property "LCSC MANUFACTURER" ""
 			(at 66.04 91.44 90)
 			(hide yes)
 			(show_name no)
@@ -15586,7 +15586,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "13-RC0402FR-7W5K1LCT-ND"
+		(property "DIGIKEY PN" ""
 			(at 66.04 91.44 90)
 			(hide yes)
 			(show_name no)
@@ -15597,7 +15597,7 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
+		(property "DIGKEY MANUFACTURER" ""
 			(at 66.04 91.44 90)
 			(hide yes)
 			(show_name no)
@@ -16422,7 +16422,7 @@
 				)
 			)
 		)
-		(property "Description" "5.1kΩ 62.5mW 50V Thick Film Resistor ±1% 0402 Chip Resistor - Surface Mount RoHS"
+		(property "Description" ""
 			(at 66.04 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -16433,7 +16433,7 @@
 				)
 			)
 		)
-		(property "PN" "CHANGLONG"
+		(property "PN" ""
 			(at 66.04 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -16455,7 +16455,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "CHANGLONG"
+		(property "LCSC PN" ""
 			(at 66.04 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -16466,7 +16466,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CHANGLONG"
+		(property "LCSC MANUFACTURER" ""
 			(at 66.04 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -16477,7 +16477,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "13-RC0402FR-7W5K1LCT-ND"
+		(property "DIGIKEY PN" ""
 			(at 66.04 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -16488,7 +16488,7 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
+		(property "DIGKEY MANUFACTURER" ""
 			(at 66.04 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -16499,7 +16499,7 @@
 				)
 			)
 		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+		(property "KiLib_Generator" ""
 			(at 66.04 41.91 0)
 			(hide yes)
 			(show_name no)

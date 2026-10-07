@@ -23,7 +23,7 @@
       "keepouts": false,
       "lockedItems": true,
       "otherItems": false,
-      "pads": true,
+      "pads": false,
       "text": true,
       "tracks": true,
       "vias": true,
@@ -32,6 +32,7 @@
     "visible_items": [
       "vias",
       "footprint_text",
+      "ratsnest",
       "grid",
       "footprints_front",
       "footprints_back",
@@ -91,18 +92,18 @@
       11
     ],
     "col_widths": [
-      130,
-      118,
+      83,
+      75,
       98,
       79,
       85,
       99,
       87,
       83,
-      73,
-      73,
-      73,
-      73
+      46,
+      46,
+      55,
+      55
     ],
     "custom_group_rules": [],
     "expanded_rows": [],

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phyduino Pico 2 – Reset / UF2 Button Plan</title>
+<style>
+.viz-root {
+  color-scheme: light;
+  --page: #f9f9f7; --surface-1: #fcfcfb; --text-primary: #0b0b0b; --text-secondary: #52514e;
+  --text-muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10);
+  --ok-text: #006300; --code-bg: #f0efec;
+  --s-pb: #2a78d6; --s-int: #eb6834; --s-rst: #1baf7a;
+  --st-reset: #d03b3b; --st-run: #0ca30c; --st-uf2: #4a3aa7;
+  --critical: #d03b3b; --warning: #fab219;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .viz-root {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface-1: #1a1a19; --text-primary: #fff; --text-secondary: #c3c2b7;
+    --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10); --ok-text: #0ca30c; --code-bg: #2c2c2a;
+    --s-pb: #3987e5; --s-int: #d95926; --s-rst: #199e70; --st-uf2: #9085e9;
+  }
+}
+:root[data-theme="dark"] .viz-root {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface-1: #1a1a19; --text-primary: #fff; --text-secondary: #c3c2b7;
+  --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10); --ok-text: #0ca30c; --code-bg: #2c2c2a;
+  --s-pb: #3987e5; --s-int: #d95926; --s-rst: #199e70; --st-uf2: #9085e9;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+.viz-root { background: var(--page); color: var(--text-primary); font: 15px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; min-height: 100vh; padding: 32px 20px 64px; }
+.wrap { max-width: 1000px; margin: 0 auto; }
+h1 { font-size: 26px; font-weight: 600; margin: 0 0 4px; }
+h2 { font-size: 18px; font-weight: 600; margin: 0 0 6px; }
+h3 { font-size: 15px; font-weight: 600; margin: 14px 0 6px; }
+.sub { color: var(--text-secondary); margin: 0; }
+.meta { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 13px; color: var(--text-secondary); margin-top: 10px; }
+.toolbar { display: flex; justify-content: flex-end; margin: 16px 0; }
+.toolbar button { font: inherit; font-size: 13px; padding: 5px 12px; border-radius: 999px; cursor: pointer; border: 1px solid var(--border); background: var(--surface-1); color: var(--text-primary); }
+section { margin-top: 22px; }
+.card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+.desc { font-size: 13px; color: var(--text-secondary); margin: 0 0 12px; }
+.tldr { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.tldr .card { padding: 16px; }
+.tldr .k { font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--text-muted); }
+.tldr .v { font-size: 18px; font-weight: 600; margin-top: 2px; }
+.tldr .s { font-size: 13px; color: var(--text-secondary); margin-top: 4px; }
+.why { border-left: 4px solid var(--critical); }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 13px; color: var(--text-secondary); margin-bottom: 6px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 18px; height: 3px; border-radius: 2px; display: inline-block; }
+.chip { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.waves { display: grid; grid-template-columns: 1fr 1.6fr; gap: 16px; }
+.wave-panel h3 { margin: 0 0 4px; }
+.wave-panel .note { font-size: 12px; color: var(--text-muted); }
+svg text { fill: var(--text-secondary); font-size: 12px; }
+svg .muted { fill: var(--text-muted); font-size: 11px; }
+svg .onchip { fill: #fff; font-size: 11px; font-weight: 600; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--grid); vertical-align: top; }
+th { color: var(--text-secondary); font-weight: 500; font-size: 13px; }
+code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 12.5px; background: var(--code-bg); padding: 1px 5px; border-radius: 4px; }
+.opts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.opt { position: relative; }
+.opt.rec { border: 2px solid var(--ok-text); }
+.badge { display: inline-block; font-size: 12px; font-weight: 600; padding: 1px 9px; border-radius: 999px; border: 1px solid var(--border); color: var(--text-secondary); margin-left: 6px; vertical-align: middle; }
+.opt.rec .badge { color: var(--ok-text); border-color: var(--ok-text); }
+.pros, .cons { list-style: none; padding: 0; margin: 6px 0 0; font-size: 14px; }
+.pros li, .cons li { padding-left: 22px; position: relative; margin: 3px 0; }
+.pros li::before { content: "✓"; position: absolute; left: 2px; color: var(--ok-text); font-weight: 700; }
+.cons li::before { content: "–"; position: absolute; left: 4px; color: var(--critical); font-weight: 700; }
+.steps { counter-reset: s; list-style: none; padding: 0; margin: 0; }
+.steps li { counter-increment: s; position: relative; padding: 10px 12px 10px 48px; border-bottom: 1px solid var(--grid); }
+.steps li:last-child { border-bottom: 0; }
+.steps li::before { content: counter(s); position: absolute; left: 10px; top: 10px; width: 26px; height: 26px; border-radius: 50%; background: var(--text-primary); color: var(--surface-1); font-weight: 600; font-size: 13px; display: flex; align-items: center; justify-content: center; }
+.steps b { display: block; }
+.warn { display: flex; gap: 10px; align-items: flex-start; padding: 10px 12px; border-radius: 8px; background: var(--code-bg); font-size: 14px; margin-top: 10px; }
+.warn .i { flex: none; width: 20px; height: 20px; border-radius: 4px; background: var(--warning); color: #0b0b0b; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 12px; }
+.calc { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; font-size: 14px; }
+.calc input { width: 90px; font: inherit; padding: 4px 8px; border: 1px solid var(--border); border-radius: 6px; background: var(--page); color: var(--text-primary); }
+.calc .out { font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums; }
+footer { margin-top: 32px; font-size: 12px; color: var(--text-muted); }
+footer a { color: var(--text-secondary); }
+@media (max-width: 760px) { .tldr, .opts, .waves { grid-template-columns: 1fr; } }
+@media print { .toolbar, .calc input { display: none; } .card { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<div class="viz-root"><div class="wrap">
+
+<header>
+  <h1>Reset and UF2 button plan</h1>
+  <p class="sub">Replace the XC6190 so that a <b>short press resets</b> the RP2350 and a <b>long press restarts it in UF2 (BOOTSEL) mode</b>.</p>
+  <div class="meta"><span><b>Board:</b> Phyduino Pico 2, Rev A</span><span><b>Fixes:</b> review finding #2</span><span><b>Date:</b> 2026-10-06</span><span><b>Status:</b> proposal</span></div>
+</header>
+
+<div class="toolbar"><button id="theme">Toggle dark mode</button></div>
+
+<div class="tldr">
+  <div class="card"><div class="k">Recommended part</div><div class="v">TPS3424C11EF2ADRLR</div><div class="s">TI one-button push-button controller with capacitor-set press times. SOT-583-8, in production.</div></div>
+  <div class="card"><div class="k">Short press (≥ 50 ms)</div><div class="v">Normal reset</div><div class="s">Runs the program in flash.</div></div>
+  <div class="card"><div class="k">Long press (≈ 2 s)</div><div class="v">UF2 mode</div><div class="s">Board appears as a USB drive. The hold time is set by one capacitor.</div></div>
+</div>
+
+<section>
+  <div class="card why">
+    <h2>Why change it</h2>
+    <p style="margin:0">The current XC6190 only resets when <b>both</b> of its inputs are held low together. One goes to SW1 and the other to the header RESET pin, which normally floats high, so <b>pressing SW1 does nothing</b>. The boot slide switch (SW2) is also easy to leave in the wrong position.</p>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>How it works</h2>
+    <p class="desc">The RP2350 starts in UF2 mode if its flash chip-select (<code>QSPI_SS</code>) is low at the moment <code>RUN</code> is released. On a long press, the IC pulls <b>INT</b> and <b>RESET</b> low together, but RESET stays low longer. With INT driving RUN and RESET driving chip-select, chip-select is still low when the chip comes out of reset. Timings are not to scale.</p>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--s-pb)"></i>Button (PB)</span>
+      <span><i class="sw" style="background:var(--s-int)"></i>INT → RUN</span>
+      <span><i class="sw" style="background:var(--s-rst)"></i>RESET → flash CS</span>
+      <span><i class="chip" style="background:var(--st-reset)"></i>RP2350 in reset</span>
+      <span><i class="chip" style="background:var(--st-run)"></i>Running program</span>
+      <span><i class="chip" style="background:var(--st-uf2)"></i>UF2 mode</span>
+    </div>
+    <div class="waves">
+      <div class="wave-panel"><h3>Short press</h3><svg id="wShort" width="100%" height="250" role="img" aria-label="Timing diagram, short press"></svg>
+        <div class="note">INT pulses low for 100 ms after 50 ms of pressing. RESET doesn't change.</div></div>
+      <div class="wave-panel"><h3>Long press</h3><svg id="wLong" width="100%" height="250" role="img" aria-label="Timing diagram, long press"></svg>
+        <div class="note">When the hold reaches t<sub>LP</sub>, INT goes low for 200 ms and RESET for 500 ms. RUN is released while CS is still low, so the chip starts in UF2 mode.</div></div>
+    </div>
+    <h3>Summary</h3>
+    <table>
+      <tr><th>Press</th><th>INT → RUN</th><th>RESET → flash CS</th><th>Result</th></tr>
+      <tr><td>Shorter than 50 ms</td><td>Nothing</td><td>Nothing</td><td>Ignored (debounce)</td></tr>
+      <tr><td>Short (50 ms to t<sub>LP</sub>)</td><td>Low for 100 ms</td><td>Unchanged</td><td><b>Normal reset</b></td></tr>
+      <tr><td>Long (≥ t<sub>LP</sub>)</td><td>Low for 200 ms</td><td>Low for 500 ms, starting at the same moment</td><td><b>UF2 mode</b> (after one normal reset at 50 ms, which is harmless)</td></tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>Part options</h2>
+  <div class="opts">
+    <div class="card opt rec">
+      <h3 style="margin-top:0">A. TPS3424C11EF2ADRLR <span class="badge">Recommended</span></h3>
+      <table>
+        <tr><td><code>C</code></td><td>Open-drain active-low RESET, active-low button</td></tr>
+        <tr><td><code>1 1</code></td><td>Short and long press times set by capacitors on SPT and LPT</td></tr>
+        <tr><td><code>E</code></td><td>INT pulse: 100 ms (short), 200 ms (long)</td></tr>
+        <tr><td><code>F</code></td><td>Short press: no RESET. Long press: 500 ms RESET pulse</td></tr>
+        <tr><td><code>2 A</code></td><td>KILL timing (not used in this mode) · 8-pin package</td></tr>
+      </table>
+      <ul class="pros"><li>Long-press time is adjustable (about 2 s with 4.7 nF)</li><li>Handles the reset and UF2 functions in one part</li></ul>
+      <ul class="cons"><li>One button input, so the header RESET pin connects straight to RUN</li></ul>
+    </div>
+    <div class="card opt">
+      <h3 style="margin-top:0">B. TPS3423CAHDFADRLR <span class="badge">Alternative</span></h3>
+      <table>
+        <tr><td><code>C</code></td><td>Open-drain active-low RESET, active-low buttons</td></tr>
+        <tr><td><code>A H</code></td><td>Short press 50 ms · long press <b>8 s</b> (fixed)</td></tr>
+        <tr><td><code>D</code></td><td>INT pulse: 50 ms (short), 200 ms (long)</td></tr>
+        <tr><td><code>F</code></td><td>Short press: no RESET. Long press: 500 ms RESET pulse</td></tr>
+      </table>
+      <ul class="pros"><li>Two independent buttons: SW1 and the header RESET pin</li><li>No timing capacitors</li></ul>
+      <ul class="cons"><li>8 s hold is long for students</li><li>Timing can't be changed</li></ul>
+    </div>
+  </div>
+  <div class="warn"><span class="i">!</span><div><b>Not suitable: TPS3423GAMDHADRLR.</b> Its button input is active high (the button must connect to VDD), and a reset needs a 20 s hold, then lasts 10 s.</div></div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>Wiring (option A)</h2>
+    <table>
+      <tr><th>U4 pin</th><th>Connect to</th><th>Notes</th></tr>
+      <tr><td>1 · PB</td><td>SW1 to GND</td><td>Add a 10–100 kΩ pull-up to +3.3 V. The internal pull-up is only 1 MΩ.</td></tr>
+      <tr><td>2 · GND</td><td>GND</td><td></td></tr>
+      <tr><td>3 · VDD</td><td>+3.3 V</td><td>0.1 µF close to the pin</td></tr>
+      <tr><td>4 · SPT</td><td>Leave open</td><td>Short press defaults to 50 ms</td></tr>
+      <tr><td>5 · LPT</td><td>Capacitor to GND</td><td>4.7 nF gives about 2 s (see the calculator below)</td></tr>
+      <tr><td>6 · RESET</td><td><code>BOOTMODE</code> → R49 → <code>FLASH_CS</code> (QSPI_SS)</td><td>Open-drain, so it doesn't load CS when inactive. The RP2350's internal pull-up on QSPI_SS keeps CS high for a normal boot</td></tr>
+      <tr><td>7 · INT</td><td><code>SYS_nRST</code> (RUN)</td><td>Open-drain. R20 (10 kΩ) stays as the pull-up</td></tr>
+      <tr><td>8 · KILL</td><td>+3.3 V</td><td>Not used in this mode</td></tr>
+      <tr><td>Header J2.3</td><td><code>SYS_nRST</code> (RUN), directly</td><td>A shield's reset button still works</td></tr>
+    </table>
+    <p class="desc" style="margin-top:8px">Check the pin numbers against the final symbol from the datasheet (Figure 5-3) before routing.</p>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>Long-press time calculator</h2>
+    <p class="desc">From the datasheet: t (s) = 0.422 × C (nF). Accuracy is ±20 %. Use a C0G/NP0 capacitor.</p>
+    <div class="calc">
+      <label>LPT capacitor <input id="cap" type="number" min="0.15" step="0.1" value="4.7"> nF</label>
+      <span>→</span>
+      <span class="out" id="tout"></span>
+      <span class="desc" id="trange" style="margin:0"></span>
+    </div>
+    <table style="margin-top:10px">
+      <tr><th>Standard value</th><th>Typical hold</th><th>Range (±20 %)</th></tr>
+      <tbody id="ctable"></tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>Board changes</h2>
+    <ol class="steps">
+      <li><b>Replace U4 (XC6190) with the TPS3424C11EF2ADRLR.</b>New symbol and SOT-583-8 footprint (0.5 mm pitch), as an <code>ADV_SMT</code> part.</li>
+      <li><b>Remove SW2 (boot slide switch).</b>Its "normal" position connects BOOTMODE straight to +3.3 V, which would short against U4's RESET output. A solder jumper to GND is fine if you want a permanent UF2 option.</li>
+      <li><b>Keep R49 at 4.7–5.1 kΩ.</b>The RP2350 datasheet recommends about 4.7 kΩ to ground. That's low enough to overcome the internal pull-up on QSPI_SS, but doesn't affect the chip-select signal when the RP2350 drives it.</li>
+      <li><b>Don't add a strong external pull-up on flash CS.</b>QSPI_SS has an internal pull-up from reset, so CS reads high (normal boot) while U4's RESET output is off. A 10 kΩ pull-up would combine with R49 to hold CS at about 1 V during a long press. That isn't a reliable low, so UF2 mode could fail. If you want one for extra safety, use 100 kΩ or more (giving about 0.15 V during a long press).</li>
+      <li><b>Remove R18.</b>It only set the XC6190's delay.</li>
+      <li><b>Reduce C57 to about 10 nF, or remove it.</b>U4 already ignores presses shorter than 50 ms.</li>
+      <li><b>Add the LPT capacitor (4.7 nF) and the PB pull-up (10–100 kΩ).</b></li>
+      <li><b>Connect J2.3 (header RESET) directly to RUN.</b>Remove the <code>EXT_RESET</code> net.</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>Bench checks after the change</h2>
+    <table>
+      <tr><th>Test</th><th>Expected</th></tr>
+      <tr><td>Tap SW1 (&lt; 50 ms)</td><td>Nothing happens</td></tr>
+      <tr><td>Press SW1 for about 0.5 s</td><td>Board resets and runs its program</td></tr>
+      <tr><td>Hold SW1 for at least 2 s</td><td><code>RP2350</code> USB drive appears</td></tr>
+      <tr><td>Scope RUN and QSPI_SS during a long press</td><td>RUN rises about 300 ms before CS</td></tr>
+      <tr><td>Pull J2.3 low</td><td>Board resets</td></tr>
+      <tr><td>Normal use: probe QSPI_SS</td><td>No extra load; flash reads and writes work</td></tr>
+    </table>
+    <div class="warn"><span class="i">i</span><div>The Arduino-Pico core can also enter UF2 mode from software, by opening the serial port at 1200 baud, and so can <code>picotool</code>. The long press is the recovery route when the running program has crashed or disabled USB.</div></div>
+  </div>
+</section>
+
+<footer>
+  Source: <a href="https://www.ti.com/lit/ds/symlink/tps3423.pdf">TI TPS3423/TPS3424 datasheet (SNVSCN9C)</a>: the timing diagram (Figure 6-2), naming tables (Figures 4-1 and 4-3), pinout (Figure 5-3), press-time formula (Equation 1) and list of orderable parts. RP2350 datasheet for boot behaviour.
+</footer>
+
+</div></div>
+
+<script>
+const NS = "http://www.w3.org/2000/svg";
+const el = (t, a, txt) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (txt != null) e.textContent = txt; return e; };
+const css = v => getComputedStyle(document.querySelector(".viz-root")).getPropertyValue(v).trim();
+
+// Each wave: list of [x, level] breakpoints in abstract time units (1 = high, 0 = low).
+const DIAGRAMS = {
+  wShort: { span: 6, breaks: [],
+    rows: [
+      { name: "Button", c: "--s-pb", pts: [[0,1],[0.6,0],[3.6,1]] },
+      { name: "INT → RUN", c: "--s-int", pts: [[0,1],[1.4,0],[2.6,1]] },
+      { name: "RESET → CS", c: "--s-rst", pts: [[0,1]] },
+    ],
+    state: [[0,1.4,"--st-run","program"],[1.4,2.6,"--st-reset","reset"],[2.6,6,"--st-run","program"]],
+    marks: [[0.6,"press"],[1.4,"50 ms"]] },
+  wLong: { span: 10, breaks: [4.0],
+    rows: [
+      { name: "Button", c: "--s-pb", pts: [[0,1],[0.2,0],[9.2,1]] },
+      { name: "INT → RUN", c: "--s-int", pts: [[0,1],[1.2,0],[2.2,1],[4.4,0],[5.6,1]] },
+      { name: "RESET → CS", c: "--s-rst", pts: [[0,1],[4.4,0],[7.6,1]] },
+    ],
+    state: [[0,1.2,"--st-run","program"],[1.2,2.2,"--st-reset","reset"],[2.2,4.4,"--st-run","program"],[4.4,5.6,"--st-reset","reset"],[5.6,10,"--st-uf2","UF2 mode"]],
+    marks: [[0.2,"press"],[1.2,"50 ms"],[4.4,"long press"],[5.6,"+200 ms"],[7.6,"+500 ms"]] },
+};
+
+function drawWave(id) {
+  const d = DIAGRAMS[id], svg = document.getElementById(id);
+  while (svg.firstChild) svg.removeChild(svg.firstChild);
+  const W = svg.clientWidth || 400, L = 92, R = 12, top = 22, rowH = 46, amp = 20;
+  const x = t => L + (W - L - R) * t / d.span;
+  const H = top + rowH * (d.rows.length + 1) + 20;
+  svg.setAttribute("height", H); svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  // event guides
+  d.marks.forEach(([t, lab]) => {
+    svg.appendChild(el("line", { x1: x(t), x2: x(t), y1: top - 6, y2: H - 22, stroke: css("--grid"), "stroke-width": 1, "stroke-dasharray": "3 3" }));
+    svg.appendChild(el("text", { x: x(t), y: top - 10, "text-anchor": "middle", class: "muted" }, lab));
+  });
+  d.rows.forEach((r, i) => {
+    const yHi = top + i * rowH + 8, yLo = yHi + amp;
+    svg.appendChild(el("text", { x: L - 10, y: yHi + amp / 2 + 4, "text-anchor": "end" }, r.name));
+    let path = "", prev = null;
+    const pts = [...r.pts, [d.span, null]];
+    pts.forEach(([t, lv], j) => {
+      if (j === 0) { path = `M${x(t)},${lv ? yHi : yLo}`; prev = lv; return; }
+      const y = prev ? yHi : yLo;
+      path += ` H${x(t)}`;
+      if (lv !== null && lv !== prev) { path += ` V${lv ? yHi : yLo}`; prev = lv; }
+    });
+    svg.appendChild(el("path", { d: path, fill: "none", stroke: css(r.c), "stroke-width": 2, "stroke-linejoin": "round" }));
+  });
+  // RP2350 state band
+  const yS = top + d.rows.length * rowH + 8;
+  svg.appendChild(el("text", { x: L - 10, y: yS + 15, "text-anchor": "end" }, "RP2350"));
+  d.state.forEach(([a, b, c, lab]) => {
+    const x0 = x(a) + 1, w = Math.max(1, x(b) - x(a) - 2);
+    svg.appendChild(el("rect", { x: x0, y: yS, width: w, height: 22, rx: 4, fill: css(c) }));
+    if (w > 46) svg.appendChild(el("text", { x: x0 + w / 2, y: yS + 15, "text-anchor": "middle", class: "onchip" }, lab));
+  });
+  // time-axis breaks
+  d.breaks.forEach(t => {
+    const g = el("g", {});
+    [0, 6].forEach(o => g.appendChild(el("line", { x1: x(t) - 4 + o, y1: top, x2: x(t) + 2 + o, y2: H - 22, stroke: css("--axis"), "stroke-width": 1.5 })));
+    svg.appendChild(g);
+    svg.appendChild(el("text", { x: x(t) + 3, y: H - 6, "text-anchor": "middle", class: "muted" }, "(holding)"));
+  });
+}
+const drawAll = () => Object.keys(DIAGRAMS).forEach(drawWave);
+drawAll(); new ResizeObserver(drawAll).observe(document.querySelector(".waves"));
+
+// Calculator
+const K = 0.422;
+function calc() {
+  const c = parseFloat(document.getElementById("cap").value) || 0, t = K * c;
+  document.getElementById("tout").textContent = `${t.toFixed(2)} s`;
+  document.getElementById("trange").textContent = `range ${(t * 0.8).toFixed(2)}–${(t * 1.2).toFixed(2)} s` + (t < 0.05 ? " · below 50 ms, so the 50 ms default applies" : "");
+}
+document.getElementById("cap").addEventListener("input", calc); calc();
+document.getElementById("ctable").innerHTML = [2.2, 3.3, 4.7, 6.8, 10].map(c =>
+  `<tr><td>${c} nF${c === 4.7 ? " (suggested)" : ""}</td><td>${(K * c).toFixed(2)} s</td><td>${(K * c * 0.8).toFixed(2)}–${(K * c * 1.2).toFixed(2)} s</td></tr>`).join("");
+
+// Theme
+document.getElementById("theme").addEventListener("click", () => {
+  const r = document.documentElement;
+  const dark = r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  r.dataset.theme = dark ? "light" : "dark"; drawAll();
+});
+</script>
+</body>
+</html>

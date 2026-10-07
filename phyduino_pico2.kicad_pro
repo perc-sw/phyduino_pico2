@@ -652,7 +652,10 @@
     "meta": {
       "version": 5
     },
-    "net_colors": null,
+    "net_colors": {
+      "+1.1V": "rgb(255, 0, 255)",
+      "+3.3V": "rgb(0, 255, 255)"
+    },
     "netclass_assignments": null,
     "netclass_patterns": [
       {
@@ -915,7 +918,7 @@
         "uuid": "42309c5d-9d7a-429d-b353-e8927a604374"
       }
     ],
-    "used_designators": "L1-2,D2-5,#PWR7-8,#PWR20,#PWR25,#PWR27-28,#PWR34-35,#PWR37-40,#PWR44,#PWR49-54,#PWR58-61,#PWR64-66,#PWR76-89,#PWR92-96,#PWR101,#PWR103,#PWR105,J6,J8,R6,R47-48,R51-54,R56-64,R134-139,R141-144,R146-151,R153-164,TP11,TP22,TP27,U2-3,U6,U8-10,U12-14,U108,C5-9,C16-19,C22-25,C27-29,C36,C131-132,C136-140",
+    "used_designators": "L1-2,D2-5,#PWR7-9,#PWR20,#PWR25,#PWR27-28,#PWR34-35,#PWR37-40,#PWR44,#PWR49-54,#PWR58-61,#PWR64-66,#PWR71,#PWR76-89,#PWR91-99,#PWR101,#PWR103,#PWR105,J6,J8-9,R6,R21-22,R47-48,R51-54,R56-64,R134-139,R141-144,R146-151,R153-164,TP11,TP22,TP27,U2-3,U6,U8-10,U12-15,U108,C5-9,C16-19,C22-25,C27-29,C36,C58-59,C131-132,C136-140",
     "variants": [
       {
         "name": "Digikey"

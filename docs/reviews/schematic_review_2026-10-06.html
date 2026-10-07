@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phyduino Pico 2 – Schematic Design Review (Rev A, no USB-PD)</title>
+<style>
+.viz-root {
+  color-scheme: light;
+  --page:           #f9f9f7;
+  --surface-1:      #fcfcfb;
+  --text-primary:   #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted:     #898781;
+  --grid:           #e1e0d9;
+  --axis:           #c3c2b7;
+  --border:         rgba(11,11,11,0.10);
+  --ok-text:        #006300;
+  --sev-critical:   #d03b3b;
+  --sev-high:       #ec835a;
+  --sev-medium:     #fab219;
+  --sev-low:        #898781;
+  --code-bg:        #f0efec;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .viz-root {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface-1: #1a1a19; --text-primary: #ffffff; --text-secondary: #c3c2b7;
+    --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10); --ok-text: #0ca30c; --code-bg: #2c2c2a;
+  }
+}
+:root[data-theme="dark"] .viz-root {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface-1: #1a1a19; --text-primary: #ffffff; --text-secondary: #c3c2b7;
+  --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10); --ok-text: #0ca30c; --code-bg: #2c2c2a;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+.viz-root {
+  background: var(--page); color: var(--text-primary);
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+  min-height: 100vh; padding: 32px 20px 64px;
+}
+.wrap { max-width: 1040px; margin: 0 auto; }
+header h1 { font-size: 26px; font-weight: 600; margin: 0 0 4px; }
+header p { margin: 0; color: var(--text-secondary); }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 10px; font-size: 13px; color: var(--text-secondary); }
+.toolbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 24px 0 16px; }
+.toolbar button {
+  font: inherit; font-size: 13px; padding: 5px 12px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--border); background: var(--surface-1); color: var(--text-primary);
+}
+.toolbar button[aria-pressed="true"] { background: var(--text-primary); color: var(--surface-1); }
+.toolbar .spacer { flex: 1; }
+
+.card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+.tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.tile .label { font-size: 13px; color: var(--text-secondary); display: flex; align-items: center; gap: 6px; }
+.tile .value { font-size: 34px; font-weight: 600; line-height: 1.1; margin-top: 4px; }
+.tile .sub { font-size: 12px; color: var(--text-muted); }
+
+.sev-icon { display: inline-flex; width: 18px; height: 18px; border-radius: 4px; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700; color: #fff; flex: none; }
+.sev-critical { background: var(--sev-critical); }
+.sev-high { background: var(--sev-high); color: #0b0b0b; }
+.sev-medium { background: var(--sev-medium); color: #0b0b0b; }
+.sev-low { background: var(--sev-low); }
+
+.chart-card { margin-top: 12px; }
+.chart-card h2, section h2 { font-size: 17px; font-weight: 600; margin: 0 0 2px; }
+.chart-card .desc { font-size: 13px; color: var(--text-secondary); margin: 0 0 12px; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 13px; color: var(--text-secondary); margin-bottom: 8px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.chart-wrap { position: relative; }
+svg text { fill: var(--text-secondary); font-size: 12px; }
+svg .tick { fill: var(--text-muted); font-variant-numeric: tabular-nums; }
+.tooltip {
+  position: absolute; pointer-events: none; background: var(--surface-1); border: 1px solid var(--border);
+  border-radius: 8px; padding: 8px 10px; font-size: 12px; box-shadow: 0 4px 16px rgba(0,0,0,.12);
+  opacity: 0; transition: opacity .1s; min-width: 160px; color: var(--text-primary);
+}
+.tooltip .t { font-weight: 600; margin-bottom: 2px; }
+.tooltip .r { display: flex; align-items: center; gap: 6px; color: var(--text-secondary); }
+details.table-view { margin-top: 10px; font-size: 13px; }
+details.table-view summary { cursor: pointer; color: var(--text-secondary); }
+table { border-collapse: collapse; width: 100%; margin-top: 8px; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 5px 8px; border-bottom: 1px solid var(--grid); }
+th { color: var(--text-secondary); font-weight: 500; }
+td.n, th.n { text-align: right; }
+
+section { margin-top: 28px; }
+section > .head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+section > .head .count { color: var(--text-muted); font-size: 13px; }
+.finding { background: var(--surface-1); border: 1px solid var(--border); border-left: 4px solid var(--sev-low);
+  border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; }
+.finding.critical { border-left-color: var(--sev-critical); }
+.finding.high { border-left-color: var(--sev-high); }
+.finding.medium { border-left-color: var(--sev-medium); }
+.finding h3 { font-size: 15px; font-weight: 600; margin: 0; display: flex; gap: 8px; align-items: baseline; }
+.finding.resolved { border-left-color: var(--ok-text); }
+.finding.resolved .grid > div:nth-child(-n+4) { opacity: .6; }
+.res-badge { margin-left: auto; font-size: 12px; font-weight: 600; color: var(--ok-text); border: 1px solid var(--ok-text); border-radius: 999px; padding: 0 9px; white-space: nowrap; }
+.finding .grid .k.res { color: var(--ok-text); }
+.finding .grid .k.fol { color: var(--sev-high); }
+.tile .value .of { font-size: 14px; font-weight: 500; color: var(--text-muted); }
+.tile .sub .done { color: var(--ok-text); font-weight: 600; }
+.finding h3 .num { color: var(--text-muted); font-weight: 500; font-variant-numeric: tabular-nums; }
+.finding .where { font-size: 12px; color: var(--text-muted); margin: 2px 0 8px; }
+.finding .where .sheet { display: inline-block; padding: 0 7px; border-radius: 999px; border: 1px solid var(--border); margin-right: 6px; color: var(--text-secondary); }
+.finding .grid { display: grid; grid-template-columns: 70px 1fr; gap: 4px 12px; font-size: 14px; }
+.finding .grid .k { color: var(--text-muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; padding-top: 2px; }
+.finding ul { margin: 0; padding-left: 18px; }
+.finding table { font-size: 13px; margin: 4px 0; }
+code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 12.5px; background: var(--code-bg); padding: 1px 5px; border-radius: 4px; }
+.hidden { display: none; }
+
+.ok-list { columns: 2; column-gap: 28px; padding-left: 0; list-style: none; margin: 0; font-size: 14px; }
+.ok-list li { break-inside: avoid; padding: 3px 0 3px 22px; position: relative; }
+.ok-list li::before { content: "✓"; position: absolute; left: 2px; color: var(--ok-text); font-weight: 700; }
+footer { margin-top: 32px; font-size: 12px; color: var(--text-muted); }
+footer a { color: var(--text-secondary); }
+@media (max-width: 720px) { .tiles { grid-template-columns: repeat(2, 1fr); } .ok-list { columns: 1; } }
+@media print { .toolbar { display: none; } .finding, .card { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<div class="viz-root">
+<div class="wrap">
+
+<header>
+  <h1>Phyduino Pico 2: Schematic Design Review</h1>
+  <p>Functional and connectivity review of the four schematic sheets. Part-attribute errors are left for a separate review.</p>
+  <div class="meta">
+    <span><b>Branch:</b> dev_reva_no_usbpd</span>
+    <span><b>Rev:</b> A</span>
+    <span><b>Date:</b> 2026-10-06</span>
+    <span><b>Status:</b> critical findings #1–#5 resolved (re-checked 2026-10-06); 3 follow-ups noted</span>
+    <span><b>Basis:</b> kicad-cli 10.0.4 netlist + ERC; datasheets in <code>docs/pdf/datasheets</code>, TPS25947, XC6190, ESP-AT docs</span>
+  </div>
+</header>
+
+<div class="toolbar" role="group" aria-label="Filter findings by severity">
+  <button data-filter="all" aria-pressed="true">All</button>
+  <button data-filter="critical" aria-pressed="false">Critical</button>
+  <button data-filter="high" aria-pressed="false">High</button>
+  <button data-filter="medium" aria-pressed="false">Medium</button>
+  <button data-filter="low" aria-pressed="false">Low</button>
+  <span class="spacer"></span>
+  <button id="theme" aria-pressed="false">Toggle dark mode</button>
+</div>
+
+<div class="tiles" id="tiles"></div>
+
+<div class="card chart-card">
+  <h2>Findings by schematic sheet</h2>
+  <p class="desc">Number of findings on each sheet, split by severity. Hover a segment for the finding numbers.</p>
+  <div class="legend" id="legend"></div>
+  <div class="chart-wrap" id="chartWrap">
+    <svg id="chart" width="100%" height="200" role="img" aria-labelledby="chartTitle"><title id="chartTitle">Stacked bar chart of findings per sheet by severity</title></svg>
+    <div class="tooltip" id="tip"></div>
+  </div>
+  <details class="table-view">
+    <summary>Show as table</summary>
+    <table id="dataTable"></table>
+  </details>
+</div>
+
+<div id="findings"></div>
+
+<section>
+  <div class="head"><h2>Checked and OK</h2></div>
+  <div class="card">
+    <ul class="ok-list">
+      <li>AP63200 feedback dividers: 3.33 V (196k/62k) and 4.99 V (157k/30k)</li>
+      <li>TPS25947 eFuses: limit ≈ 3 A each (R<sub>ILM</sub> 1.1 kΩ); windows ≈ 4.5–22.4 V (barrel/shield) and 4.5–5.6 V (USB); true reverse-current blocking makes the OR'd outputs valid</li>
+      <li>TPS2121 pin mapping, highest-voltage mode, OV dividers (≈ 5.53 V), I<sub>LIM</sub> ≈ 2.6 A</li>
+      <li>RP2350 core regulator: 3.3 µH inductor, 4.7 µF on VREG_VIN and DVDD, RC filter on VREG_AVDD</li>
+      <li>Decoupling on IOVDD, DVDD and ADC_AVDD (ferrite + 100 nF)</li>
+      <li>USB: 27 Ω series resistors, 5.1 kΩ CC resistors, ESD array, shield RC</li>
+      <li>SWD connector pinout matches the Raspberry Pi 3-pin debug connector</li>
+      <li>Arduino mapping: SPI1 on D10–D13, UART0 on D0/D1, I²C1 on D14/D15</li>
+      <li>HSTX lanes on GPIO12–19 with ground between pairs on J7</li>
+      <li>ADS7038 on SPI0; I²C0 pull-ups 5.1 kΩ; EEPROM 0x50 and expander 0x43 (no address conflict)</li>
+      <li>Boot-select slide switch acting on flash CS through R49</li>
+      <li>Shared QSPI bus between flash and PSRAM (apart from finding #4)</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  Sources:
+  <a href="https://docs.espressif.com/projects/esp-at/en/latest/esp32c6/Get_Started/Hardware_connection.html">ESP-AT ESP32-C6 hardware connection</a> ·
+  <a href="https://content.codico.com/fileadmin/media/download/datasheets/torex/xc6190-datasheet.pdf">Torex XC6190 datasheet</a> ·
+  <a href="https://www.ti.com/lit/ds/symlink/tps25947.pdf">TI TPS25947 datasheet</a> ·
+  RP2350, TPS2121, ESP32-C6-MINI-1 and AP63200 datasheets in the repository.
+</footer>
+
+</div>
+</div>
+
+<script>
+const SEV = [
+  { key: "critical", label: "Critical", icon: "✖", note: "Fix before fabrication" },
+  { key: "high",     label: "High",     icon: "!", note: "Likely field problems" },
+  { key: "medium",   label: "Medium",   icon: "◆", note: "Design-margin issues" },
+  { key: "low",      label: "Low",      icon: "•", note: "Cleanup" },
+];
+const SHEETS = ["Root", "Microcontroller", "Power", "Wireless Communication"];
+
+const F = [
+ { n: 1, sev: "critical", sheet: "Wireless Communication", title: "Every Wi-Fi UART line connects TX to TX and RX to RX",
+   where: "U1 GPIO24–29 ↔ U11 IO4–IO7, TXD0, RXD0",
+   problem: `ESP-AT on the ESP32-C6 uses GPIO7 for TX, GPIO6 for RX, GPIO5 for CTS and GPIO4 for RTS. The schematic connects matching pins together instead of crossing them:
+     <table><tr><th>Net</th><th>RP2350</th><th>ESP32</th><th>Result</th></tr>
+     <tr><td><code>WIFI_UART_TX</code></td><td>GPIO24 (UART1 TX)</td><td>IO7 (TX)</td><td>two outputs</td></tr>
+     <tr><td><code>WIFI_UART_RX</code></td><td>GPIO25 (RX)</td><td>IO6 (RX)</td><td>two inputs</td></tr>
+     <tr><td><code>WIFI_UART_CTS/RTS</code></td><td>GPIO26 / 27</td><td>IO5 (CTS) / IO4 (RTS)</td><td>same problem</td></tr>
+     <tr><td><code>WIFI_DL_UART_TX/RX</code></td><td>GPIO28 / 29</td><td>TXD0 / RXD0</td><td>same problem</td></tr></table>
+     The RP2350 can't swap TX and RX in its hardware UART, so only a PIO UART could work around this.`,
+   fix: "Swap each pair at the ESP end: RP TX → ESP RX, RP RTS → ESP CTS, and so on." },
+ { n: 2, sev: "critical", sheet: "Microcontroller", title: "The reset button can't reset the board by itself",
+   where: "U4 XC6190, SW1, J2.3, R18",
+   problem: `The XC6190 only pulls its output low when SW1 <b>and</b> SW2 are both held low for the delay time. Both pins are pulled up internally. SW2 goes to the header's <code>EXT_RESET</code> (active low), which normally floats high, so pressing SW1 does nothing. With R<sub>T</sub> = 10 kΩ, the datasheet formula gives about 0.72 s, below the specified 1–20 s range.`,
+   fix: "Put a plain button on RUN, or use a single-input supervisor. Connect the Arduino RESET pin to RUN, possibly through a resistor." },
+ { n: 3, sev: "critical", sheet: "Wireless Communication", title: "The ESP32-C6 is wired to always start in programming mode",
+   where: "R44 (IO9 pull-down), R45 (IO8 pull-up)",
+   problem: `With IO9 low and IO8 high, the datasheet table gives <i>Joint download boot</i>. The sheet note says this is deliberate, but the module will then never run the ESP-AT firmware after a reset.`,
+   fix: "Connect IO9 to a spare RP2350 GPIO (GPIO1 and GPIO8–11 are unused) with a pull-up. Firmware can then choose programming or normal start-up before raising WIFI_ENA." },
+ { n: 4, sev: "critical", sheet: "Microcontroller", title: "PSRAM chip-select has no pull-up",
+   where: "U3 CE# ↔ U1 GPIO0 (net PSRAM_CE#)",
+   problem: "At reset, RP2350 GPIOs default to a pull-down, so the PSRAM is selected while the boot ROM reads the flash. Both chips can then drive the shared QSPI data lines.",
+   fix: "Add about 10 kΩ from PSRAM_CE# to +3.3 V." },
+ { n: 5, sev: "critical", sheet: "Microcontroller", title: "The flash part runs at the wrong voltage",
+   where: "U2 GD25LE128EXHIGR",
+   problem: "The GD25<b>LE</b>128E is a 1.65–2.0 V part but is powered from +3.3 V. The datasheet in the repo is for the 3.3 V AT25SF128A. This may belong to the later attribute review, but as fitted the part would be damaged.",
+   fix: "Fit a 3.3 V QSPI flash, such as the GD25Q128E or AT25SF128A." },
+
+ { n: 6, sev: "high", sheet: "Microcontroller", title: "D8–D15 aren't 5 V tolerant",
+   where: "U1 GPIO40–47 → J3",
+   problem: "These are the RP2350B's analogue-capable pins (\"Digital IO / Analogue\", not FT), so the 5.5 V tolerance doesn't apply. D0–D7 (GPIO32–39) are fine. A 5 V Uno shield driving D8–D13 could damage the RP2350.",
+   fix: "Move D8–D15 to fault-tolerant GPIOs, add series resistance or level shifting, or at least mark it on the silkscreen and in the workshop notes." },
+ { n: 7, sev: "high", sheet: "Root", title: "IOREF isn't connected",
+   where: "J2.2 (also AREF, J3.8)",
+   problem: "Shields that adapt between 3.3 V and 5 V read IOREF to choose their logic level. AREF is also unconnected; that's fine, but should be documented.",
+   fix: "Connect IOREF to +3.3 V." },
+ { n: 8, sev: "high", sheet: "Power", title: "The notes on the Power sheet don't match the circuit",
+   where: "Notes near U108, U10, U8",
+   problem: `<ul><li>"U10's output will be selected below 5.5 V": the TPS2121 picks whichever input is higher, and ST then switches U10 off, so on USB +5 V comes straight from VIN_REG.</li>
+     <li>"U10 enables above 7.0 V / 6.0 V": there's no threshold circuit, only R153 pulling up to +3.3 V plus ST.</li>
+     <li>"U8 enables above 4.3 V": U8's EN is tied directly to VIN_REG.</li></ul>`,
+   fix: "Rewrite the notes. The circuit itself works: above about 5.5 V, the OV2 input trips, ST goes high and U10 starts." },
+
+ { n: 9, sev: "medium", sheet: "Power", title: "+5 V briefly drops out at power-up and during supply changes",
+   where: "U108 ST ↔ U10 EN",
+   problem: "As a barrel supply ramps up, VIN_REG passes through about 5 V, so IN2 is selected and U10 switches off. Above about 5.53 V, IN2 becomes invalid and the output turns off. ST then goes high and U10 soft-starts. +5 V (J2.5 and the ADC supply) drops out for a few milliseconds. +3.3 V is unaffected.",
+   fix: "Check on the bench. If it matters, add hysteresis or a small hold-up capacitance on +5 V." },
+ { n: 10, sev: "medium", sheet: "Microcontroller", title: "The I/O expander shares the 5 V-buck enable net",
+   where: "U14 GPIO2 on DCDC_5V0_EN",
+   problem: "The open-drain ST output and R153 already drive this net. If firmware sets the expander pin as an output, it will fight ST. Also check that the FXL6408's power-on pull state doesn't override R153.",
+   fix: "Document it as input-only in the firmware, or remove it from the net." },
+ { n: 11, sev: "medium", sheet: "Microcontroller", title: "Two pin pairs share one peripheral instance",
+   where: "I2C1: GPIO22/23 (J7) and GPIO46/47 (D14/D15) · UART0: GPIO32/33 (D0/D1) and GPIO28/29 (ESP programming)",
+   problem: "Each pair can't be used independently at the same time. J7's I²C lines also have no pull-ups.",
+   fix: "Move one pair of each to the other instance, or document it. Add pull-ups for HS_I2C1 if the FPC peripheral doesn't have them." },
+ { n: 12, sev: "medium", sheet: "Root", title: "Too much capacitance directly on USB VBUS",
+   where: "C27 22 µF on +V_USB, ahead of U13",
+   problem: "The USB specification limits this to 10 µF. U13's dVdt already controls inrush to the capacitors after the eFuse.",
+   fix: "Reduce C27 to 10 µF or less." },
+ { n: 13, sev: "medium", sheet: "Power", title: "USB start-up threshold is high",
+   where: "R149 / R154 / R155 on U13",
+   problem: "Starting at 4.47 V (rising) means a sagging hub or long cable around 4.4 V won't power the board.",
+   fix: "Consider lowering the threshold to about 4.2 V." },
+ { n: 14, sev: "medium", sheet: "Power", title: "VIN on the shield header is input-only",
+   where: "J2.8 → U12",
+   problem: "With reverse current blocked, shields that expect to draw barrel voltage from VIN (motor shields, for example) get nothing. That differs from Arduino behaviour.",
+   fix: "Confirm it's intended and document it." },
+ { n: 15, sev: "medium", sheet: "Microcontroller", title: "A0–A5 connect straight to the ADS7038",
+   where: "J4 → U5 AIN0–5",
+   problem: "There's no series resistance or clamping on a student-facing header.",
+   fix: "Add about 1 kΩ in series plus a small capacitor per channel." },
+
+ { n: 16, sev: "low", sheet: "Wireless Communication", title: "ESP enable has no external pull-down or RC",
+   where: "WIFI_ENA (GPIO30 → U11 EN)",
+   problem: "GPIO30's reset pull-down holds the module off, which is acceptable, but it depends on the RP2350's state.",
+   fix: "Add a 10 kΩ pull-down." },
+ { n: 17, sev: "low", sheet: "Root", title: "32 kHz crystal nets end at loose labels",
+   where: "XTAL_32K_P / _N (ESP IO0/IO1)",
+   problem: "The labels and wire stubs on the root sheet connect to nothing.",
+   fix: "Add the crystal, or remove the labels and mark the pins no-connect." },
+ { n: 18, sev: "low", sheet: "Microcontroller", title: "Unused RP2350 pins have no connection and no flags",
+   where: "GPIO1, GPIO8–11",
+   problem: "These produce ERC errors.",
+   fix: "Use one for finding #3 and add no-connect flags to the rest." },
+ { n: 19, sev: "low", sheet: "Root", title: "USB shell pads S1, S3 and S4 are unconnected",
+   where: "J6",
+   problem: "Only S2 goes to the R6/C9 network.",
+   fix: "Tie all four shell pads together." },
+ { n: 20, sev: "low", sheet: "Microcontroller", title: "Crystal load capacitors are slightly high",
+   where: "C14, C15 18 pF; Y1 C<sub>L</sub> 10 pF",
+   problem: "The effective load is about 12 pF. That's fine for USB, but the frequency will be slightly low.",
+   fix: "Use 15 pF, as in the RP2350 reference design." },
+ { n: 21, sev: "low", sheet: "Root", title: "Barrel-jack detect polarity and name",
+   where: "J8.3 → EXT_PWR (active-low net)",
+   problem: "The detect contact is usually shorted to the sleeve when <i>no</i> plug is in. If so, the active-low name is inverted. It also detects a plug, not whether power is present.",
+   fix: "Check the 54-00127 drawing and rename the net if needed." },
+ { n: 22, sev: "low", sheet: "Microcontroller", title: "Stale notes",
+   where: "MCU sheet, root sheet",
+   problem: "\"I²C Addr = 0x70\" is left over from the PCA9570; the FXL6408 with ADDR grounded is 0x43. The root sheet still has a \"DOUBLE CHECK CONNECTIONS\" note.",
+   fix: "Update or remove both." },
+ { n: 23, sev: "low", sheet: "Power", title: "ERC noise",
+   where: "Whole project",
+   problem: "The eFuse OUT-to-OUT and U108 OUT1/OUT8 errors are expected. \"Power pin not driven\" errors need PWR_FLAG symbols. Merged net names (IOVDD/+3.3V, DVDD/+1.1V, SEL_5V/DCDC_5V0_EN) are cosmetic.",
+   fix: "Add PWR_FLAGs and ERC exclusions so real errors stand out." },
+];
+
+// Resolution log: finding number → how it was closed (verified against a fresh netlist export).
+const RESOLVED = {
+  1: { date: "2026-10-06", note: "All six signals now cross at the ESP32: GPIO24 TX → IO6 RX, IO7 TX → GPIO25 RX, GPIO27 RTS → IO5 CTS, IO4 RTS → GPIO26 CTS, GPIO28 → RXD0, TXD0 → GPIO29. Pull-ups R55 and R50 now sit on the ESP32's inputs." },
+  2: { date: "2026-10-06", note: "U4 (XC6190), R18 and SW2 removed. U15 TPS3424C11EF2ADRLR added: PB takes SW1 and J2.3 (R22 10 kΩ pull-up, C57); INT drives RUN (R20); RESET drives flash CS through R49; LPT 4.7 nF (C58) gives about a 2 s long press for UF2 mode; SPT capacitor C59 is DNP, so the short press is 50 ms; KILL pulled up by R21. See <code>docs/planning/UF2_boot_button_press.html</code>.", follow: "R49 is now 10 kΩ. With the RP2350's internal pull-up on QSPI_SS, CS may only reach about 0.55–0.7 V during a long press, against a 0.8 V maximum for a valid low. The datasheet recommends about 4.7 kΩ, so set R49 to 4.7–5.1 kΩ for reliable UF2 entry." },
+  3: { date: "2026-10-06", note: "R44 and R45 are now 10 kΩ pull-ups on IO9 and IO8, so the ESP32 starts normally (SPI boot). IO9 (WIFI_BOOT1) goes to RP2350 GPIO11, so firmware can select programming mode.", follow: "Firmware must drive GPIO11 high, or switch off its default pull-down, before raising WIFI_ENA. Otherwise IO9 sits close to the ESP32's minimum input-high level. Changing R44 to 4.7 kΩ removes that dependency." },
+  4: { date: "2026-10-06", note: "R51 (5.1 kΩ) added from PSRAM_CE# to +3.3 V." },
+  5: { date: "2026-10-06", note: "U2 changed to AT25QF128A-SHB-T (3.3 V, quad mode enabled from the factory) with the SOIC-8 5.3 × 5.3 mm footprint. Pinout unchanged.", follow: "The PCB still has the old USON-8 footprint. Run Update PCB from Schematic." },
+};
+
+const sevByKey = Object.fromEntries(SEV.map(s => [s.key, s]));
+const icon = k => `<span class="sev-icon sev-${k}" aria-hidden="true">${sevByKey[k].icon}</span>`;
+
+// Tiles
+document.getElementById("tiles").innerHTML = SEV.map(s => {
+  const list = F.filter(f => f.sev === s.key), c = list.length;
+  const done = list.filter(f => RESOLVED[f.n]).length;
+  const sub = done === c ? `<span class="done">✓ All ${c} resolved</span>` : done ? `${done} of ${c} resolved · ${s.note}` : s.note;
+  return `<div class="card tile"><div class="label">${icon(s.key)}${s.label}</div>
+    <div class="value">${c - done}<span class="of"> open</span></div><div class="sub">${sub}</div></div>`;
+}).join("");
+
+// Legend
+document.getElementById("legend").innerHTML = SEV.map(s => `<span>${icon(s.key)}${s.label}</span>`).join("");
+
+// Data
+const counts = SHEETS.map(sh => ({ sheet: sh, ...Object.fromEntries(SEV.map(s => [s.key,
+  F.filter(f => f.sheet === sh && f.sev === s.key)])) }));
+
+// Table view
+document.getElementById("dataTable").innerHTML =
+  `<tr><th>Sheet</th>${SEV.map(s => `<th class="n">${s.label}</th>`).join("")}<th class="n">Total</th></tr>` +
+  counts.map(r => `<tr><td>${r.sheet}</td>${SEV.map(s => `<td class="n">${r[s.key].length}</td>`).join("")}
+    <td class="n">${SEV.reduce((a, s) => a + r[s.key].length, 0)}</td></tr>`).join("");
+
+// Chart
+const svg = document.getElementById("chart"), wrap = document.getElementById("chartWrap"), tip = document.getElementById("tip");
+const NS = "http://www.w3.org/2000/svg";
+function el(tag, attrs, text) { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; return e; }
+function draw() {
+  while (svg.lastChild && svg.lastChild.tagName !== "title") svg.removeChild(svg.lastChild);
+  const W = wrap.clientWidth, L = 160, R = 36, T = 8, rowH = 40, barH = 18;
+  const H = T + rowH * SHEETS.length + 24;
+  svg.setAttribute("height", H); svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const max = Math.max(...counts.map(r => SEV.reduce((a, s) => a + r[s.key].length, 0)));
+  const xMax = Math.ceil(max / 2) * 2;
+  const x = v => L + (W - L - R) * v / xMax;
+  const cs = getComputedStyle(document.querySelector(".viz-root"));
+  for (let v = 0; v <= xMax; v += 2) {
+    svg.appendChild(el("line", { x1: x(v), x2: x(v), y1: T, y2: T + rowH * SHEETS.length,
+      stroke: cs.getPropertyValue(v === 0 ? "--axis" : "--grid"), "stroke-width": 1 }));
+    svg.appendChild(el("text", { x: x(v), y: H - 6, "text-anchor": "middle", class: "tick" }, v));
+  }
+  counts.forEach((r, i) => {
+    const y = T + i * rowH + (rowH - barH) / 2;
+    svg.appendChild(el("text", { x: L - 10, y: y + barH / 2 + 4, "text-anchor": "end" }, r.sheet));
+    let acc = 0; const segs = SEV.filter(s => r[s.key].length);
+    segs.forEach((s, j) => {
+      const n = r[s.key].length, x0 = x(acc) + (j ? 1 : 0), x1 = x(acc + n) - (j < segs.length - 1 ? 1 : 0);
+      const last = j === segs.length - 1, w = Math.max(1, x1 - x0), rad = 4;
+      const d = last
+        ? `M${x0},${y}H${x0 + w - rad}Q${x0 + w},${y} ${x0 + w},${y + rad}V${y + barH - rad}Q${x0 + w},${y + barH} ${x0 + w - rad},${y + barH}H${x0}Z`
+        : `M${x0},${y}H${x0 + w}V${y + barH}H${x0}Z`;
+      const p = el("path", { d, fill: cs.getPropertyValue(`--sev-${s.key}`), tabindex: 0,
+        "aria-label": `${r.sheet}: ${n} ${s.label}` });
+      p.style.cursor = "default";
+      const show = ev => {
+        tip.innerHTML = `<div class="t">${r.sheet}</div><div class="r">${icon(s.key)}${s.label}: <b style="color:var(--text-primary)">${n}</b></div>
+          <div class="r">Findings #${r[s.key].map(f => f.n).join(", #")}</div>`;
+        const b = wrap.getBoundingClientRect(), px = (ev.clientX ?? (b.left + x0 + w / 2)) - b.left, py = (ev.clientY ?? (b.top + y)) - b.top;
+        tip.style.left = Math.min(px + 12, W - 190) + "px"; tip.style.top = (py - 70) + "px"; tip.style.opacity = 1;
+        svg.querySelectorAll("path").forEach(q => q.style.opacity = q === p ? 1 : 0.45);
+      };
+      const hide = () => { tip.style.opacity = 0; svg.querySelectorAll("path").forEach(q => q.style.opacity = 1); };
+      p.addEventListener("mousemove", show); p.addEventListener("focus", show);
+      p.addEventListener("mouseleave", hide); p.addEventListener("blur", hide);
+      svg.appendChild(p);
+      acc += n;
+    });
+    svg.appendChild(el("text", { x: x(acc) + 6, y: y + barH / 2 + 4 }, acc));
+  });
+}
+draw(); new ResizeObserver(draw).observe(wrap);
+
+// Findings
+document.getElementById("findings").innerHTML = SEV.map(s => {
+  const list = F.filter(f => f.sev === s.key);
+  return `<section data-sev="${s.key}"><div class="head">${icon(s.key)}<h2>${s.label}</h2><span class="count">${list.length} finding${list.length > 1 ? "s" : ""} · ${s.note}</span></div>
+  ${list.map(f => { const r = RESOLVED[f.n]; return `<article class="finding ${f.sev}${r ? " resolved" : ""}">
+    <h3><span class="num">#${f.n}</span>${f.title}${r ? `<span class="res-badge">✓ Resolved ${r.date}</span>` : ""}</h3>
+    <div class="where"><span class="sheet">${f.sheet}</span>${f.where}</div>
+    <div class="grid"><div class="k">Problem</div><div>${f.problem}</div><div class="k">Fix</div><div>${f.fix}</div>
+    ${r ? `<div class="k res">Done</div><div>${r.note}</div>` : ""}
+    ${r && r.follow ? `<div class="k fol">Follow-up</div><div>${r.follow}</div>` : ""}</div>
+  </article>`; }).join("")}</section>`;
+}).join("");
+
+// Filters
+document.querySelectorAll("[data-filter]").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll("[data-filter]").forEach(o => o.setAttribute("aria-pressed", o === b));
+  document.querySelectorAll("#findings section").forEach(sec =>
+    sec.classList.toggle("hidden", b.dataset.filter !== "all" && sec.dataset.sev !== b.dataset.filter));
+}));
+
+// Theme toggle
+document.getElementById("theme").addEventListener("click", e => {
+  const root = document.documentElement;
+  const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  root.dataset.theme = dark ? "light" : "dark";
+  e.currentTarget.setAttribute("aria-pressed", !dark);
+  draw();
+});
+</script>
+</body>
+</html>
