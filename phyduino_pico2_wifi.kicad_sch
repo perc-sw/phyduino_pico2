@@ -1972,7 +1972,7 @@
 	)
 	(text "Low=Disable, High=Enable"
 		(exclude_from_sim no)
-		(at 41.148 42.164 0)
+		(at 39.878 39.37 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1998,6 +1998,18 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3c3a111b-4f75-4704-a797-8c91dc2bf8ba")
+	)
+	(junction
+		(at 33.02 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "46007f26-ac77-42bb-8f9a-f44fa81f14cf")
+	)
+	(junction
+		(at 35.56 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5a29edf9-3197-48fe-8a55-d77ff9c55278")
 	)
 	(junction
 		(at 97.79 43.18)
@@ -2070,8 +2082,16 @@
 		(uuid "a1622fdc-e318-4742-b1cf-02f27703e8e9")
 	)
 	(no_connect
+		(at 59.69 45.72)
+		(uuid "ae7ecf6a-933e-465a-980a-1aa069bd9880")
+	)
+	(no_connect
 		(at 90.17 55.88)
 		(uuid "cc0d699e-52f3-45ac-8d0d-ba6f5d34c997")
+	)
+	(no_connect
+		(at 59.69 48.26)
+		(uuid "e0b7dd03-d2e5-4dfc-a5c0-79e3aad61a87")
 	)
 	(no_connect
 		(at 90.17 66.04)
@@ -2138,16 +2158,6 @@
 			(type default)
 		)
 		(uuid "21126c9d-9d88-4fc5-9efa-5915678adfc0")
-	)
-	(wire
-		(pts
-			(xy 46.99 48.26) (xy 59.69 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "22ea8581-e440-4909-a0b2-8c65ed2bbfb8")
 	)
 	(wire
 		(pts
@@ -2251,7 +2261,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 40.64) (xy 29.21 40.64)
+			(xy 53.34 40.64) (xy 33.02 40.64)
 		)
 		(stroke
 			(width 0)
@@ -2278,6 +2288,16 @@
 			(type default)
 		)
 		(uuid "618022f4-54e6-45f8-acbf-6b8538a29f42")
+	)
+	(wire
+		(pts
+			(xy 33.02 40.64) (xy 29.21 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a53198b-52a0-43e4-b0e4-93ced9324a3c")
 	)
 	(wire
 		(pts
@@ -2318,16 +2338,6 @@
 			(type default)
 		)
 		(uuid "91fdf8a3-8988-41f8-85c4-d43b1cf600b1")
-	)
-	(wire
-		(pts
-			(xy 46.99 45.72) (xy 59.69 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "934dcd50-6f39-40f2-a849-026d8ecb0ca8")
 	)
 	(wire
 		(pts
@@ -2438,6 +2448,16 @@
 			(type default)
 		)
 		(uuid "e091db93-1740-4c48-81f9-d3229f7c0603")
+	)
+	(wire
+		(pts
+			(xy 33.02 40.64) (xy 33.02 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e773332d-d271-45bc-89ef-437ec51bd126")
 	)
 	(wire
 		(pts
@@ -3413,26 +3433,6 @@
 			)
 		)
 	)
-	(label "XTAL_32K_N"
-		(at 48.26 48.26 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "0a3e7a82-48e0-4a7c-a080-ed6149ab440a")
-	)
-	(label "XTAL_32K_P"
-		(at 48.26 45.72 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1f082778-c11d-4b3d-b126-c41d8123e1d8")
-	)
 	(label "WIFI_BOOT0"
 		(at 58.42 66.04 180)
 		(effects
@@ -3761,6 +3761,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 80.01 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "3a90763f-e4b8-4823-b496-1cad47b19b1b")
 		)
@@ -4008,6 +4019,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 69.85 34.29 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "658e7bd1-a35c-48d8-ab87-bbea2706535d")
 		)
@@ -4035,7 +4057,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5222e805-5cdc-4701-88d8-6ddd637c0381")
-		(property "Reference" "TP14"
+		(property "Reference" "TP1"
 			(at 51.054 39.624 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4112,13 +4134,24 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 53.34 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b9e2a445-e88d-47a2-95b8-c864d455b4df")
 		)
 		(instances
 			(project "phyduino_pico2"
 				(path "/42309c5d-9d7a-429d-b353-e8927a604374/caa003fc-dd7d-454a-95fd-499db9ef27e8"
-					(reference "TP14")
+					(reference "TP1")
 					(unit 1)
 				)
 			)
@@ -4278,6 +4311,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 97.79 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b7d89455-e3c9-490f-b738-e051ef77c2bc")
 		)
@@ -4305,7 +4349,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "767a16c9-e3f1-4fd4-aca0-872ebba67317")
-		(property "Reference" "TP8"
+		(property "Reference" "TP3"
 			(at 121.92 39.624 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4382,13 +4426,24 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 124.46 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "37262c36-9c28-4724-85dc-37f49e731f43")
 		)
 		(instances
 			(project "phyduino_pico2"
 				(path "/42309c5d-9d7a-429d-b353-e8927a604374/caa003fc-dd7d-454a-95fd-499db9ef27e8"
-					(reference "TP8")
+					(reference "TP3")
 					(unit 1)
 				)
 			)
@@ -4406,7 +4461,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "885cd71b-398c-48c8-a89a-1d8411c91fe4")
-		(property "Reference" "TP9"
+		(property "Reference" "TP2"
 			(at 122.174 42.164 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4483,13 +4538,216 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 124.46 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1ad7c7cc-aa22-44b2-a47c-fcd1ef2131c0")
 		)
 		(instances
 			(project "phyduino_pico2"
 				(path "/42309c5d-9d7a-429d-b353-e8927a604374/caa003fc-dd7d-454a-95fd-499db9ef27e8"
-					(reference "TP9")
+					(reference "TP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector [KL]:TestPoint_Small")
+		(at 35.56 68.58 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "91ad723f-85ab-49df-8b65-b4ef36465e57")
+		(property "Reference" "TP11"
+			(at 33.274 67.564 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 36.83 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Component - Test point SMT [UL]:TestPoint_SameSky_CPG-47-TH-B"
+			(at 30.48 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "SMD test point"
+			(at 35.56 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 35.56 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Variant" "IGNORE"
+			(at 35.56 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 35.56 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c2401bb0-85b7-4588-8b1c-dcc09c6a8fdd")
+		)
+		(instances
+			(project "phyduino_pico2"
+				(path "/42309c5d-9d7a-429d-b353-e8927a604374/caa003fc-dd7d-454a-95fd-499db9ef27e8"
+					(reference "TP11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 33.02 46.99 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9d2b44f9-4a47-4293-ab4e-e60cd8400542")
+		(property "Reference" "#PWR076"
+			(at 33.02 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 33.02 51.4334 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 33.02 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 33.02 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 33.02 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8353e6af-b1fd-40d8-abc4-1ea2bbae5f50")
+		)
+		(instances
+			(project "phyduino_pico2"
+				(path "/42309c5d-9d7a-429d-b353-e8927a604374/caa003fc-dd7d-454a-95fd-499db9ef27e8"
+					(reference "#PWR076")
 					(unit 1)
 				)
 			)
@@ -4573,6 +4831,17 @@
 			)
 		)
 		(property "Variant" "ADV_SMT"
+			(at 74.93 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
 			(at 74.93 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -4985,6 +5254,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 36.83 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "c01c1a1b-eb77-4c6d-9b23-e3953a522cab")
 		)
@@ -5231,6 +5511,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 30.48 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "975fee66-7fb4-4baa-89da-64ff49fe0077")
 		)
@@ -5395,6 +5686,186 @@
 			(project "phyduino_pico2"
 				(path "/42309c5d-9d7a-429d-b353-e8927a604374/caa003fc-dd7d-454a-95fd-499db9ef27e8"
 					(reference "#PWR026")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "phyduino_pico:R_Small")
+		(at 33.02 44.45 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e76cc440-1ff1-4faa-aae6-e7a9bd4576ed")
+		(property "Reference" "R53"
+			(at 31.242 44.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10kΩ"
+			(at 33.02 44.45 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 33.02 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 33.02 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "1.1kΩ ±1% 62.5mW 0402 Thick Film Resistor"
+			(at 33.02 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Variant" "ADV_SMT"
+			(at 33.02 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PN" "FRC0402F1101TS"
+			(at 33.02 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PN" "C2909306"
+			(at 33.02 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC MANUFACTURER" "FOJAN"
+			(at 33.02 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY PN" "13-RC0402FR-131K1LCT-ND"
+			(at 33.02 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGKEY MANUFACTURER" "YAGEO"
+			(at 33.02 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 33.02 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 33.02 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 33.02 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cb8530f5-52c8-4700-9023-0756683c66d1")
+		)
+		(pin "2"
+			(uuid "bee8d7d7-d569-499f-b8e5-77e2da54bafd")
+		)
+		(instances
+			(project "phyduino_pico2"
+				(path "/42309c5d-9d7a-429d-b353-e8927a604374/caa003fc-dd7d-454a-95fd-499db9ef27e8"
+					(reference "R53")
 					(unit 1)
 				)
 			)
@@ -5622,6 +6093,17 @@
 			)
 		)
 		(property "Tolerance" ""
+			(at 80.01 34.29 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
 			(at 80.01 34.29 90)
 			(hide yes)
 			(show_name no)

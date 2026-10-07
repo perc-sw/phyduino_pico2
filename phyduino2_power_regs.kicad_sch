@@ -602,6 +602,172 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:D_Zener_Filled"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Zener_Filled"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Zener diode, filled shape"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "D_Zener_Filled_0_1"
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27) (xy -0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "D_Zener_Filled_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R_Small"
 			(pin_numbers
 				(hide yes)
@@ -2410,22 +2576,9 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "NOTES:"
-		(exclude_from_sim no)
-		(at 211.074 108.966 0)
-		(effects
-			(font
-				(size 2.54 2.54)
-				(thickness 0.254)
-				(bold yes)
-			)
-			(justify left top)
-		)
-		(uuid "03bfe6be-3485-4ac2-8a21-1e6b255a9166")
-	)
 	(text "V_{MIN} = 4.5V\nV_{MAX} = 5.5V\nI_{MAX} = 3A"
 		(exclude_from_sim no)
-		(at 46.736 132.842 0)
+		(at 48.514 84.328 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2434,31 +2587,9 @@
 		)
 		(uuid "06ae1b74-2f99-48ea-b694-ea61e689ebf9")
 	)
-	(text "- U108 select between +VUSB and the output of U10. If both voltages are below +5.5V, U10's output will be selected."
+	(text "NOTES:\n	C_{dVdt} > 10nF, it is recommended to add a 100Ω resistor in series before capacitor"
 		(exclude_from_sim no)
-		(at 214.376 119.888 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "2054d811-af9b-4a31-95c7-1ba210897c20")
-	)
-	(text "- U10 will only enable when +VUSB is above +7.0V."
-		(exclude_from_sim no)
-		(at 214.376 116.84 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "375f3335-3c19-443b-a929-e20dafd13879")
-	)
-	(text "NOTES:\n	C_{dVdt} > 10nF, it is recommended to 100Ω in series with capacitor"
-		(exclude_from_sim no)
-		(at 23.368 60.198 0)
+		(at 14.986 60.198 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2467,9 +2598,9 @@
 		)
 		(uuid "408a38c5-54b4-4aa4-a2d6-e028a70346fe")
 	)
-	(text "Enables +5.0V DC/DC \nwhen VIN2 > 6.0V"
+	(text "Enables +5.0V DC/DC \nwhen +VIN_REG > 5.5V"
 		(exclude_from_sim no)
-		(at 345.44 86.868 0)
+		(at 345.694 91.694 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -2502,18 +2633,7 @@
 	)
 	(text "V_{MIN} = 4.5V\nV_{MAX} = 22.0V\nI_{MAX} = 3A"
 		(exclude_from_sim no)
-		(at 46.99 84.328 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "c1197133-db38-4c5a-83a8-972cc6371679")
-	)
-	(text "V_{MIN} = 4.5V\nV_{MAX} = 22.0V\nI_{MAX} = 3A"
-		(exclude_from_sim no)
-		(at 46.482 35.56 0)
+		(at 57.404 24.638 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2535,7 +2655,7 @@
 	)
 	(text "ST [0b1] = IN1\nST [0b0] = IN2\n\n"
 		(exclude_from_sim no)
-		(at 345.44 92.964 0)
+		(at 345.694 97.79 0)
 		(effects
 			(font
 				(size 0.762 0.762)
@@ -2544,21 +2664,10 @@
 		)
 		(uuid "f9f2940c-5e3b-4f1d-bd0f-a8f1e7dac785")
 	)
-	(text "- U8 will only enable when +VUSB is above +4.3V."
+	(text_box "U108 : Selects between +VIN_REG and +5.0V_DCDC. If\n+5.0V_DCDC is present then it is selected over\n+VIN_REG, otherwise +VIN_REG is selected."
 		(exclude_from_sim no)
-		(at 214.122 114.046 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "ffeefa17-2749-4fb5-9d03-800aef4b5941")
-	)
-	(text_box "U108 : Selects between +VUSB and +5.0V_DCDC. If\n+5.0V_DCDC is present then it is selected over\n+VUSB, otherwise +VUSB is selected."
-		(exclude_from_sim no)
-		(at 316.23 57.15 0)
-		(size 39.37 8.89)
+		(at 314.198 57.15 0)
+		(size 41.402 7.9538)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
 			(width 0)
@@ -2576,16 +2685,16 @@
 		(uuid "00bdb1d6-1624-45cf-8a1e-3d135592c8b7")
 	)
 	(junction
-		(at 293.37 68.58)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "001a1ae7-86ab-4bf8-b94b-5610cb2de869")
-	)
-	(junction
 		(at 66.04 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0340dbdf-bc3e-4ad8-bd18-2c4ccb807b8a")
+	)
+	(junction
+		(at 382.27 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "03d24b48-f28a-43dd-ae3f-994f823b909d")
 	)
 	(junction
 		(at 275.59 85.09)
@@ -2594,16 +2703,10 @@
 		(uuid "05e8a5e3-e206-4eda-b89c-5d268132c90d")
 	)
 	(junction
-		(at 111.76 95.25)
+		(at 316.23 104.14)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "07024a3f-7e61-44e2-a36f-f7fe45f36408")
-	)
-	(junction
-		(at 121.92 80.01)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0a5bee74-47f4-439a-82c2-68621cf5a4a9")
+		(uuid "0cfec8bd-dfdb-45e1-a017-d2cb379bea4d")
 	)
 	(junction
 		(at 280.67 38.1)
@@ -2618,7 +2721,7 @@
 		(uuid "0e67ae59-bef1-412c-ad9a-fb4b8a2393d9")
 	)
 	(junction
-		(at 121.92 128.27)
+		(at 121.92 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1687a4f8-ceee-42d8-9ba9-0e59208001be")
@@ -2636,7 +2739,13 @@
 		(uuid "192e8ff2-d644-4a38-aa66-b772f1c5c70d")
 	)
 	(junction
-		(at 106.68 140.97)
+		(at 292.1 30.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "19739051-78e3-4d3b-8a16-6f1600acce94")
+	)
+	(junction
+		(at 106.68 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1d4dbc24-5ae7-42ce-bd11-cc5bfbc35717")
@@ -2648,19 +2757,19 @@
 		(uuid "1e65d601-5579-406a-a632-5684c851f2b4")
 	)
 	(junction
-		(at 66.04 87.63)
+		(at 137.16 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "1f07fa3d-9661-4bda-8962-98ea681d93c2")
+		(uuid "255fa5f5-1556-4a37-b300-6ad93113ae4a")
 	)
 	(junction
-		(at 137.16 30.48)
+		(at 347.98 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "293fc301-3ca6-423a-b589-8271185b73ad")
+		(uuid "2808628a-9caa-4116-8096-85d1c3b96cf9")
 	)
 	(junction
-		(at 66.04 143.51)
+		(at 66.04 95.25)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "297d4096-47c8-40a4-8280-97fcba6c8cd2")
@@ -2672,16 +2781,10 @@
 		(uuid "362653a9-687c-4a04-a25c-7ede782ed77a")
 	)
 	(junction
-		(at 347.98 77.47)
+		(at 52.07 30.48)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "41dbfff6-2250-4af6-9032-b3e5eaf21429")
-	)
-	(junction
-		(at 66.04 80.01)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "42d7573c-584f-43b9-9209-ed9162cebbfe")
+		(uuid "3bdfb150-b0f7-4f58-a9b9-dda05d3e919a")
 	)
 	(junction
 		(at 210.82 30.48)
@@ -2708,28 +2811,28 @@
 		(uuid "4865dbde-58da-4bbf-a4f6-8a76085bc070")
 	)
 	(junction
-		(at 111.76 143.51)
+		(at 57.5852 30.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4a4e3450-b4a3-4faf-ad8b-0a4ea56d21ab")
+	)
+	(junction
+		(at 204.47 30.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4b5dbdec-d75d-4a03-ac09-1d3964a84981")
+	)
+	(junction
+		(at 111.76 95.25)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4fceb86d-1182-453b-9620-569de2aeb84b")
 	)
 	(junction
-		(at 66.04 135.89)
+		(at 66.04 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "51eafc19-ca38-4336-9205-475cda397aea")
-	)
-	(junction
-		(at 106.68 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "529b80d3-1846-4efd-9a1f-ac03578b16b8")
-	)
-	(junction
-		(at 90.17 118.11)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "53dd5c5d-6fb5-4bf3-97cb-6ec0a619518a")
 	)
 	(junction
 		(at 316.23 111.76)
@@ -2750,7 +2853,7 @@
 		(uuid "58e919a8-2864-4696-9089-9449d068553f")
 	)
 	(junction
-		(at 90.17 166.37)
+		(at 90.17 118.11)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5c506ef0-7678-4ebc-b200-a45fa6272399")
@@ -2766,6 +2869,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5f2afa87-b790-4e3a-b3d2-f1c43fab0737")
+	)
+	(junction
+		(at 137.16 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6624d89e-f530-41e0-a117-1c3c1f9961d9")
 	)
 	(junction
 		(at 275.59 30.48)
@@ -2798,7 +2907,7 @@
 		(uuid "75d81180-0e59-4cf4-8555-75e50817068a")
 	)
 	(junction
-		(at 66.04 128.27)
+		(at 66.04 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "77602f6e-1c46-466f-8369-77826b359d0c")
@@ -2808,6 +2917,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "777373d6-ad20-4f34-861a-d6fba80d8fce")
+	)
+	(junction
+		(at 137.16 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "79c61b38-d525-4b7a-a679-5be70b31612f")
 	)
 	(junction
 		(at 109.22 43.18)
@@ -2840,19 +2955,37 @@
 		(uuid "974bbd77-8c88-4487-87be-e9dae3c442e4")
 	)
 	(junction
+		(at 165.1 30.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "97bfe32f-b146-4376-92cf-4cc873745940")
+	)
+	(junction
 		(at 280.67 45.72)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "97e7ce93-24a2-4309-8f3b-1d5dba3831b7")
 	)
 	(junction
-		(at 66.04 95.25)
+		(at 58.8654 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "9e40a954-4821-4f3d-a1fc-27c4d6ec60c1")
+		(uuid "a0247239-3b00-4087-8436-bb9a72a3e29d")
 	)
 	(junction
-		(at 222.25 77.47)
+		(at 143.51 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a2847bbf-2259-45e5-9ab6-ea09e5630c15")
+	)
+	(junction
+		(at 350.52 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a5fcbb2e-362e-448b-ae35-6c5cec4c313d")
+	)
+	(junction
+		(at 215.9 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a78a9a59-7319-4e4f-afe4-011cffad2e2d")
@@ -2870,10 +3003,10 @@
 		(uuid "b051a672-d55a-4689-8f4a-1623f7be6b2a")
 	)
 	(junction
-		(at 360.68 85.09)
+		(at 137.16 30.48)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "b187dd76-bd07-4023-ba65-6508d89f18f3")
+		(uuid "b30590f0-4066-4489-9c12-a455d2569e14")
 	)
 	(junction
 		(at 280.67 77.47)
@@ -2882,37 +3015,19 @@
 		(uuid "b77bef44-6117-4fcb-8269-9884ff0d5a92")
 	)
 	(junction
-		(at 137.16 80.01)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "bb5ed07d-67fa-449e-890e-e05718e634cd")
-	)
-	(junction
 		(at 121.92 30.48)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c05bf613-aabd-41cd-9c1f-908a12dab90a")
 	)
 	(junction
-		(at 354.33 85.09)
+		(at 143.51 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "c7e2767e-2fb5-4977-b525-525095e77e3b")
+		(uuid "dcdc1053-27f9-4e08-95f7-b72dfd230c7a")
 	)
 	(junction
-		(at 316.23 104.14)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d09b9358-3862-44eb-9cd2-94f0a6cbbc76")
-	)
-	(junction
-		(at 106.68 85.09)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d187039d-6763-4c71-973c-5e77238a3536")
-	)
-	(junction
-		(at 210.82 77.47)
+		(at 204.47 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e021fbc1-e581-4648-9545-07c8db6bc95e")
@@ -2930,13 +3045,31 @@
 		(uuid "e244579a-6362-492c-8955-4995e81764bf")
 	)
 	(junction
+		(at 152.4 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f0a1ba0c-8e67-4460-abdb-e0aeac21b0f5")
+	)
+	(junction
+		(at 354.33 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f0e68eaa-0334-4420-aeb6-6bc45280c255")
+	)
+	(junction
+		(at 387.35 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f80368e5-f145-4dc2-9f83-fdf600faa113")
+	)
+	(junction
 		(at 288.29 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fc9df17b-0069-4976-8a4e-2260109c16fe")
 	)
 	(junction
-		(at 106.68 133.35)
+		(at 106.68 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fe92a314-acaa-4cbd-945b-3a1bc3d39504")
@@ -3023,7 +3156,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 134.62) (xy 66.04 135.89)
+			(xy 66.04 86.36) (xy 66.04 87.63)
 		)
 		(stroke
 			(width 0)
@@ -3043,16 +3176,6 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 95.25) (xy 77.47 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0e761bb2-afcc-4eb0-bef5-a035029e24d6")
-	)
-	(wire
-		(pts
 			(xy 270.51 77.47) (xy 275.59 77.47)
 		)
 		(stroke
@@ -3060,16 +3183,6 @@
 			(type default)
 		)
 		(uuid "11e6e246-1ec7-4e8f-8abc-1c0f239e42c9")
-	)
-	(wire
-		(pts
-			(xy 41.91 80.01) (xy 66.04 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1306e186-737e-4afc-abd9-46d575207d25")
 	)
 	(wire
 		(pts
@@ -3123,7 +3236,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 133.35) (xy 106.68 134.62)
+			(xy 106.68 85.09) (xy 106.68 86.36)
 		)
 		(stroke
 			(width 0)
@@ -3133,7 +3246,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 128.27) (xy 137.16 128.27)
+			(xy 121.92 80.01) (xy 137.16 80.01)
 		)
 		(stroke
 			(width 0)
@@ -3143,33 +3256,23 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 95.25) (xy 111.76 95.25)
+			(xy 143.51 99.06) (xy 152.4 99.06)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1c7f3925-8dcf-416c-88a2-8fcb60175659")
+		(uuid "1954d9bd-cecd-42c6-a813-2610724896f6")
 	)
 	(wire
 		(pts
-			(xy 222.25 77.47) (xy 222.25 80.01)
+			(xy 215.9 77.47) (xy 215.9 80.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "1e5b64fc-eacd-4bf3-b061-782aa8d89ce0")
-	)
-	(wire
-		(pts
-			(xy 137.16 30.48) (xy 137.16 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1e5caf3a-c444-4689-a2fe-1f594fe50dcb")
 	)
 	(wire
 		(pts
@@ -3193,7 +3296,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 139.7) (xy 111.76 143.51)
+			(xy 111.76 91.44) (xy 111.76 95.25)
 		)
 		(stroke
 			(width 0)
@@ -3213,7 +3316,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 128.27) (xy 77.47 128.27)
+			(xy 41.91 80.01) (xy 58.8654 80.01)
 		)
 		(stroke
 			(width 0)
@@ -3240,16 +3343,6 @@
 			(type default)
 		)
 		(uuid "29094984-4944-453a-b0ad-8fd28707f97d")
-	)
-	(wire
-		(pts
-			(xy 111.76 85.09) (xy 111.76 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "293b8d91-8d36-4fa0-b4a7-0fd32a12ae71")
 	)
 	(wire
 		(pts
@@ -3313,6 +3406,16 @@
 	)
 	(wire
 		(pts
+			(xy 137.16 99.06) (xy 137.16 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3155a3f2-5ea9-4b40-a9e2-7ffb04f75df8")
+	)
+	(wire
+		(pts
 			(xy 280.67 83.82) (xy 280.67 85.09)
 		)
 		(stroke
@@ -3323,7 +3426,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 30.48) (xy 210.82 30.48)
+			(xy 137.16 30.48) (xy 204.47 30.48)
 		)
 		(stroke
 			(width 0)
@@ -3333,13 +3436,13 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 68.58) (xy 293.37 68.58)
+			(xy 152.4 97.79) (xy 152.4 99.06)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "34e9a297-d120-4a7b-8a15-8fa4837932dd")
+		(uuid "351bf9b5-b21c-487b-bc94-5b5ef4959399")
 	)
 	(wire
 		(pts
@@ -3363,6 +3466,16 @@
 	)
 	(wire
 		(pts
+			(xy 137.16 88.9) (xy 137.16 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "382f7b74-d964-473d-8cd9-2c889999e202")
+	)
+	(wire
+		(pts
 			(xy 229.87 30.48) (xy 232.41 30.48)
 		)
 		(stroke
@@ -3383,7 +3496,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 135.89) (xy 77.47 135.89)
+			(xy 66.04 87.63) (xy 77.47 87.63)
 		)
 		(stroke
 			(width 0)
@@ -3393,7 +3506,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 143.51) (xy 66.04 144.78)
+			(xy 66.04 95.25) (xy 66.04 96.52)
 		)
 		(stroke
 			(width 0)
@@ -3443,13 +3556,23 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 148.59) (xy 74.93 148.59)
+			(xy 77.47 100.33) (xy 74.93 100.33)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "424e9bce-0f04-4d50-8d2d-9fce43f12fe2")
+	)
+	(wire
+		(pts
+			(xy 137.16 99.06) (xy 143.51 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4916a5cb-c165-4c21-b2f1-1b383a69bceb")
 	)
 	(wire
 		(pts
@@ -3463,7 +3586,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 140.97) (xy 106.68 140.97)
+			(xy 102.87 92.71) (xy 106.68 92.71)
 		)
 		(stroke
 			(width 0)
@@ -3483,7 +3606,17 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 135.89) (xy 66.04 137.16)
+			(xy 57.5852 30.48) (xy 66.04 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4cfc76dd-c0ec-44f4-971e-badf08f48174")
+	)
+	(wire
+		(pts
+			(xy 66.04 87.63) (xy 66.04 88.9)
 		)
 		(stroke
 			(width 0)
@@ -3513,26 +3646,6 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 77.47) (xy 232.41 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "503bcb2d-e1c5-4d28-a7e2-16747ec09579")
-	)
-	(wire
-		(pts
-			(xy 106.68 85.09) (xy 106.68 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "50b7cf59-7258-410f-8231-0fb29b50bec9")
-	)
-	(wire
-		(pts
 			(xy 275.59 30.48) (xy 275.59 31.75)
 		)
 		(stroke
@@ -3550,16 +3663,6 @@
 			(type default)
 		)
 		(uuid "552e77af-2bf0-4a4f-9bbb-039ea443f0e0")
-	)
-	(wire
-		(pts
-			(xy 229.87 68.58) (xy 229.87 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "55c72be8-5491-404b-85d3-488c44c4d4f1")
 	)
 	(wire
 		(pts
@@ -3583,16 +3686,6 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 86.36) (xy 66.04 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "581158c3-5f7a-4250-8a91-5e1167bfcc26")
-	)
-	(wire
-		(pts
 			(xy 121.92 30.48) (xy 137.16 30.48)
 		)
 		(stroke
@@ -3613,17 +3706,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 80.01) (xy 66.04 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "59c495ba-9adb-4b4e-a2a7-c32f0d27bd12")
-	)
-	(wire
-		(pts
-			(xy 96.52 158.75) (xy 96.52 160.02)
+			(xy 96.52 110.49) (xy 96.52 111.76)
 		)
 		(stroke
 			(width 0)
@@ -3633,7 +3716,7 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 165.1) (xy 96.52 166.37)
+			(xy 96.52 116.84) (xy 96.52 118.11)
 		)
 		(stroke
 			(width 0)
@@ -3643,23 +3726,13 @@
 	)
 	(wire
 		(pts
-			(xy 360.68 85.09) (xy 363.22 85.09)
+			(xy 382.27 88.9) (xy 387.35 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "5f1e6709-f7bd-4628-beea-45881a2a1132")
-	)
-	(wire
-		(pts
-			(xy 90.17 118.11) (xy 96.52 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5f862062-054f-41a5-8ba3-93c7ff3121ed")
 	)
 	(wire
 		(pts
@@ -3673,7 +3746,7 @@
 	)
 	(wire
 		(pts
-			(xy 354.33 76.2) (xy 354.33 77.47)
+			(xy 382.27 80.01) (xy 382.27 81.28)
 		)
 		(stroke
 			(width 0)
@@ -3693,6 +3766,16 @@
 	)
 	(wire
 		(pts
+			(xy 350.52 77.47) (xy 354.33 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62e649f8-d690-47ce-83a2-0310c50edda0")
+	)
+	(wire
+		(pts
 			(xy 316.23 86.36) (xy 316.23 85.09)
 		)
 		(stroke
@@ -3700,16 +3783,6 @@
 			(type default)
 		)
 		(uuid "634bddd8-e634-4096-8c42-e406344ae16d")
-	)
-	(wire
-		(pts
-			(xy 96.52 110.49) (xy 96.52 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "63a3439f-f6b8-43dc-b742-bfafdbac6b61")
 	)
 	(wire
 		(pts
@@ -3723,33 +3796,23 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 92.71) (xy 106.68 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6aa5fe41-7430-4344-b57d-03b27f1d9ea8")
-	)
-	(wire
-		(pts
-			(xy 83.82 110.49) (xy 83.82 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6abefd7d-e010-4211-87e8-ae41e95191dd")
-	)
-	(wire
-		(pts
-			(xy 66.04 143.51) (xy 77.47 143.51)
+			(xy 66.04 95.25) (xy 77.47 95.25)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "6b3a9d66-7aad-4f98-804b-21093c8ae276")
+	)
+	(wire
+		(pts
+			(xy 52.07 30.48) (xy 52.07 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b612fb8-fe94-4caa-8f45-f7f10a383caf")
 	)
 	(wire
 		(pts
@@ -3773,6 +3836,16 @@
 	)
 	(wire
 		(pts
+			(xy 152.4 88.9) (xy 161.29 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e04bf17-32ce-43f3-9f64-96824d2dfe89")
+	)
+	(wire
+		(pts
 			(xy 121.92 30.48) (xy 121.92 31.75)
 		)
 		(stroke
@@ -3793,7 +3866,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 158.75) (xy 83.82 160.02)
+			(xy 83.82 110.49) (xy 83.82 111.76)
 		)
 		(stroke
 			(width 0)
@@ -3803,7 +3876,17 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 80.01) (xy 137.16 128.27)
+			(xy 137.16 95.25) (xy 137.16 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72a9cf64-604c-4509-8849-4692baa8f340")
+	)
+	(wire
+		(pts
+			(xy 137.16 30.48) (xy 137.16 80.01)
 		)
 		(stroke
 			(width 0)
@@ -3813,13 +3896,23 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 85.09) (xy 222.25 92.71)
+			(xy 215.9 85.09) (xy 215.9 92.71)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "768ab47f-cbe1-4051-a3eb-b82f9afa52c3")
+	)
+	(wire
+		(pts
+			(xy 52.07 30.48) (xy 57.5852 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77a840b3-f8c0-4fe1-9c2c-679262f963d8")
 	)
 	(wire
 		(pts
@@ -3833,17 +3926,7 @@
 	)
 	(wire
 		(pts
-			(xy 345.44 80.01) (xy 347.98 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7c044140-3729-4df1-8293-5b440e4c9955")
-	)
-	(wire
-		(pts
-			(xy 90.17 166.37) (xy 96.52 166.37)
+			(xy 90.17 118.11) (xy 96.52 118.11)
 		)
 		(stroke
 			(width 0)
@@ -3863,7 +3946,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 166.37) (xy 90.17 167.64)
+			(xy 90.17 118.11) (xy 90.17 119.38)
 		)
 		(stroke
 			(width 0)
@@ -3880,16 +3963,6 @@
 			(type default)
 		)
 		(uuid "7f516fe6-665e-42b5-9d89-bba2a6424005")
-	)
-	(wire
-		(pts
-			(xy 66.04 93.98) (xy 66.04 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7ffea726-0d3e-420a-a6ab-5ea0c7002845")
 	)
 	(wire
 		(pts
@@ -3913,17 +3986,7 @@
 	)
 	(wire
 		(pts
-			(xy 293.37 68.58) (xy 360.68 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8506ce4b-064e-468a-824c-8eeb269f1730")
-	)
-	(wire
-		(pts
-			(xy 83.82 166.37) (xy 90.17 166.37)
+			(xy 83.82 118.11) (xy 90.17 118.11)
 		)
 		(stroke
 			(width 0)
@@ -3933,7 +3996,7 @@
 	)
 	(wire
 		(pts
-			(xy 210.82 77.47) (xy 222.25 77.47)
+			(xy 204.47 77.47) (xy 215.9 77.47)
 		)
 		(stroke
 			(width 0)
@@ -3953,7 +4016,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 143.51) (xy 111.76 143.51)
+			(xy 102.87 95.25) (xy 111.76 95.25)
 		)
 		(stroke
 			(width 0)
@@ -4013,23 +4076,13 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 142.24) (xy 66.04 143.51)
+			(xy 66.04 93.98) (xy 66.04 95.25)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "8e8f1183-aa35-4826-ae65-a489569d28eb")
-	)
-	(wire
-		(pts
-			(xy 347.98 80.01) (xy 347.98 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8fcf1e04-a03f-4387-a0c6-f12d037696ac")
 	)
 	(wire
 		(pts
@@ -4053,7 +4106,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 165.1) (xy 83.82 166.37)
+			(xy 83.82 116.84) (xy 83.82 118.11)
 		)
 		(stroke
 			(width 0)
@@ -4063,17 +4116,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 80.01) (xy 137.16 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "942edbc9-4d7d-4dce-86cb-f5bda1a23e6c")
-	)
-	(wire
-		(pts
-			(xy 210.82 30.48) (xy 210.82 77.47)
+			(xy 204.47 30.48) (xy 204.47 77.47)
 		)
 		(stroke
 			(width 0)
@@ -4103,33 +4146,13 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 116.84) (xy 96.52 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "963c8ff2-2111-4118-9b70-79505622cbd0")
-	)
-	(wire
-		(pts
-			(xy 345.44 85.09) (xy 354.33 85.09)
+			(xy 347.98 88.9) (xy 382.27 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "97e78ee4-99ec-47de-991a-ccc4983e7a8f")
-	)
-	(wire
-		(pts
-			(xy 111.76 91.44) (xy 111.76 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9819e176-c29a-4be6-bd84-9b6b53c2a110")
 	)
 	(wire
 		(pts
@@ -4173,7 +4196,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 133.35) (xy 111.76 134.62)
+			(xy 111.76 85.09) (xy 111.76 86.36)
 		)
 		(stroke
 			(width 0)
@@ -4183,7 +4206,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 133.35) (xy 111.76 133.35)
+			(xy 106.68 85.09) (xy 111.76 85.09)
 		)
 		(stroke
 			(width 0)
@@ -4210,16 +4233,6 @@
 			(type default)
 		)
 		(uuid "a1d2601e-4405-4335-87d1-0b38b3bc2b0e")
-	)
-	(wire
-		(pts
-			(xy 102.87 80.01) (xy 121.92 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a41d907a-c7a5-4e5d-adb6-9ad7943302b0")
 	)
 	(wire
 		(pts
@@ -4263,6 +4276,26 @@
 	)
 	(wire
 		(pts
+			(xy 215.9 77.47) (xy 232.41 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7d6380d-fd48-44a3-9903-d3eb9166adfa")
+	)
+	(wire
+		(pts
+			(xy 347.98 88.9) (xy 347.98 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8b3a84f-d7ac-45cb-8cb6-97aaef3b410a")
+	)
+	(wire
+		(pts
 			(xy 354.33 119.38) (xy 354.33 120.65)
 		)
 		(stroke
@@ -4273,7 +4306,7 @@
 	)
 	(wire
 		(pts
-			(xy 210.82 77.47) (xy 210.82 104.14)
+			(xy 204.47 77.47) (xy 204.47 104.14)
 		)
 		(stroke
 			(width 0)
@@ -4283,23 +4316,13 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 158.75) (xy 90.17 166.37)
+			(xy 90.17 110.49) (xy 90.17 118.11)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "add8638f-de26-404d-9b8a-67da374cb21f")
-	)
-	(wire
-		(pts
-			(xy 360.68 68.58) (xy 360.68 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ae4497e8-f71b-4c61-8996-5cdc0663e5c0")
 	)
 	(wire
 		(pts
@@ -4313,13 +4336,13 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 91.44) (xy 106.68 92.71)
+			(xy 347.98 85.09) (xy 345.44 85.09)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b4dfa341-623c-4a66-99e3-942c3abd4e89")
+		(uuid "b4e39bb0-3a66-4319-bb94-7427598b1d3d")
 	)
 	(wire
 		(pts
@@ -4333,6 +4356,16 @@
 	)
 	(wire
 		(pts
+			(xy 347.98 77.47) (xy 350.52 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b66c4e1a-cb44-4559-8210-52f45cd44de3")
+	)
+	(wire
+		(pts
 			(xy 222.25 45.72) (xy 242.57 45.72)
 		)
 		(stroke
@@ -4340,26 +4373,6 @@
 			(type default)
 		)
 		(uuid "b694c1ba-1ae9-46c6-830d-060f0fceac40")
-	)
-	(wire
-		(pts
-			(xy 66.04 95.25) (xy 66.04 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b8f279e4-8e9a-4b6a-beb4-802581497cfc")
-	)
-	(wire
-		(pts
-			(xy 354.33 85.09) (xy 360.68 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b92da62e-d5fb-4d00-9418-61011a43ce35")
 	)
 	(wire
 		(pts
@@ -4373,16 +4386,6 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 87.63) (xy 77.47 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bb9ce272-d572-4213-836f-b6e4071af77c")
-	)
-	(wire
-		(pts
 			(xy 297.18 77.47) (xy 316.23 77.47)
 		)
 		(stroke
@@ -4393,7 +4396,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 30.48) (xy 66.04 30.48)
+			(xy 41.91 30.48) (xy 52.07 30.48)
 		)
 		(stroke
 			(width 0)
@@ -4403,13 +4406,13 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 100.33) (xy 74.93 100.33)
+			(xy 137.16 88.9) (xy 143.51 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "bfe81e4a-aa90-4a6b-abda-557512e431d0")
+		(uuid "bd3d4972-b017-4ad3-a70c-3fb18c73550f")
 	)
 	(wire
 		(pts
@@ -4433,6 +4436,16 @@
 	)
 	(wire
 		(pts
+			(xy 143.51 88.9) (xy 152.4 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4b9fd32-fa37-448a-95fa-c8608b91eb7f")
+	)
+	(wire
+		(pts
 			(xy 280.67 77.47) (xy 288.29 77.47)
 		)
 		(stroke
@@ -4443,23 +4456,13 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 143.51) (xy 118.11 143.51)
+			(xy 111.76 95.25) (xy 118.11 95.25)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "c5e67e68-eff1-4ca5-81cf-81502709ef89")
-	)
-	(wire
-		(pts
-			(xy 90.17 118.11) (xy 90.17 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c734ea20-17d8-49a1-ae61-cb5dde318b86")
 	)
 	(wire
 		(pts
@@ -4493,7 +4496,17 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 140.97) (xy 118.11 140.97)
+			(xy 143.51 95.25) (xy 143.51 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cbf8ecea-a7be-408b-934f-ba842ddbee74")
+	)
+	(wire
+		(pts
+			(xy 106.68 92.71) (xy 118.11 92.71)
 		)
 		(stroke
 			(width 0)
@@ -4503,7 +4516,7 @@
 	)
 	(wire
 		(pts
-			(xy 210.82 104.14) (xy 316.23 104.14)
+			(xy 204.47 104.14) (xy 316.23 104.14)
 		)
 		(stroke
 			(width 0)
@@ -4513,7 +4526,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 128.27) (xy 121.92 128.27)
+			(xy 102.87 80.01) (xy 121.92 80.01)
 		)
 		(stroke
 			(width 0)
@@ -4553,13 +4566,13 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 92.71) (xy 118.11 92.71)
+			(xy 387.35 88.9) (xy 391.16 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d66a11d3-8467-43b4-aa46-3b5b5dffa236")
+		(uuid "d92221da-4636-473a-86cd-02736a311d8b")
 	)
 	(wire
 		(pts
@@ -4570,6 +4583,16 @@
 			(type default)
 		)
 		(uuid "d994f29e-9b2a-4f4d-82d6-ae0b7fb33d3c")
+	)
+	(wire
+		(pts
+			(xy 152.4 88.9) (xy 152.4 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da3cd2a9-131b-4fef-9f08-5fe1ba9031a9")
 	)
 	(wire
 		(pts
@@ -4603,23 +4626,13 @@
 	)
 	(wire
 		(pts
-			(xy 347.98 76.2) (xy 347.98 77.47)
+			(xy 354.33 76.2) (xy 354.33 77.47)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "dd7343b8-10d0-4fb7-95ab-5b017ce55c49")
-	)
-	(wire
-		(pts
-			(xy 66.04 87.63) (xy 66.04 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dd8db98a-60f3-4474-a8ae-8e5229bab0f8")
 	)
 	(wire
 		(pts
@@ -4653,13 +4666,13 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 110.49) (xy 90.17 118.11)
+			(xy 143.51 88.9) (xy 143.51 90.17)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e256ae2a-69cc-4de4-a469-8a237178e076")
+		(uuid "e3743a29-c483-4e23-ae07-b4e6b36085b6")
 	)
 	(wire
 		(pts
@@ -4703,26 +4716,6 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 80.01) (xy 121.92 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e87cc268-36ba-48bd-90ac-4af871b4f183")
-	)
-	(wire
-		(pts
-			(xy 83.82 116.84) (xy 83.82 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ebc3968a-0d66-47ec-aa4a-d970770e6e9f")
-	)
-	(wire
-		(pts
 			(xy 275.59 77.47) (xy 280.67 77.47)
 		)
 		(stroke
@@ -4733,13 +4726,23 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 128.27) (xy 121.92 129.54)
+			(xy 121.92 80.01) (xy 121.92 81.28)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "ecc31564-8bba-4497-8965-e800fa7b9543")
+	)
+	(wire
+		(pts
+			(xy 354.33 77.47) (xy 354.33 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ecf8f011-32bc-442d-946b-28f951edace3")
 	)
 	(wire
 		(pts
@@ -4753,16 +4756,6 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 118.11) (xy 90.17 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ed94bbca-365f-4226-a5e6-1069da6a0f8b")
-	)
-	(wire
-		(pts
 			(xy 350.52 111.76) (xy 350.52 113.03)
 		)
 		(stroke
@@ -4770,16 +4763,6 @@
 			(type default)
 		)
 		(uuid "eebdb086-d497-4c93-86de-f4c116d76138")
-	)
-	(wire
-		(pts
-			(xy 66.04 80.01) (xy 77.47 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "effa086f-a4a7-4e7d-94a2-f0d10dc0c9b3")
 	)
 	(wire
 		(pts
@@ -4793,13 +4776,23 @@
 	)
 	(wire
 		(pts
-			(xy 354.33 82.55) (xy 354.33 85.09)
+			(xy 382.27 86.36) (xy 382.27 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "f0e87474-55ac-47a2-869f-8ae50aa4919d")
+	)
+	(wire
+		(pts
+			(xy 345.44 80.01) (xy 347.98 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f15e37af-e0e3-4f8f-9a3c-d6f6796e8b6d")
 	)
 	(wire
 		(pts
@@ -4843,23 +4836,23 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 139.7) (xy 106.68 140.97)
+			(xy 58.8654 80.01) (xy 77.47 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3ffc9ef-0bf0-4691-bf72-6ab73c17efb8")
+	)
+	(wire
+		(pts
+			(xy 106.68 91.44) (xy 106.68 92.71)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "f4e39891-f678-41c3-b543-c5bb62658c92")
-	)
-	(wire
-		(pts
-			(xy 106.68 85.09) (xy 111.76 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f4facaf4-53bb-4d19-b918-49a7909a39e2")
 	)
 	(wire
 		(pts
@@ -4883,7 +4876,7 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 92.71) (xy 242.57 92.71)
+			(xy 215.9 92.71) (xy 242.57 92.71)
 		)
 		(stroke
 			(width 0)
@@ -4903,13 +4896,33 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 128.27) (xy 66.04 129.54)
+			(xy 66.04 80.01) (xy 66.04 81.28)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "f94b9042-7ea8-456f-a145-7c37b930c6b3")
+	)
+	(wire
+		(pts
+			(xy 137.16 80.01) (xy 137.16 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f996d3d2-b2ed-4c23-8008-d3c2235b46b1")
+	)
+	(wire
+		(pts
+			(xy 347.98 77.47) (xy 347.98 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa260a3e-e659-412b-a56d-085a8d8750e5")
 	)
 	(wire
 		(pts
@@ -4923,13 +4936,23 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 95.25) (xy 118.11 95.25)
+			(xy 204.47 30.48) (xy 210.82 30.48)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "fe1dfa6d-1b9a-4f04-899a-c8d537db6f3b")
+		(uuid "fc7f04e5-f37f-488b-8b84-028285293fd9")
+	)
+	(wire
+		(pts
+			(xy 137.16 87.63) (xy 137.16 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd8c0feb-24e2-44b8-90ec-54728c028380")
 	)
 	(label "PMUX_OV2"
 		(at 318.77 111.76 0)
@@ -4942,7 +4965,7 @@
 		(uuid "0688027a-2773-4ef9-b8a9-f83d07ac2e59")
 	)
 	(label "USB_UVLO"
-		(at 74.93 135.89 0)
+		(at 74.93 87.63 0)
 		(effects
 			(font
 				(size 0.127 0.127)
@@ -4950,16 +4973,6 @@
 			(justify left bottom)
 		)
 		(uuid "08cabaa3-40f0-4c5b-969b-d7fb2f373c4f")
-	)
-	(label "SHIELD_ITIMER"
-		(at 83.82 111.76 90)
-		(effects
-			(font
-				(size 0.127 0.127)
-			)
-			(justify left bottom)
-		)
-		(uuid "09c1ee7d-a5ec-46a1-b4ba-2ae6c155b1ed")
 	)
 	(label "EXT_dVdt"
 		(at 96.52 62.23 90)
@@ -4972,7 +4985,7 @@
 		(uuid "12ba2445-a772-4c86-8236-67a5e05ca276")
 	)
 	(label "USB_ILIM"
-		(at 74.93 148.59 0)
+		(at 74.93 100.33 0)
 		(effects
 			(font
 				(size 0.127 0.127)
@@ -4990,16 +5003,6 @@
 			(justify left bottom)
 		)
 		(uuid "2cb9f93e-ff55-470e-8565-92a159280cfc")
-	)
-	(label "SHILED_dVdt"
-		(at 96.52 111.76 90)
-		(effects
-			(font
-				(size 0.127 0.127)
-			)
-			(justify left bottom)
-		)
-		(uuid "33a4d385-908d-4c79-a691-3d250d1f47aa")
 	)
 	(label "PMUX_SS"
 		(at 347.98 111.76 0)
@@ -5052,7 +5055,7 @@
 		(uuid "5423119b-5c3d-420d-b314-82b059faebaf")
 	)
 	(label "USB_dVdt"
-		(at 96.52 160.02 90)
+		(at 96.52 111.76 90)
 		(effects
 			(font
 				(size 0.127 0.127)
@@ -5072,7 +5075,7 @@
 		(uuid "69e4d53b-950d-4a41-99a7-0ae56599390c")
 	)
 	(label "USB_OVLO"
-		(at 74.93 143.51 0)
+		(at 74.93 95.25 0)
 		(effects
 			(font
 				(size 0.127 0.127)
@@ -5082,7 +5085,7 @@
 		(uuid "6b15df82-a7a6-43fb-ac40-6dd50294ddd5")
 	)
 	(label "USB_ITIMER"
-		(at 83.82 160.02 90)
+		(at 83.82 111.76 90)
 		(effects
 			(font
 				(size 0.127 0.127)
@@ -5141,46 +5144,6 @@
 		)
 		(uuid "91b68a9f-318f-40c8-9a11-c05a813b0dd8")
 	)
-	(label "SHIELD_UVLO"
-		(at 74.93 87.63 0)
-		(effects
-			(font
-				(size 0.127 0.127)
-			)
-			(justify left bottom)
-		)
-		(uuid "cc95efad-8c55-430c-a814-661aa269db01")
-	)
-	(label "DCDC_5V0_EN"
-		(at 231.14 85.09 0)
-		(effects
-			(font
-				(size 0.127 0.127)
-			)
-			(justify left bottom)
-		)
-		(uuid "cd257c88-8eef-4ecb-ba23-adeff561427f")
-	)
-	(label "SHIELD_OVLO"
-		(at 74.93 95.25 0)
-		(effects
-			(font
-				(size 0.127 0.127)
-			)
-			(justify left bottom)
-		)
-		(uuid "dfe91455-4eba-45ec-9707-8729b89760b6")
-	)
-	(label "SHIELD_ILIM"
-		(at 74.93 100.33 0)
-		(effects
-			(font
-				(size 0.127 0.127)
-			)
-			(justify left bottom)
-		)
-		(uuid "f79bdd5c-710e-446c-8db3-0253622d7be1")
-	)
 	(label "EXT_ITIMER"
 		(at 83.82 62.23 90)
 		(effects
@@ -5193,7 +5156,7 @@
 	)
 	(hierarchical_label "SEL_5V"
 		(shape output)
-		(at 363.22 85.09 0)
+		(at 391.16 88.9 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5213,27 +5176,16 @@
 		)
 		(uuid "30c6b4e2-8a85-464d-8051-fc8889c30b9f")
 	)
-	(hierarchical_label "SHIELD_AUXOFF"
+	(hierarchical_label "VIN_MONITOR"
 		(shape output)
-		(at 118.11 95.25 0)
+		(at 161.29 88.9 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
 		)
-		(uuid "6a516c14-c166-46fa-8cc4-ef3e1ddf837d")
-	)
-	(hierarchical_label "SHIELD_~{FLT}"
-		(shape output)
-		(at 118.11 92.71 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "74b38de3-c7f2-4f32-9249-9ee73afcd247")
+		(uuid "7ac88b5b-a396-4215-8018-a79ab088a7c7")
 	)
 	(hierarchical_label "EXT_AUXOFF"
 		(shape output)
@@ -5245,6 +5197,17 @@
 			(justify left)
 		)
 		(uuid "82375b61-fc38-4520-94af-342016c0f51c")
+	)
+	(hierarchical_label "EN_5V"
+		(shape input)
+		(at 229.87 85.09 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "89f4b7c8-8fb4-4e45-a3fb-d176f99f6b3d")
 	)
 	(hierarchical_label "+EXTERNAL_POWER"
 		(shape input)
@@ -5259,7 +5222,7 @@
 	)
 	(hierarchical_label "+VUSB"
 		(shape input)
-		(at 41.91 128.27 180)
+		(at 41.91 80.01 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5270,7 +5233,7 @@
 	)
 	(hierarchical_label "USB_AUXOFF"
 		(shape output)
-		(at 118.11 143.51 0)
+		(at 118.11 95.25 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5281,7 +5244,7 @@
 	)
 	(hierarchical_label "USB_~{FLT}"
 		(shape output)
-		(at 118.11 140.97 0)
+		(at 118.11 92.71 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5289,17 +5252,6 @@
 			(justify left)
 		)
 		(uuid "fd1d9713-5e3f-4230-8715-236b65f2ad0e")
-	)
-	(hierarchical_label "+SHIELD_VIN"
-		(shape input)
-		(at 41.91 80.01 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "fe16174d-5cd3-4f82-b6e4-a8d6a543b929")
 	)
 	(symbol
 		(lib_id "[UL] PMIC - eFuse:TPS259470ARPWR")
@@ -5380,6 +5332,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 90.17 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "208e62e4-7a1a-4bfd-a51c-e72125574b3d")
 		)
@@ -5414,175 +5377,6 @@
 			(project "phyduino_pico2"
 				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
 					(reference "U6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 74.93 102.87 0)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "06a23ce2-b8a7-438b-8a1e-e34cc67fa177")
-		(property "Reference" "R151"
-			(at 73.406 102.87 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "1.1kΩ"
-			(at 74.93 102.87 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.635 0.635)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 74.93 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 74.93 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 74.93 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PN" ""
-			(at 74.93 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Variant" "ADV_SMT"
-			(at 74.93 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PN" ""
-			(at 74.93 102.87 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC MANUFACTURER" ""
-			(at 74.93 102.87 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 74.93 102.87 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 74.93 102.87 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" ""
-			(at 74.93 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
-			(at 74.93 102.87 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fefda671-544c-4696-9e58-63baa993251b")
-		)
-		(pin "2"
-			(uuid "0fe19dc4-63d6-4015-a79a-365cd2e1b403")
-		)
-		(instances
-			(project "phyduino_pico2"
-				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
-					(reference "R151")
 					(unit 1)
 				)
 			)
@@ -5741,6 +5535,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 109.22 39.37 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "0d4b85cd-faa2-4424-84e7-029654addd1a")
 		)
@@ -5822,7 +5627,7 @@
 				)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "TCC0402X7R104M500AT"
 			(at 83.82 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -5900,6 +5705,28 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 83.82 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 83.82 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e1ec0cf0-9ab4-4f1e-819e-005208efe4c3")
 		)
@@ -5917,7 +5744,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 354.33 80.01 0)
+		(at 382.27 83.82 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -5928,7 +5755,7 @@
 		(dnp no)
 		(uuid "0a5c5e32-7bed-472d-afcd-64bfc8036d01")
 		(property "Reference" "R153"
-			(at 352.044 80.01 90)
+			(at 379.984 83.82 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5938,7 +5765,7 @@
 			)
 		)
 		(property "Value" "10kΩ"
-			(at 354.33 80.01 90)
+			(at 382.27 83.82 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5948,7 +5775,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 354.33 80.01 0)
+			(at 382.27 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5959,7 +5786,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 354.33 80.01 0)
+			(at 382.27 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5970,7 +5797,7 @@
 			)
 		)
 		(property "Description" "10kΩ ±1% 62.5mW 0402 Thick Film Resistor"
-			(at 354.33 80.01 0)
+			(at 382.27 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5981,7 +5808,7 @@
 			)
 		)
 		(property "PN" "FRC0402F1002TS"
-			(at 354.33 80.01 0)
+			(at 382.27 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5992,7 +5819,7 @@
 			)
 		)
 		(property "Variant" "ADV_SMT"
-			(at 354.33 80.01 0)
+			(at 382.27 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6003,7 +5830,7 @@
 			)
 		)
 		(property "LCSC PN" "C2906861"
-			(at 354.33 80.01 90)
+			(at 382.27 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6014,7 +5841,7 @@
 			)
 		)
 		(property "LCSC MANUFACTURER" "FOJAN"
-			(at 354.33 80.01 90)
+			(at 382.27 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6025,7 +5852,7 @@
 			)
 		)
 		(property "DIGIKEY PN" "311-10.0KLRCT-ND"
-			(at 354.33 80.01 90)
+			(at 382.27 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6036,7 +5863,7 @@
 			)
 		)
 		(property "DIGKEY MANUFACTURER" "YAGEO"
-			(at 354.33 80.01 90)
+			(at 382.27 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6047,7 +5874,7 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 354.33 80.01 0)
+			(at 382.27 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6058,7 +5885,18 @@
 			)
 		)
 		(property "Tolerance" ""
-			(at 354.33 80.01 90)
+			(at 382.27 83.82 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 382.27 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6249,6 +6087,28 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 275.59 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 275.59 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "35c1878f-f7d3-4612-86bb-7ed2f72443f5")
 		)
@@ -6266,7 +6126,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 74.93 153.67 0)
+		(at 74.93 105.41 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6277,7 +6137,7 @@
 		(fields_autoplaced yes)
 		(uuid "0c65b7fd-4e95-45ee-8901-2f34030993af")
 		(property "Reference" "#PWR085"
-			(at 74.93 160.02 0)
+			(at 74.93 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6288,7 +6148,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 74.93 158.1134 0)
+			(at 74.93 109.8534 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6299,7 +6159,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 74.93 153.67 0)
+			(at 74.93 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6310,7 +6170,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 74.93 153.67 0)
+			(at 74.93 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6321,7 +6181,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 74.93 153.67 0)
+			(at 74.93 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6344,8 +6204,9 @@
 		)
 	)
 	(symbol
-		(lib_id "[UL] PMIC - eFuse:TPS259470ARPWR")
-		(at 90.17 92.71 0)
+		(lib_id "power:GND")
+		(at 354.33 83.82 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6354,43 +6215,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "0d526458-36cd-49e2-bb83-252a2854abda")
-		(property "Reference" "U12"
-			(at 80.01 76.962 0)
-			(show_name no)
-			(do_not_autoplace yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "TPS259470ARPWR"
-			(at 98.044 108.458 0)
-			(show_name no)
-			(do_not_autoplace yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Footprint" "Package - QFN [UL]:Texas_Instruments_VQFN-HR-10"
-			(at 90.17 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Ftps25947"
-			(at 90.17 92.71 0)
+		(uuid "14b4ac78-177d-44bf-b198-e2e16fbf1805")
+		(property "Reference" "#PWR094"
+			(at 354.33 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6400,8 +6227,8 @@
 				)
 			)
 		)
-		(property "Description" "Electronic Fuse Regulator 5.5A 10-VQFN-HR (2x2)"
-			(at 90.17 92.71 0)
+		(property "Value" "GND"
+			(at 354.33 88.2634 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6411,91 +6238,8 @@
 				)
 			)
 		)
-		(property "Variant" "ADV_SMT"
-			(at 90.17 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a396b6a4-5d59-43af-a5f3-b739a012265e")
-		)
-		(pin "5"
-			(uuid "3f8e5f43-7176-4192-b7d7-e8c652c60e82")
-		)
-		(pin "9"
-			(uuid "efca0f20-fcac-4d84-80ab-5b3a0b927490")
-		)
-		(pin "4"
-			(uuid "3588cfdf-e440-4ff0-8d08-8fac83ff60c8")
-		)
-		(pin "2"
-			(uuid "bf05b2bf-c9e0-4bb9-bb44-1acff7791ceb")
-		)
-		(pin "3"
-			(uuid "5c94d812-4ef7-4476-bd9a-fecaf9b546a9")
-		)
-		(pin "6"
-			(uuid "60135cd8-6273-46e3-a451-a5ba0be8fd5f")
-		)
-		(pin "8"
-			(uuid "19295bc9-a8b3-4bbd-9464-f2152f05f814")
-		)
-		(pin "7"
-			(uuid "d4571e5f-d885-4a87-b149-3ef23925cdce")
-		)
-		(pin "10"
-			(uuid "4dfacba3-a6dd-4b94-8774-1f398de30534")
-		)
-		(instances
-			(project "phyduino_pico2"
-				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
-					(reference "U12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small_US")
-		(at 121.92 83.82 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "11fd8c0e-51c7-42ab-8750-5f05daf9b1bd")
-		(property "Reference" "C22"
-			(at 124.714 83.312 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100µF"
-			(at 124.46 85.09 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_Elec_5x5.4"
-			(at 121.92 83.82 0)
+		(property "Footprint" ""
+			(at 354.33 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6506,7 +6250,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 121.92 83.82 0)
+			(at 354.33 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6516,8 +6260,8 @@
 				)
 			)
 		)
-		(property "Description" "capacitor, small US symbol"
-			(at 121.92 83.82 0)
+		(property "Description" ""
+			(at 354.33 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6526,61 +6270,14 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(property "VOLTAGE" "35V"
-			(at 126.238 87.122 0)
-			(show_name no)
-			(do_not_autoplace yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(color 0 132 132 1)
-				)
-			)
-		)
-		(property "PN" "VPXB0771E101MVTM"
-			(at 121.92 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MFR" "Ymin"
-			(at 121.92 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Variant" "STUDENT"
-			(at 121.92 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "cb05b8d8-c137-48d9-8ced-954569de3e3e")
 		)
 		(pin "1"
-			(uuid "9b37ffd4-8295-4d86-a764-20ec6bca2f51")
+			(uuid "ba82d7a6-1677-4caf-a059-b94ccd293206")
 		)
 		(instances
 			(project "phyduino_pico2"
 				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
-					(reference "C22")
+					(reference "#PWR094")
 					(unit 1)
 				)
 			)
@@ -6665,7 +6362,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 106.68 137.16 0)
+		(at 106.68 88.9 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -6676,7 +6373,7 @@
 		(dnp no)
 		(uuid "1c6de8ce-e4c8-4fe4-8b13-076b7cbac065")
 		(property "Reference" "R162"
-			(at 104.394 137.16 90)
+			(at 104.394 88.9 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6686,7 +6383,7 @@
 			)
 		)
 		(property "Value" "10kΩ"
-			(at 106.68 137.16 90)
+			(at 106.68 88.9 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6696,7 +6393,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 106.68 137.16 0)
+			(at 106.68 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6707,7 +6404,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 106.68 137.16 0)
+			(at 106.68 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6718,7 +6415,7 @@
 			)
 		)
 		(property "Description" "10kΩ ±1% 62.5mW 0402 Thick Film Resistor"
-			(at 106.68 137.16 0)
+			(at 106.68 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6729,7 +6426,7 @@
 			)
 		)
 		(property "PN" "FRC0402F1002TS"
-			(at 106.68 137.16 0)
+			(at 106.68 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6740,7 +6437,7 @@
 			)
 		)
 		(property "Variant" "ADV_SMT"
-			(at 106.68 137.16 0)
+			(at 106.68 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6751,7 +6448,7 @@
 			)
 		)
 		(property "LCSC PN" "C2906861"
-			(at 106.68 137.16 90)
+			(at 106.68 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6762,7 +6459,7 @@
 			)
 		)
 		(property "LCSC MANUFACTURER" "FOJAN"
-			(at 106.68 137.16 90)
+			(at 106.68 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6773,7 +6470,7 @@
 			)
 		)
 		(property "DIGIKEY PN" "311-10.0KLRCT-ND"
-			(at 106.68 137.16 90)
+			(at 106.68 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6784,7 +6481,7 @@
 			)
 		)
 		(property "DIGKEY MANUFACTURER" "YAGEO"
-			(at 106.68 137.16 90)
+			(at 106.68 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6795,7 +6492,7 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 106.68 137.16 0)
+			(at 106.68 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6806,7 +6503,18 @@
 			)
 		)
 		(property "Tolerance" ""
-			(at 106.68 137.16 90)
+			(at 106.68 88.9 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 106.68 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6833,7 +6541,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 74.93 151.13 0)
+		(at 74.93 102.87 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -6844,7 +6552,7 @@
 		(dnp no)
 		(uuid "1edfe84a-3c36-40c8-978f-a7871304d1f1")
 		(property "Reference" "R156"
-			(at 73.406 151.13 0)
+			(at 73.406 102.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6855,7 +6563,7 @@
 			)
 		)
 		(property "Value" "1.1kΩ"
-			(at 74.93 151.13 90)
+			(at 74.93 102.87 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6865,7 +6573,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 74.93 151.13 0)
+			(at 74.93 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6876,7 +6584,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 74.93 151.13 0)
+			(at 74.93 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6887,7 +6595,7 @@
 			)
 		)
 		(property "Description" "5.1kΩ 62.5mW 50V Thick Film Resistor ±1% 0402 Chip Resistor - Surface Mount RoHS"
-			(at 74.93 151.13 0)
+			(at 74.93 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6898,7 +6606,7 @@
 			)
 		)
 		(property "PN" "CHANGLONG"
-			(at 74.93 151.13 0)
+			(at 74.93 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6909,7 +6617,7 @@
 			)
 		)
 		(property "Variant" "ADV_SMT"
-			(at 74.93 151.13 0)
+			(at 74.93 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6920,7 +6628,7 @@
 			)
 		)
 		(property "LCSC PN" "CHANGLONG"
-			(at 74.93 151.13 90)
+			(at 74.93 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6931,7 +6639,7 @@
 			)
 		)
 		(property "LCSC MANUFACTURER" "CHANGLONG"
-			(at 74.93 151.13 90)
+			(at 74.93 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6942,7 +6650,7 @@
 			)
 		)
 		(property "DIGIKEY PN" "13-RC0402FR-7W5K1LCT-ND"
-			(at 74.93 151.13 90)
+			(at 74.93 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6953,7 +6661,7 @@
 			)
 		)
 		(property "DIGKEY MANUFACTURER" "YAGEO"
-			(at 74.93 151.13 90)
+			(at 74.93 102.87 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6964,7 +6672,7 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 74.93 151.13 0)
+			(at 74.93 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6975,7 +6683,18 @@
 			)
 		)
 		(property "Tolerance" ""
-			(at 74.93 151.13 90)
+			(at 74.93 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 74.93 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7001,176 +6720,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 111.76 88.9 0)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "285788b0-b9d8-4112-8e1f-d620e5f3a3a0")
-		(property "Reference" "R160"
-			(at 109.474 88.9 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10kΩ"
-			(at 111.76 88.9 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.635 0.635)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 111.76 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 111.76 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "10kΩ ±1% 62.5mW 0402 Thick Film Resistor"
-			(at 111.76 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PN" "FRC0402F1002TS"
-			(at 111.76 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Variant" "ADV_SMT"
-			(at 111.76 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PN" "C2906861"
-			(at 111.76 88.9 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC MANUFACTURER" "FOJAN"
-			(at 111.76 88.9 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" "311-10.0KLRCT-ND"
-			(at 111.76 88.9 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
-			(at 111.76 88.9 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 111.76 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
-			(at 111.76 88.9 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "148e52c9-796d-42d8-82ef-34fa9235d567")
-		)
-		(pin "2"
-			(uuid "3706a8c9-5746-4dd2-8fa9-6ec8e3a67e4b")
-		)
-		(instances
-			(project "phyduino_pico2"
-				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
-					(reference "R160")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Power Symbols:+VDC")
-		(at 354.33 76.2 0)
+		(at 382.27 80.01 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7180,7 +6731,7 @@
 		(dnp no)
 		(uuid "28938c8b-a558-4c4f-af16-ff43289c59c5")
 		(property "Reference" "#PWR038"
-			(at 354.33 76.2 0)
+			(at 382.27 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7191,7 +6742,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 354.33 72.39 0)
+			(at 382.27 76.2 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7201,7 +6752,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 354.33 76.2 0)
+			(at 382.27 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7212,7 +6763,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 354.33 76.2 0)
+			(at 382.27 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7223,7 +6774,7 @@
 			)
 		)
 		(property "Description" "+DC Voltage Bar Symbol"
-			(at 354.33 76.2 0)
+			(at 382.27 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7240,175 +6791,6 @@
 			(project "phyduino_pico2"
 				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
 					(reference "#PWR038")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 66.04 83.82 0)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "29562917-b469-4865-a6a4-a28e1599b369")
-		(property "Reference" "R147"
-			(at 64.516 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "732kΩ"
-			(at 66.04 83.82 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.635 0.635)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 66.04 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 66.04 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 66.04 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PN" ""
-			(at 66.04 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Variant" "ADV_SMT"
-			(at 66.04 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PN" ""
-			(at 66.04 83.82 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC MANUFACTURER" ""
-			(at 66.04 83.82 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 66.04 83.82 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 66.04 83.82 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 66.04 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
-			(at 66.04 83.82 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0528057d-4f83-47ec-840e-af2b113eb4d1")
-		)
-		(pin "2"
-			(uuid "4bf00373-e360-41e0-bc55-83c20e97a069")
-		)
-		(instances
-			(project "phyduino_pico2"
-				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
-					(reference "R147")
 					(unit 1)
 				)
 			)
@@ -7555,6 +6937,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 266.7 77.47 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "0602094a-b738-4f39-bf3b-e05416a56b45")
 		)
@@ -7565,6 +6958,185 @@
 			(project "phyduino_pico2"
 				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
 					(reference "L2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 137.16 92.71 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2e246639-7be1-4e81-878b-956acd97ad5b")
+		(property "Reference" "R166"
+			(at 134.874 92.71 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10kΩ"
+			(at 137.16 92.71 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.635 0.635)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 137.16 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "10kΩ ±1% 62.5mW 0402 Thick Film Resistor"
+			(at 137.16 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PN" "FRC0402F1002TS"
+			(at 137.16 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Variant" "ADV_SMT"
+			(at 137.16 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PN" "C2906861"
+			(at 137.16 92.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC MANUFACTURER" "FOJAN"
+			(at 137.16 92.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY PN" "311-10.0KLRCT-ND"
+			(at 137.16 92.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGKEY MANUFACTURER" "YAGEO"
+			(at 137.16 92.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 137.16 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 137.16 92.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 137.16 92.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e10a1982-ef24-4df8-af7f-55ae322bbc7b")
+		)
+		(pin "2"
+			(uuid "38328e05-af2d-4e60-8833-e61000147374")
+		)
+		(instances
+			(project "phyduino_pico2"
+				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
+					(reference "R166")
 					(unit 1)
 				)
 			)
@@ -7808,175 +7380,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 66.04 99.06 0)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "41c3aa9b-594a-42a1-bc12-6c202b4ebf54")
-		(property "Reference" "R161"
-			(at 64.516 99.06 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "53.6kΩ"
-			(at 66.04 99.06 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.635 0.635)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 66.04 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 66.04 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 66.04 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PN" ""
-			(at 66.04 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Variant" "ADV_SMT"
-			(at 66.04 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PN" ""
-			(at 66.04 99.06 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC MANUFACTURER" ""
-			(at 66.04 99.06 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 66.04 99.06 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 66.04 99.06 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 66.04 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
-			(at 66.04 99.06 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7a43a1e9-cbbc-45a8-a2ec-6019be57037d")
-		)
-		(pin "2"
-			(uuid "f48ba16a-bb22-43de-82c4-00c346e32bae")
-		)
-		(instances
-			(project "phyduino_pico2"
-				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
-					(reference "R161")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Component - Device [KL]:C_Small")
 		(at 288.29 38.1 0)
 		(mirror y)
@@ -8121,6 +7524,17 @@
 			)
 		)
 		(property "Tolerance" ""
+			(at 288.29 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
 			(at 288.29 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -8336,6 +7750,28 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "capacitor/SMD/elec_round"
+			(at 121.92 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 121.92 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "45b7bf3b-4a2a-4267-9f20-1333b03f1375")
 		)
@@ -8431,7 +7867,7 @@
 	)
 	(symbol
 		(lib_id "UL - Power - Symbols:+VDC")
-		(at 347.98 76.2 0)
+		(at 354.33 76.2 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8441,7 +7877,7 @@
 		(dnp no)
 		(uuid "4e19e5b0-ebbb-44cc-b991-3a26dff314b3")
 		(property "Reference" "#PWR087"
-			(at 347.98 76.2 0)
+			(at 354.33 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8452,7 +7888,7 @@
 			)
 		)
 		(property "Value" "+5.0V"
-			(at 347.98 72.39 0)
+			(at 354.33 72.39 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8462,7 +7898,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 347.98 76.2 0)
+			(at 354.33 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8473,7 +7909,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 347.98 76.2 0)
+			(at 354.33 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8484,7 +7920,7 @@
 			)
 		)
 		(property "Description" "+DC Voltage Bar Symbol"
-			(at 347.98 76.2 0)
+			(at 354.33 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8741,6 +8177,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 288.29 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "4b906efd-775c-4032-88f1-e368fd3db81e")
 		)
@@ -8837,87 +8284,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 74.93 105.41 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "581311c8-0a74-441d-b1cc-8d11bf2825c3")
-		(property "Reference" "#PWR082"
-			(at 74.93 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 74.93 109.8534 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 74.93 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 74.93 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 74.93 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6eb26147-54fc-4a92-8e52-187f8d69f687")
-		)
-		(instances
-			(project "phyduino_pico2"
-				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
-					(reference "#PWR082")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector [KL]:TestPoint_Small")
-		(at 293.37 68.58 0)
+		(at 387.35 88.9 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -8927,8 +8295,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5833ff06-4c67-4906-aa24-5284d556cff4")
-		(property "Reference" "TP27"
-			(at 293.37 67.056 0)
+		(property "Reference" "TP17"
+			(at 387.35 87.376 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8938,7 +8306,7 @@
 			)
 		)
 		(property "Value" "TestPoint_Small"
-			(at 294.64 69.85 0)
+			(at 388.62 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8950,7 +8318,7 @@
 			)
 		)
 		(property "Footprint" "Component - Test point SMT [UL]:TestPoint_SameSky_CPG-47-TH-B"
-			(at 288.29 68.58 0)
+			(at 382.27 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8961,7 +8329,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 288.29 68.58 0)
+			(at 382.27 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8972,7 +8340,7 @@
 			)
 		)
 		(property "Description" "SMD test point"
-			(at 293.37 68.58 0)
+			(at 387.35 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8983,7 +8351,7 @@
 			)
 		)
 		(property "Tolerance" ""
-			(at 293.37 68.58 0)
+			(at 387.35 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8994,7 +8362,18 @@
 			)
 		)
 		(property "Variant" "IGNORE"
-			(at 293.37 68.58 0)
+			(at 387.35 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 387.35 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9010,7 +8389,7 @@
 		(instances
 			(project "phyduino_pico2"
 				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
-					(reference "TP27")
+					(reference "TP17")
 					(unit 1)
 				)
 			)
@@ -9018,7 +8397,7 @@
 	)
 	(symbol
 		(lib_id "[UL] PMIC - eFuse:TPS259470ARPWR")
-		(at 90.17 140.97 0)
+		(at 90.17 92.71 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9029,7 +8408,7 @@
 		(fields_autoplaced yes)
 		(uuid "5bb2c98c-a368-4f84-878c-be50fcb7ccfc")
 		(property "Reference" "U13"
-			(at 80.01 125.222 0)
+			(at 80.01 76.962 0)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects
@@ -9040,7 +8419,7 @@
 			)
 		)
 		(property "Value" "TPS259470ARPWR"
-			(at 98.044 156.718 0)
+			(at 98.044 108.458 0)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects
@@ -9051,7 +8430,7 @@
 			)
 		)
 		(property "Footprint" "Package - QFN [UL]:Texas_Instruments_VQFN-HR-10"
-			(at 90.17 140.97 0)
+			(at 90.17 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9063,7 +8442,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Ftps25947"
-			(at 90.17 140.97 0)
+			(at 90.17 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9074,7 +8453,7 @@
 			)
 		)
 		(property "Description" "Electronic Fuse Regulator 5.5A 10-VQFN-HR (2x2)"
-			(at 90.17 140.97 0)
+			(at 90.17 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9085,7 +8464,18 @@
 			)
 		)
 		(property "Variant" "ADV_SMT"
-			(at 90.17 140.97 0)
+			(at 90.17 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 90.17 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9287,6 +8677,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 316.23 81.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "79b6b5db-34b9-493d-ae92-8572faaa57c8")
 		)
@@ -9297,6 +8698,132 @@
 			(project "phyduino_pico2"
 				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
 					(reference "R135")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener_Filled")
+		(at 152.4 93.98 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5d0a1101-607c-4bc2-8291-2e4cf283f33a")
+		(property "Reference" "D2"
+			(at 154.94 92.71 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "3.6V"
+			(at 154.94 95.25 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_TUMD2"
+			(at 152.4 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.rohm.com/datasheet?p=TFZV3.6B&dist=Digi-key&media=referral&source=digi-key.com&campaign=Digi-key"
+			(at 152.4 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Zener Diode 3.6 V 500 mW ±4% Surface Mount TUMD2M (SOD-323HE)"
+			(at 152.4 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "Rohm Semiconductor"
+			(at 152.4 93.98 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PN" "TFZVTR3.6B"
+			(at 152.4 93.98 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 152.4 93.98 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Variant" "ADV_SMT"
+			(at 152.4 93.98 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7ac33a38-8030-4efb-a002-0d802c7767e8")
+		)
+		(pin "2"
+			(uuid "89b24359-dee1-4009-8010-6fee01ae20bb")
+		)
+		(instances
+			(project "phyduino_pico2"
+				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -9537,6 +9064,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 96.52 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "ce29971a-2987-4965-a94d-85bb8ab7de3d")
 		)
@@ -9547,6 +9085,265 @@
 			(project "phyduino_pico2"
 				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
 					(reference "C136")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 137.16 85.09 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "62c8c812-7021-46b9-ae4b-1324e742378c")
+		(property "Reference" "R165"
+			(at 134.874 85.09 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100kΩ"
+			(at 137.16 85.09 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.635 0.635)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 137.16 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "10kΩ ±1% 62.5mW 0402 Thick Film Resistor"
+			(at 137.16 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PN" "FRC0402F1002TS"
+			(at 137.16 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Variant" "ADV_SMT"
+			(at 137.16 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PN" "C2906861"
+			(at 137.16 85.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC MANUFACTURER" "FOJAN"
+			(at 137.16 85.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY PN" "311-10.0KLRCT-ND"
+			(at 137.16 85.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGKEY MANUFACTURER" "YAGEO"
+			(at 137.16 85.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 137.16 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 137.16 85.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 137.16 85.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1cd30060-ba12-4f25-913e-027f8451c4dc")
+		)
+		(pin "2"
+			(uuid "1fd2fa3e-d1d9-4b39-932c-8576bf97eb25")
+		)
+		(instances
+			(project "phyduino_pico2"
+				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
+					(reference "R165")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 137.16 100.33 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6312f52a-67de-49cf-82db-da09fe4cbbea")
+		(property "Reference" "#PWR0100"
+			(at 137.16 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 137.16 104.7734 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 137.16 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 137.16 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2b291393-916d-4b85-b775-65d90137b294")
+		)
+		(instances
+			(project "phyduino_pico2"
+				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
+					(reference "#PWR0100")
 					(unit 1)
 				)
 			)
@@ -9695,6 +9492,17 @@
 			)
 		)
 		(property "Tolerance" ""
+			(at 316.23 115.57 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
 			(at 316.23 115.57 90)
 			(hide yes)
 			(show_name no)
@@ -9955,6 +9763,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 297.18 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "886fce5d-cc2f-440c-bc82-65bc0c6664c8")
 		)
@@ -10125,6 +9944,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 297.18 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "149e9a1b-f5e3-4a7a-b9d6-0ae1c0add02e")
 		)
@@ -10141,8 +9971,9 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Small_US")
-		(at 121.92 132.08 0)
+		(lib_id "Device:C_Small")
+		(at 143.51 92.71 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10150,31 +9981,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "6d222e07-7dfa-410b-af11-acbe7cf64a94")
-		(property "Reference" "C28"
-			(at 124.714 131.572 0)
+		(uuid "6cc33d24-c612-4400-8d73-94652a6ecd88")
+		(property "Reference" "C141"
+			(at 145.8341 91.5233 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "100µF"
-			(at 124.46 133.35 0)
+		(property "Value" "1nF"
+			(at 145.8341 93.9093 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_Elec_5x5.4"
-			(at 121.92 132.08 0)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 143.51 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10185,7 +10016,187 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 121.92 132.08 0)
+			(at 143.51 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 143.51 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PN" ""
+			(at 143.51 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Variant" "ADV_SMT"
+			(at 143.51 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PN" ""
+			(at 143.51 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC MANUFACTURER" ""
+			(at 143.51 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY PN" ""
+			(at 143.51 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGKEY MANUFACTURER" ""
+			(at 143.51 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 143.51 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 143.51 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 143.51 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d48b353a-5b11-4924-a336-2fa8c1e833cd")
+		)
+		(pin "2"
+			(uuid "e4f9ba2d-2794-4527-80b3-9da16763ca5a")
+		)
+		(instances
+			(project "phyduino_pico2"
+				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
+					(reference "C141")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small_US")
+		(at 121.92 83.82 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6d222e07-7dfa-410b-af11-acbe7cf64a94")
+		(property "Reference" "C28"
+			(at 124.714 83.312 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100µF"
+			(at 124.46 85.09 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_Elec_5x5.4"
+			(at 121.92 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 121.92 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10196,7 +10207,7 @@
 			)
 		)
 		(property "Description" "capacitor, small US symbol"
-			(at 121.92 132.08 0)
+			(at 121.92 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10207,7 +10218,7 @@
 			)
 		)
 		(property "VOLTAGE" "35V"
-			(at 126.238 135.382 0)
+			(at 126.238 87.122 0)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects
@@ -10218,7 +10229,7 @@
 			)
 		)
 		(property "PN" "VPXB0771E101MVTM"
-			(at 121.92 132.08 0)
+			(at 121.92 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10229,7 +10240,7 @@
 			)
 		)
 		(property "MFR" "Ymin"
-			(at 121.92 132.08 0)
+			(at 121.92 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10240,7 +10251,29 @@
 			)
 		)
 		(property "Variant" "STUDENT"
-			(at 121.92 132.08 0)
+			(at 121.92 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "capacitor/SMD/elec_round"
+			(at 121.92 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 121.92 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10419,6 +10452,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 74.93 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "dead9229-7ae7-4d87-bd1f-de51552af92c")
 		)
@@ -10516,7 +10560,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 66.04 132.08 0)
+		(at 66.04 83.82 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -10527,7 +10571,7 @@
 		(dnp no)
 		(uuid "83eaa2d4-eb0a-42bc-98ac-2ae0dbb6d8b1")
 		(property "Reference" "R149"
-			(at 64.516 132.08 0)
+			(at 64.516 83.82 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10538,7 +10582,7 @@
 			)
 		)
 		(property "Value" "732kΩ"
-			(at 66.04 132.08 90)
+			(at 66.04 83.82 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10548,7 +10592,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 66.04 132.08 0)
+			(at 66.04 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10559,7 +10603,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 66.04 132.08 0)
+			(at 66.04 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10570,7 +10614,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 66.04 132.08 0)
+			(at 66.04 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10581,7 +10625,7 @@
 			)
 		)
 		(property "PN" ""
-			(at 66.04 132.08 0)
+			(at 66.04 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10592,7 +10636,7 @@
 			)
 		)
 		(property "Variant" "ADV_SMT"
-			(at 66.04 132.08 0)
+			(at 66.04 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10603,7 +10647,7 @@
 			)
 		)
 		(property "LCSC PN" ""
-			(at 66.04 132.08 90)
+			(at 66.04 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10614,7 +10658,7 @@
 			)
 		)
 		(property "LCSC MANUFACTURER" ""
-			(at 66.04 132.08 90)
+			(at 66.04 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10625,7 +10669,7 @@
 			)
 		)
 		(property "DIGIKEY PN" ""
-			(at 66.04 132.08 90)
+			(at 66.04 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10636,7 +10680,7 @@
 			)
 		)
 		(property "DIGKEY MANUFACTURER" ""
-			(at 66.04 132.08 90)
+			(at 66.04 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10647,7 +10691,7 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 66.04 132.08 0)
+			(at 66.04 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10658,7 +10702,18 @@
 			)
 		)
 		(property "Tolerance" ""
-			(at 66.04 132.08 90)
+			(at 66.04 83.82 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 66.04 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10814,6 +10869,17 @@
 			)
 		)
 		(property "Tolerance" ""
+			(at 266.7 30.48 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
 			(at 266.7 30.48 90)
 			(hide yes)
 			(show_name no)
@@ -10993,6 +11059,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 66.04 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "034e0a7a-a6b5-4615-96b2-d99c6746a3b8")
 		)
@@ -11152,6 +11229,17 @@
 			)
 		)
 		(property "Tolerance" ""
+			(at 350.52 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
 			(at 350.52 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -11330,6 +11418,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 114.3 39.37 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b1dea864-5e10-4e0a-830c-66314c2b3d56")
 		)
@@ -11426,6 +11525,118 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector [KL]:TestPoint_Small")
+		(at 350.52 77.47 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "916859c7-780a-463d-ae7f-9de4942b6ea2")
+		(property "Reference" "TP19"
+			(at 350.52 75.946 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 351.79 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Component - Test point SMT [UL]:TestPoint_SameSky_CPG-47-TH-B"
+			(at 345.44 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 345.44 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "SMD test point"
+			(at 350.52 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 350.52 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Variant" "IGNORE"
+			(at 350.52 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 350.52 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "995adbde-6cd6-4ae3-8309-7ad8c88ee6db")
+		)
+		(instances
+			(project "phyduino_pico2"
+				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
+					(reference "TP19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 242.57 93.98 0)
 		(mirror y)
@@ -11507,7 +11718,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 111.76 137.16 0)
+		(at 111.76 88.9 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -11518,7 +11729,7 @@
 		(dnp no)
 		(uuid "9327c8fb-89df-48df-aeba-d9339ad7170f")
 		(property "Reference" "R163"
-			(at 109.474 137.16 90)
+			(at 109.474 88.9 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11528,7 +11739,7 @@
 			)
 		)
 		(property "Value" "10kΩ"
-			(at 111.76 137.16 90)
+			(at 111.76 88.9 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11538,7 +11749,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 111.76 137.16 0)
+			(at 111.76 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11549,7 +11760,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 111.76 137.16 0)
+			(at 111.76 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11560,7 +11771,7 @@
 			)
 		)
 		(property "Description" "10kΩ ±1% 62.5mW 0402 Thick Film Resistor"
-			(at 111.76 137.16 0)
+			(at 111.76 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11571,7 +11782,7 @@
 			)
 		)
 		(property "PN" "FRC0402F1002TS"
-			(at 111.76 137.16 0)
+			(at 111.76 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11582,7 +11793,7 @@
 			)
 		)
 		(property "Variant" "ADV_SMT"
-			(at 111.76 137.16 0)
+			(at 111.76 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11593,7 +11804,7 @@
 			)
 		)
 		(property "LCSC PN" "C2906861"
-			(at 111.76 137.16 90)
+			(at 111.76 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11604,7 +11815,7 @@
 			)
 		)
 		(property "LCSC MANUFACTURER" "FOJAN"
-			(at 111.76 137.16 90)
+			(at 111.76 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11615,7 +11826,7 @@
 			)
 		)
 		(property "DIGIKEY PN" "311-10.0KLRCT-ND"
-			(at 111.76 137.16 90)
+			(at 111.76 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11626,7 +11837,7 @@
 			)
 		)
 		(property "DIGKEY MANUFACTURER" "YAGEO"
-			(at 111.76 137.16 90)
+			(at 111.76 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11637,7 +11848,7 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 111.76 137.16 0)
+			(at 111.76 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11648,7 +11859,18 @@
 			)
 		)
 		(property "Tolerance" ""
-			(at 111.76 137.16 90)
+			(at 111.76 88.9 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 111.76 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11827,6 +12049,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 66.04 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a1419b75-1ca7-4dfb-81c2-7ce3cb688d6c")
 		)
@@ -11837,83 +12070,6 @@
 			(project "phyduino_pico2"
 				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
 					(reference "R150")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Power Symbols:+VDC")
-		(at 106.68 85.09 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "94b14107-b67d-4073-b32e-5817cb3b5a20")
-		(property "Reference" "#PWR076"
-			(at 106.68 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 106.68 81.28 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 106.68 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 106.68 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "+DC Voltage Bar Symbol"
-			(at 106.68 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin ""
-			(uuid "769d32f8-4e0e-4152-b17d-1be14679699c")
-		)
-		(instances
-			(project "phyduino_pico2"
-				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
-					(reference "#PWR076")
 					(unit 1)
 				)
 			)
@@ -12001,7 +12157,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 90.17 167.64 0)
+		(at 90.17 119.38 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -12013,7 +12169,7 @@
 		(fields_autoplaced yes)
 		(uuid "966aab93-6307-4133-9b36-4a0df0e9a7db")
 		(property "Reference" "#PWR089"
-			(at 90.17 173.99 0)
+			(at 90.17 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12024,7 +12180,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 90.17 172.0834 0)
+			(at 90.17 123.8234 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12035,7 +12191,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 90.17 167.64 0)
+			(at 90.17 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12046,7 +12202,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 90.17 167.64 0)
+			(at 90.17 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12057,7 +12213,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 90.17 167.64 0)
+			(at 90.17 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12080,18 +12236,30 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Small")
-		(at 83.82 162.56 0)
+		(lib_id "Connector [KL]:TestPoint_Small")
+		(at 165.1 30.48 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "9a2d8c1b-58ba-4441-a113-83d3893d3f9d")
-		(property "Reference" "C139"
-			(at 81.4959 161.3733 0)
+		(uuid "968d4023-e316-4a96-9c43-29448fcc3f55")
+		(property "Reference" "TP18"
+			(at 165.1 28.956 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 166.37 31.75 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12101,19 +12269,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "0.1µF"
-			(at 81.4959 163.7593 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 83.82 162.56 0)
+		(property "Footprint" "Component - Test point SMT [UL]:TestPoint_SameSky_CPG-47-TH-B"
+			(at 160.02 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12124,7 +12281,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 83.82 162.56 0)
+			(at 160.02 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12134,85 +12291,8 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 83.82 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PN" ""
-			(at 83.82 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Variant" "ADV_SMT"
-			(at 83.82 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PN" ""
-			(at 83.82 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC MANUFACTURER" ""
-			(at 83.82 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 83.82 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 83.82 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 83.82 162.56 0)
+		(property "Description" "SMD test point"
+			(at 165.1 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12223,7 +12303,206 @@
 			)
 		)
 		(property "Tolerance" ""
-			(at 83.82 162.56 0)
+			(at 165.1 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Variant" "IGNORE"
+			(at 165.1 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 165.1 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7d321135-5758-4d52-be44-dfdd0caa24a0")
+		)
+		(instances
+			(project "phyduino_pico2"
+				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
+					(reference "TP18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 83.82 114.3 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9a2d8c1b-58ba-4441-a113-83d3893d3f9d")
+		(property "Reference" "C139"
+			(at 81.4959 113.1133 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "0.1µF"
+			(at 81.4959 115.4993 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 83.82 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 83.82 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 83.82 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PN" "TCC0402X7R104M500AT"
+			(at 83.82 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Variant" "ADV_SMT"
+			(at 83.82 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PN" ""
+			(at 83.82 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC MANUFACTURER" ""
+			(at 83.82 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY PN" ""
+			(at 83.82 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGKEY MANUFACTURER" ""
+			(at 83.82 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 83.82 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 83.82 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 83.82 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12401,6 +12680,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 316.23 107.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "292290f6-12ec-4a0f-b4f8-4c9ef4db3e6f")
 		)
@@ -12411,256 +12701,6 @@
 			(project "phyduino_pico2"
 				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
 					(reference "R138")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 90.17 119.38 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9e011c61-988c-4f1a-abcc-3c8f7da4912a")
-		(property "Reference" "#PWR081"
-			(at 90.17 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 90.17 123.8234 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 90.17 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 90.17 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 90.17 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0905a7c4-018f-4dcf-8e68-1bd23f2f8541")
-		)
-		(instances
-			(project "phyduino_pico2"
-				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
-					(reference "#PWR081")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 96.52 114.3 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "9e0ad6e7-e386-4cfc-9ab1-260d4734cc8a")
-		(property "Reference" "C138"
-			(at 98.8441 113.1133 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "1nF"
-			(at 98.8441 115.4993 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 96.52 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 96.52 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 96.52 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PN" ""
-			(at 96.52 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Variant" ""
-			(at 96.52 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PN" ""
-			(at 96.52 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC MANUFACTURER" ""
-			(at 96.52 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 96.52 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 96.52 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 96.52 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
-			(at 96.52 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1a2ab1a8-3225-4226-aae6-176db16358d8")
-		)
-		(pin "2"
-			(uuid "fd3febf0-0b39-468a-8c01-0f3020511658")
-		)
-		(instances
-			(project "phyduino_pico2"
-				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
-					(reference "C138")
 					(unit 1)
 				)
 			)
@@ -12808,6 +12848,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 334.01 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "664bf0f2-0a2a-4ae1-895b-d813678172d5")
 		)
@@ -12929,6 +12980,17 @@
 			)
 		)
 		(property "Variant" "STUDENT"
+			(at 242.57 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
 			(at 242.57 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -13119,6 +13181,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 280.67 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "0b1bac6f-b129-4a03-b089-5721b346e457")
 		)
@@ -13136,7 +13209,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 66.04 147.32 0)
+		(at 66.04 99.06 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -13147,7 +13220,7 @@
 		(dnp no)
 		(uuid "a77dc6db-29b5-419a-a9ce-62581741e0e3")
 		(property "Reference" "R155"
-			(at 64.516 147.32 0)
+			(at 64.516 99.06 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13158,7 +13231,7 @@
 			)
 		)
 		(property "Value" "215kΩ"
-			(at 66.04 147.32 90)
+			(at 66.04 99.06 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13168,7 +13241,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 66.04 147.32 0)
+			(at 66.04 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13179,7 +13252,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 66.04 147.32 0)
+			(at 66.04 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13190,7 +13263,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 66.04 147.32 0)
+			(at 66.04 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13201,7 +13274,7 @@
 			)
 		)
 		(property "PN" ""
-			(at 66.04 147.32 0)
+			(at 66.04 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13212,7 +13285,7 @@
 			)
 		)
 		(property "Variant" "ADV_SMT"
-			(at 66.04 147.32 0)
+			(at 66.04 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13223,7 +13296,7 @@
 			)
 		)
 		(property "LCSC PN" ""
-			(at 66.04 147.32 90)
+			(at 66.04 99.06 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13234,7 +13307,7 @@
 			)
 		)
 		(property "LCSC MANUFACTURER" ""
-			(at 66.04 147.32 90)
+			(at 66.04 99.06 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13245,7 +13318,7 @@
 			)
 		)
 		(property "DIGIKEY PN" ""
-			(at 66.04 147.32 90)
+			(at 66.04 99.06 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13256,7 +13329,7 @@
 			)
 		)
 		(property "DIGKEY MANUFACTURER" ""
-			(at 66.04 147.32 90)
+			(at 66.04 99.06 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13267,7 +13340,7 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 66.04 147.32 0)
+			(at 66.04 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13278,7 +13351,18 @@
 			)
 		)
 		(property "Tolerance" ""
-			(at 66.04 147.32 90)
+			(at 66.04 99.06 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 66.04 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13315,7 +13399,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a8f4438c-83e2-40fc-8a79-e20b3353ab76")
-		(property "Reference" "TP22"
+		(property "Reference" "TP20"
 			(at 293.37 75.946 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13392,13 +13476,24 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 293.37 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "2e19cd0b-bbd3-4660-a9e4-8e0d5fd27ab9")
 		)
 		(instances
 			(project "phyduino_pico2"
 				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
-					(reference "TP22")
+					(reference "TP20")
 					(unit 1)
 				)
 			)
@@ -13406,7 +13501,7 @@
 	)
 	(symbol
 		(lib_id "Power Symbols:+VDC")
-		(at 106.68 133.35 0)
+		(at 106.68 85.09 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13416,7 +13511,7 @@
 		(dnp no)
 		(uuid "a9b7064a-9621-41c7-b264-0075c3ded740")
 		(property "Reference" "#PWR092"
-			(at 106.68 133.35 0)
+			(at 106.68 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13427,7 +13522,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 106.68 129.54 0)
+			(at 106.68 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13437,7 +13532,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 106.68 133.35 0)
+			(at 106.68 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13448,7 +13543,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 106.68 133.35 0)
+			(at 106.68 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13459,7 +13554,7 @@
 			)
 		)
 		(property "Description" "+DC Voltage Bar Symbol"
-			(at 106.68 133.35 0)
+			(at 106.68 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13476,6 +13571,118 @@
 			(project "phyduino_pico2"
 				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
 					(reference "#PWR092")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector [KL]:TestPoint_Small")
+		(at 292.1 30.48 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a9f4a8b8-6a5b-4ced-8af4-d5b1d992bc99")
+		(property "Reference" "TP14"
+			(at 292.1 28.956 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 293.37 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Component - Test point SMT [UL]:TestPoint_SameSky_CPG-47-TH-B"
+			(at 287.02 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 287.02 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "SMD test point"
+			(at 292.1 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Tolerance" ""
+			(at 292.1 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Variant" "IGNORE"
+			(at 292.1 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 292.1 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d50766c2-7a05-46e2-a84e-a4baf26425dc")
+		)
+		(instances
+			(project "phyduino_pico2"
+				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
+					(reference "TP14")
 					(unit 1)
 				)
 			)
@@ -13713,6 +13920,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 280.67 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "6ed4d4dd-ce06-47a9-830c-91c40e66fbfc")
 		)
@@ -13729,168 +13947,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 121.92 86.36 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ad7e1402-ef84-4f6c-bb80-12a380d8de20")
-		(property "Reference" "#PWR094"
-			(at 121.92 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 121.92 90.8034 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 121.92 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 121.92 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 121.92 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "82a7973e-8332-49c8-81f5-9cc7e14c8f6f")
-		)
-		(instances
-			(project "phyduino_pico2"
-				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
-					(reference "#PWR094")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 66.04 101.6 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "aef5bc2e-5c04-43cf-86ae-6dae0e8478b1")
-		(property "Reference" "#PWR083"
-			(at 66.04 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 66.04 106.0434 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 66.04 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 66.04 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 66.04 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "df054482-814d-4a3c-80ec-37987f47f229")
-		)
-		(instances
-			(project "phyduino_pico2"
-				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
-					(reference "#PWR083")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small")
-		(at 66.04 139.7 0)
+		(at 66.04 91.44 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -13901,7 +13959,7 @@
 		(dnp no)
 		(uuid "afce48c2-bb70-43ac-95d2-8cca40923305")
 		(property "Reference" "R154"
-			(at 64.516 139.7 0)
+			(at 64.516 91.44 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13912,7 +13970,7 @@
 			)
 		)
 		(property "Value" "53.6kΩ"
-			(at 66.04 139.7 90)
+			(at 66.04 91.44 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13922,7 +13980,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 66.04 139.7 0)
+			(at 66.04 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13933,7 +13991,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 66.04 139.7 0)
+			(at 66.04 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13944,7 +14002,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 66.04 139.7 0)
+			(at 66.04 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13955,7 +14013,7 @@
 			)
 		)
 		(property "PN" ""
-			(at 66.04 139.7 0)
+			(at 66.04 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13966,7 +14024,7 @@
 			)
 		)
 		(property "Variant" "ADV_SMT"
-			(at 66.04 139.7 0)
+			(at 66.04 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13977,7 +14035,7 @@
 			)
 		)
 		(property "LCSC PN" ""
-			(at 66.04 139.7 90)
+			(at 66.04 91.44 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13988,7 +14046,7 @@
 			)
 		)
 		(property "LCSC MANUFACTURER" ""
-			(at 66.04 139.7 90)
+			(at 66.04 91.44 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13999,7 +14057,7 @@
 			)
 		)
 		(property "DIGIKEY PN" ""
-			(at 66.04 139.7 90)
+			(at 66.04 91.44 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14010,7 +14068,7 @@
 			)
 		)
 		(property "DIGKEY MANUFACTURER" ""
-			(at 66.04 139.7 90)
+			(at 66.04 91.44 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14021,7 +14079,7 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 66.04 139.7 0)
+			(at 66.04 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14032,7 +14090,18 @@
 			)
 		)
 		(property "Tolerance" ""
-			(at 66.04 139.7 90)
+			(at 66.04 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 66.04 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14210,6 +14279,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 316.23 88.9 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "cb94b463-2e3b-4060-ab98-691efa3d9123")
 		)
@@ -14226,176 +14306,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 106.68 88.9 0)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "b4de2907-91ab-46cd-8548-1bdb3bce14d2")
-		(property "Reference" "R159"
-			(at 104.394 88.9 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10kΩ"
-			(at 106.68 88.9 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.635 0.635)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 106.68 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 106.68 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "10kΩ ±1% 62.5mW 0402 Thick Film Resistor"
-			(at 106.68 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PN" "FRC0402F1002TS"
-			(at 106.68 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Variant" "ADV_SMT"
-			(at 106.68 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PN" "C2906861"
-			(at 106.68 88.9 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC MANUFACTURER" "FOJAN"
-			(at 106.68 88.9 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" "311-10.0KLRCT-ND"
-			(at 106.68 88.9 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
-			(at 106.68 88.9 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 106.68 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
-			(at 106.68 88.9 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3c4755fa-f3dd-4241-a4ed-451cd8b1f94e")
-		)
-		(pin "2"
-			(uuid "cec651d2-493e-4127-9128-d5934bc91827")
-		)
-		(instances
-			(project "phyduino_pico2"
-				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
-					(reference "R159")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
-		(at 96.52 162.56 0)
+		(at 96.52 114.3 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -14406,7 +14318,7 @@
 		(dnp no)
 		(uuid "b9ecaa0e-4833-45ce-ae8e-ad1228bc2f82")
 		(property "Reference" "C140"
-			(at 98.8441 161.3733 0)
+			(at 98.8441 113.1133 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14416,8 +14328,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1nF"
-			(at 98.8441 163.7593 0)
+		(property "Value" "3300pF"
+			(at 98.8441 115.4993 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14428,7 +14340,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 96.52 162.56 0)
+			(at 96.52 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14439,7 +14351,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 96.52 162.56 0)
+			(at 96.52 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14450,7 +14362,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 96.52 162.56 0)
+			(at 96.52 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14461,7 +14373,7 @@
 			)
 		)
 		(property "PN" ""
-			(at 96.52 162.56 0)
+			(at 96.52 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14471,8 +14383,8 @@
 				)
 			)
 		)
-		(property "Variant" ""
-			(at 96.52 162.56 0)
+		(property "Variant" "ADV_SMT"
+			(at 96.52 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14483,7 +14395,7 @@
 			)
 		)
 		(property "LCSC PN" ""
-			(at 96.52 162.56 0)
+			(at 96.52 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14494,7 +14406,7 @@
 			)
 		)
 		(property "LCSC MANUFACTURER" ""
-			(at 96.52 162.56 0)
+			(at 96.52 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14505,7 +14417,7 @@
 			)
 		)
 		(property "DIGIKEY PN" ""
-			(at 96.52 162.56 0)
+			(at 96.52 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14516,7 +14428,7 @@
 			)
 		)
 		(property "DIGKEY MANUFACTURER" ""
-			(at 96.52 162.56 0)
+			(at 96.52 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14527,7 +14439,7 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 96.52 162.56 0)
+			(at 96.52 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14538,7 +14450,18 @@
 			)
 		)
 		(property "Tolerance" ""
-			(at 96.52 162.56 0)
+			(at 96.52 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 96.52 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14707,6 +14630,17 @@
 			)
 		)
 		(property "Tolerance" ""
+			(at 222.25 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
 			(at 222.25 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -14886,6 +14820,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 257.81 34.29 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "8fcb2a31-36b3-4f9c-99b9-4d8c225b9163")
 		)
@@ -14902,18 +14847,30 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Small")
-		(at 83.82 114.3 0)
+		(lib_id "Connector [KL]:TestPoint_Small")
+		(at 58.8654 80.01 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "c3ef2861-bb29-45be-9832-bd632a4e21dc")
-		(property "Reference" "C137"
-			(at 81.4959 113.1133 0)
+		(uuid "c4b2f7bb-1a42-4b24-8b76-217f0c9fabfe")
+		(property "Reference" "TP10"
+			(at 58.8654 78.486 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 60.1354 81.28 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14923,19 +14880,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "0.1µF"
-			(at 81.4959 115.4993 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 83.82 114.3 0)
+		(property "Footprint" "Component - Test point SMT [UL]:TestPoint_SameSky_CPG-47-TH-B"
+			(at 53.7854 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14946,7 +14892,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 83.82 114.3 0)
+			(at 53.7854 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14956,8 +14902,8 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 83.82 114.3 0)
+		(property "Description" "SMD test point"
+			(at 58.8654 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14967,8 +14913,8 @@
 				)
 			)
 		)
-		(property "PN" ""
-			(at 83.82 114.3 0)
+		(property "Tolerance" ""
+			(at 58.8654 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14978,8 +14924,8 @@
 				)
 			)
 		)
-		(property "Variant" "ADV_SMT"
-			(at 83.82 114.3 0)
+		(property "Variant" "IGNORE"
+			(at 58.8654 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14989,53 +14935,8 @@
 				)
 			)
 		)
-		(property "LCSC PN" ""
-			(at 83.82 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC MANUFACTURER" ""
-			(at 83.82 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 83.82 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "VOLTAGE" "16V"
-			(at 81.28 117.856 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(color 0 132 132 1)
-				)
-				(justify right)
-			)
-		)
-		(property "Tolerance" "±5%"
-			(at 83.82 114.3 0)
+		(property "FLASH_SIZE" ""
+			(at 58.8654 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15046,15 +14947,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "709f5281-82db-42da-b546-69455a8ebb10")
-		)
-		(pin "2"
-			(uuid "f9347467-56f9-4232-b00d-7cbcf21668ac")
+			(uuid "3ca723ac-2907-4ff7-bfa1-82769cf4f448")
 		)
 		(instances
 			(project "phyduino_pico2"
 				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
-					(reference "C137")
+					(reference "TP10")
 					(unit 1)
 				)
 			)
@@ -15213,6 +15111,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 280.67 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "c8309ff0-846f-4557-87a0-0a2a8ef16fd8")
 		)
@@ -15230,7 +15139,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 66.04 149.86 0)
+		(at 66.04 101.6 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -15242,7 +15151,7 @@
 		(fields_autoplaced yes)
 		(uuid "d024df05-f9e6-431c-994c-5feec4020275")
 		(property "Reference" "#PWR084"
-			(at 66.04 156.21 0)
+			(at 66.04 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15253,7 +15162,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 66.04 154.3034 0)
+			(at 66.04 106.0434 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15264,7 +15173,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 66.04 149.86 0)
+			(at 66.04 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15275,7 +15184,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 66.04 149.86 0)
+			(at 66.04 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15286,7 +15195,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 66.04 149.86 0)
+			(at 66.04 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15461,6 +15370,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 280.67 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "bc8c4191-651c-4ee7-83df-65c8638f50c7")
 		)
@@ -15477,19 +15397,30 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 66.04 91.44 0)
-		(mirror x)
+		(lib_id "Connector [KL]:TestPoint_Small")
+		(at 57.5852 30.48 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "d28d8992-8189-4697-97b8-6147357a38d3")
-		(property "Reference" "R148"
-			(at 64.516 91.44 0)
+		(uuid "e2e0974d-8426-409c-932e-f09156445033")
+		(property "Reference" "TP23"
+			(at 57.5852 28.956 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "TestPoint_Small"
+			(at 58.8552 31.75 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15499,18 +15430,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "215kΩ"
-			(at 66.04 91.44 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.635 0.635)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 66.04 91.44 0)
+		(property "Footprint" "Component - Test point SMT [UL]:TestPoint_SameSky_CPG-47-TH-B"
+			(at 52.5052 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15521,7 +15442,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 66.04 91.44 0)
+			(at 52.5052 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15531,85 +15452,8 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 66.04 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PN" ""
-			(at 66.04 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Variant" "ADV_SMT"
-			(at 66.04 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC PN" ""
-			(at 66.04 91.44 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC MANUFACTURER" ""
-			(at 66.04 91.44 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 66.04 91.44 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 66.04 91.44 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 66.04 91.44 0)
+		(property "Description" "SMD test point"
+			(at 57.5852 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15620,7 +15464,29 @@
 			)
 		)
 		(property "Tolerance" ""
-			(at 66.04 91.44 90)
+			(at 57.5852 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Variant" "IGNORE"
+			(at 57.5852 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 57.5852 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15631,15 +15497,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "a50fce9c-68bd-4676-a1ac-2db4d0e836b6")
-		)
-		(pin "2"
-			(uuid "0fb52210-50e2-41bf-a564-1a7b9577dcce")
+			(uuid "b8b5805f-6eb0-4611-83ac-d44c942f23be")
 		)
 		(instances
 			(project "phyduino_pico2"
 				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
-					(reference "R148")
+					(reference "TP23")
 					(unit 1)
 				)
 			)
@@ -15734,6 +15597,28 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 275.59 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 275.59 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "7bc983ab-bf1e-4f5a-a451-08093e03fb08")
 		)
@@ -15750,8 +15635,9 @@
 		)
 	)
 	(symbol
-		(lib_id "Component - Device [KL]:C_Small")
-		(at 222.25 82.55 0)
+		(lib_id "power:GND")
+		(at 52.07 38.1 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15759,31 +15645,32 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "e95039f6-efe8-407f-9572-fe137636486a")
-		(property "Reference" "C23"
-			(at 219.71 81.2863 0)
+		(fields_autoplaced yes)
+		(uuid "e35a45d3-c928-4d90-bc9c-31f385b162e4")
+		(property "Reference" "#PWR081"
+			(at 52.07 44.45 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "10µF"
-			(at 219.71 83.8263 0)
+		(property "Value" "GND"
+			(at 52.07 42.5434 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 222.25 82.55 0)
+		(property "Footprint" ""
+			(at 52.07 38.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15794,7 +15681,85 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 222.25 82.55 0)
+			(at 52.07 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "279dcf23-0051-4d57-a270-504a438104cf")
+		)
+		(instances
+			(project "phyduino_pico2"
+				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
+					(reference "#PWR081")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Component - Device [KL]:C_Small")
+		(at 215.9 82.55 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e95039f6-efe8-407f-9572-fe137636486a")
+		(property "Reference" "C23"
+			(at 213.36 81.2863 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10µF"
+			(at 213.36 83.8263 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 215.9 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 215.9 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15805,7 +15770,7 @@
 			)
 		)
 		(property "Description" "10uF X5R ±10% 35V 0805 Ceramic Capacitors RoHS"
-			(at 222.25 82.55 0)
+			(at 215.9 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15816,7 +15781,7 @@
 			)
 		)
 		(property "Variant" "STUDENT"
-			(at 222.25 82.55 0)
+			(at 215.9 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15827,7 +15792,7 @@
 			)
 		)
 		(property "LCSC PN" "C49326680"
-			(at 222.25 82.55 0)
+			(at 215.9 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15838,7 +15803,7 @@
 			)
 		)
 		(property "PN" "0805X5R106K350NT"
-			(at 222.25 82.55 0)
+			(at 215.9 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15849,7 +15814,7 @@
 			)
 		)
 		(property "LCSC MANUFACTURER" "AIDE CAPACITOR"
-			(at 222.25 82.55 0)
+			(at 215.9 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15860,7 +15825,7 @@
 			)
 		)
 		(property "DIGIKEY PN" "490-10748-1-ND"
-			(at 222.25 82.55 0)
+			(at 215.9 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15871,7 +15836,7 @@
 			)
 		)
 		(property "DIGKEY MANUFACTURER" "Murata Electronics"
-			(at 222.25 82.55 0)
+			(at 215.9 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15882,7 +15847,7 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 222.25 82.55 0)
+			(at 215.9 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15893,7 +15858,18 @@
 			)
 		)
 		(property "Tolerance" ""
-			(at 222.25 82.55 0)
+			(at 215.9 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 215.9 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15913,6 +15889,153 @@
 			(project "phyduino_pico2"
 				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
 					(reference "C23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small_US")
+		(at 354.33 81.28 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "edf28142-47fa-40f3-a98c-0ab28421fcd8")
+		(property "Reference" "C22"
+			(at 357.124 80.772 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100µF"
+			(at 356.87 82.55 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_Elec_5x5.4"
+			(at 354.33 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 354.33 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "capacitor, small US symbol"
+			(at 354.33 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "VOLTAGE" "35V"
+			(at 358.648 84.582 0)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(color 0 132 132 1)
+				)
+			)
+		)
+		(property "PN" "VPXB0771E101MVTM"
+			(at 354.33 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "Ymin"
+			(at 354.33 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Variant" "STUDENT"
+			(at 354.33 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "capacitor/SMD/elec_round"
+			(at 354.33 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 354.33 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "dd55cb13-f248-4913-9d7b-b6b15209d44b")
+		)
+		(pin "1"
+			(uuid "9f996a86-1f5a-48bf-94bb-89ca5b6c6752")
+		)
+		(instances
+			(project "phyduino_pico2"
+				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
+					(reference "C22")
 					(unit 1)
 				)
 			)
@@ -16060,6 +16183,17 @@
 			)
 		)
 		(property "Tolerance" ""
+			(at 354.33 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
 			(at 354.33 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -16239,6 +16373,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 257.81 81.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "aa7e6ab6-d18f-40b9-a248-7e2475574aca")
 		)
@@ -16249,6 +16394,187 @@
 			(project "phyduino_pico2"
 				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
 					(reference "C24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 52.07 35.56 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f1246570-c12c-4a9f-b966-ec202b8a49ff")
+		(property "Reference" "C134"
+			(at 49.7459 34.3733 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1µF"
+			(at 49.7459 36.7593 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 52.07 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.07 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PN" ""
+			(at 52.07 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Variant" "STUDENT"
+			(at 52.07 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC PN" ""
+			(at 52.07 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC MANUFACTURER" ""
+			(at 52.07 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY PN" ""
+			(at 52.07 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "VOLTAGE" "50V"
+			(at 49.53 39.116 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(color 0 132 132 1)
+				)
+				(justify right)
+			)
+		)
+		(property "Tolerance" "±5%"
+			(at 52.07 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 52.07 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
+			(at 52.07 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "16f6fb49-8ed6-45f2-b7e2-82ab255337b4")
+		)
+		(pin "2"
+			(uuid "aa33f4ac-c61d-42f3-9fd2-ca98dba20cb1")
+		)
+		(instances
+			(project "phyduino_pico2"
+				(path "/42309c5d-9d7a-429d-b353-e8927a604374/62a72eab-32a2-4607-a7e9-a45f8428aec8"
+					(reference "C134")
 					(unit 1)
 				)
 			)
@@ -16330,6 +16656,17 @@
 			)
 		)
 		(property "Variant" "STUDENT"
+			(at 242.57 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "FLASH_SIZE" ""
 			(at 242.57 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -16521,6 +16858,17 @@
 				)
 			)
 		)
+		(property "FLASH_SIZE" ""
+			(at 66.04 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "64bdf4c6-e9ab-4303-a21d-54f59d036c13")
 		)
@@ -16538,7 +16886,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 121.92 134.62 0)
+		(at 121.92 86.36 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -16550,7 +16898,7 @@
 		(fields_autoplaced yes)
 		(uuid "fd6980d4-e468-428b-ab93-09ced9ceaae3")
 		(property "Reference" "#PWR095"
-			(at 121.92 140.97 0)
+			(at 121.92 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16561,7 +16909,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 121.92 139.0634 0)
+			(at 121.92 90.8034 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16572,7 +16920,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 121.92 134.62 0)
+			(at 121.92 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16583,7 +16931,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 121.92 134.62 0)
+			(at 121.92 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16594,7 +16942,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 121.92 134.62 0)
+			(at 121.92 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
