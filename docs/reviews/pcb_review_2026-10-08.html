@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phyduino Pico 2 – PCB Design Review (Rev A, no USB-PD)</title>
+<style>
+.viz-root {
+  color-scheme: light;
+  --page:           #f9f9f7;
+  --surface-1:      #fcfcfb;
+  --text-primary:   #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted:     #898781;
+  --grid:           #e1e0d9;
+  --axis:           #c3c2b7;
+  --border:         rgba(11,11,11,0.10);
+  --ok-text:        #006300;
+  --sev-critical:   #d03b3b;
+  --sev-high:       #ec835a;
+  --sev-medium:     #fab219;
+  --sev-low:        #898781;
+  --code-bg:        #f0efec;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .viz-root {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface-1: #1a1a19; --text-primary: #ffffff; --text-secondary: #c3c2b7;
+    --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10); --ok-text: #0ca30c; --code-bg: #2c2c2a;
+  }
+}
+:root[data-theme="dark"] .viz-root {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface-1: #1a1a19; --text-primary: #ffffff; --text-secondary: #c3c2b7;
+  --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10); --ok-text: #0ca30c; --code-bg: #2c2c2a;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+.viz-root {
+  background: var(--page); color: var(--text-primary);
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+  min-height: 100vh; padding: 32px 20px 64px;
+}
+.wrap { max-width: 1040px; margin: 0 auto; }
+header h1 { font-size: 26px; font-weight: 600; margin: 0 0 4px; }
+header p { margin: 0; color: var(--text-secondary); }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 10px; font-size: 13px; color: var(--text-secondary); }
+.toolbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 24px 0 16px; }
+.toolbar button {
+  font: inherit; font-size: 13px; padding: 5px 12px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--border); background: var(--surface-1); color: var(--text-primary);
+}
+.toolbar button[aria-pressed="true"] { background: var(--text-primary); color: var(--surface-1); }
+.toolbar .spacer { flex: 1; }
+
+.card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+.tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.tile .label { font-size: 13px; color: var(--text-secondary); display: flex; align-items: center; gap: 6px; }
+.tile .value { font-size: 34px; font-weight: 600; line-height: 1.1; margin-top: 4px; }
+.tile .sub { font-size: 12px; color: var(--text-muted); }
+
+.sev-icon { display: inline-flex; width: 18px; height: 18px; border-radius: 4px; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700; color: #fff; flex: none; }
+.sev-critical { background: var(--sev-critical); }
+.sev-high { background: var(--sev-high); color: #0b0b0b; }
+.sev-medium { background: var(--sev-medium); color: #0b0b0b; }
+.sev-low { background: var(--sev-low); }
+
+.chart-card { margin-top: 12px; }
+.chart-card h2, section h2 { font-size: 17px; font-weight: 600; margin: 0 0 2px; }
+.chart-card .desc { font-size: 13px; color: var(--text-secondary); margin: 0 0 12px; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 13px; color: var(--text-secondary); margin-bottom: 8px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.chart-wrap { position: relative; }
+svg text { fill: var(--text-secondary); font-size: 12px; }
+svg .tick { fill: var(--text-muted); font-variant-numeric: tabular-nums; }
+.tooltip {
+  position: absolute; pointer-events: none; background: var(--surface-1); border: 1px solid var(--border);
+  border-radius: 8px; padding: 8px 10px; font-size: 12px; box-shadow: 0 4px 16px rgba(0,0,0,.12);
+  opacity: 0; transition: opacity .1s; min-width: 160px; color: var(--text-primary);
+}
+.tooltip .t { font-weight: 600; margin-bottom: 2px; }
+.tooltip .r { display: flex; align-items: center; gap: 6px; color: var(--text-secondary); }
+details.table-view { margin-top: 10px; font-size: 13px; }
+details.table-view summary { cursor: pointer; color: var(--text-secondary); }
+table { border-collapse: collapse; width: 100%; margin-top: 8px; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 5px 8px; border-bottom: 1px solid var(--grid); }
+th { color: var(--text-secondary); font-weight: 500; }
+td.n, th.n { text-align: right; }
+
+section { margin-top: 28px; }
+section > .head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+section > .head .count { color: var(--text-muted); font-size: 13px; }
+.finding { background: var(--surface-1); border: 1px solid var(--border); border-left: 4px solid var(--sev-low);
+  border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; }
+.finding.critical { border-left-color: var(--sev-critical); }
+.finding.high { border-left-color: var(--sev-high); }
+.finding.medium { border-left-color: var(--sev-medium); }
+.finding h3 { font-size: 15px; font-weight: 600; margin: 0; display: flex; gap: 8px; align-items: baseline; }
+.finding.resolved { border-left-color: var(--ok-text); }
+.finding.resolved .grid > div:nth-child(-n+4) { opacity: .6; }
+.res-badge { margin-left: auto; font-size: 12px; font-weight: 600; color: var(--ok-text); border: 1px solid var(--ok-text); border-radius: 999px; padding: 0 9px; white-space: nowrap; }
+.finding .grid .k.res { color: var(--ok-text); }
+.finding .grid .k.fol { color: var(--sev-high); }
+.tile .value .of { font-size: 14px; font-weight: 500; color: var(--text-muted); }
+.tile .sub .done { color: var(--ok-text); font-weight: 600; }
+.finding h3 .num { color: var(--text-muted); font-weight: 500; font-variant-numeric: tabular-nums; }
+.finding .where { font-size: 12px; color: var(--text-muted); margin: 2px 0 8px; }
+.finding .where .sheet { display: inline-block; padding: 0 7px; border-radius: 999px; border: 1px solid var(--border); margin-right: 6px; color: var(--text-secondary); }
+.finding .grid { display: grid; grid-template-columns: 70px 1fr; gap: 4px 12px; font-size: 14px; }
+.finding .grid .k { color: var(--text-muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; padding-top: 2px; }
+.finding ul { margin: 0; padding-left: 18px; }
+.finding table { font-size: 13px; margin: 4px 0; }
+code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 12.5px; background: var(--code-bg); padding: 1px 5px; border-radius: 4px; }
+.hidden { display: none; }
+
+.ok-list { columns: 2; column-gap: 28px; padding-left: 0; list-style: none; margin: 0; font-size: 14px; }
+.ok-list li { break-inside: avoid; padding: 3px 0 3px 22px; position: relative; }
+.ok-list li::before { content: "✓"; position: absolute; left: 2px; color: var(--ok-text); font-weight: 700; }
+footer { margin-top: 32px; font-size: 12px; color: var(--text-muted); }
+footer a { color: var(--text-secondary); }
+@media (max-width: 720px) { .tiles { grid-template-columns: repeat(2, 1fr); } .ok-list { columns: 1; } }
+@media print { .toolbar { display: none; } .finding, .card { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<div class="viz-root">
+<div class="wrap">
+
+<header>
+  <h1>Phyduino Pico 2: PCB Design Review</h1>
+  <p>Controlled-impedance and USB-specification review of the routed board, against the JLCPCB JLC04161H-7628 stackup. General DRC, silkscreen and assembly items are left for a separate review.</p>
+  <div class="meta">
+    <span><b>Branch:</b> dev_reva_no_usbpd</span>
+    <span><b>Rev:</b> A</span>
+    <span><b>Date:</b> 2026-10-08</span>
+    <span><b>Status:</b> all 11 findings resolved on 2026-10-08: high #1 and #2; medium #3; low #4–#11 (#8 re-routed at the J6 pads; #9 and #10 accepted with no change; #4 corrected and downgraded from medium). Last checked against the 16:46 save, zones refilled. Before ordering: regenerate the Gerbers and drill files (fabrication/ is from 2026-10-07)</span>
+    <span><b>Basis:</b> <code>phyduino_pico2.kicad_pcb</code> as saved 2026-10-08 09:10 (KiCad was open, so unsaved changes aren't included); kicad-cli 10.0.4 DRC and netlist; Hammerstad-Jensen / Kirschning-Jansen microstrip formulas, no solder mask</span>
+    <span><b>Coordinates:</b> mm from the board origin (bottom-left corner of the 68.58 × 53.34 mm board), Y up. KiCad page coordinates are (X + 29.71, 83.67 − Y).</span>
+    <span><b>Stackup:</b> JLC04161H-7628, 1.6 mm, 4 layers: F.Cu 35 µm · 7628 prepreg 0.2104 mm (ε<sub>r</sub> 4.4) · In1.Cu 15.2 µm (split power) · core 1.065 mm · In2.Cu 15.2 µm (GND) · 7628 prepreg 0.2104 mm · B.Cu 35 µm</span>
+  </div>
+</header>
+
+<div class="toolbar" role="group" aria-label="Filter findings by severity">
+  <button data-filter="all" aria-pressed="true">All</button>
+  <button data-filter="critical" aria-pressed="false">Critical</button>
+  <button data-filter="high" aria-pressed="false">High</button>
+  <button data-filter="medium" aria-pressed="false">Medium</button>
+  <button data-filter="low" aria-pressed="false">Low</button>
+  <span class="spacer"></span>
+  <button id="theme" aria-pressed="false">Toggle dark mode</button>
+</div>
+
+<div class="tiles" id="tiles"></div>
+
+<div class="card chart-card">
+  <h2>Findings by area</h2>
+  <p class="desc">Number of findings in each review area, split by severity. Hover a segment for the finding numbers.</p>
+  <div class="legend" id="legend"></div>
+  <div class="chart-wrap" id="chartWrap">
+    <svg id="chart" width="100%" height="200" role="img" aria-labelledby="chartTitle"><title id="chartTitle">Stacked bar chart of findings per review area by severity</title></svg>
+    <div class="tooltip" id="tip"></div>
+  </div>
+  <details class="table-view">
+    <summary>Show as table</summary>
+    <table id="dataTable"></table>
+  </details>
+</div>
+
+<div id="findings"></div>
+
+<section>
+  <div class="head"><h2>Checked and OK</h2></div>
+  <div class="card">
+    <ul class="ok-list">
+      <li>Stackup matches JLC04161H-7628: 0.2104 / 1.065 / 0.2104 mm, 35 / 15.2 µm copper, prepreg ε<sub>r</sub> 4.4, core 4.6, mask 3.8 at 0.015 mm (#5); a 50 Ω single-ended trace works out at about 0.35 mm, matching JLC's figure</li>
+      <li>USB pair 0.30 / 0.15 mm on every segment: about 92 Ω without mask, 88–90 Ω with it, within 90 Ω ±10% (JLC guide) and ±15% (USB 2.0) (#1)</li>
+      <li>USB P/N mismatch 1.5 mm on <code>USB_IO</code> (about 9 ps); at J6, 0.9 or 2.7 mm depending on plug orientation, under the JLC guide's 200 mil</li>
+      <li>J6 data pads joined at the pad row on F.Cu with no vias; stubs 0–2.7 mm, under the JLC guide's 200 mil (#8)</li>
+      <li>USB path has 2 layer changes in total (the <code>USB_IO</code> vias), within the JLC guide's maximum of 2</li>
+      <li>B.Cu sections of every USB and HSTX pair run over solid In2 GND; F.Cu USB sections run over continuous +3.3V on In1, with no split crossings (#6)</li>
+      <li>The <code>USB_IO</code> layer changes have +3.3V-to-GND capacitors within 2–3 mm (C129 / C125 100 nF at R3/R4, C3 4.7 µF at U1) to carry the return current between planes (#4)</li>
+      <li>HSTX pairs 0.25 / 0.20 mm: about 105 Ω without mask, about 101 Ω with it; P/N mismatch about 0.7 mm per lane; lanes 53.4–57.6 mm long (#3)</li>
+      <li>HSTX lanes at least 0.3 mm apart outside U1 (0.23 mm for 2.5 mm below U1); 0.15 mm under U1 accepted (#3)</li>
+      <li>FLASH_CLK at least 0.655 mm from the USB pair (#7)</li>
+      <li>VBUS detect: R151 22 kΩ / R152 33 kΩ from +V_USB to GPIO34 (USB VBUS DET function, fault-tolerant), top resistor near C27, 25.6 mm F.Cu trace with no vias (#2)</li>
+      <li>ESD array U9 about 3 mm from J6, ahead of the 27 Ω resistors, with no stubs between them; R3/R4 placement accepted for full speed (#9)</li>
+      <li>CC1 and CC2 each have their own 5.1 kΩ R<sub>d</sub> (R48, R47) close to J6</li>
+      <li>VBUS capacitance at the connector: C27 10 µF is at, not over, the USB 2.0 / Type-C cSnkBulk limit (schematic #12)</li>
+      <li>Inrush through U13: C140 3.3 nF gives about 0.55 V/ms (TPS25947 table), about 120 mA into the ~220 µF on +VIN_REG</li>
+      <li>U13 start 4.47 V / cut-out 4.06 V / over-voltage 5.58 V: still above the 5.5 V Type-C maximum; start threshold accepted in schematic #13</li>
+      <li>U13 and U6 block reverse current, so the barrel or shield supply can't drive USB VBUS</li>
+      <li>HSTX lane 0/1 J7-end vias have C137 100 nF within 1.0–3.6 mm; C127/C128 add return paths near R3/R4 and U9 (#4)</li>
+      <li>Zones refilled: DRC gives the same 68 items with or without a refill (16:46 save)</li>
+      <li>DRC: 0 unconnected items and schematic parity clean; the 68 remaining items are text, silkscreen and footprint-library warnings outside this review, plus 6 exclusions (J6 GND pads to its NPTH locating holes, J1 mounting pins to the board edge) that are part of the footprints</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  Sources:
+  <a href="https://jlcpcb.com/impedance">JLCPCB impedance calculator and stackups</a> ·
+  <a href="https://jlcpcb.com/blog/pcb-layout-guidelines-for-usb-type-c">JLCPCB USB Type-C layout guidelines</a> ·
+  <a href="https://www.usb.org/document-library/usb-20-specification">USB 2.0 specification</a> ·
+  <a href="https://www.usb.org/document-library/usb-type-cr-cable-and-connector-specification-release-24">USB Type-C cable and connector specification</a> ·
+  <a href="https://www.ti.com/lit/ds/symlink/tps25947.pdf">TI TPS25947 datasheet</a> ·
+  <a href="https://datasheets.raspberrypi.com/rp2350/hardware-design-with-rp2350.pdf">Hardware design with RP2350</a> ·
+  RP2350 datasheet in the repository; <a href="schematic_review_2026-10-06.html">schematic review (2026-10-06)</a>.
+</footer>
+
+</div>
+</div>
+
+<script>
+const SEV = [
+  { key: "critical", label: "Critical", icon: "✖", note: "Fix before fabrication" },
+  { key: "high",     label: "High",     icon: "!", note: "Spec violation or likely field problem" },
+  { key: "medium",   label: "Medium",   icon: "◆", note: "Design-margin issues" },
+  { key: "low",      label: "Low",      icon: "•", note: "Cleanup" },
+];
+const SHEETS = ["Impedance", "Return path", "USB specification", "Layout"];
+
+const F = [
+ { n: 1, sev: "high", sheet: "Impedance", title: "The USB pair is about 110 Ω, outside 90 Ω ±15%",
+   where: "Net class DIFF_90OHM (0.20 mm / 0.15 mm) · USB_COM_D±, USB_D±, USB_IO_D± · F.Cu and B.Cu",
+   problem: `Every USB segment uses the <code>DIFF_90OHM</code> net class. On this stackup that geometry is far above 90 Ω:
+     <table><tr><th>Width / gap (mm)</th><th class="n">Z<sub>diff</sub> (Ω)</th><th class="n">Z<sub>odd</sub> (Ω)</th><th>Note</th></tr>
+     <tr><td>0.20 / 0.15</td><td class="n">109.5</td><td class="n">54.7</td><td>as routed (about 105–107 Ω with mask)</td></tr>
+     <tr><td>0.25 / 0.15</td><td class="n">100.0</td><td class="n">50.0</td><td></td></tr>
+     <tr><td>0.28 / 0.15</td><td class="n">95.2</td><td class="n">47.6</td><td></td></tr>
+     <tr><td>0.30 / 0.15</td><td class="n">92.2</td><td class="n">46.1</td><td>about 88–90 Ω with mask</td></tr></table>
+     USB 2.0 sets 90 Ω ±15% (76.5–103.5 Ω), so the board is out of spec. The RP2350 only runs USB at full speed (12 Mbit/s) and the longest run is about 33 mm, so the board will very likely still work; it's a compliance deviation rather than a functional one. Values are for ε<sub>r</sub> 4.4 without mask; 4.29 (the KiCad stackup value) is about 1 Ω higher.`,
+   fix: "Change DIFF_90OHM to about 0.30 mm wide with a 0.15 mm gap, confirm in JLC's calculator (it includes the mask), and re-route. Narrow the traces only for the last few hundred micrometres at the RP2350's 0.4 mm-pitch pins and J6. Order with JLC's impedance-control option." },
+ { n: 2, sev: "high", sheet: "USB specification", title: "No VBUS detection, so the board drives D+ into an unpowered host",
+   where: "+V_USB → C27, J6, R149, TP10, U13 only · RP2350 USB",
+   problem: "USB 2.0 §7.1.5.1 says a device mustn't pull D+ (or D−) up unless VBUS is present, and the USB-IF back-voltage test checks it. +V_USB doesn't reach any GPIO or the FXL6408, so firmware can't tell whether a host is connected. When the board runs from the barrel or shield supply and the cable goes to a host that's switched off, the RP2350's 1.5 kΩ pull-up drives D+ to 3.3 V into the host. Note that U13 isolates VBUS from +VIN_REG, so U13's output can't be used to sense it either.",
+   fix: "Add a divider from +V_USB to a GPIO that has the USB VBUS DET function and is fault-tolerant: GPIO34 or GPIO37 are free (the function is on every third GPIO from 1 to 46, but 40, 43 and 46 are analogue pins without fault tolerance). Use 22 kΩ over 33 kΩ: 3.30 V at 5.5 V (below the 3.63 V limit when the chip is unpowered), 2.64 V at 4.4 V (above the 2.0 V V<sub>IH</sub>), about 0.09 mA load. With C27 and the UVLO divider it reads low about 0.7 s after VBUS goes (100 kΩ over 150 kΩ, as first suggested here, would take about 2.5 s). Put the top resistor on the +V_USB side near C27/J6. Firmware selects the USB VBUS-detect function on the pin, doesn't force VBUS detect in USB_PWR, and sets SIE_CTRL.PULLUP_EN only while SIE_STATUS.VBUS_DETECTED is set." },
+
+ { n: 3, sev: "medium", sheet: "Impedance", title: "HSTX pairs are about 115 Ω against a 100 Ω target",
+   where: "Net class DIFF_100OHM (0.20 mm / 0.20 mm) · HSTX_LANE0–3_P/N → J7",
+   problem: "The 0.20 / 0.20 mm geometry gives about 115 Ω (about 111 Ω with mask), 11–15% high and outside the ±10% JLC holds for impedance-controlled orders. Whether it matters depends on the FPC peripheral and HSTX rate (up to about 300 Mbit/s per lane with DDR), and the FPC itself adds a discontinuity. <b>Re-checked 2026-10-08 (14:30 save): impedance fixed, three new problems.</b> DIFF_100OHM is now 0.25 mm wide with a 0.20 mm gap, and 86–90% of each lane is routed that way (about 105 Ω without mask, about 101 Ω with it). Lane 0 has a further 5.6 mm at a 0.18 mm gap (about 103 Ω). The 0.20 mm breakouts at the U1 pins are about 0.9 mm per line (about 115 Ω), which is fine. Lanes are 53.5–57.1 mm long, with about 0.7 mm P/N mismatch per lane. <ul><li><b>Zones not refilled.</b> As saved, the lane 0 and lane 1 vias under U1, at (31.47–34.05, 32.2–32.7), sit in solid copper on In1 (+1.1V, MCU_CORE_PWR_PLANE) and In2 (GND). That shorts HSTX_LANE0_P/N and LANE1_P/N to both planes. DRC without refill shows 96 items instead of 81.</li><li><b>5 clearance violations at the U1 breakout, even after a refill.</b> Lane 2 at about (27.8–28.1, 40.6–41.2): P to N 0.118 mm. Lane 0 at about (29.7–30.1, 40.7): P to N 0.146 mm. In both, the P and N 0.20 mm breakouts jog sideways by different amounts on their 45° sections (0.185 vs 0.135 mm on lane 2, 0.146 vs 0.096 mm on lane 0), so the pair pinches below the 0.15 mm clearance.</li><li><b>Lanes are closer to each other.</b> DIFF_100OHM clearance was lowered from 0.20 to 0.15 mm, and widening the traces moved the edges together. Neighbouring lanes now run 0.15 mm apart (less than the 0.20 mm gap inside a pair): lane 0 N to lane 1 P for about 10 mm on F.Cu under U1, plus about 5 mm at under 0.3 mm on B.Cu; lane 2 N to lane 3 P for about 7.5 mm on B.Cu, plus about 7 mm at under 0.3 mm on F.Cu; lane 1 N to lane 2 P for about 2.7 mm on B.Cu. This couples the lanes and lowers the impedance of the nearer line by a few percent. HSTX_LANE3_N also runs 0.155 mm from WIFI_BOOT1 for about 3 mm on B.Cu, which is harmless because WIFI_BOOT1 is static.</li></ul>",
+   fix: "Change DIFF_100OHM to about 0.25–0.26 mm wide with a 0.20 mm gap (0.25 / 0.20 gives about 105 Ω without mask, about 101 Ω with it) and confirm in JLC's calculator. <b>Re-checked 14:43:</b> zones are refilled (DRC shows 81 items with or without a refill, so the via shorts are gone); the HSTX tracks are unchanged, so the 5 breakout clearance violations and the lane spacing are still open. <b>Re-checked 15:00:</b> breakout clearance fixed. The lane 0 and lane 2 N breakouts now jog lower (lane 2 N at Y 40.61 instead of 40.68, lane 0 N at 40.54 instead of 40.63), so the narrowest P-to-N gaps are 0.161 mm (lane 2) and 0.18 mm (lane 0), and DRC reports no clearance items (70 shown; the 6 newly excluded items are J6's NPTH hole clearance and J1's edge clearance, which aren't HSTX). Lane-to-lane spacing is unchanged. <b>Still to do:</b> space neighbouring lanes at least 0.4 mm apart (twice the in-pair gap) where routing allows, especially under U1 and on B.Cu between lanes 2 and 3. If the spacing can't be found under U1, accept it there (it's about 10 mm) and fix it on B.Cu." },
+ { n: 4, sev: "low", sheet: "Return path", title: "Return path at the HSTX layer changes near J7",
+   where: "HSTX lane 0 and 1 vias at about (39.8–41.9, 26.1–27.7) · F.Cu over In1 +3.3V ↔ B.Cu over In2 GND",
+   problem: `<b>Corrected 2026-10-08.</b> This finding first said "no GND vias beside the layer-change vias" and recommended adding GND vias. That fix doesn't work on this stackup. At every USB and HSTX signal via, the F.Cu side sits over a power area on In1 (+3.3V, or +1.1V under U1) with no GND copper on F.Cu nearby, and the B.Cu side sits over In2 GND. The return current on In1 is on the +3.3V or +1.1V net, so a GND via (which joins In2 to other GND copper, not to In1) gives it no path. It can only cross through a decoupling capacitor between that net and GND near the via, or through the plane-to-plane capacitance, which is small with the 1.065 mm core (about 0.4 pF per mm²).
+     <table><tr><th>Vias</th><th>F.Cu-side reference</th><th>Nearest capacitor to GND</th><th>Assessment</th></tr>
+     <tr><td><code>USB_IO</code> at R3/R4 (18.36, 42.1/41.4)</td><td>+3.3V</td><td>C129 / C125 100 nF, 1.9–2.6 mm</td><td>Good</td></tr>
+     <tr><td><code>USB_IO</code> at U1 (37.24, 35.0/34.3)</td><td>+3.3V</td><td>C3 4.7 µF, 2.2–2.8 mm</td><td>Good</td></tr>
+     <tr><td>HSTX under U1 (26.9–34.1, 32.2–32.7)</td><td>+1.1V (lanes 2/3 near the +3.3V edge)</td><td>C2 / C120 4.7 µF, 2.5–5 mm; C26 100 nF, 3.4–4.3 mm</td><td>Acceptable</td></tr>
+     <tr><td>HSTX lanes 2/3 near J7 (42.8–45.2, 26.1)</td><td>+3.3V</td><td>C1 100 nF, 2.1–4.3 mm</td><td>Acceptable</td></tr>
+     <tr><td><b>HSTX lanes 0/1 near J7 (39.8–41.9, 26.1–27.7)</b></td><td>+3.3V</td><td><b>C1, 5.2–7.3 mm</b></td><td>Weakest</td></tr></table>
+     For a balanced differential pair the return currents under P and N cancel and can close within each plane, so only the common-mode part has to cross between planes. That part exists here: full-speed USB has single-ended states (such as end of packet), and the RP2350's HSTX outputs are GPIOs driven in opposite directions, so P/N skew creates some common mode. At full-speed USB edges (4 ns or slower) the effect is negligible, and the <code>USB_IO</code> vias already have capacitors within 2–3 mm. HSTX, with edges of the order of a nanosecond, is the only real concern, mainly for EMI, and only at the J7 end of lanes 0 and 1. Severity lowered from medium to low. (The J6 → U9 section and its C27 concern no longer apply: that section now references +3.3V and has no vias, see #6 and #8.)`,
+   fix: "Optional: add one 100 nF 0402 capacitor from +3.3V to GND near the lane 0/1 vias at about (40.8, 26.7), roughly 41 mm from the left edge and 27 mm up from the bottom edge, with its own short vias about 1 mm from the signal vias. (Corrected 2026-10-08: this location was first given in KiCad page coordinates as (70.5, 57), which looked off the board; all coordinates in this report are now from the board origin, Y up.) Alternatively, keep more of the HSTX routing on B.Cu over GND so fewer sections sit over +3.3V. No change is needed for the USB vias." },
+ { n: 5, sev: "low", sheet: "Impedance", title: "KiCad stackup ε<sub>r</sub> doesn't match JLC's",
+   where: "Board Setup → Physical Stackup",
+   problem: "All three dielectrics are set to ε<sub>r</sub> 4.29. JLC publishes 4.4 for 7628 prepreg on this stackup. KiCad's calculator and any length tuning that uses propagation delay will be slightly off (about 1 Ω and 1%).",
+   fix: "Set the prepreg layers to 4.4 (and the core to JLC's published value), and mask to 3.8." },
+ { n: 6, sev: "low", sheet: "Return path", title: "USB pair crosses In1 splits at the RP2350 and at U9",
+   where: "USB_IO_D± on F.Cu at about (35.8–36.0, 34.5–34.9) · USB_COM_D± on F.Cu at about (10.5–10.8, 41.3–42.1)",
+   problem: "Between U1 pins 66/67 and the vias, the pair passes over the boundary between the +1.1V and +3.3V areas on In1, with a gap of about 0.26 mm. It's short, but the reference is interrupted. <b>Re-checked 2026-10-08 (12:48 save, zones refilled):</b> the RP2350 crossing is still there (about 0.2 mm under the 0.15 mm neck-down). After the re-route and refill, <code>USB_COM_D±</code> also crosses a gap of about 0.2–0.3 mm between a +3.3V area and +V_USB, just west of U9 pins 4 and 6.",
+   fix: "Pull the +1.1V area back so the F.Cu section stays over +3.3V, or put the vias right at the pins. At U9, pull the +3.3V area back so the J6 → U9 section stays over +V_USB up to the pins." },
+ { n: 7, sev: "low", sheet: "Impedance", title: "Other vias are 0.16–0.19 mm from the USB pair",
+   where: "USB_IO_D_N on B.Cu at about (21.8–22.2, 41.44)",
+   problem: "Several +3.3V vias sit 0.19 mm (edge to edge) from <code>USB_IO_D_N</code>, about the same as the 0.15 mm gap inside the pair. That lowers the impedance locally and couples supply noise into one side. DRC passes because the class clearance is 0.15 mm. <b>Re-checked 2026-10-08 (12:37 save; unchanged at 12:48):</b> with the pair widened to 0.30 mm (#1), the gaps are smaller: <code>USB_IO_D_P</code> is 0.16 mm from a +3.3V via at (21.9, 41.0); <code>USB_IO_D_N</code> is 0.17 mm from a +3.3V via at (37.7, 41.4), 0.25 mm from a +1.1V via at (30.1, 41.4), and 0.155 mm from a <code>FLASH_CLK</code> via at (39.04, 35.6). The flash clock is the worst of these, because it couples a fast clock edge into one side of the pair.",
+   fix: "Keep other copper at least twice the gap away (0.3 mm or more; more once the pair is widened for #1). Raising the DIFF_90OHM clearance makes DRC enforce it." },
+ { n: 8, sev: "low", sheet: "USB specification", title: "J6 cross-over loop leaves a 7.9 mm stub and skew",
+   where: "J6 A6/B6 and A7/B7 → vias at (4.87, 42.60/41.90) and (8.47, 41.60/40.90)",
+   problem: "The A and B rows are joined by a loop that goes under the connector body and through 2 vias. In either plug orientation, one line has about 7.9 mm and 2 vias more than the other (about 50 ps of skew) and the unused pin leaves a 7.9 mm stub. That's harmless at full speed (rise times of 4–20 ns) but would matter for high-speed USB.",
+   fix: "No change needed for this board. If the layout is reused for high-speed USB, join A6/B6 and A7/B7 right at the pads." },
+ { n: 9, sev: "low", sheet: "Layout", title: "27 Ω series resistors are at the far end from the RP2350",
+   where: "R3, R4 at (15.5, 41.3–42.5); U1 pins about 25 mm away",
+   problem: "The RP2350 design guidance places the 27 Ω resistors next to the chip, as source termination. Here they're beside the ESD array. At 12 Mbit/s a 33 mm line is electrically short, so they behave as lumped resistance and it works.",
+   fix: "Optional: move R3/R4 next to U1 when re-routing for #1." },
+ { n: 10, sev: "low", sheet: "USB specification", title: "The board can draw more than a default USB port allows",
+   where: "CC1/CC2 → R47/R48 only · U13 R<sub>ILM</sub> 1.1 kΩ (about 3 A)",
+   problem: "The CC lines aren't read, so the board can't tell whether the source offers default USB, 1.5 A or 3 A. A USB 2.0 port or an A-to-C cable only allows 500 mA, while U13 allows about 3 A. The schematic review accepted this with a 3 A USB-C supply requirement in the workshop notes (#12).",
+   fix: "Keep the workshop-notes requirement. If USB-A use matters, connect CC1 and CC2 through 100 kΩ each to the free analogue pin GPIO42 so firmware can read the advertised current (the ADS7038 has no spare channels: AIN0–5 are A0–A5 and AIN6/7 are HS_GPIO0/1 on J7; corrected 2026-10-08), or lower U13's limit (R<sub>ILM</sub> 6.65 kΩ gives 0.5 A typical)." },
+ { n: 11, sev: "low", sheet: "Layout", title: "Duplicate vias on HSTX lane 3",
+   where: "HSTX_LANE3_P at (44.455, 26.02) · HSTX_LANE3_N at (45.205, 26.02)",
+   problem: "DRC reports co-located drilled holes: each net has two vias stacked on the same spot.",
+   fix: "Delete the duplicate via on each net." },
+];
+
+// Resolution log: finding number → how it was closed (verified against a fresh board file).
+const RESOLVED = {
+  4: { date: "2026-10-08", note: "Checked against the 16:44 save. C137 (100 nF X7R 0402, ADV_SMT) added from +3.3V to GND at (39.25, 29.0), with its own vias 0.7 mm from each pad at (39.97, 28.52) (+3.3V) and (39.96, 29.48) (GND). The nearest +3.3V-to-GND capacitor to the HSTX J7-end vias is now 1.0 mm (lane 0 P) and 1.5 mm (lane 0 N), down from 6.5–7.3 mm, and 3.1–3.6 mm for lane 1 (was 5.2–5.9 mm), the same range as lanes 2 and 3. C127 and C128 (100 nF, ADV_SMT) were also added from +3.3V to GND at (15.75, 43.75) and (15.75, 39.75), each with its own vias 0.7 mm from the pads, which adds return paths along the F.Cu USB section near R3/R4 and U9. With zones refilled, DRC shows the same 68 items, 0 unconnected, and schematic parity clean.", follow: "<b>Done 16:46:</b> zones refilled; DRC shows 68 items as saved, 0 unconnected, schematic parity clean. (As saved at 16:44, the seven new capacitor vias at (14.57, 39.75), (14.59, 43.75), (16.90, 43.75), (16.93, 39.75), (39.96, 29.48), (39.97, 28.52) and (47.01, 45.48) sit in solid copper, shorting +3.3V to the In2 GND plane and GND to the In1 +3.3V plane: DRC showed 82 items as saved and 68 after a refill.)" },
+  10: { date: "2026-10-08", note: "Accepted with no change (option A), matching schematic review #12. The board relies on a 5 V / 3 A USB-C supply, stated in the workshop notes; CC1/CC2 stay as R47/R48 only and U13's limit stays at about 3 A (R156 1.1 kΩ). The other options were rejected: lowering R156 to 6.65 kΩ (0.5 A) would give up the 3 A capability and U13 latches off on overcurrent; CC sensing on GPIO42 would only let firmware warn, because on USB power nothing can switch off the shield +5 V. The board on its own (RP2350, ESP32-C6 and on-board parts) is estimated, not measured, to stay under 500 mA; the limit is mainly at risk when a shield draws from +5V.", follow: "Add to the workshop notes: “Use a USB-C supply rated 5 V / 3 A; on a computer's USB-A port, keep shield current low.” Measure the board's own current on the first board (idle and during Wi-Fi transmit) to confirm the under-500 mA estimate." },
+  9: { date: "2026-10-08", note: "Accepted with no change. Raspberry Pi's Hardware design with RP2350 (§5.1 USB) asks for the 27 Ω resistors to be “placed close to the chip, in order to meet the USB impedance specification”, but gives no distance limit, and the RP2350 datasheet only says they are required. Here the pin-to-resistor run (USB_IO, 32–33 mm) has a one-way delay of about 0.2 ns against full-speed edges of 4 ns or slower, so the line is electrically short and the 27 Ω acts as a lumped series resistance wherever it sits. Driver impedance, rise time and receiver levels are the same either way, and the USB 2.0 full-speed driver-impedance limit (28–44 Ω including the external resistor) is met. Placement would start to matter on runs of roughly 65–110 mm or more (an estimate from the 1/6 to 1/10 of edge-time rule, not a published limit), or for high-speed USB. Designs with the resistors at the connector, such as the Adafruit Metro cited by the designer, work for the same reason.", follow: "If the board is reworked for high-speed USB, or the USB_IO run grows much longer, revisit this. Source: <a href=\"https://datasheets.raspberrypi.com/rp2350/hardware-design-with-rp2350.pdf\">Hardware design with RP2350</a>, §5.1." },
+  8: { date: "2026-10-08", note: "Re-routed (15:37 save), checked against the <a href=\"https://jlcpcb.com/blog/pcb-layout-guidelines-for-usb-type-c\">JLCPCB USB Type-C layout guidelines</a>. The loop under the connector and its four vias are gone; both junctions are now on F.Cu at the pad row. D+ joins A6 and B6 behind the pads (vertical at X ≈ 8.07, passing inboard of the A7 pad), and D− joins B7 and A7 in front of the pad tips (vertical at X ≈ 6.23). Stubs to the unused contact are 0.9 mm (A6) and 1.8 mm (B6) on D+, and 2.7 mm (A7) and 0 mm (B7, on the through path) on D−. All are well under the guide's 200 mil (5.08 mm) limit. The length difference between D+ and D− is 2.7 mm in one plug orientation and 0.9 mm in the other, also under the guide's 200 mil. The whole USB path now has 2 layer changes (the USB_IO vias), within the guide's maximum of 2. USB_COM_D± is on F.Cu over continuous In1 +3.3V. DRC is unchanged at 68 items, the same with or without a refill, with 0 unconnected and schematic parity clean.", follow: "Minor, against the same guide: D+ has a 90° corner at (8.07, 42.02) where the vertical junction meets the horizontal run; replace it with two 45° segments. The D− junction runs about 0.8–1.1 mm inside J6's body outline (F.Fab), under the connector. GCT's USB4110 drawing text gives no keep-out note under the body, but check the drawing's figure to confirm nothing metallic sits on the board there. The guide asks for 50 mil (1.27 mm) between the pair and other signals; that can't be met inside the 0.5 mm-pitch pad row (CC1 is 0.275 mm from D− at the junction), and elsewhere it is stricter than #7 accepted, so treat it as a target if the USB_IO routing is touched again. The guide also prefers a GND reference plane; the USB_COM section is over +3.3V, as covered in #4." },
+  7: { date: "2026-10-08", note: "Checked against the 15:23 save. The FLASH_CLK routing moved away from the USB pair: its vias are now at (40.23, 34.90), (42.73, 40.17), (41.71, 30.87) and (42.75, 29.08), and the nearest FLASH_CLK copper is 0.655 mm from USB_IO_D_N (B.Cu track) and 0.72 mm from USB_IO_D_P (F.Cu track), up from 0.155 mm. That was the aggressor that mattered. DRC is unchanged at 68 items, with 0 unconnected.", follow: "Accepted as they are (supply vias are AC-quiet and each one affects only about 0.6 mm of the pair): +3.3V vias 0.16 mm from USB_IO_D_P at (21.9, 41.0) and 0.17 mm from USB_IO_D_N at (37.7, 41.4), and a +1.1V via 0.245 mm from USB_IO_D_N at (30.1, 41.4). Move them to 0.3 mm or more if they are touched again. Also noted: the MCU_VREG_LX copper (the RP2350 core regulator's switching node) on F.Cu is 0.4 mm from USB_IO_D_N where the pair lands on its via at (37.24, 34.30). It's short and at full speed unlikely to matter, but keep the LX copper from growing towards the pair." },
+  5: { date: "2026-10-08", note: "Checked against the 15:19 save. The stackup now matches JLCPCB's published JLC04161H-7628 values: prepreg (dielectric 1 and 3) ε<sub>r</sub> 4.4, core (dielectric 2) ε<sub>r</sub> 4.6, loss tangent 0.0168 on all three; F.Mask and B.Mask ε<sub>r</sub> 3.8 at 0.015 mm (JLC's 0.6 mil over-trace figure). Thicknesses were already correct: 0.2104 / 1.065 / 0.2104 mm with 35 / 15.2 µm copper, about 1.62 mm overall including mask. The impedance figures in this review already used ε<sub>r</sub> 4.4, so none of them change. DRC is unchanged at 68 items.", follow: "Optional: “Impedance controlled” in Physical Stackup is still unticked (<code>dielectric_constraints no</code>). Tick it so the fabrication output flags the board, and select impedance control with JLC04161H-7628 when ordering. Confirm 0.30/0.15 mm (USB) and 0.25/0.20 mm (HSTX) in JLC's calculator, which includes the mask." },
+  3: { date: "2026-10-08", note: "Checked against the 15:10 save. DIFF_100OHM is 0.25 mm wide with a 0.20 mm gap, which covers 86–90% of each lane: about 105 Ω without mask, about 101 Ω with it (lane 0 has a further 5.6 mm at a 0.18 mm gap, about 103 Ω). The 0.20 mm breakouts at U1 are about 0.9 mm per line. The breakouts on lanes 0 and 2 now jog evenly, with the narrowest P-to-N gaps at 0.18 and 0.161 mm, and DRC has no HSTX clearance items. The B.Cu sections were re-spaced: outside U1, neighbouring lanes are now at least 0.30 mm apart (lane 0/1 at 0.46 mm or more, lane 1/2 at 0.35 mm or more on B.Cu) apart from one stretch below. Under U1, lane 0 N to lane 1 P (about 10 mm) and lane 2 N to lane 3 P (about 7.5 mm) stay at 0.15 mm, which is the fallback in the fix text: there's no room between the pad ring and the exposed pad. Lanes are 53.4–57.3 mm long, with about 0.7 mm P/N mismatch.", follow: "<b>Done 15:11:</b> zones refilled; DRC shows 68 items with or without a refill, 0 unconnected, schematic parity clean. (In the 15:10 save, the moved ADC_MOSI vias at (40.63, 21.96) and (40.18, 20.07) and ADC_SCK vias at (41.38, 21.45) and (41.00, 20.07) sit in solid copper on In1 (+3.3V) and In2 (GND), so both nets are shorted to both planes. DRC showed 84 items as saved and 68 after a refill.) Optional: lane 2 N to lane 3 P is 0.23 mm apart on B.Cu at about (29.0, 28.7), just below U1 (re-checked 15:13: lane 3 was re-routed, so this is down from 3.8 to 2.5 mm under 0.3 mm, but the narrowest point is unchanged); HSTX_LANE3_N now runs within 0.2 mm of WIFI_BOOT1 for about 1.7 mm (was 4 mm), which is harmless because WIFI_BOOT1 is static." },
+  11: { date: "2026-10-08", note: "Lane 3 now has one via per line at (44.455, 26.02) and (45.205, 26.02); DRC no longer reports co-located holes." },
+  2: { date: "2026-10-08", note: "R151 (22 kΩ) from +V_USB to the new net VBUS_DETECT, and R152 (33 kΩ) from VBUS_DETECT to GND, both 0402 and ADV_SMT; VBUS_DETECT goes to U1 pad 43 (GPIO34), which has the USB VBUS DET function and is fault-tolerant. On the board, R151/R152 sit at (8.8, 25.5–26.8), about 3.5 mm from C27, with R151's +V_USB pad on the VBUS side, so the 25.6 mm, 0.15 mm F.Cu trace to U1 carries only the divided voltage. It has no vias and runs over In1 +3.3V and +V_USB; its nearest neighbours are the slow IO_EXP_~RST (0.14 mm) and EN_5V (0.175 mm) nets. DRC: 76 items with and without refill, the same as before, 0 unconnected, and schematic parity clean.", follow: "R151 and R152 have no PN, LCSC, Digi-Key, manufacturer or Description fields; fill them in (1% thick film, as for R166) before generating BOMs. Firmware must select the USB VBUS-detect function on GPIO34, leave VBUS_DETECT_OVERRIDE_EN clear, and gate SIE_CTRL.PULLUP_EN on SIE_STATUS.VBUS_DETECTED (the RP2350 datasheet describes VBUS detect only as a status bit and interrupt). Verify on the first board: with barrel power and an unpowered host, D+ should stay below 0.4 V." },
+  6: { date: "2026-10-08", note: "Re-checked against the 12:57 save with zones refilled. The +1.1V area on In1 no longer reaches under USB_IO_D± at U1, and the area under USB_COM_D± at U9 is now continuous +3.3V. Every F.Cu USB section is over +3.3V from end to end; the only breaks are the antipads of the pair's own vias. DRC still reports 0 unconnected items, so the +1.1V and +V_USB areas are still connected." },
+  1: { date: "2026-10-08", note: "Re-checked against the 12:57 save (USB traces unchanged since 12:48). DIFF_90OHM is now 0.30 mm wide with a 0.15 mm gap, and every USB segment uses it: USB_COM_D± (J6 → U9) on F.Cu and B.Cu, USB_D± (U9 → R3/R4), and USB_IO_D± (R3/R4 → U1) on B.Cu. That gives about 92 Ω without mask and about 88–90 Ω with it. Short sections with a 0.18–0.20 mm gap near J6 and U9 (about 2 mm in total) come out at about 94–96 Ω, still within 90 Ω ±15%. P/N mismatch on USB_IO is 1.5 mm (about 9 ps), negligible at full speed. The zones are refilled: the new vias at (9.27, 41.42/40.72) and (18.36, 42.10/41.40) now have proper antipads on In1 and In2. DRC shows 76 items whether or not the zones are refilled first, the same as before the change, with none on the USB nets. The neck-down at U1 is now about 0.95 mm per line at 0.15 mm wide with a 0.25–0.30 mm gap (about 135 Ω, about 6 ps long), only across the pad row before it widens to 0.30 mm at X ≈ 36.13. That is acceptable at full speed.", follow: "Cosmetic: DIFF_90OHM's single-track width is still 0.15 mm (the neck-down uses it). Set it to 0.30 mm so a single track routed in this class doesn't come out narrow by default, and draw the neck-down with an explicit width instead. Both In1 split crossings are fixed (#6). The via spacing in #7 is unchanged. Issues #2, #4 and #10 are still open." },
+};
+
+
+const sevByKey = Object.fromEntries(SEV.map(s => [s.key, s]));
+const icon = k => `<span class="sev-icon sev-${k}" aria-hidden="true">${sevByKey[k].icon}</span>`;
+
+// Tiles
+document.getElementById("tiles").innerHTML = SEV.map(s => {
+  const list = F.filter(f => f.sev === s.key), c = list.length;
+  const done = list.filter(f => RESOLVED[f.n]).length;
+  const sub = c === 0 ? "None found" : done === c ? `<span class="done">✓ All ${c} resolved</span>` : done ? `${done} of ${c} resolved · ${s.note}` : s.note;
+  return `<div class="card tile"><div class="label">${icon(s.key)}${s.label}</div>
+    <div class="value">${c - done}<span class="of"> open</span></div><div class="sub">${sub}</div></div>`;
+}).join("");
+
+// Legend
+document.getElementById("legend").innerHTML = SEV.map(s => `<span>${icon(s.key)}${s.label}</span>`).join("");
+
+// Data
+const counts = SHEETS.map(sh => ({ sheet: sh, ...Object.fromEntries(SEV.map(s => [s.key,
+  F.filter(f => f.sheet === sh && f.sev === s.key)])) }));
+
+// Table view
+document.getElementById("dataTable").innerHTML =
+  `<tr><th>Area</th>${SEV.map(s => `<th class="n">${s.label}</th>`).join("")}<th class="n">Total</th></tr>` +
+  counts.map(r => `<tr><td>${r.sheet}</td>${SEV.map(s => `<td class="n">${r[s.key].length}</td>`).join("")}
+    <td class="n">${SEV.reduce((a, s) => a + r[s.key].length, 0)}</td></tr>`).join("");
+
+// Chart
+const svg = document.getElementById("chart"), wrap = document.getElementById("chartWrap"), tip = document.getElementById("tip");
+const NS = "http://www.w3.org/2000/svg";
+function el(tag, attrs, text) { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; return e; }
+function draw() {
+  while (svg.lastChild && svg.lastChild.tagName !== "title") svg.removeChild(svg.lastChild);
+  const W = wrap.clientWidth, L = 160, R = 36, T = 8, rowH = 40, barH = 18;
+  const H = T + rowH * SHEETS.length + 24;
+  svg.setAttribute("height", H); svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const max = Math.max(...counts.map(r => SEV.reduce((a, s) => a + r[s.key].length, 0)));
+  const xMax = Math.ceil(max / 2) * 2;
+  const x = v => L + (W - L - R) * v / xMax;
+  const cs = getComputedStyle(document.querySelector(".viz-root"));
+  for (let v = 0; v <= xMax; v += 2) {
+    svg.appendChild(el("line", { x1: x(v), x2: x(v), y1: T, y2: T + rowH * SHEETS.length,
+      stroke: cs.getPropertyValue(v === 0 ? "--axis" : "--grid"), "stroke-width": 1 }));
+    svg.appendChild(el("text", { x: x(v), y: H - 6, "text-anchor": "middle", class: "tick" }, v));
+  }
+  counts.forEach((r, i) => {
+    const y = T + i * rowH + (rowH - barH) / 2;
+    svg.appendChild(el("text", { x: L - 10, y: y + barH / 2 + 4, "text-anchor": "end" }, r.sheet));
+    let acc = 0; const segs = SEV.filter(s => r[s.key].length);
+    segs.forEach((s, j) => {
+      const n = r[s.key].length, x0 = x(acc) + (j ? 1 : 0), x1 = x(acc + n) - (j < segs.length - 1 ? 1 : 0);
+      const last = j === segs.length - 1, w = Math.max(1, x1 - x0), rad = 4;
+      const d = last
+        ? `M${x0},${y}H${x0 + w - rad}Q${x0 + w},${y} ${x0 + w},${y + rad}V${y + barH - rad}Q${x0 + w},${y + barH} ${x0 + w - rad},${y + barH}H${x0}Z`
+        : `M${x0},${y}H${x0 + w}V${y + barH}H${x0}Z`;
+      const p = el("path", { d, fill: cs.getPropertyValue(`--sev-${s.key}`), tabindex: 0,
+        "aria-label": `${r.sheet}: ${n} ${s.label}` });
+      p.style.cursor = "default";
+      const show = ev => {
+        tip.innerHTML = `<div class="t">${r.sheet}</div><div class="r">${icon(s.key)}${s.label}: <b style="color:var(--text-primary)">${n}</b></div>
+          <div class="r">Findings #${r[s.key].map(f => f.n).join(", #")}</div>`;
+        const b = wrap.getBoundingClientRect(), px = (ev.clientX ?? (b.left + x0 + w / 2)) - b.left, py = (ev.clientY ?? (b.top + y)) - b.top;
+        tip.style.left = Math.min(px + 12, W - 190) + "px"; tip.style.top = (py - 70) + "px"; tip.style.opacity = 1;
+        svg.querySelectorAll("path").forEach(q => q.style.opacity = q === p ? 1 : 0.45);
+      };
+      const hide = () => { tip.style.opacity = 0; svg.querySelectorAll("path").forEach(q => q.style.opacity = 1); };
+      p.addEventListener("mousemove", show); p.addEventListener("focus", show);
+      p.addEventListener("mouseleave", hide); p.addEventListener("blur", hide);
+      svg.appendChild(p);
+      acc += n;
+    });
+    svg.appendChild(el("text", { x: x(acc) + 6, y: y + barH / 2 + 4 }, acc));
+  });
+}
+draw(); new ResizeObserver(draw).observe(wrap);
+
+// Findings
+document.getElementById("findings").innerHTML = SEV.map(s => {
+  const list = F.filter(f => f.sev === s.key);
+  if (!list.length) return "";
+  return `<section data-sev="${s.key}"><div class="head">${icon(s.key)}<h2>${s.label}</h2><span class="count">${list.length} finding${list.length > 1 ? "s" : ""} · ${s.note}</span></div>
+  ${list.map(f => { const r = RESOLVED[f.n]; return `<article class="finding ${f.sev}${r ? " resolved" : ""}">
+    <h3><span class="num">#${f.n}</span>${f.title}${r ? `<span class="res-badge">✓ Resolved ${r.date}</span>` : ""}</h3>
+    <div class="where"><span class="sheet">${f.sheet}</span>${f.where}</div>
+    <div class="grid"><div class="k">Problem</div><div>${f.problem}</div><div class="k">Fix</div><div>${f.fix}</div>
+    ${r ? `<div class="k res">Done</div><div>${r.note}</div>` : ""}
+    ${r && r.follow ? `<div class="k fol">Follow-up</div><div>${r.follow}</div>` : ""}</div>
+  </article>`; }).join("")}</section>`;
+}).join("");
+
+// Filters
+document.querySelectorAll("[data-filter]").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll("[data-filter]").forEach(o => o.setAttribute("aria-pressed", o === b));
+  document.querySelectorAll("#findings section").forEach(sec =>
+    sec.classList.toggle("hidden", b.dataset.filter !== "all" && sec.dataset.sev !== b.dataset.filter));
+}));
+
+// Theme toggle
+document.getElementById("theme").addEventListener("click", e => {
+  const root = document.documentElement;
+  const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  root.dataset.theme = dark ? "light" : "dark";
+  e.currentTarget.setAttribute("aria-pressed", !dark);
+  draw();
+});
+</script>
+</body>
+</html>

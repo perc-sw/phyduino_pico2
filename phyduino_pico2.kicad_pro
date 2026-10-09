@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.0,
-          "height": 1.45,
-          "width": 1.175
+          "drill": 1.0,
+          "height": 1.7,
+          "width": 1.7
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -62,7 +62,7 @@
           "hatch_thickness": 1.0,
           "min_clearance": 0.0,
           "min_island_area": 10.0,
-          "min_thickness": 0.25,
+          "min_thickness": 0.1,
           "pad_connection": 2,
           "remove_islands": 0,
           "thermal_relief_gap": 0.5,
@@ -556,7 +556,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.15,
+        "clearance": 0.1,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -574,9 +574,9 @@
         "wire_width": 6
       },
       {
-        "clearance": 0.2,
+        "clearance": 0.15,
         "diff_pair_gap": 0.2,
-        "diff_pair_width": 0.2,
+        "diff_pair_width": 0.25,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "DIFF_100OHM",
@@ -591,14 +591,14 @@
       {
         "clearance": 0.15,
         "diff_pair_gap": 0.15,
-        "diff_pair_width": 0.2,
+        "diff_pair_width": 0.3,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "DIFF_90OHM",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 3,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
+        "track_width": 0.15,
         "tuning_profile": "",
         "via_diameter": 0.55,
         "via_drill": 0.25
@@ -619,7 +619,7 @@
         "via_drill": 0.25
       },
       {
-        "clearance": 0.15,
+        "clearance": 0.1,
         "diff_pair_gap": 0.25,
         "diff_pair_width": 0.2,
         "microvia_diameter": 0.3,
@@ -927,7 +927,7 @@
     "meta": {
       "version": 1
     },
-    "page_layout_descr_file": "kicad-embed://ISO_B_PLRS.kicad_wks",
+    "page_layout_descr_file": "kicad-embed://ISO_A_PLRS.kicad_wks",
     "plot_directory": "",
     "reuse_designators": true,
     "subpart_first_id": 65,
@@ -939,7 +939,7 @@
         "uuid": "42309c5d-9d7a-429d-b353-e8927a604374"
       }
     ],
-    "used_designators": "L1-2,D2-5,#PWR7-9,#PWR20,#PWR25,#PWR27-28,#PWR34-35,#PWR37-40,#PWR44,#PWR49-54,#PWR58-61,#PWR64-66,#PWR71,#PWR76-89,#PWR91-101,#PWR103,#PWR105,J6,J8-9,R6,R21-22,R47-48,R51-54,R56-64,R134-139,R141-144,R146-151,R153-167,TP11,TP16-17,TP22,TP27-33,U2-3,U6,U8-10,U12-15,U108,C5-9,C16-19,C22-25,C27-33,C35-36,C38,C58-59,C131-132,C134,C136-141,RN1-2",
+    "used_designators": "L1-2,D2-5,#PWR1,#PWR7-9,#PWR11-14,#PWR17,#PWR20,#PWR24-25,#PWR27-28,#PWR30-31,#PWR34-35,#PWR37-44,#PWR46,#PWR49-54,#PWR58-66,#PWR69-71,#PWR76-89,#PWR91-101,#PWR103,#PWR105,J6,J8-9,R6,R20-22,R42-43,R47-49,R51-54,R56-65,R134-139,R141-144,R146-167,TP4-6,TP11,TP16-17,TP22,TP27-33,U2-3,U5-10,U12-15,U108,C1,C5-12,C16-25,C27-33,C35-36,C38-39,C57-59,C127-128,C131-132,C134,C136-141,FB1,RN1-2,SW1",
     "variants": [
       {
         "name": "Digikey"
@@ -956,12 +956,20 @@
       "Microcontroller"
     ],
     [
-      "caa003fc-dd7d-454a-95fd-499db9ef27e8",
-      "Wireless Communication"
+      "5c121146-22cf-4407-b679-7587725ee278",
+      "Peripherals"
+    ],
+    [
+      "130ed7ac-194b-41a2-b725-c05ef78bc2e1",
+      "Memory"
     ],
     [
       "62a72eab-32a2-4607-a7e9-a45f8428aec8",
       "Power"
+    ],
+    [
+      "caa003fc-dd7d-454a-95fd-499db9ef27e8",
+      "Wireless Communication"
     ]
   ],
   "text_variables": {},

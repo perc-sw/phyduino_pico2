@@ -3,9 +3,9 @@
     "GenerationSoftware": {
       "Vendor": "KiCad",
       "Application": "Pcbnew",
-      "Version": "10.0.3-10.0.3~ubuntu24.04.1"
+      "Version": "10.0.4"
     },
-    "CreationDate": "2026-06-14T19:04:54-04:00"
+    "CreationDate": "2026-10-09T12:20:33-04:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -18,7 +18,7 @@
       "Y": 53.44
     },
     "LayerNumber": 4,
-    "BoardThickness": 1.6062,
+    "BoardThickness": 1.6162,
     "Finish": "ENIG"
   },
   "DesignRules": [
@@ -28,16 +28,16 @@
       "PadToTrack": 0.1,
       "TrackToTrack": 0.1,
       "MinLineWidth": 0.15,
-      "TrackToRegion": 0.15,
-      "RegionToRegion": 0.15
+      "TrackToRegion": 0.1,
+      "RegionToRegion": 0.1
     },
     {
       "Layers": "Inner",
       "PadToPad": 0.0,
       "PadToTrack": 0.0,
       "TrackToTrack": 0.1,
-      "TrackToRegion": 0.15,
-      "RegionToRegion": 0.15
+      "TrackToRegion": 0.1,
+      "RegionToRegion": 0.1
     }
   ],
   "FilesAttributes": [
@@ -110,8 +110,8 @@
     },
     {
       "Type": "SolderMask",
-      "Color": "Blue",
-      "Thickness": 0.01,
+      "Color": "Black",
+      "Thickness": 0.015,
       "Material": "Liquid Ink",
       "Name": "Top Solder Mask"
     },
@@ -161,8 +161,8 @@
     },
     {
       "Type": "SolderMask",
-      "Color": "Blue",
-      "Thickness": 0.01,
+      "Color": "Black",
+      "Thickness": 0.015,
       "Material": "Liquid Ink",
       "Name": "Bottom Solder Mask"
     },
