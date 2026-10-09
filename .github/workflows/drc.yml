@@ -1,0 +1,64 @@
+name: PCB DRC
+
+# Runs the KiCad design rules check on every push. Only error-level violations
+# fail the job; warnings (e.g. missing global footprint libraries on the runner)
+# and violations excluded in the KiCad DRC dialog are not reported.
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  drc:
+    runs-on: ubuntu-latest
+    container:
+      # Keep in step with the KiCad version used to edit the board.
+      image: kicad/kicad:10.0.4
+      options: --user root
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      # Text on the copper layers is drawn with these fonts, so install them
+      # to get the same copper geometry as on the designer's machine.
+      - name: Install board fonts
+        run: |
+          mkdir -p /usr/local/share/fonts/phyduino
+          cp .github/workflows/fonts/*.ttf .github/workflows/fonts/*.TTF /usr/local/share/fonts/phyduino/
+          if command -v fc-cache >/dev/null; then fc-cache -f; fi
+
+      - name: Run DRC (errors only)
+        run: |
+          set +e
+          kicad-cli pcb drc \
+            --severity-error \
+            --exit-code-violations \
+            --format report \
+            -o drc-report.txt \
+            phyduino_pico2.kicad_pcb
+          status=$?
+          set -e
+
+          {
+            echo "## PCB DRC (errors only)"
+            echo '```'
+            cat drc-report.txt 2>/dev/null || echo "(no report was produced)"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          # kicad-cli exits with 5 when violations are found; anything else
+          # non-zero means DRC itself failed to run.
+          if [ "$status" -eq 5 ]; then
+            echo "::error file=phyduino_pico2.kicad_pcb::DRC found error-level violations. See the job summary or the drc-report artifact."
+          elif [ "$status" -ne 0 ]; then
+            echo "::error::kicad-cli failed to run DRC (exit code $status)."
+          fi
+          exit "$status"
+
+      - name: Upload DRC report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: drc-report
+          path: drc-report.txt

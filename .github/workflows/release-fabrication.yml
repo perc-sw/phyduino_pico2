@@ -1,0 +1,99 @@
+name: Release fabrication files
+
+# When a release is published, generate the Gerber, Gerber job and drill files
+# and the schematic PDF from the design at the release tag, then attach a zip
+# of the fabrication files and the PDF to the release.
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+env:
+  TAG: ${{ github.event.release.tag_name }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    container:
+      # Keep in step with the KiCad version used to edit the design.
+      image: kicad/kicad:10.0.4
+      options: --user root
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      # Board text is drawn with these fonts, so install them to get the same
+      # silkscreen and copper geometry as on the designer's machine.
+      - name: Install board fonts
+        run: |
+          mkdir -p /usr/local/share/fonts/phyduino
+          cp .github/workflows/fonts/*.ttf .github/workflows/fonts/*.TTF /usr/local/share/fonts/phyduino/
+          if command -v fc-cache >/dev/null; then fc-cache -f; fi
+
+      # Gerbers use the plot settings saved in the board. Drill settings match
+      # those used for fabrication/: separate PTH/NPTH files, metric, decimal,
+      # absolute origin and routed slots.
+      - name: Export Gerber and drill files
+        run: |
+          mkdir -p out/fabrication
+          kicad-cli pcb export gerbers --board-plot-params -o out/fabrication/ phyduino_pico2.kicad_pcb
+          kicad-cli pcb export drill \
+            --format excellon \
+            --drill-origin absolute \
+            --excellon-units mm \
+            --excellon-zeros-format decimal \
+            --excellon-oval-format route \
+            --excellon-separate-th \
+            -o out/fabrication/ \
+            phyduino_pico2.kicad_pcb
+
+      - name: Export schematic PDF
+        run: |
+          kicad-cli sch export pdf \
+            -o "out/phyduino_pico2-${TAG}-schematic.pdf" \
+            phyduino_pico2.kicad_sch
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: release-files
+          path: out/
+          if-no-files-found: error
+
+  package:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: release-files
+
+      - name: Zip Gerber and drill files
+        id: zip
+        run: |
+          shopt -s nullglob
+          files=(fabrication/*.gbr fabrication/*.gbrjob fabrication/*.drl)
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "::error::No Gerber or drill files were generated"
+            exit 1
+          fi
+          name="phyduino_pico2-${TAG}-fabrication.zip"
+          zip -j "$name" "${files[@]}"
+          echo "name=$name" >> "$GITHUB_OUTPUT"
+
+      - name: Attach files to release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          ZIP: ${{ steps.zip.outputs.name }}
+        run: |
+          gh release upload "$TAG" \
+            --repo "$REPO" \
+            "$ZIP" \
+            "phyduino_pico2-${TAG}-schematic.pdf" \
+            --clobber
