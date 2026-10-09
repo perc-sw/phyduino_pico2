@@ -42,7 +42,12 @@
     <div class="board-hero-text">
       <span class="board-tag">Introduction to Electronics - Phyduino Pico2</span>
       <div class="board-img-panel">
-      <img src="./images/phyduino_pico2.png" alt="Phyduino Pico2 board, top view" onerror="this.style.display='none'">
+      <div class="view-toggle" role="group" aria-label="Board view" hidden>
+        <button type="button" data-view="image" aria-pressed="true">Image</button>
+        <button type="button" data-view="3d" aria-pressed="false">3D model</button>
+      </div>
+      <img src="./images/phyduino_pico2_render.png" alt="Phyduino Pico2 board, 3D render" onerror="this.style.display='none'">
+      <p class="view-status" role="status" hidden></p>
     </div>
       <p class="board-desc">
         An Arduino Uno-style development board built around the Raspberry Pi RP2350 microcontroller,
@@ -139,9 +144,9 @@
           <td><a class="ds-link" href="./pdf/datasheets/PSRAM - IS66WVR8M8FBLL.pdf">PDF</a></td>
         </tr>
         <tr>
-          <td>ZD24C64A</td>
+          <td>24AA64F</td>
           <td>64-Kbit I2C Serial EEPROM</td>
-          <td><a class="ds-link" href="./pdf/datasheets/EEPROM - ZD24C64A.pdf">PDF</a></td>
+          <td><a class="ds-link" href="./pdf/datasheets/EEPROM - 24AA64F.pdf">PDF</a></td>
         </tr>
         <tr>
           <td>FXL6408</td>
@@ -276,5 +281,6 @@
   </div>
 </footer>
 
+<script type="module" src="./js/board-viewer.js"></script>
 </body>
 </html>

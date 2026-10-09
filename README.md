@@ -1,5 +1,11 @@
 # Phyduino Pico 2
 
+[![PCB DRC](https://github.com/perc-sw/phyduino_pico2/actions/workflows/drc.yml/badge.svg)](https://github.com/perc-sw/phyduino_pico2/actions/workflows/drc.yml)
+[![Latest release](https://img.shields.io/github/v/release/perc-sw/phyduino_pico2?include_prereleases&label=release)](https://github.com/perc-sw/phyduino_pico2/releases)
+[![KiCad 10](https://img.shields.io/badge/KiCad-10.0-314CB0?logo=kicad&logoColor=white)](https://www.kicad.org/)
+[![Licence: GPL v3](https://img.shields.io/badge/licence-GPL--3.0-blue)](LICENSE)
+[![Project site](https://img.shields.io/badge/docs-perc--sw.github.io-007FA3)](https://perc-sw.github.io/phyduino_pico2)
+
 An Arduino Uno-style development board built around the Raspberry Pi **RP2350** microcontroller, designed by the University of Toronto Department of Physics, Electronics Support Services, for the [Introduction to Electronics](https://plrs.physics.utoronto.ca/course-listing/) course. Students assemble part of the board themselves, learning surface-mount soldering, microcontroller programming, analogue-to-digital conversion and digital communication.
 
 ![Phyduino Pico 2, 3D render](docs/images/phyduino_pico2_render.png)
