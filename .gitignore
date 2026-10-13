@@ -46,3 +46,6 @@ fp-info-cache
 # Claude Code project instructions (local only)
 CLAUDE.md
 *.zip
+
+# BOM sourcing review (local only: holds distributor prices, stock and lead times)
+docs/reviews/BoM_review.html
