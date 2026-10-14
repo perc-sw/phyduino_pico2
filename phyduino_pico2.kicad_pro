@@ -743,14 +743,20 @@
       "fields_ordered": [
         {
           "group_by": false,
-          "label": "Reference",
-          "name": "Reference",
-          "show": true
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
         },
         {
           "group_by": false,
           "label": "Qty",
           "name": "${QUANTITY}",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Reference",
+          "name": "Reference",
           "show": true
         },
         {
@@ -778,10 +784,16 @@
           "show": false
         },
         {
+          "group_by": false,
+          "label": "VOLTAGE",
+          "name": "VOLTAGE",
+          "show": false
+        },
+        {
           "group_by": true,
           "label": "Footprint",
           "name": "Footprint",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
@@ -791,26 +803,8 @@
         },
         {
           "group_by": false,
-          "label": "DIGKEY MANUFACTURER",
-          "name": "DIGKEY MANUFACTURER",
-          "show": false
-        },
-        {
-          "group_by": false,
           "label": "FREQ",
           "name": "FREQ",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "KiLib_Generator",
-          "name": "KiLib_Generator",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "LCSC MANUFACTURER",
-          "name": "LCSC MANUFACTURER",
           "show": false
         },
         {
@@ -826,7 +820,7 @@
           "show": false
         },
         {
-          "group_by": false,
+          "group_by": true,
           "label": "PN",
           "name": "PN",
           "show": true
@@ -851,21 +845,9 @@
         },
         {
           "group_by": false,
-          "label": "DIGIKEY PN",
-          "name": "DIGIKEY PN",
-          "show": false
-        },
-        {
-          "group_by": false,
           "label": "Description",
           "name": "Description",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "#",
-          "name": "${ITEM_NUMBER}",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -877,12 +859,6 @@
           "group_by": false,
           "label": "RAM_SIZE",
           "name": "RAM_SIZE",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "VOLTAGE",
-          "name": "VOLTAGE",
           "show": false
         },
         {
@@ -905,14 +881,26 @@
         },
         {
           "group_by": false,
-          "label": "DistPN",
-          "name": "DistPN",
+          "label": "SIZE",
+          "name": "SIZE",
           "show": false
         },
         {
           "group_by": false,
-          "label": "SIZE",
-          "name": "SIZE",
+          "label": "DIGIKEY_PN",
+          "name": "DIGIKEY_PN",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "MOUSER_PN",
+          "name": "MOUSER_PN",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "LCSC_PN",
+          "name": "LCSC_PN",
           "show": false
         }
       ],
@@ -921,7 +909,7 @@
       "include_excluded_from_bom": true,
       "name": "",
       "sort_asc": true,
-      "sort_field": "Variant"
+      "sort_field": "Value"
     },
     "bus_aliases": {},
     "connection_grid_size": 50.0,

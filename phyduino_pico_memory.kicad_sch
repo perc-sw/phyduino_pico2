@@ -3006,7 +3006,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Value" "IS66WVR8M8FBLL-104NLI"
+		(property "Value" "IS66WVS8M8FBLL-104NLI"
 			(at 89.154 141.478 0)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -3028,7 +3028,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.issi.com/WW/pdf/66-67WVR8M8FALL-BLL.pdf"
+		(property "Datasheet" "https://www.issi.com/WW/pdf/66-67WVS8M8FALL-BLL.pdf"
 			(at 91.44 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -3039,7 +3039,7 @@
 				)
 			)
 		)
-		(property "Description" "SOIC-8 : PSRAM (Pseudo SRAM) Memory IC 64Mbit SPI - Quad I/O 104 MHz 7 ns"
+		(property "Description" "64 Mbit SPI/QPI serial PSRAM, 2.7-3.6 V, 104 MHz, 8-SOIC 3.9 mm"
 			(at 91.44 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -3071,7 +3071,7 @@
 				)
 			)
 		)
-		(property "KiLib_Generator" "package/gullwing"
+		(property "FLASH_SIZE" ""
 			(at 91.44 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -3082,7 +3082,29 @@
 				)
 			)
 		)
-		(property "FLASH_SIZE" ""
+		(property "PN" "${VALUE}"
+			(at 91.44 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "706-IS66WVS8M8FBLL-104NLI-ND"
+			(at 91.44 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "870-WVS8M8FBLL104NLI"
 			(at 91.44 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -3170,7 +3192,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 118.11 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -3181,7 +3203,7 @@
 				)
 			)
 		)
-		(property "Description" "5.1kΩ 62.5mW 50V Thick Film Resistor ±1% 0402 Chip Resistor - Surface Mount RoHS"
+		(property "Description" "Chip resistor, 10 kΩ ±1%, 1/16 W, thick film, 0402"
 			(at 118.11 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -3203,7 +3225,7 @@
 				)
 			)
 		)
-		(property "PN" "CHANGLONG"
+		(property "PN" "RC0402FR-0710KL"
 			(at 118.11 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -3214,7 +3236,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "CHANGLONG"
+		(property "LCSC_PN" "C60490"
 			(at 118.11 133.35 90)
 			(hide yes)
 			(show_name no)
@@ -3225,41 +3247,8 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CHANGLONG"
+		(property "DIGIKEY_PN" "311-10.0KLRCT-ND"
 			(at 118.11 133.35 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" "13-RC0402FR-7W5K1LCT-ND"
-			(at 118.11 133.35 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
-			(at 118.11 133.35 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 118.11 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3281,6 +3270,17 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 118.11 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "603-RC0402FR-0710KL"
 			(at 118.11 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -3428,7 +3428,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GCM155R71H104KE02%23"
 			(at 152.4 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -3439,7 +3439,7 @@
 				)
 			)
 		)
-		(property "Description" "100nF ±20% 50V Ceramic Capacitor X7R 0402"
+		(property "Description" "MLCC, 0.1 µF ±10%, 50 V, X7R, 0402"
 			(at 152.4 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -3461,7 +3461,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C5142567"
+		(property "LCSC_PN" "C85858"
 			(at 152.4 119.38 90)
 			(hide yes)
 			(show_name no)
@@ -3472,7 +3472,7 @@
 				)
 			)
 		)
-		(property "PN" "TCC0402X7R104M500AT"
+		(property "PN" "GCM155R71H104KE02J"
 			(at 152.4 119.38 90)
 			(hide yes)
 			(show_name no)
@@ -3483,7 +3483,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CCTC"
+		(property "DIGIKEY_PN" "490-14514-1-ND"
 			(at 152.4 119.38 90)
 			(hide yes)
 			(show_name no)
@@ -3494,40 +3494,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "490-14514-1-ND"
-			(at 152.4 119.38 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "Murata Electronics"
-			(at 152.4 119.38 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 152.4 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
+		(property "Tolerance" "±10%"
 			(at 152.4 119.38 90)
 			(hide yes)
 			(show_name no)
@@ -3540,6 +3507,17 @@
 		)
 		(property "FLASH_SIZE" ""
 			(at 152.4 119.38 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "81-GCM155R71H104KE2J"
+			(at 152.4 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3763,7 +3741,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GCM155R71H104KE02%23"
 			(at 95.25 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -3774,7 +3752,7 @@
 				)
 			)
 		)
-		(property "Description" "100nF ±20% 50V Ceramic Capacitor X7R 0402"
+		(property "Description" "MLCC, 0.1 µF ±10%, 50 V, X7R, 0402"
 			(at 95.25 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -3796,7 +3774,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C5142567"
+		(property "LCSC_PN" "C85858"
 			(at 95.25 119.38 90)
 			(hide yes)
 			(show_name no)
@@ -3807,7 +3785,7 @@
 				)
 			)
 		)
-		(property "PN" "TCC0402X7R104M500AT"
+		(property "PN" "GCM155R71H104KE02J"
 			(at 95.25 119.38 90)
 			(hide yes)
 			(show_name no)
@@ -3818,7 +3796,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CCTC"
+		(property "DIGIKEY_PN" "490-14514-1-ND"
 			(at 95.25 119.38 90)
 			(hide yes)
 			(show_name no)
@@ -3829,40 +3807,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "490-14514-1-ND"
-			(at 95.25 119.38 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "Murata Electronics"
-			(at 95.25 119.38 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 95.25 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
+		(property "Tolerance" "±10%"
 			(at 95.25 119.38 90)
 			(hide yes)
 			(show_name no)
@@ -3875,6 +3820,17 @@
 		)
 		(property "FLASH_SIZE" ""
 			(at 95.25 119.38 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "81-GCM155R71H104KE2J"
+			(at 95.25 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3944,7 +3900,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps3424.pdf?ts=1781789088928&ref_url=https%253A%252F%252Fwww.google.com%252F"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps3424.pdf"
 			(at 140.97 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -3955,7 +3911,7 @@
 				)
 			)
 		)
-		(property "Description" "Supervisor Open Drain or Open Collector 1 Channel SOT-583"
+		(property "Description" "Voltage supervisor, open-drain, 1 channel, SOT-583"
 			(at 140.97 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -3978,6 +3934,39 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 140.97 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PN" "${VALUE}"
+			(at 140.97 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "296-TPS3424C11EF2ADRLRCT-ND"
+			(at 140.97 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "595-S3424C11EF2ADRLR"
 			(at 140.97 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -4492,7 +4481,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 175.26 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -4503,7 +4492,7 @@
 				)
 			)
 		)
-		(property "Description" "5.1kΩ 62.5mW 50V Thick Film Resistor ±1% 0402 Chip Resistor - Surface Mount RoHS"
+		(property "Description" "Chip resistor, 10 kΩ ±1%, 1/16 W, thick film, 0402"
 			(at 175.26 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -4525,7 +4514,7 @@
 				)
 			)
 		)
-		(property "PN" "CHANGLONG"
+		(property "PN" "RC0402FR-0710KL"
 			(at 175.26 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -4536,7 +4525,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "CHANGLONG"
+		(property "LCSC_PN" "C60490"
 			(at 175.26 63.5 90)
 			(hide yes)
 			(show_name no)
@@ -4547,41 +4536,8 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CHANGLONG"
+		(property "DIGIKEY_PN" "311-10.0KLRCT-ND"
 			(at 175.26 63.5 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" "13-RC0402FR-7W5K1LCT-ND"
-			(at 175.26 63.5 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
-			(at 175.26 63.5 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 175.26 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4604,6 +4560,17 @@
 		)
 		(property "FLASH_SIZE" ""
 			(at 175.26 63.5 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "603-RC0402FR-0710KL"
+			(at 175.26 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4672,7 +4639,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM1555C1H472JE01-01A-EN_PDF_CERAMICCAPACITORSMD"
 			(at 165.1 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -4683,7 +4650,7 @@
 				)
 			)
 		)
-		(property "Description" "100nF ±20% 50V Ceramic Capacitor X7R 0402"
+		(property "Description" "MLCC, 4700 pF ±5%, 50 V, C0G, 0402"
 			(at 165.1 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -4705,7 +4672,7 @@
 				)
 			)
 		)
-		(property "PN" "TCC0402X7R104M500AT"
+		(property "PN" "GRM1555C1H472JE01D"
 			(at 165.1 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -4716,7 +4683,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C5142567"
+		(property "LCSC_PN" "C1518204"
 			(at 165.1 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -4727,7 +4694,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CCTC"
+		(property "DIGIKEY_PN" "490-GRM1555C1H472JE01DCT-ND"
 			(at 165.1 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -4738,40 +4705,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "490-14514-1-ND"
-			(at 165.1 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "Murata Electronics"
-			(at 165.1 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 165.1 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
+		(property "Tolerance" "±5%"
 			(at 165.1 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -4783,6 +4717,17 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 165.1 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "81-GRM1555C1H472JE1D"
 			(at 165.1 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -4853,7 +4798,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GCM155R71H104KE02%23"
 			(at 115.57 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -4864,7 +4809,7 @@
 				)
 			)
 		)
-		(property "Description" "100nF ±20% 50V Ceramic Capacitor X7R 0402"
+		(property "Description" "MLCC, 0.1 µF ±10%, 50 V, X7R, 0402"
 			(at 115.57 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -4886,7 +4831,7 @@
 				)
 			)
 		)
-		(property "PN" "TCC0402X7R104M500AT"
+		(property "PN" "GCM155R71H104KE02J"
 			(at 115.57 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -4897,7 +4842,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C5142567"
+		(property "LCSC_PN" "C85858"
 			(at 115.57 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -4908,7 +4853,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CCTC"
+		(property "DIGIKEY_PN" "490-14514-1-ND"
 			(at 115.57 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -4919,40 +4864,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "490-14514-1-ND"
-			(at 115.57 59.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "Murata Electronics"
-			(at 115.57 59.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 115.57 59.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
+		(property "Tolerance" "±10%"
 			(at 115.57 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -4964,6 +4876,17 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 115.57 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "81-GCM155R71H104KE2J"
 			(at 115.57 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -5034,7 +4957,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GRM1555C1H102JA01%23"
 			(at 125.73 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -5045,7 +4968,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "MLCC, 1000 pF ±5%, 50 V, C0G, 0402"
 			(at 125.73 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -5067,7 +4990,7 @@
 				)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "GRM1555C1H102JA01D"
 			(at 125.73 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -5078,7 +5001,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C5142567"
+		(property "LCSC_PN" "C76947"
 			(at 125.73 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -5089,51 +5012,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CCTC"
-			(at 125.73 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 125.73 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 125.73 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" ""
-			(at 125.73 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
+		(property "Tolerance" "±5%"
 			(at 125.73 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -5145,6 +5024,28 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 125.73 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "490-3244-1-ND"
+			(at 125.73 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "81-GRM1555C1H102JA1D"
 			(at 125.73 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -5212,7 +5113,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GCM155R71H104KE02%23"
 			(at 146.05 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -5223,7 +5124,7 @@
 				)
 			)
 		)
-		(property "Description" "100nF ±20% 50V Ceramic Capacitor X7R 0402"
+		(property "Description" "MLCC, 0.1 µF ±10%, 50 V, X7R, 0402"
 			(at 146.05 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -5245,7 +5146,7 @@
 				)
 			)
 		)
-		(property "PN" "TCC0402X7R104M500AT"
+		(property "PN" "GCM155R71H104KE02J"
 			(at 146.05 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -5256,7 +5157,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C5142567"
+		(property "LCSC_PN" "C85858"
 			(at 146.05 44.45 90)
 			(hide yes)
 			(show_name no)
@@ -5267,7 +5168,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CCTC"
+		(property "DIGIKEY_PN" "490-14514-1-ND"
 			(at 146.05 44.45 90)
 			(hide yes)
 			(show_name no)
@@ -5278,40 +5179,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "490-14514-1-ND"
-			(at 146.05 44.45 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "Murata Electronics"
-			(at 146.05 44.45 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 146.05 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
+		(property "Tolerance" "±10%"
 			(at 146.05 44.45 90)
 			(hide yes)
 			(show_name no)
@@ -5324,6 +5192,17 @@
 		)
 		(property "FLASH_SIZE" ""
 			(at 146.05 44.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "81-GCM155R71H104KE2J"
+			(at 146.05 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5626,7 +5505,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 175.26 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -5637,7 +5516,7 @@
 				)
 			)
 		)
-		(property "Description" "5.1kΩ 62.5mW 50V Thick Film Resistor ±1% 0402 Chip Resistor - Surface Mount RoHS"
+		(property "Description" "Chip resistor, 10 kΩ ±1%, 1/16 W, thick film, 0402"
 			(at 175.26 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -5659,7 +5538,7 @@
 				)
 			)
 		)
-		(property "PN" "CHANGLONG"
+		(property "PN" "RC0402FR-0710KL"
 			(at 175.26 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -5670,7 +5549,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "CHANGLONG"
+		(property "LCSC_PN" "C60490"
 			(at 175.26 55.88 90)
 			(hide yes)
 			(show_name no)
@@ -5681,41 +5560,8 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CHANGLONG"
+		(property "DIGIKEY_PN" "311-10.0KLRCT-ND"
 			(at 175.26 55.88 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" "13-RC0402FR-7W5K1LCT-ND"
-			(at 175.26 55.88 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
-			(at 175.26 55.88 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 175.26 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5738,6 +5584,17 @@
 		)
 		(property "FLASH_SIZE" ""
 			(at 175.26 55.88 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "603-RC0402FR-0710KL"
+			(at 175.26 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5994,7 +5851,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 154.94 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -6005,7 +5862,7 @@
 				)
 			)
 		)
-		(property "Description" "10kΩ ±1% 62.5mW 0402 Thick Film Resistor"
+		(property "Description" "Chip resistor, 10 kΩ ±1%, 1/16 W, thick film, 0402"
 			(at 154.94 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -6027,7 +5884,7 @@
 				)
 			)
 		)
-		(property "PN" "FRC0402F1002TS"
+		(property "PN" "RC0402FR-0710KL"
 			(at 154.94 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -6038,7 +5895,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C2906861"
+		(property "LCSC_PN" "C60490"
 			(at 154.94 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -6049,40 +5906,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "FOJAN"
-			(at 154.94 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" "311-10.0KLRCT-ND"
-			(at 154.94 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
-			(at 154.94 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+		(property "DIGIKEY_PN" "311-10.0KLRCT-ND"
 			(at 154.94 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -6105,6 +5929,17 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 154.94 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "603-RC0402FR-0710KL"
 			(at 154.94 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -6185,7 +6020,7 @@
 				)
 			)
 		)
-		(property "Description" "FLASH - NOR Memory IC 128Mbit SPI - Quad I/O 133 MHz 8-SOIC"
+		(property "Description" "128 Mbit SPI/Quad NOR flash, 133 MHz, 8-SOIC 5.3 mm"
 			(at 147.32 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -6206,17 +6041,6 @@
 				)
 			)
 		)
-		(property "KiLib_Generator" "package/gullwing"
-			(at 147.32 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Variant" "ADV_SMT"
 			(at 147.32 132.08 0)
 			(hide yes)
@@ -6229,6 +6053,50 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 147.32 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PN" "${VALUE}"
+			(at 147.32 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "1695-AT25QF128A-SHB-TCT-ND"
+			(at 147.32 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "988-AT25QF128A-SHB-T"
+			(at 147.32 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC_PN" "C7452501"
 			(at 147.32 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -6478,7 +6346,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1977067&DocType=Customer+Drawing&DocLang=English&DocFormat=pdf&PartCntxt=1977067-1"
+		(property "Datasheet" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=8-1773450-9_SECTION_C_TACTILE_SWITCHES&DocType=Data%20Sheet&DocLang=English&PartCntxt=1977067-1&DocFormat=pdf"
 			(at 107.95 52.324 0)
 			(hide yes)
 			(show_name no)
@@ -6489,7 +6357,7 @@
 				)
 			)
 		)
-		(property "Description" "Tactile Switch SPST-NO Side Actuated Surface Mount, Right Angle"
+		(property "Description" "Tactile switch, SPST-NO, side actuated, SMD right angle"
 			(at 107.95 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -6533,29 +6401,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "TE Connectivity"
-			(at 107.95 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" "450-1977067-1DKR-ND"
-			(at 107.95 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "TE Connectivity ALCOSWITCH Switches"
+		(property "DIGIKEY_PN" "450-1977067-1CT-ND"
 			(at 107.95 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -6653,7 +6499,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 128.27 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -6664,7 +6510,7 @@
 				)
 			)
 		)
-		(property "Description" "10kΩ ±1% 62.5mW 0402 Thick Film Resistor"
+		(property "Description" "Chip resistor, 10 kΩ ±1%, 1/16 W, thick film, 0402"
 			(at 128.27 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -6686,7 +6532,7 @@
 				)
 			)
 		)
-		(property "PN" "FRC0402F1002TS"
+		(property "PN" "RC0402FR-0710KL"
 			(at 128.27 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -6697,7 +6543,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C2906861"
+		(property "LCSC_PN" "C60490"
 			(at 128.27 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -6708,40 +6554,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "FOJAN"
-			(at 128.27 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" "311-10.0KLRCT-ND"
-			(at 128.27 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
-			(at 128.27 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+		(property "DIGIKEY_PN" "311-10.0KLRCT-ND"
 			(at 128.27 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -6764,6 +6577,17 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 128.27 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "603-RC0402FR-0710KL"
 			(at 128.27 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -6833,7 +6657,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 125.73 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -6844,7 +6668,7 @@
 				)
 			)
 		)
-		(property "Description" "10kΩ ±1% 62.5mW 0402 Thick Film Resistor"
+		(property "Description" "Chip resistor, 10 kΩ ±1%, 1/16 W, thick film, 0402"
 			(at 125.73 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -6866,7 +6690,7 @@
 				)
 			)
 		)
-		(property "PN" "FRC0402F1002TS"
+		(property "PN" "RC0402FR-0710KL"
 			(at 125.73 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -6877,7 +6701,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C2906861"
+		(property "LCSC_PN" "C60490"
 			(at 125.73 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -6888,40 +6712,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "FOJAN"
-			(at 125.73 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" "311-10.0KLRCT-ND"
-			(at 125.73 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
-			(at 125.73 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+		(property "DIGIKEY_PN" "311-10.0KLRCT-ND"
 			(at 125.73 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -6944,6 +6735,17 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 125.73 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "603-RC0402FR-0710KL"
 			(at 125.73 48.26 0)
 			(hide yes)
 			(show_name no)

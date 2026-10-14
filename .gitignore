@@ -49,3 +49,9 @@ CLAUDE.md
 
 # BOM sourcing review (local only: holds distributor prices, stock and lead times)
 docs/reviews/BoM_review.html
+
+# Local notes (not published)
+docs/notes/
+
+# Write lock taken by the BOM agents while they edit the schematic
+.bom-write.lock/

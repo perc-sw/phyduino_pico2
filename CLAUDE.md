@@ -37,6 +37,10 @@ Each symbol has a `Variant` field that controls which parts students solder:
 
 `ibom.config.ini` (InteractiveHtmlBom plugin) whitelists `STUDENT` and blacklists `IGNORE,ADV_SMT`, writing to `docs/bom/ibom_student.html`. `docs/bom/ibom.html` and `ibom_all.html` are the other generated BOMs. Whenever you add a part, set its `Variant`.
 
+JLCPCB assembles the `ADV_SMT` parts. **JLCPCB build quantity: 32** boards per run (the minimum). Runs are always a multiple of 4, so check stock for 32 unless a prompt gives a larger multiple of 4.
+
+**Digi-Key order quantities:** order what one board needs. Don't round passives up to a price break (decided 2026-10-13, DK-8).
+
 ## Generated outputs (regenerate after design changes)
 
 - `fabrication/`: Gerbers and drill files (the PCB plot output directory is set to `fabrication/`).

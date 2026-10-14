@@ -4383,7 +4383,7 @@
 				)
 			)
 		)
-		(property "Description" "1k Ohm ±5% 62.5mW Power Per Element Isolated 4 Resistor Network/Array ±200ppm/°C 0804, Concave, Long Side Terminals"
+		(property "Description" "Chip resistor array, 4x 1 kΩ ±5%, 62.5 mW per element, isolated, 0804"
 			(at 134.62 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -4418,6 +4418,28 @@
 		)
 		(property "Variant" "ADV_SMT"
 			(at 134.62 55.88 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "CAT10-102J4LFCT-ND"
+			(at 134.62 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "652-CAT10-102J4LF"
+			(at 134.62 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4504,7 +4526,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 31.75 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -4515,7 +4537,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Chip resistor, 5.1 kΩ ±1%, 1/16 W, thick film, 0402"
 			(at 31.75 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -4537,7 +4559,7 @@
 				)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "RC0402FR-075K1L"
 			(at 31.75 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -4548,7 +4570,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" ""
+		(property "LCSC_PN" "C105872"
 			(at 31.75 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -4559,40 +4581,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" ""
-			(at 31.75 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 31.75 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 31.75 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+		(property "DIGIKEY_PN" "311-5.10KLRCT-ND"
 			(at 31.75 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -4615,6 +4604,17 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 31.75 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "603-RC0402FR-075K1L"
 			(at 31.75 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -4661,7 +4661,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "1kΩ@100MHz"
 			(at 55.88 52.324 90)
 			(hide yes)
 			(show_name no)
@@ -4683,7 +4683,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.laird.com/sites/default/files/hz0805d102r-10-datasheet.pdf"
 			(at 55.88 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -4694,7 +4694,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Ferrite bead, 1 kΩ @ 100 MHz, 400 mA, 300 mΩ DCR, 0805"
 			(at 55.88 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -4716,7 +4716,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" ""
+		(property "LCSC_PN" "C85835"
 			(at 55.88 49.53 90)
 			(hide yes)
 			(show_name no)
@@ -4727,52 +4727,8 @@
 				)
 			)
 		)
-		(property "PN" "${VALUE}"
+		(property "PN" "HZ0805D102R-10"
 			(at 55.88 49.53 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC MANUFACTURER" ""
-			(at 55.88 49.53 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 55.88 49.53 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 55.88 49.53 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 55.88 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4795,6 +4751,28 @@
 		)
 		(property "FLASH_SIZE" ""
 			(at 55.88 49.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "240-2397-1-ND"
+			(at 55.88 49.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "875-HZ0805D102R-10"
+			(at 55.88 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4872,7 +4850,7 @@
 				)
 			)
 		)
-		(property "Description" "1k Ohm ±5% 62.5mW Power Per Element Isolated 4 Resistor Network/Array ±200ppm/°C 0804, Concave, Long Side Terminals"
+		(property "Description" "Chip resistor array, 4x 1 kΩ ±5%, 62.5 mW per element, isolated, 0804"
 			(at 134.62 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -4907,6 +4885,28 @@
 		)
 		(property "Variant" "ADV_SMT"
 			(at 134.62 52.07 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "CAT10-102J4LFCT-ND"
+			(at 134.62 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "652-CAT10-102J4LF"
+			(at 134.62 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4971,7 +4971,7 @@
 				(justify right bottom)
 			)
 		)
-		(property "Value" "24AA64FT-I/MNY"
+		(property "Value" "AT24C64D-MAHM-T"
 			(at 231.394 62.738 0)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -4993,7 +4993,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/22154B.pdf"
+		(property "Datasheet" "https://ww1.microchip.com/downloads/aemDocuments/documents/MPD/ProductDocuments/DataSheets/AT24C64D-64-Kbit-Serial-EEPROM-I2C-Compatible-Two-Wire-DS20005937.pdf"
 			(at 227.33 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -5004,7 +5004,7 @@
 				)
 			)
 		)
-		(property "Description" "EEPROM Memory IC 64Kbit I2C 400 kHz 900 ns 8-TDFN (2x3)"
+		(property "Description" "64 Kbit I2C serial EEPROM, 1.7-5.5 V, 1 MHz, 8-UDFN 2x3 mm"
 			(at 227.33 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -5036,7 +5036,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" ""
+		(property "LCSC_PN" "C2061553"
 			(at 227.33 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -5058,29 +5058,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" ""
-			(at 227.33 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" "24AA64FT-I/MNYCT-ND"
-			(at 227.33 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "Microchip Technology"
+		(property "DIGIKEY_PN" "AT24C64D-MAHM-TCT-ND"
 			(at 227.33 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -5103,6 +5081,17 @@
 			)
 		)
 		(property "FLASH_SIZE" "64kb"
+			(at 227.33 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" ""
 			(at 227.33 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -5278,7 +5267,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GCM21BR71H105KA03-01A-EN_PDF_CERAMICCAPACITORSMD"
 			(at 63.5 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -5289,7 +5278,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "MLCC, 1 µF ±10%, 50 V, X7R, 0805"
 			(at 63.5 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -5311,7 +5300,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" ""
+		(property "LCSC_PN" "C342759"
 			(at 63.5 49.53 90)
 			(hide yes)
 			(show_name no)
@@ -5322,7 +5311,7 @@
 				)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "GCM21BR71H105KA03L"
 			(at 63.5 49.53 90)
 			(hide yes)
 			(show_name no)
@@ -5333,7 +5322,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" ""
+		(property "DIGIKEY_PN" "490-10675-1-ND"
 			(at 63.5 49.53 90)
 			(hide yes)
 			(show_name no)
@@ -5344,40 +5333,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" ""
-			(at 63.5 49.53 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 63.5 49.53 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 63.5 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
+		(property "Tolerance" "±10%"
 			(at 63.5 49.53 90)
 			(hide yes)
 			(show_name no)
@@ -5390,6 +5346,17 @@
 		)
 		(property "FLASH_SIZE" ""
 			(at 63.5 49.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "81-GCM21BR71H105KA3L"
+			(at 63.5 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5458,7 +5425,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 203.2 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -5469,7 +5436,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Chip resistor, 5.1 kΩ ±1%, 1/16 W, thick film, 0402"
 			(at 203.2 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -5491,7 +5458,7 @@
 				)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "RC0402FR-075K1L"
 			(at 203.2 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -5502,7 +5469,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" ""
+		(property "LCSC_PN" "C105872"
 			(at 203.2 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -5513,40 +5480,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" ""
-			(at 203.2 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 203.2 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 203.2 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+		(property "DIGIKEY_PN" "311-5.10KLRCT-ND"
 			(at 203.2 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -5569,6 +5503,17 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 203.2 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "603-RC0402FR-075K1L"
 			(at 203.2 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -5618,7 +5563,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "ADS7038QRTERQ1"
+		(property "Value" "ADS7038IRTER"
 			(at 52.07 77.47 0)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -5640,7 +5585,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/lit/gpn/ads7038-q1"
+		(property "Datasheet" "https://www.ti.com/lit/gpn/ads7038"
 			(at 57.15 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -5651,7 +5596,7 @@
 				)
 			)
 		)
-		(property "Description" "12 Bit Analog to Digital Converter 8 Input 1 SAR 16-WQFN (3x3)"
+		(property "Description" "12-bit 1 MSPS 8-channel SAR ADC, SPI, 2.35-5.5 V, 16-WQFN 3x3 mm"
 			(at 57.15 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -5673,7 +5618,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C2876384"
+		(property "LCSC_PN" "C2871580"
 			(at 57.15 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -5685,39 +5630,6 @@
 			)
 		)
 		(property "PN" "${VALUE}"
-			(at 57.15 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC MANUFACTURER" "Texas Instruments"
-			(at 57.15 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" "296-ADS7038QRTERQ1CT-ND"
-			(at 57.15 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "Texas Instruments"
 			(at 57.15 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -5740,6 +5652,28 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 57.15 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "296-ADS7038IRTERCT-ND"
+			(at 57.15 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "595-ADS7038IRTER"
 			(at 57.15 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -6098,7 +6032,7 @@
 				)
 			)
 		)
-		(property "Description" "1k Ohm ±5% 62.5mW Power Per Element Isolated 4 Resistor Network/Array ±200ppm/°C 0804, Concave, Long Side Terminals"
+		(property "Description" "Chip resistor array, 4x 1 kΩ ±5%, 62.5 mW per element, isolated, 0804"
 			(at 134.62 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -6133,6 +6067,28 @@
 		)
 		(property "Variant" "ADV_SMT"
 			(at 134.62 60.96 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "CAT10-102J4LFCT-ND"
+			(at 134.62 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "652-CAT10-102J4LF"
+			(at 134.62 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6228,7 +6184,7 @@
 				)
 			)
 		)
-		(property "Description" "1k Ohm ±5% 62.5mW Power Per Element Isolated 4 Resistor Network/Array ±200ppm/°C 0804, Concave, Long Side Terminals"
+		(property "Description" "Chip resistor array, 4x 1 kΩ ±5%, 62.5 mW per element, isolated, 0804"
 			(at 134.62 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -6263,6 +6219,28 @@
 		)
 		(property "Variant" "ADV_SMT"
 			(at 134.62 49.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "CAT10-102J4LFCT-ND"
+			(at 134.62 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "652-CAT10-102J4LF"
+			(at 134.62 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6349,7 +6327,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 182.88 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -6360,7 +6338,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Chip resistor, 10 kΩ ±1%, 1/16 W, thick film, 0402"
 			(at 182.88 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -6382,7 +6360,7 @@
 				)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "RC0402FR-0710KL"
 			(at 182.88 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -6393,7 +6371,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" ""
+		(property "LCSC_PN" "C60490"
 			(at 182.88 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -6404,40 +6382,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" ""
-			(at 182.88 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 182.88 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 182.88 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+		(property "DIGIKEY_PN" "311-10.0KLRCT-ND"
 			(at 182.88 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -6460,6 +6405,17 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 182.88 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "603-RC0402FR-0710KL"
 			(at 182.88 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -6529,7 +6485,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GRM1555C1H102JA01%23"
 			(at 101.6 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -6540,7 +6496,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "MLCC, 1000 pF ±5%, 50 V, C0G, 0402"
 			(at 101.6 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -6562,7 +6518,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" ""
+		(property "LCSC_PN" "C76947"
 			(at 101.6 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -6573,7 +6529,7 @@
 				)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "GRM1555C1H102JA01D"
 			(at 101.6 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -6584,51 +6540,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" ""
-			(at 101.6 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 101.6 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 101.6 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 101.6 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
+		(property "Tolerance" "±5%"
 			(at 101.6 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -6640,6 +6552,28 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 101.6 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "490-3244-1-ND"
+			(at 101.6 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "81-GRM1555C1H102JA1D"
 			(at 101.6 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -6718,7 +6652,7 @@
 				)
 			)
 		)
-		(property "Description" "1k Ohm ±5% 62.5mW Power Per Element Isolated 4 Resistor Network/Array ±200ppm/°C 0804, Concave, Long Side Terminals"
+		(property "Description" "Chip resistor array, 4x 1 kΩ ±5%, 62.5 mW per element, isolated, 0804"
 			(at 134.62 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -6753,6 +6687,28 @@
 		)
 		(property "Variant" "ADV_SMT"
 			(at 134.62 63.5 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "CAT10-102J4LFCT-ND"
+			(at 134.62 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "652-CAT10-102J4LF"
+			(at 134.62 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6838,7 +6794,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GCM155R71H104KE02%23"
 			(at 222.25 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -6849,7 +6805,7 @@
 				)
 			)
 		)
-		(property "Description" "100nF ±20% 50V Ceramic Capacitor X7R 0402"
+		(property "Description" "MLCC, 0.1 µF ±10%, 50 V, X7R, 0402"
 			(at 222.25 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -6871,7 +6827,7 @@
 				)
 			)
 		)
-		(property "PN" "TCC0402X7R104M500AT"
+		(property "PN" "GCM155R71H104KE02J"
 			(at 222.25 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -6882,7 +6838,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C5142567"
+		(property "LCSC_PN" "C85858"
 			(at 222.25 39.37 90)
 			(hide yes)
 			(show_name no)
@@ -6893,7 +6849,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CCTC"
+		(property "DIGIKEY_PN" "490-14514-1-ND"
 			(at 222.25 39.37 90)
 			(hide yes)
 			(show_name no)
@@ -6904,40 +6860,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "490-14514-1-ND"
-			(at 222.25 39.37 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "Murata Electronics"
-			(at 222.25 39.37 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 222.25 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
+		(property "Tolerance" "±10%"
 			(at 222.25 39.37 90)
 			(hide yes)
 			(show_name no)
@@ -6950,6 +6873,17 @@
 		)
 		(property "FLASH_SIZE" ""
 			(at 222.25 39.37 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "81-GCM155R71H104KE2J"
+			(at 222.25 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7098,7 +7032,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GRM1555C1H102JA01%23"
 			(at 119.38 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -7109,7 +7043,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "MLCC, 1000 pF ±5%, 50 V, C0G, 0402"
 			(at 119.38 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -7131,7 +7065,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" ""
+		(property "LCSC_PN" "C76947"
 			(at 119.38 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -7142,7 +7076,7 @@
 				)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "GRM1555C1H102JA01D"
 			(at 119.38 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -7153,51 +7087,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" ""
-			(at 119.38 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 119.38 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 119.38 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 119.38 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
+		(property "Tolerance" "±5%"
 			(at 119.38 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -7209,6 +7099,28 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 119.38 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "490-3244-1-ND"
+			(at 119.38 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "81-GRM1555C1H102JA1D"
 			(at 119.38 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -7278,7 +7190,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GRM1555C1H102JA01%23"
 			(at 83.82 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -7289,7 +7201,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "MLCC, 1000 pF ±5%, 50 V, C0G, 0402"
 			(at 83.82 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -7311,7 +7223,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" ""
+		(property "LCSC_PN" "C76947"
 			(at 83.82 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -7322,7 +7234,7 @@
 				)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "GRM1555C1H102JA01D"
 			(at 83.82 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -7333,51 +7245,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" ""
-			(at 83.82 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 83.82 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 83.82 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 83.82 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
+		(property "Tolerance" "±5%"
 			(at 83.82 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -7389,6 +7257,28 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 83.82 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "490-3244-1-ND"
+			(at 83.82 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "81-GRM1555C1H102JA1D"
 			(at 83.82 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -7569,7 +7459,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 25.4 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -7580,7 +7470,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Chip resistor, 5.1 kΩ ±1%, 1/16 W, thick film, 0402"
 			(at 25.4 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -7602,7 +7492,7 @@
 				)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "RC0402FR-075K1L"
 			(at 25.4 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -7613,7 +7503,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" ""
+		(property "LCSC_PN" "C105872"
 			(at 25.4 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -7624,40 +7514,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" ""
-			(at 25.4 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 25.4 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 25.4 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+		(property "DIGIKEY_PN" "311-5.10KLRCT-ND"
 			(at 25.4 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -7680,6 +7537,17 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 25.4 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "603-RC0402FR-075K1L"
 			(at 25.4 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -7829,7 +7697,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GCM21BR71H105KA03-01A-EN_PDF_CERAMICCAPACITORSMD"
 			(at 30.48 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -7840,7 +7708,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "MLCC, 1 µF ±10%, 50 V, X7R, 0805"
 			(at 30.48 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -7862,7 +7730,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" ""
+		(property "LCSC_PN" "C342759"
 			(at 30.48 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -7873,7 +7741,7 @@
 				)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "GCM21BR71H105KA03L"
 			(at 30.48 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -7884,7 +7752,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" ""
+		(property "DIGIKEY_PN" "490-10675-1-ND"
 			(at 30.48 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -7895,40 +7763,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" ""
-			(at 30.48 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 30.48 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 30.48 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
+		(property "Tolerance" "±10%"
 			(at 30.48 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -7940,6 +7775,17 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 30.48 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "81-GCM21BR71H105KA3L"
 			(at 30.48 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -8018,7 +7864,7 @@
 				)
 			)
 		)
-		(property "Description" "1k Ohm ±5% 62.5mW Power Per Element Isolated 4 Resistor Network/Array ±200ppm/°C 0804, Concave, Long Side Terminals"
+		(property "Description" "Chip resistor array, 4x 1 kΩ ±5%, 62.5 mW per element, isolated, 0804"
 			(at 134.62 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -8053,6 +7899,28 @@
 		)
 		(property "Variant" "ADV_SMT"
 			(at 134.62 58.42 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "CAT10-102J4LFCT-ND"
+			(at 134.62 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "652-CAT10-102J4LF"
+			(at 134.62 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8305,7 +8173,7 @@
 				)
 			)
 		)
-		(property "Description" "1k Ohm ±5% 62.5mW Power Per Element Isolated 4 Resistor Network/Array ±200ppm/°C 0804, Concave, Long Side Terminals"
+		(property "Description" "Chip resistor array, 4x 1 kΩ ±5%, 62.5 mW per element, isolated, 0804"
 			(at 134.62 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -8340,6 +8208,28 @@
 		)
 		(property "Variant" "ADV_SMT"
 			(at 134.62 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "CAT10-102J4LFCT-ND"
+			(at 134.62 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "652-CAT10-102J4LF"
+			(at 134.62 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8505,7 +8395,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GCM155R71H104KE02%23"
 			(at 220.98 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -8516,7 +8406,7 @@
 				)
 			)
 		)
-		(property "Description" "100nF ±20% 50V Ceramic Capacitor X7R 0402"
+		(property "Description" "MLCC, 0.1 µF ±10%, 50 V, X7R, 0402"
 			(at 220.98 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -8538,7 +8428,7 @@
 				)
 			)
 		)
-		(property "PN" "TCC0402X7R104M500AT"
+		(property "PN" "GCM155R71H104KE02J"
 			(at 220.98 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -8549,7 +8439,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C5142567"
+		(property "LCSC_PN" "C85858"
 			(at 220.98 93.98 90)
 			(hide yes)
 			(show_name no)
@@ -8560,7 +8450,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CCTC"
+		(property "DIGIKEY_PN" "490-14514-1-ND"
 			(at 220.98 93.98 90)
 			(hide yes)
 			(show_name no)
@@ -8571,40 +8461,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "490-14514-1-ND"
-			(at 220.98 93.98 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "Murata Electronics"
-			(at 220.98 93.98 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 220.98 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
+		(property "Tolerance" "±10%"
 			(at 220.98 93.98 90)
 			(hide yes)
 			(show_name no)
@@ -8617,6 +8474,17 @@
 		)
 		(property "FLASH_SIZE" ""
 			(at 220.98 93.98 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "81-GCM155R71H104KE2J"
+			(at 220.98 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8698,7 +8566,7 @@
 				)
 			)
 		)
-		(property "Description" "I/O Expander 8 I2C 400 kHz 16-UMLP (1.8x2.6)"
+		(property "Description" "I2C I/O expander, 8-bit, 400 kHz, 16-UMLP 1.8x2.6 mm"
 			(at 227.33 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -8710,19 +8578,7 @@
 				(justify bottom)
 			)
 		)
-		(property "PN" "FXL6408UMX"
-			(at 227.33 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "MFR" "ON Semiconductor"
+		(property "PN" "${VALUE}"
 			(at 227.33 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -8746,6 +8602,39 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 227.33 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "FXL6408UMXCT-ND"
+			(at 227.33 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "512-FXL6408UMX"
+			(at 227.33 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC_PN" "C457770"
 			(at 227.33 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -9014,7 +8903,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 189.23 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -9025,7 +8914,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Chip resistor, 10 kΩ ±1%, 1/16 W, thick film, 0402"
 			(at 189.23 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -9047,7 +8936,7 @@
 				)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "RC0402FR-0710KL"
 			(at 189.23 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -9058,7 +8947,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" ""
+		(property "LCSC_PN" "C60490"
 			(at 189.23 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -9069,40 +8958,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" ""
-			(at 189.23 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 189.23 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 189.23 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+		(property "DIGIKEY_PN" "311-10.0KLRCT-ND"
 			(at 189.23 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -9125,6 +8981,17 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 189.23 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "603-RC0402FR-0710KL"
 			(at 189.23 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -9194,7 +9061,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GRM1555C1H102JA01%23"
 			(at 110.49 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -9205,7 +9072,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "MLCC, 1000 pF ±5%, 50 V, C0G, 0402"
 			(at 110.49 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -9227,7 +9094,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" ""
+		(property "LCSC_PN" "C76947"
 			(at 110.49 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -9238,7 +9105,7 @@
 				)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "GRM1555C1H102JA01D"
 			(at 110.49 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -9249,51 +9116,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" ""
-			(at 110.49 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 110.49 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 110.49 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 110.49 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
+		(property "Tolerance" "±5%"
 			(at 110.49 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -9305,6 +9128,28 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 110.49 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "490-3244-1-ND"
+			(at 110.49 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "81-GRM1555C1H102JA1D"
 			(at 110.49 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -9383,7 +9228,7 @@
 				)
 			)
 		)
-		(property "Description" "1k Ohm ±5% 62.5mW Power Per Element Isolated 4 Resistor Network/Array ±200ppm/°C 0804, Concave, Long Side Terminals"
+		(property "Description" "Chip resistor array, 4x 1 kΩ ±5%, 62.5 mW per element, isolated, 0804"
 			(at 134.62 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -9418,6 +9263,28 @@
 		)
 		(property "Variant" "ADV_SMT"
 			(at 134.62 66.04 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "CAT10-102J4LFCT-ND"
+			(at 134.62 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "652-CAT10-102J4LF"
+			(at 134.62 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9584,7 +9451,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 196.85 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -9595,7 +9462,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Chip resistor, 5.1 kΩ ±1%, 1/16 W, thick film, 0402"
 			(at 196.85 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -9617,7 +9484,7 @@
 				)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "RC0402FR-075K1L"
 			(at 196.85 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -9628,7 +9495,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" ""
+		(property "LCSC_PN" "C105872"
 			(at 196.85 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -9639,40 +9506,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" ""
-			(at 196.85 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 196.85 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 196.85 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+		(property "DIGIKEY_PN" "311-5.10KLRCT-ND"
 			(at 196.85 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -9695,6 +9529,17 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 196.85 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "603-RC0402FR-075K1L"
 			(at 196.85 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -9764,7 +9609,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GRM1555C1H102JA01%23"
 			(at 128.27 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -9775,7 +9620,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "MLCC, 1000 pF ±5%, 50 V, C0G, 0402"
 			(at 128.27 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -9797,7 +9642,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" ""
+		(property "LCSC_PN" "C76947"
 			(at 128.27 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -9808,7 +9653,7 @@
 				)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "GRM1555C1H102JA01D"
 			(at 128.27 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -9819,51 +9664,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" ""
-			(at 128.27 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 128.27 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 128.27 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 128.27 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
+		(property "Tolerance" "±5%"
 			(at 128.27 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -9875,6 +9676,28 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 128.27 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "490-3244-1-ND"
+			(at 128.27 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "81-GRM1555C1H102JA1D"
 			(at 128.27 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -10021,7 +9844,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GCM21BR71H105KA03-01A-EN_PDF_CERAMICCAPACITORSMD"
 			(at 43.18 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -10032,7 +9855,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "MLCC, 1 µF ±10%, 50 V, X7R, 0805"
 			(at 43.18 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -10054,7 +9877,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" ""
+		(property "LCSC_PN" "C342759"
 			(at 43.18 49.53 90)
 			(hide yes)
 			(show_name no)
@@ -10065,7 +9888,7 @@
 				)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "GCM21BR71H105KA03L"
 			(at 43.18 49.53 90)
 			(hide yes)
 			(show_name no)
@@ -10076,7 +9899,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" ""
+		(property "DIGIKEY_PN" "490-10675-1-ND"
 			(at 43.18 49.53 90)
 			(hide yes)
 			(show_name no)
@@ -10087,40 +9910,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" ""
-			(at 43.18 49.53 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 43.18 49.53 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 43.18 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
+		(property "Tolerance" "±10%"
 			(at 43.18 49.53 90)
 			(hide yes)
 			(show_name no)
@@ -10133,6 +9923,17 @@
 		)
 		(property "FLASH_SIZE" ""
 			(at 43.18 49.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "81-GCM21BR71H105KA3L"
+			(at 43.18 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10312,7 +10113,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GRM1555C1H102JA01%23"
 			(at 92.71 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -10323,7 +10124,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "MLCC, 1000 pF ±5%, 50 V, C0G, 0402"
 			(at 92.71 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -10345,7 +10146,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" ""
+		(property "LCSC_PN" "C76947"
 			(at 92.71 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -10356,7 +10157,7 @@
 				)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "GRM1555C1H102JA01D"
 			(at 92.71 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -10367,51 +10168,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" ""
-			(at 92.71 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 92.71 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 92.71 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 92.71 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
+		(property "Tolerance" "±5%"
 			(at 92.71 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -10423,6 +10180,28 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 92.71 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "490-3244-1-ND"
+			(at 92.71 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "81-GRM1555C1H102JA1D"
 			(at 92.71 78.74 0)
 			(hide yes)
 			(show_name no)

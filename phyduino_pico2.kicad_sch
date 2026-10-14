@@ -6620,7 +6620,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 166.37 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -6631,7 +6631,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Chip resistor, 5.1 kΩ ±1%, 1/16 W, thick film, 0402"
 			(at 166.37 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -6653,7 +6653,7 @@
 				)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "RC0402FR-075K1L"
 			(at 166.37 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -6664,7 +6664,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" ""
+		(property "LCSC_PN" "C105872"
 			(at 166.37 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -6675,40 +6675,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" ""
-			(at 166.37 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 166.37 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 166.37 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+		(property "DIGIKEY_PN" "311-5.10KLRCT-ND"
 			(at 166.37 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -6731,6 +6698,17 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 166.37 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "603-RC0402FR-075K1L"
 			(at 166.37 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -6914,17 +6892,6 @@
 				)
 			)
 		)
-		(property "KiLib_Generator" "mounting_hardware/mounting_hole"
-			(at 152.4 198.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Tolerance" ""
 			(at 152.4 198.12 0)
 			(hide yes)
@@ -7000,7 +6967,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/eSH.pdf"
 			(at 228.6 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -7011,7 +6978,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "JST SH header, 1.0 mm pitch, 4 pos, SMD right angle (side entry)"
 			(at 228.6 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -7022,51 +6989,7 @@
 				)
 			)
 		)
-		(property "DistPN" ""
-			(at 228.6 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PRICE" ""
-			(at 228.6 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 228.6 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PN" ""
-			(at 228.6 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "connector/SMD_single_row_plus_mounting_pad"
+		(property "PN" "${VALUE}"
 			(at 228.6 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -7089,6 +7012,39 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 228.6 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "455-SM04B-SRSS-TBCT-ND"
+			(at 228.6 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "306-SM04BSRSSTBLFSN"
+			(at 228.6 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC_PN" "C160404"
 			(at 228.6 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -7163,7 +7119,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 66.04 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -7174,7 +7130,7 @@
 				)
 			)
 		)
-		(property "Description" "5.1kΩ 62.5mW 50V Thick Film Resistor ±1% 0402 Chip Resistor - Surface Mount RoHS"
+		(property "Description" "Chip resistor, 5.1 kΩ ±1%, 1/16 W, thick film, 0402"
 			(at 66.04 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -7196,7 +7152,7 @@
 				)
 			)
 		)
-		(property "PN" "CHANGLONG"
+		(property "PN" "RC0402FR-075K1L"
 			(at 66.04 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -7207,7 +7163,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "CHANGLONG"
+		(property "LCSC_PN" "C105872"
 			(at 66.04 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -7218,40 +7174,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CHANGLONG"
-			(at 66.04 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" "13-RC0402FR-7W5K1LCT-ND"
-			(at 66.04 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
-			(at 66.04 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+		(property "DIGIKEY_PN" "311-5.10KLRCT-ND"
 			(at 66.04 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -7274,6 +7197,17 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 66.04 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "603-RC0402FR-075K1L"
 			(at 66.04 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -7343,7 +7277,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 60.96 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -7354,7 +7288,7 @@
 				)
 			)
 		)
-		(property "Description" "5.1kΩ 62.5mW 50V Thick Film Resistor ±1% 0402 Chip Resistor - Surface Mount RoHS"
+		(property "Description" "Chip resistor, 5.1 kΩ ±1%, 1/16 W, thick film, 0402"
 			(at 60.96 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -7376,7 +7310,7 @@
 				)
 			)
 		)
-		(property "PN" "CHANGLONG"
+		(property "PN" "RC0402FR-075K1L"
 			(at 60.96 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -7387,7 +7321,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "CHANGLONG"
+		(property "LCSC_PN" "C105872"
 			(at 60.96 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -7398,40 +7332,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "CHANGLONG"
-			(at 60.96 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" "13-RC0402FR-7W5K1LCT-ND"
-			(at 60.96 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
-			(at 60.96 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+		(property "DIGIKEY_PN" "311-5.10KLRCT-ND"
 			(at 60.96 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -7454,6 +7355,17 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 60.96 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "603-RC0402FR-075K1L"
 			(at 60.96 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -7682,7 +7594,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "https://sullinscorp.com/catalogs/78_PAGE114-115_.100_FEMALE_HDR.pdf"
 			(at 199.39 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -7693,7 +7605,7 @@
 				)
 			)
 		)
-		(property "Description" "10 Position Header Connector 0.100\" (2.54mm) Through Hole Gold"
+		(property "Description" "Female header, 1x10, 2.54 mm, 3 A, gold, through-hole"
 			(at 199.39 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -7737,29 +7649,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" ""
-			(at 199.39 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 199.39 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
+		(property "DIGIKEY_PN" "S7043-ND"
 			(at 199.39 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -7771,17 +7661,6 @@
 			)
 		)
 		(property "Tolerance" ""
-			(at 199.39 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "connector/pin_header_socket"
 			(at 199.39 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -7885,7 +7764,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 35.56 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -7896,7 +7775,7 @@
 				)
 			)
 		)
-		(property "Description" "220kΩ ±1% 125mW 0805 Thick Film Resistor"
+		(property "Description" "Chip resistor, 220 kΩ ±1%, 1/8 W, thick film, 0805"
 			(at 35.56 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -7918,7 +7797,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C2907242"
+		(property "LCSC_PN" "C137568"
 			(at 35.56 132.08 90)
 			(hide yes)
 			(show_name no)
@@ -7929,7 +7808,7 @@
 				)
 			)
 		)
-		(property "PN" "FRC0805F2203TS"
+		(property "PN" "RC0805FR-07220KL"
 			(at 35.56 132.08 90)
 			(hide yes)
 			(show_name no)
@@ -7940,41 +7819,8 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "FOJAN"
+		(property "DIGIKEY_PN" "311-220KCRCT-ND"
 			(at 35.56 132.08 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" "13-RC0805FR-13220KLCT-ND"
-			(at 35.56 132.08 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
-			(at 35.56 132.08 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 35.56 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7997,6 +7843,17 @@
 		)
 		(property "FLASH_SIZE" ""
 			(at 35.56 132.08 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "603-RC0805FR-07220KL"
+			(at 35.56 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8120,7 +7977,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Value" "HC-FPC-0.5-22P-CSH20"
+		(property "Value" "F32Q-1A7H1-11022"
 			(at 201.93 117.1956 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8152,7 +8009,7 @@
 				)
 			)
 		)
-		(property "Description" "22 Position FFC, FPC Connector Contacts, Top 0.020\" (0.50mm) Surface Mount, Right Angle"
+		(property "Description" "FFC/FPC connector, 22 pos, 0.5 mm pitch, top contact, SMD right angle"
 			(at 199.39 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -8175,50 +8032,6 @@
 			)
 		)
 		(property "PN" "${VALUE}"
-			(at 199.39 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC MANUFACTURER" "Hong Cheng"
-			(at 199.39 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" "609-F32Q-1A7H1-11022CT-ND"
-			(at 199.39 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "Amphenol ICC (FCI)"
-			(at 199.39 114.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "connector/Amphenol"
 			(at 199.39 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -8252,6 +8065,28 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 199.39 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "609-F32Q-1A7H1-11022CT-ND"
+			(at 199.39 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "649-F32Q-1A7H1-11022"
 			(at 199.39 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -8470,7 +8305,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/2151/GMK212BBJ106KG-T_SS.pdf"
 			(at 60.96 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -8481,7 +8316,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "MLCC, 10 µF ±10%, 35 V, X5R, 0805"
 			(at 60.96 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -8503,7 +8338,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" ""
+		(property "LCSC_PN" "C440198"
 			(at 60.96 105.41 90)
 			(hide yes)
 			(show_name no)
@@ -8514,7 +8349,7 @@
 				)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "GMK212BBJ106KG-T"
 			(at 60.96 105.41 90)
 			(hide yes)
 			(show_name no)
@@ -8525,7 +8360,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" ""
+		(property "DIGIKEY_PN" "587-4893-1-ND"
 			(at 60.96 105.41 90)
 			(hide yes)
 			(show_name no)
@@ -8536,7 +8371,7 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" ""
+		(property "Tolerance" "±10%"
 			(at 60.96 105.41 90)
 			(hide yes)
 			(show_name no)
@@ -8547,30 +8382,8 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" ""
-			(at 60.96 105.41 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
-			(at 60.96 105.41 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FLASH_SIZE" ""
-			(at 60.96 105.41 90)
+		(property "MOUSER_PN" "603-CC0805KKX59BB106"
+			(at 60.96 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8637,7 +8450,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "https://sullinscorp.com/catalogs/78_PAGE114-115_.100_FEMALE_HDR.pdf"
 			(at 199.39 27.94 0)
 			(hide yes)
 			(show_name no)
@@ -8648,7 +8461,7 @@
 				)
 			)
 		)
-		(property "Description" "8 Position Header Connector 0.100\" (2.54mm) Through Hole Gold"
+		(property "Description" "Female header, 1x8, 2.54 mm, 3 A, gold, through-hole"
 			(at 199.39 27.94 0)
 			(hide yes)
 			(show_name no)
@@ -8681,29 +8494,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" ""
-			(at 199.39 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 199.39 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
+		(property "DIGIKEY_PN" "S7041-ND"
 			(at 199.39 27.94 0)
 			(hide yes)
 			(show_name no)
@@ -8715,17 +8506,6 @@
 			)
 		)
 		(property "Tolerance" ""
-			(at 199.39 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "connector/pin_header_socket"
 			(at 199.39 27.94 0)
 			(hide yes)
 			(show_name no)
@@ -8813,7 +8593,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Value" "GT-USB-7047A"
+		(property "Value" "USB4110-GF-A"
 			(at 44.958 128.778 0)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -8835,7 +8615,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221125_G-Switch-GT-USB-7047A_C963216.pdf"
+		(property "Datasheet" "https://gct.co/files/specs/usb4110-spec.pdf"
 			(at 46.99 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -8846,7 +8626,7 @@
 				)
 			)
 		)
-		(property "Description" "USB 2.0 5A 1 Horizontal attachment 16P Female -40℃~+85℃ Type-C SMD USB Connectors ROHS"
+		(property "Description" "USB-C receptacle, USB 2.0, 16 pos, SMD right angle"
 			(at 43.18 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -8857,7 +8637,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C963216"
+		(property "LCSC_PN" "C5143397"
 			(at 43.18 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -8879,50 +8659,6 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "G-Switch"
-			(at 43.18 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" "2073-USB4110-GF-A-1-ND"
-			(at 43.18 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "GCT"
-			(at 43.18 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
-			(at 43.18 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Variant" "ADV_SMT"
 			(at 43.18 115.57 0)
 			(hide yes)
@@ -8934,7 +8670,18 @@
 				)
 			)
 		)
-		(property "FLASH_SIZE" ""
+		(property "DIGIKEY_PN" "2073-USB4110-GF-A-1-ND"
+			(at 43.18 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "640-USB4110-GF-A"
 			(at 43.18 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -9144,7 +8891,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 54.61 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -9155,7 +8902,7 @@
 				)
 			)
 		)
-		(property "Description" "10kΩ ±1% 62.5mW 0402 Thick Film Resistor"
+		(property "Description" "Chip resistor, 10 kΩ ±1%, 1/16 W, thick film, 0402"
 			(at 54.61 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -9166,7 +8913,7 @@
 				)
 			)
 		)
-		(property "PN" "FRC0402F1002TS"
+		(property "PN" "RC0402FR-0710KL"
 			(at 54.61 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -9188,7 +8935,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C2906861"
+		(property "LCSC_PN" "C60490"
 			(at 54.61 74.93 90)
 			(hide yes)
 			(show_name no)
@@ -9199,41 +8946,8 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "FOJAN"
+		(property "DIGIKEY_PN" "311-10.0KLRCT-ND"
 			(at 54.61 74.93 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" "311-10.0KLRCT-ND"
-			(at 54.61 74.93 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "YAGEO"
-			(at 54.61 74.93 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 54.61 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9256,6 +8970,17 @@
 		)
 		(property "FLASH_SIZE" ""
 			(at 54.61 74.93 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "603-RC0402FR-0710KL"
+			(at 54.61 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9483,7 +9208,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "https://sullinscorp.com/catalogs/78_PAGE114-115_.100_FEMALE_HDR.pdf"
 			(at 38.1 27.94 0)
 			(hide yes)
 			(show_name no)
@@ -9494,7 +9219,7 @@
 				)
 			)
 		)
-		(property "Description" "8 Position Header Connector 0.100\" (2.54mm) Through Hole Gold"
+		(property "Description" "Female header, 1x8, 2.54 mm, 3 A, gold, through-hole"
 			(at 38.1 27.94 0)
 			(hide yes)
 			(show_name no)
@@ -9538,29 +9263,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" ""
-			(at 38.1 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 38.1 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
+		(property "DIGIKEY_PN" "S7041-ND"
 			(at 38.1 27.94 0)
 			(hide yes)
 			(show_name no)
@@ -9572,17 +9275,6 @@
 			)
 		)
 		(property "Tolerance" ""
-			(at 38.1 27.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "connector/pin_header_socket"
 			(at 38.1 27.94 0)
 			(hide yes)
 			(show_name no)
@@ -9761,7 +9453,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://product.samsungsem.com/mlcc/CL05A105KO5NNN.do"
 			(at 166.37 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -9772,7 +9464,7 @@
 				)
 			)
 		)
-		(property "Description" "4.7uF ±20% 25V Ceramic Capacitor X5R 0402"
+		(property "Description" "MLCC, 1 µF ±10%, 16 V, X5R, 0402"
 			(at 166.37 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -9794,7 +9486,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C6119795"
+		(property "LCSC_PN" "C29266"
 			(at 166.37 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -9805,7 +9497,7 @@
 				)
 			)
 		)
-		(property "PN" "CGA0402X5R475M250GT"
+		(property "PN" "CL05A105KO5NNNC"
 			(at 166.37 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -9816,40 +9508,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "HRE"
-			(at 166.37 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" "490-GRM155C61E475ME15DCT-ND"
-			(at 166.37 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "Murata Electronics"
-			(at 166.37 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+		(property "DIGIKEY_PN" "1276-1067-1-ND"
 			(at 166.37 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -9872,6 +9531,17 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 166.37 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "187-CL05A105KO5NNNC"
 			(at 166.37 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -10321,7 +9991,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
 			(at 35.56 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -10332,7 +10002,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/KEM_C1010_X7R_HV_SMD"
 			(at 35.56 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -10343,7 +10013,7 @@
 				)
 			)
 		)
-		(property "Description" "100nF ±10% 500V Ceramic Capacitor X7R 1206"
+		(property "Description" "MLCC, 0.1 µF ±10%, 500 V, X7R, 1210"
 			(at 35.56 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -10365,7 +10035,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C22374889"
+		(property "LCSC_PN" "C141218"
 			(at 35.56 137.16 90)
 			(hide yes)
 			(show_name no)
@@ -10376,7 +10046,7 @@
 				)
 			)
 		)
-		(property "PN" "CGA1206X7R104K501NT"
+		(property "PN" "C1210C104KCRACTU"
 			(at 35.56 137.16 90)
 			(hide yes)
 			(show_name no)
@@ -10387,7 +10057,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" "HRE"
+		(property "Tolerance" "±10%"
 			(at 35.56 137.16 90)
 			(hide yes)
 			(show_name no)
@@ -10398,7 +10068,18 @@
 				)
 			)
 		)
-		(property "DIGIKEY PN" "399-C1206C104K5RACTUCT-ND"
+		(property "VOLTAGE" "500V"
+			(at 35.56 142.494 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(color 0 132 132 1)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "399-C1210C104KCRACTUCT-ND"
 			(at 35.56 137.16 90)
 			(hide yes)
 			(show_name no)
@@ -10409,41 +10090,8 @@
 				)
 			)
 		)
-		(property "DIGKEY MANUFACTURER" "KEMET"
-			(at 35.56 137.16 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+		(property "MOUSER_PN" "80-C1210C104KCRACTU"
 			(at 35.56 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Tolerance" ""
-			(at 35.56 137.16 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "FLASH_SIZE" ""
-			(at 35.56 137.16 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10490,7 +10138,7 @@
 				)
 			)
 		)
-		(property "Value" "TPUSBLC6-2P6"
+		(property "Value" "USBLC6-2P6"
 			(at 97.79 102.87 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10522,7 +10170,7 @@
 				)
 			)
 		)
-		(property "Description" "16VC Clamp 5A@8/20us Ipp SOT-666-6"
+		(property "Description" "ESD protection, 2-line USB TVS array, 5 V, SOT-666"
 			(at 97.79 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -10555,40 +10203,7 @@
 				)
 			)
 		)
-		(property "LCSC PN" "C2682291"
-			(at 97.79 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC MANUFACTURER" "TECH PUBLIC "
-			(at 97.79 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" "497-5026-1-ND"
-			(at 97.79 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" "STMicroelectronics"
+		(property "LCSC_PN" "C2827693"
 			(at 97.79 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -10611,6 +10226,28 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 97.79 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "497-5026-1-ND"
+			(at 97.79 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER_PN" "511-USBLC6-2P6"
 			(at 97.79 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -10902,7 +10539,7 @@
 		(dnp no)
 		(uuid "ece0de10-0b7f-40ff-b7d9-d01a118ac860")
 		(property "Reference" "J4"
-			(at 199.39 148.59 0)
+			(at 199.39 150.114 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10932,7 +10569,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "https://sullinscorp.com/catalogs/78_PAGE114-115_.100_FEMALE_HDR.pdf"
 			(at 199.39 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -10943,7 +10580,7 @@
 				)
 			)
 		)
-		(property "Description" "6 Position Header Connector 0.100\" (2.54mm) Through Hole Gold"
+		(property "Description" "Female header, 1x6, 2.54 mm, 3 A, gold, through-hole"
 			(at 199.39 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -10987,29 +10624,7 @@
 				)
 			)
 		)
-		(property "LCSC MANUFACTURER" ""
-			(at 199.39 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGIKEY PN" ""
-			(at 199.39 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIGKEY MANUFACTURER" ""
+		(property "DIGIKEY_PN" "S7039-ND"
 			(at 199.39 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -11021,17 +10636,6 @@
 			)
 		)
 		(property "Tolerance" ""
-			(at 199.39 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "connector/pin_header_socket"
 			(at 199.39 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -11136,7 +10740,7 @@
 				)
 			)
 		)
-		(property "Description" "Power Barrel Connector Jack 2.10mm ID (0.083\"), 5.50mm OD (0.217\") Through Hole, Right Angle"
+		(property "Description" "DC power jack, 2.1 mm ID x 5.5 mm OD, right angle, through-hole"
 			(at 43.18 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -11159,6 +10763,28 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
+			(at 43.18 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PN" "${VALUE}"
+			(at 43.18 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIGIKEY_PN" "839-54-00127-ND"
 			(at 43.18 81.28 0)
 			(hide yes)
 			(show_name no)
