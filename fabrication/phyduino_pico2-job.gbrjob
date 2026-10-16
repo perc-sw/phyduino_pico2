@@ -5,13 +5,13 @@
       "Application": "Pcbnew",
       "Version": "10.0.4"
     },
-    "CreationDate": "2026-10-16T09:13:55-04:00"
+    "CreationDate": "2026-10-16T13:09:33-04:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "phyduino_pico2",
       "GUID": "70687964-7569-46e6-9f5f-7069636f322e",
-      "Revision": "A"
+      "Revision": "A0"
     },
     "Size": {
       "X": 68.68,
