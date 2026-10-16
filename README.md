@@ -70,7 +70,7 @@ An Arduino Uno-style development board built around the Raspberry Pi **RP2350** 
 | `phyduino2_power_regs.kicad_sch` | Power: eFuses, power mux and buck regulators |
 | `phyduino_pico2_wifi.kicad_sch` | Wireless Communication: ESP32-C6 module |
 | `phyduino_pico2.kicad_pcb` | 4-layer PCB |
-| `scripts/` | Pre-release documentation check (see [Before a release](#before-a-release)) |
+| `scripts/` | Pre-release check: documentation links, generated outputs, part numbers and pinout against the design |
 | `ibom.config.ini` | Settings for the student interactive BOM (InteractiveHtmlBom plugin) |
 | `fabrication/` | Gerber and drill files |
 | `docs/` | [Project site](https://perc-sw.github.io/phyduino_pico2): schematic and PCB PDFs, interactive BOMs, 3D models, datasheets and design reviews |
@@ -82,21 +82,6 @@ The design files are in **KiCad 10** format and can't be opened with earlier ver
 Some symbols and footprints come from the maintainer's own libraries, which aren't in this repository. KiCad may report these as missing library links. The board and schematic still open and plot correctly, because every footprint and symbol is stored in the design files.
 
 The board's silkscreen and copper text use Liberation Sans, Tekton, Centaur and Photograph Signature. Install the fonts in [`.github/workflows/fonts/`](.github/workflows/fonts/) so the text renders as it does on the fabricated board.
-
-## Before a release
-
-`scripts/prerelease_check.py` checks that the documentation matches the design: local links, generated outputs that are older than the design files, part numbers in this README and on the project site, the pinout diagram against the netlist, and ERC/DRC. The **Docs check** workflow runs it on every push, without ERC or DRC (DRC has its own workflow).
-
-Before tagging a release:
-
-1. Save the design in KiCad, then rebuild the outputs. This needs KiCad 10 and, for the interactive BOMs, the InteractiveHtmlBom plugin:
-   ```
-   python scripts/prerelease_check.py --regenerate
-   ```
-2. Update the pinout diagram (`docs/images/phyduino_pico2_pinout.svg`) in Inkscape if the board or its pins changed.
-3. Commit the regenerated files and wait for the **PCB DRC** and **Docs check** workflows to pass.
-
-Add `--external` to also check external links. Some sites block scripted requests, so those failures are reported as warnings only.
 
 ## Related projects
 

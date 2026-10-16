@@ -21,6 +21,7 @@ Usage:
   python scripts/prerelease_check.py --external       # also check external links
   python scripts/prerelease_check.py --skip drc,erc   # skip some checks
   python scripts/prerelease_check.py --regenerate     # rebuild outputs, then check
+  python scripts/prerelease_check.py --regenerate --pcb-bg "#ffffff"   # white PCB PDFs
 
 --regenerate rebuilds the schematic and PCB PDFs, STEP and GLB models, Gerber
 and drill files, board renders and iBOMs. Run it locally only: the renders and
@@ -33,6 +34,7 @@ import argparse
 import csv
 import glob
 import html.parser
+import json
 import os
 import re
 import shutil
@@ -443,7 +445,18 @@ def ibom_plugin():
     return None
 
 
-def regenerate(cli, tmp):
+def is_light(colour):
+    """True for a light '#rrggbb' colour (or a few common names)."""
+    names = {'white': '#ffffff', 'black': '#000000'}
+    c = names.get(colour.lower(), colour)
+    m = re.fullmatch(r'#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})(?:[0-9a-fA-F]{2})?', c)
+    if not m:
+        return False
+    r, g, b = (int(x, 16) for x in m.groups())
+    return 0.299 * r + 0.587 * g + 0.114 * b > 160
+
+
+def regenerate(cli, tmp, pcb_bg='#001023'):
     print('\n== Regenerating outputs from the files saved on disk')
     if glob.glob(os.path.join(ROOT, '~*.lck')):
         print('  note  KiCad has the project open: unsaved changes are not included')
@@ -456,6 +469,38 @@ def regenerate(cli, tmp):
             print('        ' + (r.stderr or r.stdout).strip().replace('\n', '\n        ')[:800])
         return r.returncode == 0
 
+    # A scratch copy of the KiCad config, so the user's own settings are never
+    # changed. Renders need through-hole models shown; light-background PCB
+    # PDFs need a colour theme with black silkscreen.
+    cfg = os.path.join(tmp, 'kicad-config')
+    src = kicad_config_dir()
+    os.makedirs(os.path.join(cfg, '10.0', 'colors'))
+    for f in glob.glob(os.path.join(src, '*.json')) + glob.glob(os.path.join(src, '*lib-table')):
+        shutil.copy(f, os.path.join(cfg, '10.0'))
+    viewer = os.path.join(cfg, '10.0', '3d_viewer.json')
+    if os.path.exists(viewer):
+        text = open(viewer, encoding='utf-8').read()
+        text = re.sub(r'"show_footprints_normal":\s*false', '"show_footprints_normal": true', text)
+        open(viewer, 'w', encoding='utf-8').write(text)
+    env = dict(os.environ, KICAD_CONFIG_HOME=cfg)
+
+    theme = []
+    if is_light(pcb_bg):
+        pcbnew = os.path.join(src, 'pcbnew.json')
+        name = (json.load(open(pcbnew, encoding='utf-8')).get('appearance', {})
+                .get('color_theme') if os.path.exists(pcbnew) else None) or 'user'
+        base = os.path.join(src, 'colors', name + '.json')
+        data = json.load(open(base, encoding='utf-8')) if os.path.exists(base) else {
+            'meta': {'name': 'KiCad Default', 'version': 5}, 'board': {}}
+        data.setdefault('meta', {})['name'] = 'Phyduino light'
+        board = data.setdefault('board', {})
+        board['f_silks'] = board['b_silks'] = 'rgb(0, 0, 0)'
+        board['edge_cuts'] = 'rgb(64, 64, 64)'      # dark grey board outline
+        board['background'] = 'rgb(255, 255, 255)'
+        json.dump(data, open(os.path.join(cfg, '10.0', 'colors', 'phyduino_light.json'),
+                             'w', encoding='utf-8'), indent=2)
+        theme = ['--theme', 'phyduino_light']
+
     good = True
     good &= step('schematic PDF', [cli, 'sch', 'export', 'pdf', '-o',
                                    'docs/pdf/board/phyduino_pico2-schematic.pdf', SCH])
@@ -465,8 +510,9 @@ def regenerate(cli, tmp):
                                 ('bottom', 'B.Cu,B.Silkscreen', ['--mirror'])):
         good &= step(f'PCB PDF ({name})', [
             cli, 'pcb', 'export', 'pdf', '--mode-single', '--include-border-title',
-            '--bg-color', '#001023', *extra, '--layers', layers + ',Edge.Cuts,User.Drawings',
-            '-o', f'docs/pdf/board/phyduino_pico2_pcb-{name}.pdf', PCB])
+            '--bg-color', pcb_bg, *theme, *extra,
+            '--layers', layers + ',Edge.Cuts,User.Drawings',
+            '-o', f'docs/pdf/board/phyduino_pico2_pcb-{name}.pdf', PCB], env)
     good &= step('STEP model', [cli, 'pcb', 'export', 'step', '--subst-models', '-f',
                                 '-o', 'docs/models/phyduino_pico2.step', PCB])
     good &= step('GLB model', [cli, 'pcb', 'export', 'glb', '--subst-models', '-f',
@@ -480,18 +526,6 @@ def regenerate(cli, tmp):
                                  '--excellon-oval-format', 'route', '--excellon-separate-th',
                                  '-o', 'fabrication/', PCB])
 
-    # Renders: use a copy of the KiCad config with through-hole models shown.
-    cfg = os.path.join(tmp, 'kicad-config')
-    src = kicad_config_dir()
-    os.makedirs(os.path.join(cfg, '10.0'))
-    for f in glob.glob(os.path.join(src, '*.json')) + glob.glob(os.path.join(src, '*lib-table')):
-        shutil.copy(f, os.path.join(cfg, '10.0'))
-    viewer = os.path.join(cfg, '10.0', '3d_viewer.json')
-    if os.path.exists(viewer):
-        text = open(viewer, encoding='utf-8').read()
-        text = re.sub(r'"show_footprints_normal":\s*false', '"show_footprints_normal": true', text)
-        open(viewer, 'w', encoding='utf-8').write(text)
-    env = dict(os.environ, KICAD_CONFIG_HOME=cfg)
     good &= step('top render', [cli, 'pcb', 'render', '--side', 'top', '--quality', 'high',
                                 '-w', '1592', '-h', '1256', '--zoom', '0.96',
                                 '-o', 'docs/images/phyduino_pico2_top.png', PCB], env)
@@ -545,6 +579,10 @@ def main():
     ap.add_argument('--external', action='store_true', help='also check external links')
     ap.add_argument('--regenerate', action='store_true',
                     help='rebuild generated outputs before checking (local only)')
+    ap.add_argument('--pcb-bg', default='#001023', metavar='COLOR',
+                    help='background colour of the PCB layer PDFs (default: %(default)s); '
+                         'a light colour also makes the silkscreen black and the '
+                         'board outline dark grey')
     args = ap.parse_args()
     skip = {s.strip() for s in args.skip.split(',') if s.strip()}
 
@@ -556,7 +594,7 @@ def main():
         return 2
 
     with tempfile.TemporaryDirectory() as tmp:
-        if args.regenerate and not regenerate(cli, tmp):
+        if args.regenerate and not regenerate(cli, tmp, args.pcb_bg):
             rep.error('some outputs could not be regenerated (see above)')
         if 'links' not in skip:
             check_links(rep)
