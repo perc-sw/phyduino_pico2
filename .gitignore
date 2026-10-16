@@ -55,3 +55,6 @@ docs/notes/
 
 # Write lock taken by the BOM agents while they edit the schematic
 .bom-write.lock/
+
+# Distributor order lists (local only: built from the BOM review)
+output/bom/

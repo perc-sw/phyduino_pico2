@@ -1870,6 +1870,17 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Long button press is ~2sec\nShort button press is 50ms (default DNP)"
+		(exclude_from_sim no)
+		(at 125.73 81.534 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3854a2a4-7b4c-4e6a-bb3c-e7bc0e747932")
+	)
 	(junction
 		(at 120.65 52.07)
 		(diameter 0)
@@ -1877,10 +1888,10 @@
 		(uuid "033abe1b-85ec-4a09-bbde-5bdca28c1d21")
 	)
 	(junction
-		(at 125.73 52.07)
+		(at 167.64 109.22)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "0527dfcf-79b1-4feb-9a33-bdfd4e8c2f7d")
+		(uuid "03927218-0b90-42c8-af58-20c8056fdd0e")
 	)
 	(junction
 		(at 91.44 119.38)
@@ -1889,34 +1900,40 @@
 		(uuid "0592c024-6629-452e-92ae-8bcfee9ed29c")
 	)
 	(junction
+		(at 175.26 138.43)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0bfa9548-5063-4abf-a739-a6d5922dec31")
+	)
+	(junction
 		(at 118.11 138.43)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1adc7132-9ccd-4b78-b1a0-e2d7542a17b2")
 	)
 	(junction
-		(at 165.1 106.68)
+		(at 170.18 111.76)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "2b28e07f-f799-4e7c-b3c2-a0bc9ba7bcae")
+		(uuid "365c349c-766d-470e-81ce-8f8ea4998f2a")
 	)
 	(junction
-		(at 115.57 63.5)
+		(at 109.22 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3835c0ce-4f55-4454-87da-74e50221800d")
 	)
 	(junction
-		(at 160.02 101.6)
+		(at 165.1 106.68)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "42eac777-5077-4158-9921-08d67afe619a")
+		(uuid "4763674d-7dc7-46b8-8c2f-ec9f872c882f")
 	)
 	(junction
-		(at 167.64 109.22)
+		(at 162.56 104.14)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "5e6d9828-5df4-4180-b1e4-163e2bb96ce5")
+		(uuid "59034815-3d1f-4dc2-aafc-03232b8ebf7a")
 	)
 	(junction
 		(at 140.97 44.45)
@@ -1925,10 +1942,10 @@
 		(uuid "6178e82c-d3e3-4141-81ca-c59f728d9768")
 	)
 	(junction
-		(at 170.18 111.76)
+		(at 160.02 101.6)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "7331d2a7-fec2-4fd5-9ae2-3dec5668ba02")
+		(uuid "8c9010c8-2530-4aa4-832d-1c30abd3ff25")
 	)
 	(junction
 		(at 128.27 44.45)
@@ -1955,25 +1972,19 @@
 		(uuid "c078f081-6b4a-432a-8454-e1251904edc8")
 	)
 	(junction
-		(at 162.56 104.14)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c709eab8-7528-45e7-bcc4-a2d16e31073e")
-	)
-	(junction
 		(at 140.97 74.93)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cad56b71-9f58-4108-9599-706dd368edff")
 	)
 	(junction
-		(at 95.25 54.61)
+		(at 88.9 54.61)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d2771b24-fadd-4167-b6b3-ebbc179fa067")
 	)
 	(junction
-		(at 115.57 52.07)
+		(at 109.22 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d93651f6-23e6-4132-b6b5-8d29bc4a460f")
@@ -1985,18 +1996,18 @@
 		(uuid "e6bdaf2b-9e48-4b97-978e-9db75c1511b7")
 	)
 	(junction
-		(at 175.26 138.43)
+		(at 125.73 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "e88c3f4d-1f97-47e8-8906-0e29501a0418")
+		(uuid "fd5e79d7-6df8-4fa7-a60a-46c93033bfe2")
 	)
 	(no_connect
-		(at 107.95 58.42)
+		(at 101.6 58.42)
 		(uuid "3104d057-8df0-4de4-a9a2-1f6e4c12c0fc")
 	)
 	(wire
 		(pts
-			(xy 95.25 41.91) (xy 115.57 41.91)
+			(xy 88.9 41.91) (xy 109.22 41.91)
 		)
 		(stroke
 			(width 0)
@@ -2006,7 +2017,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 111.76) (xy 201.93 111.76)
+			(xy 170.18 111.76) (xy 186.69 111.76)
 		)
 		(stroke
 			(width 0)
@@ -2076,7 +2087,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 109.22) (xy 201.93 109.22)
+			(xy 167.64 109.22) (xy 186.69 109.22)
 		)
 		(stroke
 			(width 0)
@@ -2086,7 +2097,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 54.61) (xy 95.25 63.5)
+			(xy 88.9 54.61) (xy 88.9 63.5)
 		)
 		(stroke
 			(width 0)
@@ -2156,7 +2167,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 52.07) (xy 113.03 52.07)
+			(xy 109.22 52.07) (xy 106.68 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2166,7 +2177,7 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 138.43) (xy 201.93 138.43)
+			(xy 175.26 138.43) (xy 186.69 138.43)
 		)
 		(stroke
 			(width 0)
@@ -2266,7 +2277,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 41.91) (xy 115.57 52.07)
+			(xy 109.22 41.91) (xy 109.22 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2276,7 +2287,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 63.5) (xy 95.25 63.5)
+			(xy 109.22 63.5) (xy 88.9 63.5)
 		)
 		(stroke
 			(width 0)
@@ -2356,7 +2367,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 63.5) (xy 115.57 64.77)
+			(xy 109.22 63.5) (xy 109.22 64.77)
 		)
 		(stroke
 			(width 0)
@@ -2486,7 +2497,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 104.14) (xy 201.93 104.14)
+			(xy 162.56 104.14) (xy 186.69 104.14)
 		)
 		(stroke
 			(width 0)
@@ -2556,7 +2567,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 54.61) (xy 95.25 54.61)
+			(xy 96.52 54.61) (xy 88.9 54.61)
 		)
 		(stroke
 			(width 0)
@@ -2636,7 +2647,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 106.68) (xy 201.93 106.68)
+			(xy 165.1 106.68) (xy 186.69 106.68)
 		)
 		(stroke
 			(width 0)
@@ -2666,7 +2677,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 62.23) (xy 115.57 63.5)
+			(xy 109.22 62.23) (xy 109.22 63.5)
 		)
 		(stroke
 			(width 0)
@@ -2686,7 +2697,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 52.07) (xy 95.25 52.07)
+			(xy 96.52 52.07) (xy 88.9 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2706,7 +2717,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 101.6) (xy 201.93 101.6)
+			(xy 160.02 101.6) (xy 186.69 101.6)
 		)
 		(stroke
 			(width 0)
@@ -2806,7 +2817,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 52.07) (xy 95.25 54.61)
+			(xy 88.9 52.07) (xy 88.9 54.61)
 		)
 		(stroke
 			(width 0)
@@ -2836,7 +2847,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 52.07) (xy 115.57 57.15)
+			(xy 109.22 52.07) (xy 109.22 57.15)
 		)
 		(stroke
 			(width 0)
@@ -2846,7 +2857,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 52.07) (xy 125.73 52.07)
+			(xy 109.22 52.07) (xy 125.73 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2886,10 +2897,10 @@
 	)
 	(hierarchical_label "FLASH_~{CS}"
 		(shape input)
-		(at 201.93 138.43 0)
+		(at 186.69 138.43 0)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
@@ -2897,10 +2908,10 @@
 	)
 	(hierarchical_label "MEMORY_SD0"
 		(shape bidirectional)
-		(at 201.93 101.6 0)
+		(at 186.69 101.6 0)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
@@ -2908,7 +2919,7 @@
 	)
 	(hierarchical_label "EXT_~{RESET}"
 		(shape input)
-		(at 95.25 41.91 180)
+		(at 88.9 41.91 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2923,7 +2934,7 @@
 		(at 186.69 52.07 0)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
@@ -2931,10 +2942,10 @@
 	)
 	(hierarchical_label "MEMORY_SD1"
 		(shape bidirectional)
-		(at 201.93 104.14 0)
+		(at 186.69 104.14 0)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
@@ -2942,10 +2953,10 @@
 	)
 	(hierarchical_label "MEMORY_SD3"
 		(shape bidirectional)
-		(at 201.93 109.22 0)
+		(at 186.69 109.22 0)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
@@ -2964,10 +2975,10 @@
 	)
 	(hierarchical_label "MEMORY_CLK"
 		(shape input)
-		(at 201.93 111.76 0)
+		(at 186.69 111.76 0)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
@@ -2975,10 +2986,10 @@
 	)
 	(hierarchical_label "MEMORY_SD2"
 		(shape bidirectional)
-		(at 201.93 106.68 0)
+		(at 186.69 106.68 0)
 		(effects
 			(font
-				(size 0.762 0.762)
+				(size 1.27 1.27)
 			)
 			(justify left)
 		)
@@ -4755,7 +4766,7 @@
 	)
 	(symbol
 		(lib_id "phyduino_pico:C_Small")
-		(at 115.57 59.69 0)
+		(at 109.22 59.69 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -4766,7 +4777,7 @@
 		(dnp no)
 		(uuid "90ac95e4-737f-4d35-ae5e-c20ea67fa068")
 		(property "Reference" "C57"
-			(at 113.2459 58.8616 0)
+			(at 106.8959 58.8616 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4777,7 +4788,7 @@
 			)
 		)
 		(property "Value" "0.1µF"
-			(at 113.284 60.706 0)
+			(at 106.934 60.706 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4788,7 +4799,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 115.57 59.69 0)
+			(at 109.22 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4799,7 +4810,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.murata.com/en-global/products/productdetail?partno=GCM155R71H104KE02%23"
-			(at 115.57 59.69 0)
+			(at 109.22 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4810,7 +4821,7 @@
 			)
 		)
 		(property "Description" "MLCC, 0.1 µF ±10%, 50 V, X7R, 0402"
-			(at 115.57 59.69 0)
+			(at 109.22 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4821,7 +4832,7 @@
 			)
 		)
 		(property "Variant" "ADV_SMT"
-			(at 115.57 59.69 0)
+			(at 109.22 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4832,7 +4843,7 @@
 			)
 		)
 		(property "PN" "GCM155R71H104KE02J"
-			(at 115.57 59.69 0)
+			(at 109.22 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4843,7 +4854,7 @@
 			)
 		)
 		(property "LCSC_PN" "C85858"
-			(at 115.57 59.69 0)
+			(at 109.22 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4854,7 +4865,7 @@
 			)
 		)
 		(property "DIGIKEY_PN" "490-14514-1-ND"
-			(at 115.57 59.69 0)
+			(at 109.22 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4865,7 +4876,7 @@
 			)
 		)
 		(property "Tolerance" "±10%"
-			(at 115.57 59.69 0)
+			(at 109.22 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4876,7 +4887,7 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
-			(at 115.57 59.69 0)
+			(at 109.22 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4887,7 +4898,7 @@
 			)
 		)
 		(property "MOUSER_PN" "81-GCM155R71H104KE2J"
-			(at 115.57 59.69 0)
+			(at 109.22 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6146,7 +6157,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 115.57 64.77 0)
+		(at 109.22 64.77 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -6158,7 +6169,7 @@
 		(fields_autoplaced yes)
 		(uuid "dda7704b-d699-4af8-912a-29bd6a3818ac")
 		(property "Reference" "#PWR070"
-			(at 115.57 71.12 0)
+			(at 109.22 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6169,7 +6180,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 115.57 69.2134 0)
+			(at 109.22 69.2134 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6180,7 +6191,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 115.57 64.77 0)
+			(at 109.22 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6191,7 +6202,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 115.57 64.77 0)
+			(at 109.22 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6202,7 +6213,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 115.57 64.77 0)
+			(at 109.22 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6306,7 +6317,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical - Switches:SW_Push_TE_1977067-1")
-		(at 107.95 52.07 0)
+		(at 101.6 52.07 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6316,7 +6327,7 @@
 		(dnp no)
 		(uuid "e562db48-9570-4621-91b9-600c0ad9d0d7")
 		(property "Reference" "SW1"
-			(at 107.95 47.752 0)
+			(at 101.6 47.752 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6326,7 +6337,7 @@
 			)
 		)
 		(property "Value" "1977067-1"
-			(at 101.092 57.15 0)
+			(at 94.742 57.15 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6336,7 +6347,7 @@
 			)
 		)
 		(property "Footprint" "Mechanical - Switch [UL]:TE_1977067-1"
-			(at 107.95 52.07 0)
+			(at 101.6 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6347,7 +6358,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=8-1773450-9_SECTION_C_TACTILE_SWITCHES&DocType=Data%20Sheet&DocLang=English&PartCntxt=1977067-1&DocFormat=pdf"
-			(at 107.95 52.324 0)
+			(at 101.6 52.324 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6358,7 +6369,7 @@
 			)
 		)
 		(property "Description" "Tactile switch, SPST-NO, side actuated, SMD right angle"
-			(at 107.95 52.07 0)
+			(at 101.6 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6369,7 +6380,7 @@
 			)
 		)
 		(property "Variant" "ADV_SMT"
-			(at 107.95 52.07 0)
+			(at 101.6 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6380,7 +6391,7 @@
 			)
 		)
 		(property "LCSC PN" "C2972216"
-			(at 107.95 52.07 0)
+			(at 101.6 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6391,7 +6402,7 @@
 			)
 		)
 		(property "PN" "${VALUE}"
-			(at 107.95 52.07 0)
+			(at 101.6 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6402,7 +6413,7 @@
 			)
 		)
 		(property "DIGIKEY_PN" "450-1977067-1CT-ND"
-			(at 107.95 52.07 0)
+			(at 101.6 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6413,7 +6424,7 @@
 			)
 		)
 		(property "Tolerance" ""
-			(at 107.95 52.07 0)
+			(at 101.6 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6424,7 +6435,7 @@
 			)
 		)
 		(property "FLASH_SIZE" ""
-			(at 107.95 52.07 0)
+			(at 101.6 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
