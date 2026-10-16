@@ -1,6 +1,7 @@
 # Phyduino Pico 2
 
 [![PCB DRC](https://github.com/perc-sw/phyduino_pico2/actions/workflows/drc.yml/badge.svg)](https://github.com/perc-sw/phyduino_pico2/actions/workflows/drc.yml)
+[![Docs check](https://github.com/perc-sw/phyduino_pico2/actions/workflows/docs-check.yml/badge.svg)](https://github.com/perc-sw/phyduino_pico2/actions/workflows/docs-check.yml)
 [![Latest release](https://img.shields.io/github/v/release/perc-sw/phyduino_pico2?include_prereleases&label=release)](https://github.com/perc-sw/phyduino_pico2/releases)
 [![KiCad 10](https://img.shields.io/badge/KiCad-10.0-314CB0?logo=kicad&logoColor=white)](https://www.kicad.org/)
 [![Licence: GPL v3](https://img.shields.io/badge/licence-GPL--3.0-blue)](LICENSE)
@@ -19,8 +20,8 @@ An Arduino Uno-style development board built around the Raspberry Pi **RP2350** 
 ### Microcontroller and memory
 - **RP2350B** (QFN-80): dual Arm Cortex-M33 or Hazard3 RISC-V cores, 12 MHz crystal
 - **16 MB** QSPI NOR flash (AT25QF128A)
-- **8 MB** QSPI PSRAM (IS66WVR8M8FBLL)
-- **8 KB** I²C EEPROM (24AA64)
+- **8 MB** QSPI PSRAM (IS66WVS8M8FBLL)
+- **8 KB** I²C EEPROM (AT24C64D)
 
 ### Analogue inputs
 - Six analogue inputs (**A0–A5**) measured by an 8-channel, **12-bit SAR ADC** (ADS7038) on SPI
@@ -45,7 +46,7 @@ An Arduino Uno-style development board built around the Raspberry Pi **RP2350** 
   - **USB-C:** 4.5–5.5 V, up to 3 A
   - **DC barrel jack** (2.1 mm): 4.5–22 V, up to 3 A
 - Each input has a **TPS25947 eFuse** with over-voltage, under-voltage and reverse-current protection and current limiting (2.6 A)
-- **AP63200** synchronous buck regulators generate the 3.3 V and 5 V rails
+- **AP63301** synchronous buck regulators (3 A) generate the 3.3 V and 5 V rails
 - A **TPS2121** power mux supplies the 5 V rail:
   - from the 5 V regulator when the input is above 5.5 V
   - directly from the input otherwise, for example on USB power
@@ -62,9 +63,17 @@ An Arduino Uno-style development board built around the Raspberry Pi **RP2350** 
 | Path | Contents |
 |---|---|
 | `phyduino_pico2.kicad_pro` | KiCad project (net classes, design rules, DRC exclusions) |
-| `phyduino_pico2.kicad_sch` | Root schematic, with the Microcontroller, Power and Wireless Communication sub-sheets |
+| `phyduino_pico2.kicad_sch` | Root schematic: headers and connectors, with the Microcontroller, Power and Wireless Communication sub-sheets |
+| `phyduino_pico2_mcu.kicad_sch` | Microcontroller: RP2350, crystal and debug connector, with two sub-sheets |
+| `phyduino_pico_memory.kicad_sch` | Memory: QSPI flash, PSRAM and the RESET/BOOT button controller |
+| `phyduino_pico_peripherals.kicad_sch` | Peripherals: ADC, EEPROM and I²C GPIO expander |
+| `phyduino2_power_regs.kicad_sch` | Power: eFuses, power mux and buck regulators |
+| `phyduino_pico2_wifi.kicad_sch` | Wireless Communication: ESP32-C6 module |
 | `phyduino_pico2.kicad_pcb` | 4-layer PCB |
+| `scripts/` | Pre-release documentation check (see [Before a release](#before-a-release)) |
+| `ibom.config.ini` | Settings for the student interactive BOM (InteractiveHtmlBom plugin) |
 | `fabrication/` | Gerber and drill files |
+| `docs/` | [Project site](https://perc-sw.github.io/phyduino_pico2): schematic and PCB PDFs, interactive BOMs, 3D models, datasheets and design reviews |
 
 ## Opening the design
 
@@ -74,9 +83,26 @@ Some symbols and footprints come from the maintainer's own libraries, which aren
 
 The board's silkscreen and copper text use Liberation Sans, Tekton, Centaur and Photograph Signature. Install the fonts in [`.github/workflows/fonts/`](.github/workflows/fonts/) so the text renders as it does on the fabricated board.
 
+## Before a release
+
+`scripts/prerelease_check.py` checks that the documentation matches the design: local links, generated outputs that are older than the design files, part numbers in this README and on the project site, the pinout diagram against the netlist, and ERC/DRC. The **Docs check** workflow runs it on every push (DRC has its own workflow).
+
+Before tagging a release:
+
+1. Save the design in KiCad, then rebuild the outputs. This needs KiCad 10 and, for the interactive BOMs, the InteractiveHtmlBom plugin:
+   ```
+   python scripts/prerelease_check.py --regenerate
+   ```
+2. Update the pinout diagram (`docs/images/phyduino_pico2_pinout.svg`) in Inkscape if the board or its pins changed.
+3. Commit the regenerated files and wait for the **PCB DRC** and **Docs check** workflows to pass.
+
+Add `--external` to also check external links. Some sites block scripted requests, so those failures are reported as warnings only.
+
 ## Related projects
 
-- 
+- [Phyduino Pico](https://github.com/perc-sw/phyduino_pico): the previous RP2040 board
+- [Analog Shield 2](https://github.com/perc-sw/analog_shield2) and [Analog Shield](https://github.com/perc-sw/analog_shield)
+- [ESP-AT fork](https://github.com/perc-sw/esp-at): firmware for the wireless module
 
 ## Licence
 

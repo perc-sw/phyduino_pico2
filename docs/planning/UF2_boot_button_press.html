@@ -93,7 +93,7 @@ footer a { color: var(--text-secondary); }
 <header>
   <h1>Reset and UF2 button plan</h1>
   <p class="sub">Replace the XC6190 so that a <b>short press resets</b> the RP2350 and a <b>long press restarts it in UF2 (BOOTSEL) mode</b>.</p>
-  <div class="meta"><span><b>Board:</b> Phyduino Pico 2, Rev A</span><span><b>Fixes:</b> review finding #2</span><span><b>Date:</b> 2026-10-06</span><span><b>Status:</b> proposal</span></div>
+  <div class="meta"><span><b>Board:</b> Phyduino Pico 2, Rev A</span><span><b>Fixes:</b> review finding #2</span><span><b>Date:</b> 2026-10-06</span><span><b>Status:</b> implemented in Rev A0 as U15 (LPT capacitor C58, 4.7 nF)</span></div>
 </header>
 
 <div class="toolbar"><button id="theme">Toggle dark mode</button></div>
@@ -233,7 +233,7 @@ footer a { color: var(--text-secondary); }
       <tr><td>Pull J2.3 low</td><td>Board resets</td></tr>
       <tr><td>Normal use: probe QSPI_SS</td><td>No extra load; flash reads and writes work</td></tr>
     </table>
-    <div class="warn"><span class="i">i</span><div>The Arduino-Pico core can also enter UF2 mode from software, by opening the serial port at 1200 baud, and so can <code>picotool</code>. The long press is the recovery route when the running program has crashed or disabled USB.</div></div>
+    <div class="warn"><span class="i">i</span><div>Software can also restart the board in UF2 mode, for example with <code>picotool</code>. The long press is the recovery route when the running program has crashed or disabled USB.</div></div>
   </div>
 </section>
 

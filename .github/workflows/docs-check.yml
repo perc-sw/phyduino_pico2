@@ -1,0 +1,44 @@
+name: Docs check
+
+# Runs scripts/prerelease_check.py on every push: local links, generated
+# outputs older than the design files, part numbers in the docs, the pinout
+# diagram against the netlist, and schematic ERC. DRC has its own workflow
+# (drc.yml). Outputs are regenerated locally with --regenerate, not here: the
+# renders and iBOMs need the maintainer's KiCad setup.
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    container:
+      # Keep in step with the KiCad version used to edit the design.
+      image: kicad/kicad:10.0.4
+      options: --user root
+    steps:
+      # The stale-output check reads commit history, so checkout needs git
+      # (not in the image) and the full history.
+      - name: Install git
+        run: |
+          apt-get update -qq
+          apt-get install -y -qq git >/dev/null
+
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Run checks
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          python3 scripts/prerelease_check.py --skip drc
+
+      - name: Upload ERC report
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: erc-report
+          path: erc-report.txt
+          if-no-files-found: ignore

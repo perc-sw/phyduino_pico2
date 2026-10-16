@@ -58,10 +58,10 @@
       <div class="spec-row">
         <span class="spec-pill">RP2350</span>
         <span class="spec-pill">4-layer PCB</span>
-        <span class="spec-pill">USB-C PD</span>
+        <span class="spec-pill">USB-C</span>
         <span class="spec-pill">Data Acquisition</span>
         <span class="spec-pill">Wireless Communication</span>
-        <span class="spec-pill">Rev-A</span>
+        <span class="spec-pill">Rev-A0</span>
       </div>
     </div>
     
@@ -70,7 +70,7 @@
   <!-- Assembly resources -->
   <div class="section-head"><h2>Assembly resources</h2></div>
   <div class="resource-grid">
-    <a class="res-card" href="./bom/ibom.html">
+    <a class="res-card" href="./bom/ibom_student.html">
       <div class="res-icon blue" aria-hidden="true">
         <img class="res-icon.img" src="images/icon-bom.svg">
       </div>
@@ -97,10 +97,10 @@
       <span class="res-desc">Copper layer drawings and fabrication package for ordering boards.</span>
       <div class="res-file-list">
         <a class="res-file-row" href="./pdf/board/phyduino_pico2_pcb-top.pdf">Top layer Cu<span class="res-file-tag">PDF</span></a>
-        <a class="res-file-row" href="./pdf/board/phyduino_pico_pcb_inner1.pdf">Inner layer 1 Cu<span class="res-file-tag">PDF</span></a>
-        <a class="res-file-row" href="./pdf/board/phyduino_pico_pcb_inner2.pdf">Inner layer 2 Cu<span class="res-file-tag">PDF</span></a>
+        <a class="res-file-row" href="./pdf/board/phyduino_pico2_pcb-inner1.pdf">Inner layer 1 Cu<span class="res-file-tag">PDF</span></a>
+        <a class="res-file-row" href="./pdf/board/phyduino_pico2_pcb-inner2.pdf">Inner layer 2 Cu<span class="res-file-tag">PDF</span></a>
         <a class="res-file-row" href="./pdf/board/phyduino_pico2_pcb-bottom.pdf">Bottom layer Cu<span class="res-file-tag">PDF</span></a>
-        <a class="res-file-row" href="">Fabrication files <span class="res-file-tag">ZIP</span></a>
+        <a class="res-file-row" href="https://github.com/perc-sw/phyduino_pico2/releases">Fabrication files (GitHub releases)<span class="res-file-tag">ZIP</span></a>
       </div>
     </div>
     <a class="res-card" href="./models/phyduino_pico2.step">
@@ -139,14 +139,14 @@
           <td><a class="ds-link" href="./pdf/datasheets/QSPI Flash - AT25QF128A.pdf">PDF</a></td>
         </tr>
         <tr>
-          <td>IS66WVR8M8FBLL</td>
+          <td>IS66WVS8M8FBLL</td>
           <td>64-Mbit SPI/QPI Serial PSRAM</td>
-          <td><a class="ds-link" href="./pdf/datasheets/PSRAM - IS66WVR8M8FBLL.pdf">PDF</a></td>
+          <td><a class="ds-link" href="https://www.issi.com/WW/pdf/66-67WVS8M8FALL-BLL.pdf">PDF</a></td>
         </tr>
         <tr>
-          <td>24AA64F</td>
+          <td>AT24C64D</td>
           <td>64-Kbit I2C Serial EEPROM</td>
-          <td><a class="ds-link" href="./pdf/datasheets/EEPROM - 24AA64F.pdf">PDF</a></td>
+          <td><a class="ds-link" href="./pdf/datasheets/EEPROM - AT24C64D.pdf">PDF</a></td>
         </tr>
         <tr>
           <td>FXL6408</td>
@@ -169,9 +169,9 @@
           <td><a class="ds-link" href="./pdf/datasheets/PMUX - TPS2121.pdf">PDF</a></td>
         </tr>
         <tr>
-          <td>AP63200</td>
-          <td>3.8V TO 32V Input, 2A Low IQ Synchronous Buck Regulator</td>
-          <td><a class="ds-link" href="./pdf/datasheets/DCDC - AP63200.pdf">PDF</a></td>
+          <td>AP63301</td>
+          <td>3.8V to 32V Input, 3A Low IQ Synchronous Buck Regulator</td>
+          <td><a class="ds-link" href="./pdf/datasheets/DCDC - AP63301.pdf">PDF</a></td>
         </tr>
         <tr>
           <td>TPS3424</td>
@@ -282,5 +282,23 @@
 </footer>
 
 <script type="module" src="./js/board-viewer.js"></script>
+<script>
+  // Browsers don't run module scripts (or load the GLB) on file:// pages, so
+  // board-viewer.js never shows the toggle there. Show it anyway and explain.
+  if (location.protocol === 'file:') {
+    const panel = document.querySelector('.board-img-panel');
+    const toggle = panel.querySelector('.view-toggle');
+    const status = panel.querySelector('.view-status');
+    toggle.hidden = false;
+    toggle.querySelectorAll('button').forEach((b) => b.addEventListener('click', () => {
+      const is3d = b.dataset.view === '3d';
+      toggle.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      status.textContent = is3d
+        ? 'The 3D view only works when the page is served over HTTP: open it on the project site, or run "python -m http.server" in the docs folder and browse to http://localhost:8000.'
+        : '';
+      status.hidden = !is3d;
+    }));
+  }
+</script>
 </body>
 </html>

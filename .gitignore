@@ -58,3 +58,5 @@ docs/notes/
 
 # Distributor order lists (local only: built from the BOM review)
 output/bom/
+docs/reviews/
+notes/
