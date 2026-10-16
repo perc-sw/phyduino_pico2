@@ -4,8 +4,8 @@
 Checks that the documentation and generated outputs match the design:
 
   links      every local href/src in the README and the docs site points to a file
-  stale      generated outputs were committed no earlier than the design files they
-             come from (needs full git history)
+  stale      generated outputs were regenerated from the current design files and
+             haven't changed since (compares hashes in scripts/outputs_manifest.json)
   parts      part numbers named in the README, the datasheet table and the
              datasheet file names are on the board's BOM
   pinout     the GPIO numbers and functions in docs/images/phyduino_pico2_pinout.svg
@@ -58,24 +58,36 @@ PART_ALLOWLIST = {
     'ESP32-C61-MINI-1',   # pin-compatible alternative to the ESP32-C6 module
 }
 
-# Generated output -> design files it is built from.
+# Files that --regenerate writes. The pinout diagram isn't one of them: it is
+# drawn by hand, and the pinout check compares its contents with the netlist.
 SCH_FILES = sorted(os.path.basename(p) for p in glob.glob(os.path.join(ROOT, '*.kicad_sch')))
-OUTPUTS = {
-    'docs/pdf/board/phyduino_pico2-schematic.pdf': SCH_FILES,
-    'docs/pdf/board/phyduino_pico2_pcb-top.pdf': [PCB],
-    'docs/pdf/board/phyduino_pico2_pcb-inner1.pdf': [PCB],
-    'docs/pdf/board/phyduino_pico2_pcb-inner2.pdf': [PCB],
-    'docs/pdf/board/phyduino_pico2_pcb-bottom.pdf': [PCB],
-    'docs/models/phyduino_pico2.step': [PCB],
-    'docs/models/phyduino_pico2.glb': [PCB],
-    'docs/images/phyduino_pico2_top.png': [PCB],
-    'docs/images/phyduino_pico2_render.png': [PCB],
-    'docs/images/phyduino_pico2_pinout.svg': [PCB],   # embedded board picture
-    'docs/bom/ibom.html': [PCB],
-    'docs/bom/ibom_all.html': [PCB],
-    'docs/bom/ibom_student.html': [PCB],
-    'fabrication/phyduino_pico2-job.gbrjob': [PCB],
-}
+SOURCES = SCH_FILES + [PCB]
+OUTPUTS = [
+    'docs/pdf/board/phyduino_pico2-schematic.pdf',
+    'docs/pdf/board/phyduino_pico2_pcb-top.pdf',
+    'docs/pdf/board/phyduino_pico2_pcb-inner1.pdf',
+    'docs/pdf/board/phyduino_pico2_pcb-inner2.pdf',
+    'docs/pdf/board/phyduino_pico2_pcb-bottom.pdf',
+    'docs/models/phyduino_pico2.step',
+    'docs/models/phyduino_pico2.glb',
+    'docs/images/phyduino_pico2_top.png',
+    'docs/images/phyduino_pico2_render.png',
+    'docs/bom/ibom.html',
+    'docs/bom/ibom_all.html',
+    'docs/bom/ibom_student.html',
+]
+FAB_PATTERNS = ['fabrication/*.gbr', 'fabrication/*.gbrjob', 'fabrication/*.drl']
+
+# Written by --regenerate: the git hash of every design file the outputs were
+# built from, and of every output written. The stale check compares hashes, so
+# it doesn't depend on the order in which files are committed.
+MANIFEST = 'scripts/outputs_manifest.json'
+
+
+def fab_outputs():
+    return sorted(os.path.relpath(p, ROOT).replace(os.sep, '/')
+                  for pat in FAB_PATTERNS for p in glob.glob(os.path.join(ROOT, pat)))
+
 
 IN_CI = os.environ.get('GITHUB_ACTIONS') == 'true'
 
@@ -220,41 +232,55 @@ def check_links(rep):
         rep.ok(f'all local links in {len(DOC_PAGES)} pages resolve')
 
 
+def file_hash(path):
+    """git blob hash of a file as it would be committed (line endings normalised)."""
+    return git('hash-object', '--', path)
+
+
+def write_manifest():
+    data = {
+        'note': 'Written by scripts/prerelease_check.py --regenerate. Do not edit.',
+        'sources': {s: file_hash(s) for s in SOURCES},
+        'outputs': {o: file_hash(o) for o in OUTPUTS + fab_outputs()
+                    if os.path.exists(os.path.join(ROOT, o))},
+    }
+    with open(os.path.join(ROOT, MANIFEST), 'w', encoding='utf-8', newline='\n') as f:
+        json.dump(data, f, indent=2)
+        f.write('\n')
+
+
 def check_stale(rep):
     rep.section('Generated outputs vs design files')
-    if git('rev-parse', '--is-shallow-repository') == 'true':
-        rep.warn('shallow clone: fetch full history (fetch-depth: 0) to check outputs')
+    path = os.path.join(ROOT, MANIFEST)
+    if not os.path.exists(path):
+        rep.error(f'{MANIFEST} is missing: run --regenerate and commit the result', MANIFEST)
         return
-    dirty = git('status', '--porcelain', '--', *SCH_FILES, PCB) or ''
-    if dirty:
-        rep.warn('design files have uncommitted changes; outputs are checked '
-                 'against the last commit only')
-    when = {}
-
-    def last(path):
-        if path not in when:
-            t = git('log', '-1', '--format=%ct', '--', path)
-            when[path] = int(t) if t else None
-        return when[path]
-
-    stale = 0
-    for out, sources in OUTPUTS.items():
-        t_out = last(out)
-        if t_out is None:
-            rep.error(f'{out} is not committed', out)
-            stale += 1
-            continue
-        newest = max((last(s) or 0, s) for s in sources)
-        if newest[0] > t_out:
-            days = (newest[0] - t_out) / 86400
-            if git('status', '--porcelain', '--', out):
-                rep.error(f'{out} has been regenerated but not committed', out)
-            else:
-                rep.error(f'{out} is older than {newest[1]} ({days:.1f} days); '
-                          'regenerate it', out)
-            stale += 1
-    if not stale:
-        rep.ok(f'{len(OUTPUTS)} outputs are up to date')
+    data = json.load(open(path, encoding='utf-8'))
+    bad = 0
+    for s in SOURCES:
+        if data.get('sources', {}).get(s) != file_hash(s):
+            rep.error(f'{s} has changed since the outputs were regenerated: '
+                      'run --regenerate', s)
+            bad += 1
+    recorded = data.get('outputs', {})
+    for o in OUTPUTS + fab_outputs():
+        if o not in recorded:
+            rep.error(f'{o} was not written by the last --regenerate', o)
+            bad += 1
+    for o, h in recorded.items():
+        if not os.path.exists(os.path.join(ROOT, o)):
+            rep.error(f'{o} is missing', o)
+            bad += 1
+        elif file_hash(o) != h:
+            rep.error(f'{o} differs from what --regenerate wrote (edited or replaced '
+                      'by hand?): run --regenerate', o)
+            bad += 1
+    if not IN_CI:
+        pending = git('status', '--porcelain', '--', MANIFEST, *recorded) or ''
+        if pending:
+            rep.warn('regenerated outputs or the manifest are not committed yet')
+    if not bad:
+        rep.ok(f'{len(recorded)} outputs match the current design files')
 
 
 def check_parts(rep, rows):
@@ -564,7 +590,11 @@ def regenerate(cli, tmp, pcb_bg='#001023'):
                         os.path.join(ROOT, 'docs/bom/ibom.html'))
     print('  note  the pinout diagram is drawn by hand: update its board picture and '
           'labels in Inkscape if the board changed')
-    print('  note  commit the regenerated files before the stale-output check can pass')
+    if good:
+        write_manifest()
+        print(f'  ok    {MANIFEST} records what was built; commit it with the outputs')
+    else:
+        print(f'  note  {MANIFEST} not updated, because some steps failed')
     return good
 
 

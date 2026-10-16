@@ -1,0 +1,41 @@
+{
+  "note": "Written by scripts/prerelease_check.py --regenerate. Do not edit.",
+  "sources": {
+    "phyduino2_power_regs.kicad_sch": "65558402f6f5b080d8cec4dbb319bcb58c03cd85",
+    "phyduino_pico2.kicad_sch": "579038f5501f0d28c341374edd68bb720d7a5814",
+    "phyduino_pico2_mcu.kicad_sch": "27c274a6de16d7270c5e2edf6f188e6a7419bd02",
+    "phyduino_pico2_usbpd.kicad_sch": "2b87b0819f83152d7a68f20f3697b5d8433b8793",
+    "phyduino_pico2_wifi.kicad_sch": "a784e81117952260b24a021ec161e87ba972e50a",
+    "phyduino_pico_memory.kicad_sch": "280f17f74e621a6818cd03558cc671c2a4b5644d",
+    "phyduino_pico_peripherals.kicad_sch": "7acf9972a0791f585767a63498569e2b69edbabe",
+    "phyduino_pico2.kicad_pcb": "faa09fe64bc1b94ae0a65bef9f9af08177dcb115"
+  },
+  "outputs": {
+    "docs/pdf/board/phyduino_pico2-schematic.pdf": "0a8f8556bff5faaf6848d53c02e456220726ad60",
+    "docs/pdf/board/phyduino_pico2_pcb-top.pdf": "f9df563eec34e0eb8ea9bae7e29cf682e85feebd",
+    "docs/pdf/board/phyduino_pico2_pcb-inner1.pdf": "3364c3676e33f982eff286ec49768204963d42f3",
+    "docs/pdf/board/phyduino_pico2_pcb-inner2.pdf": "8496923eddbefbcb3f44e9bbd0a248b39c7389b6",
+    "docs/pdf/board/phyduino_pico2_pcb-bottom.pdf": "37133edfecde07a017c1ceb84dd41b9b37c568dc",
+    "docs/models/phyduino_pico2.step": "bd4a5127be0ff56ae29b1da93b6492a6d8aa0d0e",
+    "docs/models/phyduino_pico2.glb": "56df19853da825b2eb663f6060b479c6beddcd51",
+    "docs/images/phyduino_pico2_top.png": "74bdc9cf90f37180f3fa35677a6f055359ab19e2",
+    "docs/images/phyduino_pico2_render.png": "464c6e13c835fe0baa9173627ff3fb46a89b907b",
+    "docs/bom/ibom.html": "2cad13819871e34fb009ef98137b5b22bf25fadf",
+    "docs/bom/ibom_all.html": "2cad13819871e34fb009ef98137b5b22bf25fadf",
+    "docs/bom/ibom_student.html": "aa3b6d19f16851d530c9ac78f3090220e65f872a",
+    "fabrication/phyduino_pico2-B_Cu.gbr": "36d55a0df53cba57083c948d0a73dc5943d83d3d",
+    "fabrication/phyduino_pico2-B_Mask.gbr": "67c6c8a7b214f2d7ae1065bf753cac9d13ed1ede",
+    "fabrication/phyduino_pico2-B_Paste.gbr": "e5a64223d0df90f9dd6d9fbbf0fe3dd584cdf32e",
+    "fabrication/phyduino_pico2-B_Silkscreen.gbr": "ce4ccc7aeb31af49ca7b33ad3f3bbe418a2a7c2a",
+    "fabrication/phyduino_pico2-Edge_Cuts.gbr": "941d86b08d3be0e46032d9591143f50bd49924fa",
+    "fabrication/phyduino_pico2-F_Cu.gbr": "8f4d4e093280fbc2399c00b62e235a5e249745f8",
+    "fabrication/phyduino_pico2-F_Mask.gbr": "1f1d58c0a1a1964cfc48e6cbc99dc684fe207911",
+    "fabrication/phyduino_pico2-F_Paste.gbr": "d09cf4660ac93098af5efc6b1d8ad387a99803db",
+    "fabrication/phyduino_pico2-F_Silkscreen.gbr": "ec4e94dd2a4af24aae65858cdb64c0f43290d5e3",
+    "fabrication/phyduino_pico2-In1_Cu.gbr": "a1e0f4d0451502111a47796ff776d3bca3b25bdf",
+    "fabrication/phyduino_pico2-In2_Cu.gbr": "6f5af28ffa8fca6845d77ebc7d6a308cc1cce01e",
+    "fabrication/phyduino_pico2-NPTH.drl": "c170d23e7edafd19b95786025c46a66a2dcd8bc9",
+    "fabrication/phyduino_pico2-PTH.drl": "a45a135f673db813b9c8d5dd704b81c2c48c77b3",
+    "fabrication/phyduino_pico2-job.gbrjob": "ba56dae041afa4ea903efa45856a6dc529bfd10b"
+  }
+}
