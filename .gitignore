@@ -60,3 +60,5 @@ docs/notes/
 output/bom/
 docs/reviews/
 notes/
+# Release summaries (local only)
+docs/notes/release_*.md

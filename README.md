@@ -85,9 +85,10 @@ The board's silkscreen and copper text use Liberation Sans, Tekton, Centaur and 
 
 ## Related projects
 
-- [Phyduino Pico](https://github.com/perc-sw/phyduino_pico): the previous RP2040 board
-- [Analog Shield 2](https://github.com/perc-sw/analog_shield2) and [Analog Shield](https://github.com/perc-sw/analog_shield)
-- [ESP-AT fork](https://github.com/perc-sw/esp-at): firmware for the wireless module
+- [Phyduino Pico](https://perc-sw.github.io/phyduino_pico/): the previous RP2040 board
+- [Analog Shield](https://perc-sw.github.io/analog_shield)
+- [Analog Shield 2](https://github.com/perc-sw/analog_shield2)
+- [Phyduino Board Support](https://perc-sw.github.io/phyduino_bsp/) 
 
 ## Licence
 
