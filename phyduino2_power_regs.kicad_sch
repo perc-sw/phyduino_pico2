@@ -6,8 +6,8 @@
 	(paper "A")
 	(title_block
 		(title "Phyduino Pico 2")
-		(date "2026-05-04")
-		(rev "A")
+		(date "2026-10-16")
+		(rev "A0")
 		(company "University of Toronto, Dept. of Physics")
 	)
 	(lib_symbols

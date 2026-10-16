@@ -10,7 +10,7 @@
 	(title_block
 		(title "Phyduino Pico 2")
 		(date "2026-07-10")
-		(rev "A")
+		(rev "A0")
 		(company "University of Toronto, Dept of Physics E.S.S.")
 	)
 	(layers
