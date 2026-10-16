@@ -85,7 +85,7 @@ The board's silkscreen and copper text use Liberation Sans, Tekton, Centaur and 
 
 ## Before a release
 
-`scripts/prerelease_check.py` checks that the documentation matches the design: local links, generated outputs that are older than the design files, part numbers in this README and on the project site, the pinout diagram against the netlist, and ERC/DRC. The **Docs check** workflow runs it on every push (DRC has its own workflow).
+`scripts/prerelease_check.py` checks that the documentation matches the design: local links, generated outputs that are older than the design files, part numbers in this README and on the project site, the pinout diagram against the netlist, and ERC/DRC. The **Docs check** workflow runs it on every push, without ERC or DRC (DRC has its own workflow).
 
 Before tagging a release:
 
